@@ -9,15 +9,13 @@ Improvements over cold-young/robotics_paper_daily:
   5. Full config.yaml compatibility
   6. Cumulative DB (docs/papers_db.json)
      - New papers accumulate daily; oldest papers are pruned
-       when per-category limit is exceeded (default: 50/category)
-  7. Conference paper collection via OpenReview (CoRL, NeurIPS, etc.)
+       when retention.max_per_category is exceeded
 
 Usage:
     python paper_radar.py                  # collect today, accumulate into DB
     python paper_radar.py --days 3         # collect last 3 days
     python paper_radar.py --reset-db       # reset DB and collect fresh
     python paper_radar.py --output my.md   # specify output file
-    python paper_radar.py --conferences    # include conference papers (OpenReview)
 """
 
 import re
@@ -109,14 +107,6 @@ ARXIV_DEFAULT_RETRIES = 4
 ARXIV_DEFAULT_PAGE_SIZE = 20
 ARXIV_DEFAULT_BACKOFF_SECONDS = (30.0, 60.0, 120.0, 240.0)
 ARXIV_HF_BATCH_SIZE = 10
-CONFERENCE_KEYWORD_CATEGORIES = {
-    "dexterous",
-    "manipulation",
-    "learnedcontrol",
-    "sim2real",
-    "tactile",
-    "vla",
-}
 
 
 def _sleep_with_jitter(seconds: float) -> None:
@@ -512,7 +502,7 @@ def load_config(config_path: str = "config.yaml") -> dict:
 # Core: collect & merge
 # ─────────────────────────────────────────────
 
-def collect_papers(config: dict, include_conferences: bool = False, **kwargs) -> tuple[
+def collect_papers(config: dict, **kwargs) -> tuple[
     dict[str, Paper],   # all papers (deduped), keyed by paper_id
     dict[str, int],     # hf_map
 ]:
@@ -635,68 +625,14 @@ def collect_papers(config: dict, include_conferences: bool = False, **kwargs) ->
             )
             all_papers[pid] = p
 
-    # 5. Conference paper collection (--conferences mode)
-    if include_conferences:
-        from conference_fetch import fetch_openreview_venue
-        all_keywords = []
-        for kws in categories.values():
-            all_keywords.extend(kws)
-        all_keywords = list(set(all_keywords))
-
-        conf_cfg = config.get("conferences", {})
-        if conf_cfg.get("enabled", False):
-            max_conf = conf_cfg.get("max_results_per_venue", 0)
-            for venue_cfg in conf_cfg.get("venues", []):
-                source = venue_cfg["source"]
-                label = venue_cfg["label"]
-                venue_id = venue_cfg["venue_id"]
-                print(f"\n[Conference] Fetching {label} (venue={venue_id})...")
-                conf_papers = fetch_openreview_venue(
-                    venue_id=venue_id,
-                    venue_label=label,
-                    source=source,
-                    keywords=all_keywords,
-                    max_results=max_conf,
-                )
-                print(f"  → {len(conf_papers)} papers after keyword filter")
-                for r in conf_papers:
-                    pid = r["paper_id"]
-                    if pid in all_papers:
-                        continue
-                    # Assign categories by keyword matching
-                    text = (r["title"] + " " + r["abstract"]).lower()
-                    matched_cats = []
-                    matched_kws = []
-                    for cat_name, kws in categories.items():
-                        cat_matched = [kw for kw in kws if kw.lower() in text]
-                        if cat_matched:
-                            matched_cats.append(cat_name)
-                            matched_kws.extend(cat_matched)
-                    if not matched_cats:
-                        matched_cats = [label]  # fallback: venue as category
-                    all_papers[pid] = Paper(
-                        arxiv_id=r.get("arxiv_id", ""),
-                        title=r["title"],
-                        abstract=r["abstract"],
-                        authors=r["authors"],
-                        publish_date=r["publish_date"],
-                        arxiv_url=r.get("arxiv_url", ""),
-                        project_url=r.get("project_url", ""),
-                        matched_categories=matched_cats,
-                        matched_keywords=list(set(matched_kws)),
-                        paper_id=pid,
-                        source=source,
-                        venue=label,
-                    )
-
-    # 6. Enrich with Papers With Code links
+    # 5. Enrich with Papers With Code links
     #    0.5s delay to avoid rate limiting
-    #    Skip conference papers without arXiv ID
+    #    Skip papers without arXiv ID
     print(f"\n[PWC] Enriching {len(all_papers)} papers with code links...")
     pwc_count = 0
     for i, (pid, paper) in enumerate(all_papers.items()):
         if not paper.arxiv_id:
-            continue  # skip conference papers without arXiv ID
+            continue
         time.sleep(0.5)
         enrich_with_pwc(paper)
         if paper.code_url:
@@ -705,7 +641,7 @@ def collect_papers(config: dict, include_conferences: bool = False, **kwargs) ->
             print(f"  → {i+1}/{len(all_papers)} processed, {pwc_count} with code")
     print(f"[PWC] Done. {pwc_count}/{len(all_papers)} papers have code links.")
 
-    # 7. Final score computation (includes code bonus)
+    # 6. Final score computation (includes code bonus)
     for p in all_papers.values():
         p.compute_score()
 
@@ -819,18 +755,6 @@ def _paper_links(p: Paper) -> str:
     return links
 
 
-def _conference_labels(all_papers: dict[str, Paper], config: dict) -> list[str]:
-    labels: list[str] = []
-    for venue_cfg in config.get("conferences", {}).get("venues", []):
-        label = venue_cfg.get("label", "")
-        if label and label not in labels:
-            labels.append(label)
-    for p in all_papers.values():
-        if p.venue and p.venue not in labels:
-            labels.append(p.venue)
-    return labels
-
-
 def _display_limit(config: dict, key: str, default: int) -> int:
     return int(config.get("display", {}).get(key, default))
 
@@ -846,12 +770,6 @@ def _slugify(text: str) -> str:
 
 def _gitpage_nav_items(all_papers: dict[str, Paper], config: dict) -> list[tuple[str, str]]:
     items = [("HF Hot", "{{ site.baseurl }}/")]
-    for label in _conference_labels(all_papers, config):
-        if any(p.venue == label for p in all_papers.values()):
-            items.append((
-                label,
-                f"{{{{ site.baseurl }}}}/conferences/{_slugify(label)}.html",
-            ))
     for cat_name in config.get("categories", {}).keys():
         items.append((cat_name, f"{{{{ site.baseurl }}}}/{_slugify(cat_name)}.html"))
     return items
@@ -877,21 +795,6 @@ def _gitpage_front_matter(title: str) -> list[str]:
     return ["---", "layout: default", f'title: "{title}"', "---", ""]
 
 
-def _keyword_cell(p: Paper, max_keywords: int = 2) -> str:
-    categories = [
-        _slugify(cat)
-        for cat in p.matched_categories
-        if cat not in {"HF-Hot", p.venue}
-    ]
-    keywords = []
-    for cat in categories:
-        if cat in CONFERENCE_KEYWORD_CATEGORIES and cat not in keywords:
-            keywords.append(cat)
-    if not keywords:
-        return ""
-    return " ".join(f"`{kw}`" for kw in keywords[:max_keywords])
-
-
 def _paper_row(p: Paper) -> str:
     """README table row format with PWC code links."""
     links = _paper_links(p)
@@ -908,25 +811,6 @@ def _paper_row(p: Paper) -> str:
     )
 
 
-def _conference_paper_row(p: Paper, details: bool = True) -> str:
-    """Conference table row with matched keywords in the first column."""
-    links = _paper_links(p)
-    abstract_short = _abstract_short(p.abstract)
-    if details:
-        title_abstract = (
-            f"**{p.title}** "
-            f"<details><summary>Abstract</summary>{abstract_short}</details>"
-        )
-    else:
-        title_abstract = f"**{p.title}**<br>{abstract_short}"
-    return (
-        f"| {_keyword_cell(p)} | "
-        f"{title_abstract} | "
-        f"{p.author_team()} | "
-        f"{links} |"
-    )
-
-
 def generate_markdown(
     all_papers: dict[str, Paper],
     hf_map: dict[str, int],
@@ -934,10 +818,8 @@ def generate_markdown(
 ) -> str:
     today = datetime.date.today().strftime("%Y.%m.%d")
     cat_names = list(config.get("categories", {}).keys())
-    conference_labels = _conference_labels(all_papers, config)
     max_hf = _display_limit(config, "readme_max_hf_hot", 30)
     max_cat = _display_limit(config, "readme_max_per_category", 40)
-    max_conf = _display_limit(config, "readme_max_conference_per_venue", 50)
 
     lines = []
     lines.append(f"## Updated on {today}\n")
@@ -945,11 +827,7 @@ def generate_markdown(
     # ── Table of Contents
     lines.append("## Table of Contents\n")
     lines.append("1. [🔥 HuggingFace Hot Papers](#-huggingface-hot-papers)")
-    toc_items = cat_names + [
-        label for label in conference_labels
-        if any(p.venue == label for p in all_papers.values())
-    ]
-    for i, title in enumerate(toc_items, start=2):
+    for i, title in enumerate(cat_names, start=2):
         anchor = title.lower().replace(" ", "-")
         lines.append(f"{i}. [{title}](#{anchor})")
     lines.append("")
@@ -1005,26 +883,6 @@ def generate_markdown(
         lines.append("| --- | --- | --- | --- |")
         for p in cat_papers:
             lines.append(_paper_row(p).strip())
-        lines.append("\n</details>\n")
-
-    # ── Conference sections: separate from keyword categories
-    for label in conference_labels:
-        venue_papers = _limit_papers(
-            sorted(
-                [p for p in all_papers.values() if p.venue == label],
-                key=lambda p: p.publish_date,
-                reverse=True,
-            ),
-            max_conf,
-        )
-        if not venue_papers:
-            continue
-        lines.append(f"## {label}\n")
-        lines.append(f"<details><summary><b>{label} Papers (Click to expand)</b></summary>\n")
-        lines.append("| Keyword | Title & Abstract | Authors | Links |")
-        lines.append("| --- | --- | --- | --- |")
-        for p in venue_papers:
-            lines.append(_conference_paper_row(p, details=True))
         lines.append("\n</details>\n")
 
     return "\n".join(lines)
@@ -1170,32 +1028,6 @@ def generate_gitpage_category_markdown(
     )
 
 
-def generate_gitpage_conference_markdown(
-    all_papers: dict[str, Paper],
-    config: dict,
-    venue_label: str,
-) -> str:
-    max_conf = _display_limit(config, "gitpage_max_conference_per_venue", 100)
-    venue_papers = _limit_papers(
-        sorted(
-            [p for p in all_papers.values() if p.venue == venue_label],
-            key=lambda p: p.publish_date,
-            reverse=True,
-        ),
-        max_conf,
-    )
-    return _generate_gitpage_section_page(
-        all_papers,
-        config,
-        active=venue_label,
-        title=venue_label,
-        papers=venue_papers,
-        row_fn=lambda p: _conference_paper_row(p, details=False),
-        table_header="| Keyword | Title & Abstract | Authors | Links |",
-        table_align="|:---------|:-----------------------|:---------|:------|",
-    )
-
-
 def write_gitpage_markdowns(
     all_papers: dict[str, Paper],
     hf_map: dict[str, int],
@@ -1218,18 +1050,6 @@ def write_gitpage_markdowns(
         )
         written.append(path)
 
-    conf_dir = gitpage_path.parent / "conferences"
-    conf_dir.mkdir(parents=True, exist_ok=True)
-    for label in _conference_labels(all_papers, config):
-        if not any(p.venue == label for p in all_papers.values()):
-            continue
-        path = conf_dir / f"{_slugify(label)}.md"
-        path.write_text(
-            generate_gitpage_conference_markdown(all_papers, config, label),
-            encoding="utf-8",
-        )
-        written.append(path)
-
     return written
 
 
@@ -1244,19 +1064,22 @@ def main():
     parser.add_argument("--gitpage",    default="docs/index.md",     help="GitPage output path")
     parser.add_argument("--db",         default="docs/papers_db.json", help="cumulative DB JSON path")
     parser.add_argument("--days",       type=int, default=1,         help="days back to collect")
-    parser.add_argument("--max-per-cat",type=int, default=50,        help="max papers per category")
+    parser.add_argument("--max-per-cat",type=int, default=None,      help="override max papers per category kept in DB")
     parser.add_argument("--no-gitpage", action="store_true",         help="skip GitPage generation")
     parser.add_argument("--reset-db",   action="store_true",         help="reset DB and collect fresh")
-    parser.add_argument("--conferences",action="store_true",         help="include conference papers (OpenReview)")
     args = parser.parse_args()
 
     config = load_config(args.config)
+    retention_cfg = config.get("retention", {})
+    max_per_category = (
+        args.max_per_cat
+        if args.max_per_cat is not None
+        else int(retention_cfg.get("max_per_category", 50))
+    )
 
     # ── Step 1: Collect new papers
     print("\n[Step 1] Collecting new papers...")
-    today_papers, hf_map = collect_papers(
-        config, include_conferences=args.conferences, days_back=args.days,
-    )
+    today_papers, hf_map = collect_papers(config, days_back=args.days)
 
     # ── Step 2: Load DB (or reset)
     if args.reset_db:
@@ -1268,12 +1091,12 @@ def main():
         print(f"         Existing DB: {len(db)} papers")
 
     # ── Step 3: Merge new papers into DB + prune overflow
-    max_hf_hot_only = int(config.get("retention", {}).get("hf_hot_only_max", 200))
-    print(f"[Step 3] Merging... (max {args.max_per_cat} per category)")
+    max_hf_hot_only = int(retention_cfg.get("hf_hot_only_max", 200))
+    print(f"[Step 3] Merging... (max {max_per_category} per category)")
     db = merge_into_db(
         db,
         today_papers,
-        max_per_category=args.max_per_cat,
+        max_per_category=max_per_category,
         max_hf_hot_only=max_hf_hot_only,
     )
     print(f"         After merge: {len(db)} papers")

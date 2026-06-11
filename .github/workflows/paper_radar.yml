@@ -21,7 +21,7 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install pyyaml requests "arxiv>=2.1.0"
+        run: pip install -r requirements.txt
 
       - name: Create docs directory
         run: mkdir -p docs
@@ -32,8 +32,7 @@ jobs:
             --config      config.yaml \
             --output      README.md \
             --gitpage     docs/index.md \
-            --db          docs/papers_db.json \
-            --max-per-cat 200
+            --db          docs/papers_db.json
 
       - name: Show DB stats
         run: |
