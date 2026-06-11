@@ -1124,8 +1124,8 @@ def main():
     print(f"[Stats] Multi-category    : {multi_cat}")
     print(f"[Stats] With code links   : {code_count}")
     for cat, cnt in sorted(cat_stats.items()):
-        bar = "█" * int(cnt / args.max_per_cat * 20)
-        print(f"[Stats]   {cat:<18} {cnt:>3}/{args.max_per_cat}  {bar}")
+        bar = "█" * int(cnt / max_per_category * 20) if max_per_category > 0 else ""
+        print(f"[Stats]   {cat:<18} {cnt:>3}/{max_per_category}  {bar}")
 
     # ── Generate README.md
     readme_md = generate_markdown(display_papers, hf_map, config)
