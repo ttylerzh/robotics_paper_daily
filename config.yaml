@@ -1,0 +1,143 @@
+# ─────────────────────────────────────────────────
+# paper_radar config.yaml
+# ─────────────────────────────────────────────────
+# Fully compatible with legacy config.yaml format
+# categories -> category_name -> keywords list
+
+categories:
+
+  Dexterous:
+    keywords:
+      - Dexterous Manipulation
+      - Dexterous hand
+      - Multifingered
+      - Multi-fingered
+      - Anthropomorphic
+      - In-hand Manipulation
+      - Tactile sensing
+      - Bimanual
+      - Manipulation
+
+  Manipulation:
+    keywords:
+      - Robot Manipulation
+      - Robotic Manipulation
+      - Robot Learning
+      - Imitation Learning
+      - Deformable
+      - Teleoperation
+      - Learning from Demonstration
+      - diffusion policy
+      - behavior cloning
+      - contact-rich manipulation
+
+  VLA:
+    keywords:
+      - Vision Language Action
+      - Vision-Language-Action
+      - VLA
+      - robot foundation model
+      - generalist robot policy
+      - OpenVLA
+      - pi0
+
+  Tactile:
+    keywords:
+      - tactile sensing
+      - tactile sensor
+      - GelSight
+      - visuotactile
+      - slip detection
+      - contact sensing
+
+  Sim2Real:
+    keywords:
+      - sim-to-real
+      - sim2real
+      - domain randomization
+      - domain adaptation robot
+      - Isaac Lab
+      - MuJoCo manipulation
+
+  LearnedControl:
+    keywords:
+      - reinforcement learning robot
+      - model predictive control robot
+      - whole-body control
+      - loco-manipulation
+      - locomotion manipulation
+      - humanoid manipulation
+
+
+# ─────────────────────────────────────────────────
+# HuggingFace Daily Papers filter (optional)
+# Papers with any of these keywords in title/abstract are included as HF hot
+# Leave empty to show all HF daily papers
+# ─────────────────────────────────────────────────
+hf_filter_keywords:
+  - robot
+  - manipulation
+  - dexterous
+  - embodied
+  - humanoid
+  - locomotion
+  - tactile
+  - grasping
+  - imitation learning
+  - diffusion policy
+  - reinforcement learning
+  - sim-to-real
+
+
+# ─────────────────────────────────────────────────
+# Conference paper collection (OpenReview)
+# ─────────────────────────────────────────────────
+conferences:
+  enabled: true
+  # Uses combined keywords from all categories for filtering
+  venues:
+    - source: corl
+      label: "CoRL 2025"
+      venue_id: "robot-learning.org/CoRL/2025/Conference"
+    # RSS main papers are not hosted on OpenReview (only archived, <3 papers)
+    # - source: rss
+    #   label: "RSS 2024"
+    #   venue_id: "roboticsfoundation.org/RSS/2024/Conference"
+    - source: neurips
+      label: "NeurIPS 2025"
+      venue_id: "NeurIPS.cc/2025/Conference"
+  max_results_per_venue: 0   # 0 = unlimited (keyword filter reduces count sufficiently)
+
+# ─────────────────────────────────────────────────
+# Collection settings
+# ─────────────────────────────────────────────────
+settings:
+  max_results_per_category: 20    # max arXiv papers per category (latest N, no date filter)
+  hf_daily_limit: 50              # max HF daily papers to fetch
+  arxiv_delay_seconds: 5          # pause before each arXiv request; CI shared IPs often need >3s
+  arxiv_retry_attempts: 4         # retries after HTTP 429 rate limiting
+  arxiv_page_size: 20             # keep API max_results aligned with max_results_per_category
+  arxiv_hf_batch_size: 10         # fetch missing HF arXiv metadata in batches, not one-by-one
+  arxiv_backoff_seconds: [30, 60, 120, 240]
+
+# ─────────────────────────────────────────────────
+# Retention / display limits
+# ─────────────────────────────────────────────────
+retention:
+  hf_hot_only_max: 200             # keep DB from growing with old HF-only papers
+
+display:
+  readme_max_hf_hot: 30
+  readme_max_per_category: 40
+  readme_max_conference_per_venue: 50
+  gitpage_max_hf_hot: 30
+  gitpage_max_per_category: 100
+  gitpage_max_conference_per_venue: 100
+
+# ─────────────────────────────────────────────────
+# GitHub info (for GitPage badges)
+# ─────────────────────────────────────────────────
+user_name: "cold-young"
+repo_name: "robotics_paper_daily"
+
+show_badge: False
