@@ -190,6 +190,32 @@ def _build_query_string(keywords: list[str]) -> str:
     return " OR ".join(parts)
 
 
+def _normalized_terms(cat_cfg: dict, key: str) -> list[str]:
+    return [
+        str(term).strip().lower()
+        for term in cat_cfg.get(key, [])
+        if str(term).strip()
+    ]
+
+
+def _matches_category_filters(text: str, cat_cfg: dict) -> bool:
+    """
+    Optional per-category filters from config.yaml.
+
+    require_keywords narrows broad topics like RL to a domain context.
+    exclude_keywords can be added later for hard negative terms if needed.
+    """
+    text = text.lower()
+    required = _normalized_terms(cat_cfg, "require_keywords")
+    excluded = _normalized_terms(cat_cfg, "exclude_keywords")
+
+    if required and not any(term in text for term in required):
+        return False
+    if excluded and any(term in text for term in excluded):
+        return False
+    return True
+
+
 def fetch_arxiv(
     keywords: list[str],
     max_results: int = 20,
@@ -376,6 +402,7 @@ def merge_into_db(
     new_papers: dict[str, Paper],
     max_per_category: int = 50,
     max_hf_hot_only: int = 200,
+    category_configs: dict[str, dict] | None = None,
 ) -> dict[str, Paper]:
     """
     Merge new papers into existing DB, then prune oldest papers
@@ -412,7 +439,24 @@ def merge_into_db(
         else:
             merged[pid] = new_p
 
-    # 2. Enforce per-category max (prune oldest)
+    # 2. Re-apply config filters to cumulative papers. This keeps old DB rows
+    #    from retaining a category after that category is narrowed in config.
+    if category_configs:
+        papers_to_remove_after_filter: set[str] = set()
+        for pid, paper in merged.items():
+            text = f"{paper.title} {paper.abstract}"
+            paper.matched_categories = [
+                cat for cat in paper.matched_categories
+                if cat == "HF-Hot"
+                or _matches_category_filters(text, category_configs.get(cat, {}))
+            ]
+            if not paper.matched_categories:
+                papers_to_remove_after_filter.add(pid)
+
+        for pid in papers_to_remove_after_filter:
+            del merged[pid]
+
+    # 3. Enforce per-category max (prune oldest)
     #    Collect all categories (exclude HF-Hot: changes daily)
     all_cats: set[str] = set()
     for p in merged.values():
@@ -443,7 +487,7 @@ def merge_into_db(
     for pid in papers_to_remove:
         del merged[pid]
 
-    # 3. Prune stale HF-only papers. These arrive daily and otherwise dominate
+    # 4. Prune stale HF-only papers. These arrive daily and otherwise dominate
     #    the DB while not belonging to a long-lived robotics category.
     if max_hf_hot_only > 0:
         hf_only_papers = [
@@ -506,9 +550,9 @@ def collect_papers(config: dict, **kwargs) -> tuple[
     dict[str, Paper],   # all papers (deduped), keyed by paper_id
     dict[str, int],     # hf_map
 ]:
-    categories: dict[str, list[str]] = {}
+    categories: dict[str, dict] = {}
     for cat_name, cat_cfg in config.get("categories", {}).items():
-        categories[cat_name] = cat_cfg.get("keywords", [])
+        categories[cat_name] = cat_cfg or {}
 
     settings = config.get("settings", {})
     max_results_per_category = int(settings.get("max_results_per_category", 20))
@@ -542,7 +586,8 @@ def collect_papers(config: dict, **kwargs) -> tuple[
     # 2. arXiv per category
     all_papers: dict[str, Paper] = {}
 
-    for cat_name, keywords in categories.items():
+    for cat_name, cat_cfg in categories.items():
+        keywords = cat_cfg.get("keywords", [])
         print(f"[arXiv] Fetching category '{cat_name}' with {len(keywords)} keywords...")
         _sleep_with_jitter(arxiv_delay_seconds)
 
@@ -556,12 +601,16 @@ def collect_papers(config: dict, **kwargs) -> tuple[
         )
         print(f"  → {len(raw)} papers before dedup")
 
+        kept_count = 0
         for r in raw:
             aid = r["arxiv_id"]
             pid = make_paper_id("arxiv", aid)
 
             # Check which keywords matched
             text = (r["title"] + " " + r["abstract"]).lower()
+            if not _matches_category_filters(text, cat_cfg):
+                continue
+            kept_count += 1
             matched = [kw for kw in keywords if kw.lower() in text]
 
             if pid not in all_papers:
@@ -584,6 +633,8 @@ def collect_papers(config: dict, **kwargs) -> tuple[
             for kw in matched:
                 if kw not in p.matched_keywords:
                     p.matched_keywords.append(kw)
+        if kept_count != len(raw):
+            print(f"  → {kept_count} papers after category filters")
 
     # 3. Assign HF rank (hf_map is keyed by arxiv_id)
     for pid, paper in all_papers.items():
@@ -1098,6 +1149,7 @@ def main():
         today_papers,
         max_per_category=max_per_category,
         max_hf_hot_only=max_hf_hot_only,
+        category_configs=config.get("categories", {}),
     )
     print(f"         After merge: {len(db)} papers")
 
