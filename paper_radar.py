@@ -916,6 +916,8 @@ def generate_markdown(
     for cat_name in cat_names:
         anchor = cat_name.lower().replace(" ", "-")
         lines.append(f"## {cat_name}\n")
+        category_page = f"./docs/{_slugify(cat_name)}.md"
+        lines.append(f"[View the complete {cat_name} paper list]({category_page})\n")
 
         cat_papers = _limit_papers(
             sorted(
