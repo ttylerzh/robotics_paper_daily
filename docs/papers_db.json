@@ -6708,48 +6708,6 @@
     "source": "arxiv",
     "venue": ""
   },
-  "arxiv:2606.18558": {
-    "arxiv_id": "2606.18558",
-    "title": "MolmoMotion: Forecasting Point Trajectories in 3D with Language Instruction",
-    "abstract": "Motion forecasting is central to visual intelligence: agents must anticipate how objects will move in order to plan actions, reason about physical interactions, and synthesize realistic futures. We argue that 3D points in world coordinates provide a general representation that is class-agnostic, view-stable, compact, and directly useful for downstream tasks. We formalize the task of goal-conditioned 3D point motion forecasting: given a short visual history, a set of 3D query points on an object of interest, and a language description of the intended goal, the model predicts the future 3D trajectory of each point. We introduce a full stack to study this task at scale: (1) MolmoMotion-1M is a large corpus of action-described, object-grounded 3D point trajectories annotated from 1.16M unconstrained videos; (2) PointMotionBench is a human-verified benchmark spanning 111 object categories and 61 motion types; and (3) MolmoMotion is a general motion forecasting model that supports both autoregressive coordinate prediction and flow-matching-based trajectory generation. MolmoMotion accurately predicts diverse motion patterns with different language instructions, and significantly outperforms existing motion prediction baselines on PointMotionBench. Finally, we show that the learned 3D motion prior transfers well to downstream applications: it improves training efficiency and generalization for robot manipulation, and its predicted trajectories provide effective motion guidance for generative models to synthesize videos with more realistic object motion.",
-    "authors": "Jianing Zhang, Chenhao Zheng, Yajun Yang, Max Argus, Rustin Soraki, Winson Han, Taira Anderson, Chun-Liang Li, Shuo Liu, Jiafei Duan, Zhongzheng Ren, Jieyu Zhang, Ranjay Krishna",
-    "publish_date": "2026-06-17",
-    "arxiv_url": "http://arxiv.org/abs/2606.18558",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [],
-    "matched_categories": [
-      "HF-Hot"
-    ],
-    "hf_rank": 47,
-    "score": 26,
-    "paper_id": "arxiv:2606.18558",
-    "source": "arxiv",
-    "venue": ""
-  },
-  "arxiv:2606.18717": {
-    "arxiv_id": "2606.18717",
-    "title": "Morpheus: A Morphology-Aware Neural Tokenizer and Word Embedder for Turkish",
-    "abstract": "Turkish is agglutinative: meaning is carried by morphemes, yet the subword tokenizers that drive modern language models split words by corpus statistics, fragmenting semantically loaded suffixes and -- in the case of WordPiece and rule-based analyzers -- failing to decode their output back to the original text. This paper presents \\textbf{Morpheus}, a neural morpheme-boundary model for Turkish that is at once a lossless, morphology-aware tokenizer and a word-embedding producer. A differentiable Poisson-binomial dynamic program turns per-character boundary probabilities into soft morpheme memberships during training and exact segments at inference, with no string normalization, so $\\mathrm{decode}(\\mathrm{encode}(w)) = w$ holds by construction. Because the model is neural, the same forward pass that tokenizes also emits a structured word embedding. Among reversible tokenizers -- the only ones valid for generation -- Morpheus attains the lowest bits-per-character ($1.425$), roughly doubles the gold morphological alignment of the subword family (MorphScore macro-F1 $0.61$ vs.\\ ${\\sim}0.32$), and uses ${\\sim}19\\%$ less GPU memory than 64K-vocabulary subword tokenizers. As an embedder, frozen Morpheus vectors lead on lexical retrieval (root-family MAP $0.85$) and same-root verification (ROC-AUC $1.00$), surpassing the multilingual retriever BGE-M3 and BERTurk; on context- and inflection-dependent tasks (NER, case/number probing) the heavier contextual encoders remain ahead -- a trade-off we attribute to Morpheus's root-centric geometry. Code: https://github.com/lonewolf-rd/TurkishMorpheus; model: https://huggingface.co/lonewolflab/Morpheus-TR-50K; interactive demo: https://huggingface.co/spaces/lonewolflab/morpheus-tr-demo.",
-    "authors": "Tolga Şakar",
-    "publish_date": "2026-06-17",
-    "arxiv_url": "http://arxiv.org/abs/2606.18717",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [],
-    "matched_categories": [
-      "HF-Hot"
-    ],
-    "hf_rank": 48,
-    "score": 17,
-    "paper_id": "arxiv:2606.18717",
-    "source": "arxiv",
-    "venue": ""
-  },
   "arxiv:2606.20549": {
     "arxiv_id": "2606.20549",
     "title": "Generating Robot Hands from Human Demonstrations",
@@ -8249,27 +8207,6 @@
     "hf_rank": 49,
     "score": 29,
     "paper_id": "arxiv:2606.20527",
-    "source": "arxiv",
-    "venue": ""
-  },
-  "arxiv:2606.18829": {
-    "arxiv_id": "2606.18829",
-    "title": "GateMem: Benchmarking Memory Governance in Multi-Principal Shared-Memory Agents",
-    "abstract": "Memory benchmarks for LLM agents largely assume single-user settings, leaving shared assistants for hospitals, workplaces, campuses, and households understudied. In these deployments, multiple principals write to a common memory pool and query it under different roles, scopes, and relationships, so memory quality requires governance as well as recall. We introduce GateMem, a benchmark for multi-principal shared-memory agents. GateMem jointly evaluates utility for legitimate long-horizon requests with state updates, access control across contextual authorization boundaries, and agent-facing active forgetting after explicit deletion requests. It spans medical, office, education, and household domains, with long-form multi-party episodes, incremental memory injection, hidden checkpoints, structured judging, and leak-target annotations. Across diverse baselines and backbone models, no method simultaneously achieves strong utility, robust access control, and reliable forgetting. Long-context prompting often yields the best governance score at high token cost, while retrieval-based and external-memory methods reduce cost yet still leak unauthorized or deleted information. These results show current memory agents remain far from reliable shared institutional deployment.",
-    "authors": "Zhe Ren, Yibo Yang, Yimeng Chen, Zijun Zhao, Benshuo Fu, Zhihao Shu, Bingjie Zhang, Yangyang Xu, Dandan Guo, Shuicheng Yan",
-    "publish_date": "2026-06-17",
-    "arxiv_url": "http://arxiv.org/abs/2606.18829",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [],
-    "matched_categories": [
-      "HF-Hot"
-    ],
-    "hf_rank": 7,
-    "score": 23,
-    "paper_id": "arxiv:2606.18829",
     "source": "arxiv",
     "venue": ""
   },
@@ -10098,27 +10035,6 @@
     "source": "arxiv",
     "venue": ""
   },
-  "arxiv:2606.18648": {
-    "arxiv_id": "2606.18648",
-    "title": "Deep Research in Physical Sciences: A Multi-Agent Framework and Comprehensive Benchmark",
-    "abstract": "Deep research agents are Large Language Model (LLM)-based systems designed for autonomous, multi-step scientific reasoning, and they hold immense potential for accelerating research in the physical sciences. However, comprehensive and in-depth evaluations of their capabilities within this domain remain lacking. To address this gap, we introduce PhySciBench, a benchmark highly relevant to physical science research, comprising 200 expert-curated questions, balanced between physics and chemistry, across six task categories that reflect real-world scientific workflows. Evaluations of state-of-the-art models and agent systems on PhySciBench reveal limited performance; even the strongest baseline, Gemini Deep Research, achieves an accuracy of only 33.5%. Analysis of failure cases identifies three recurrent deficiencies: fragility in extended reasoning chains, limited knowledge transfer across steps, and a lack of physics-grounded self-verification. Motivated by these findings, we develop DelveAgent, a modular multi-agent framework equipped with an adaptive planning loop, dual-granularity memory, and a hierarchical physics-grounded reflection mechanism. Across four scientific benchmarks, DelveAgent improves accuracy by up to 7.5 percentage points while reducing inference costs to approximately one-third of the strongest baseline. These results establish the significance of PhySciBench as a critical benchmark for evaluating AI systems in the physical sciences and demonstrate that architectural specialization can effectively enhance the reliability of autonomous scientific research.Our data andcode are publicly available athttps://github.com/yigengjiang/physci-deepresearch.",
-    "authors": "Yigeng Jiang, Tengchao Yang, Taoyong Cui, Jiaxing Wan, Yuan Wang, Weida Wang, Zhiyu Liu, Chuyi Peng, Binzhao Luo, Maoli Gao, Huaihai Huang, Yuqianer Zeng, Ziyang Zheng, Dongchen Huang, Chao Chen, Zichao Liu, Weiping Shen, Shuchen Pu, Siyu Zhou, Runmin Ma, Yusong Hu, Fei Chao, Bo Zhang, Xiawu Zheng, Zifu Wang, Lei Bai, Yunqi Cai, Shufei Zhang",
-    "publish_date": "2026-06-17",
-    "arxiv_url": "http://arxiv.org/abs/2606.18648",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [],
-    "matched_categories": [
-      "HF-Hot"
-    ],
-    "hf_rank": 44,
-    "score": 0,
-    "paper_id": "arxiv:2606.18648",
-    "source": "arxiv",
-    "venue": ""
-  },
   "arxiv:2606.19827": {
     "arxiv_id": "2606.19827",
     "title": "When, Where, and How: Adaptive Binning for Tabular Self-Supervised Learning",
@@ -10874,27 +10790,6 @@
     "hf_rank": 24,
     "score": 17,
     "paper_id": "arxiv:2606.24888",
-    "source": "arxiv",
-    "venue": ""
-  },
-  "arxiv:2606.18831": {
-    "arxiv_id": "2606.18831",
-    "title": "Beyond Reward Engineering: A Data Recipe for Long-Context Reinforcement Learning",
-    "abstract": "Long-context reasoning is an essential capability for large language models, particularly when they are deployed as autonomous agents that must reason over lengthy trajectories. Reinforcement learning (RL) has recently emerged as a dominant paradigm for improving this ability, yet existing work largely focuses on reward engineering while diverse training data remains scarce. We revisit this problem from a data-centric perspective and show that a simple yet effective data recipe alone, paired with a minimal outcome-based GRPO setup, suffices to substantially improve long-context reasoning. Our recipe targets three complementary task families -- retrieval, multi-evidence synthesis, and reasoning -- for which we construct and curate eight datasets totaling ~14K examples. Experiments on three models (Qwen3-4B/8B/30B-A3B) yield average gains of +7.2/+3.2/+6.4 points across seven long-context benchmarks, surpassing prior RL training sets. We further demonstrate that these gains transfer to agentic tasks, where continuing RL training on an agent-tuned model with our data recipe improves GAIA by +4.8 and BrowseComp by +7.0 points. We will release our datasets to facilitate future research.",
-    "authors": "Xiaoyue Xu, Sikui Zhang, Xiaorong Wang, Xu Han, Chaojun Xiao",
-    "publish_date": "2026-06-17",
-    "arxiv_url": "http://arxiv.org/abs/2606.18831",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [],
-    "matched_categories": [
-      "HF-Hot"
-    ],
-    "hf_rank": 25,
-    "score": 16,
-    "paper_id": "arxiv:2606.18831",
     "source": "arxiv",
     "venue": ""
   },
@@ -32467,7 +32362,7 @@
       "Dexterous",
       "HF-Hot"
     ],
-    "hf_rank": 9,
+    "hf_rank": 15,
     "score": 10,
     "paper_id": "arxiv:2607.12800",
     "source": "arxiv",
@@ -32605,7 +32500,7 @@
       "Dexterous",
       "HF-Hot"
     ],
-    "hf_rank": 44,
+    "hf_rank": 50,
     "score": 0,
     "paper_id": "arxiv:2607.12395",
     "source": "arxiv",
@@ -33201,7 +33096,7 @@
     "matched_categories": [
       "RL"
     ],
-    "hf_rank": 41,
+    "hf_rank": 47,
     "score": 0,
     "paper_id": "arxiv:2607.13960",
     "source": "arxiv",
@@ -34363,7 +34258,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 29,
+    "hf_rank": 35,
     "score": 29,
     "paper_id": "arxiv:2607.13250",
     "source": "arxiv",
@@ -34384,7 +34279,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 31,
+    "hf_rank": 37,
     "score": 27,
     "paper_id": "arxiv:2607.13104",
     "source": "arxiv",
@@ -34405,7 +34300,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 33,
+    "hf_rank": 39,
     "score": 25,
     "paper_id": "arxiv:2607.13027",
     "source": "arxiv",
@@ -34426,7 +34321,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 34,
+    "hf_rank": 40,
     "score": 24,
     "paper_id": "arxiv:2607.13705",
     "source": "arxiv",
@@ -34447,7 +34342,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 35,
+    "hf_rank": 41,
     "score": 23,
     "paper_id": "arxiv:2607.13125",
     "source": "arxiv",
@@ -34468,7 +34363,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 36,
+    "hf_rank": 42,
     "score": 22,
     "paper_id": "arxiv:2607.12752",
     "source": "arxiv",
@@ -34489,7 +34384,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 37,
+    "hf_rank": 43,
     "score": 21,
     "paper_id": "arxiv:2607.11523",
     "source": "arxiv",
@@ -34510,7 +34405,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 38,
+    "hf_rank": 44,
     "score": 20,
     "paper_id": "arxiv:2607.07702",
     "source": "arxiv",
@@ -34531,7 +34426,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 39,
+    "hf_rank": 45,
     "score": 19,
     "paper_id": "arxiv:2607.12747",
     "source": "arxiv",
@@ -34552,7 +34447,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 40,
+    "hf_rank": 46,
     "score": 18,
     "paper_id": "arxiv:2607.12000",
     "source": "arxiv",
@@ -34573,7 +34468,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 42,
+    "hf_rank": 48,
     "score": 16,
     "paper_id": "arxiv:2607.05910",
     "source": "arxiv",
@@ -34594,7 +34489,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 43,
+    "hf_rank": 49,
     "score": 15,
     "paper_id": "arxiv:2607.13124",
     "source": "arxiv",
@@ -35793,7 +35688,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 1,
+    "hf_rank": 7,
     "score": 29,
     "paper_id": "arxiv:2607.15058",
     "source": "arxiv",
@@ -35814,7 +35709,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 2,
+    "hf_rank": 8,
     "score": 28,
     "paper_id": "arxiv:2607.10995",
     "source": "arxiv",
@@ -35835,7 +35730,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 3,
+    "hf_rank": 9,
     "score": 27,
     "paper_id": "arxiv:2607.14952",
     "source": "arxiv",
@@ -35856,7 +35751,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 4,
+    "hf_rank": 10,
     "score": 26,
     "paper_id": "arxiv:2607.14660",
     "source": "arxiv",
@@ -35877,7 +35772,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 5,
+    "hf_rank": 11,
     "score": 25,
     "paper_id": "arxiv:2607.10463",
     "source": "arxiv",
@@ -35898,7 +35793,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 6,
+    "hf_rank": 12,
     "score": 24,
     "paper_id": "arxiv:2607.03065",
     "source": "arxiv",
@@ -35919,7 +35814,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 7,
+    "hf_rank": 13,
     "score": 23,
     "paper_id": "arxiv:2607.15277",
     "source": "arxiv",
@@ -35940,7 +35835,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 8,
+    "hf_rank": 14,
     "score": 22,
     "paper_id": "arxiv:2607.14076",
     "source": "arxiv",
@@ -35961,7 +35856,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 10,
+    "hf_rank": 16,
     "score": 20,
     "paper_id": "arxiv:2607.13491",
     "source": "arxiv",
@@ -35982,7 +35877,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 11,
+    "hf_rank": 17,
     "score": 19,
     "paper_id": "arxiv:2607.14935",
     "source": "arxiv",
@@ -36003,7 +35898,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 12,
+    "hf_rank": 18,
     "score": 18,
     "paper_id": "arxiv:2607.14189",
     "source": "arxiv",
@@ -36024,7 +35919,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 13,
+    "hf_rank": 19,
     "score": 17,
     "paper_id": "arxiv:2607.14202",
     "source": "arxiv",
@@ -36045,7 +35940,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 14,
+    "hf_rank": 20,
     "score": 16,
     "paper_id": "arxiv:2607.13399",
     "source": "arxiv",
@@ -36066,7 +35961,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 15,
+    "hf_rank": 21,
     "score": 15,
     "paper_id": "arxiv:2607.13188",
     "source": "arxiv",
@@ -36087,7 +35982,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 16,
+    "hf_rank": 22,
     "score": 14,
     "paper_id": "arxiv:2607.14749",
     "source": "arxiv",
@@ -36108,7 +36003,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 17,
+    "hf_rank": 23,
     "score": 13,
     "paper_id": "arxiv:2607.15257",
     "source": "arxiv",
@@ -36129,7 +36024,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 18,
+    "hf_rank": 24,
     "score": 12,
     "paper_id": "arxiv:2607.15207",
     "source": "arxiv",
@@ -36150,7 +36045,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 19,
+    "hf_rank": 25,
     "score": 11,
     "paper_id": "arxiv:2607.15273",
     "source": "arxiv",
@@ -36171,7 +36066,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 20,
+    "hf_rank": 26,
     "score": 10,
     "paper_id": "arxiv:2607.14431",
     "source": "arxiv",
@@ -36192,7 +36087,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 24,
+    "hf_rank": 30,
     "score": 6,
     "paper_id": "arxiv:2607.13921",
     "source": "arxiv",
@@ -36213,7 +36108,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 25,
+    "hf_rank": 31,
     "score": 5,
     "paper_id": "arxiv:2607.09786",
     "source": "arxiv",
@@ -36234,7 +36129,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 26,
+    "hf_rank": 32,
     "score": 4,
     "paper_id": "arxiv:2607.06701",
     "source": "arxiv",
@@ -36255,7 +36150,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 27,
+    "hf_rank": 33,
     "score": 3,
     "paper_id": "arxiv:2607.12477",
     "source": "arxiv",
@@ -36276,9 +36171,114 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 28,
+    "hf_rank": 34,
     "score": 2,
     "paper_id": "arxiv:2607.13431",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2607.09061": {
+    "arxiv_id": "2607.09061",
+    "title": "On Locality and Length Generalization in Visual Reasoning",
+    "abstract": "A striking feature of the human visual system is that it ingests visual information through a series of local foveated glimpses, rather than a single global computation. This makes human vision distinctly different from most popular computer vision models in use today, which input images globally and in a single shot. A natural question therefore is whether local, sequential vision models may provide any fundamental computational benefits in addition to being biologically more plausible than global models. In this work, we investigate this question from the perspective of visual state tracking and length generalization. Inspired by recent studies of length generalization in language models, we study the behavior of vision models trained on simple vision tasks that require the aggregation of local information across an image. Our experiments reveal that, similar to language models, vision models can learn to exploit global shortcuts and thereby fail to generalize over task length or complexity. We also show that recurrent vision policies based on strictly local perception can mitigate these failures, thereby allowing models to generalize on these tasks. Our results show that local attention may be an essential overlooked requirement for robust compositional generalization.",
+    "authors": "Pulkit Madan, Sanjay Haresh, Reza Ebrahimi, Sunny Panchal, Apratim Bhattacharyya, Roland Memisevic",
+    "publish_date": "2026-07-10",
+    "arxiv_url": "http://arxiv.org/abs/2607.09061",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "HF-Hot"
+    ],
+    "hf_rank": 1,
+    "score": 29,
+    "paper_id": "arxiv:2607.09061",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2607.12227": {
+    "arxiv_id": "2607.12227",
+    "title": "Rethinking the Evaluation of Harness Evolution for Agents",
+    "abstract": "We revisit the evaluation of automatic harness evolution for LLM agents. Existing harness evolution methods use unit test cases to search for harness configurations and then report final performance on the same public benchmark. This protocol raises two fundamental concerns. First, harness evolution is itself an iterative search procedure that repeatedly evaluates and revises candidate harnesses using task feedback. As in agentic test-time scaling, it should therefore be compared with simple task-level search baselines under matched feedback and inference budgets to determine whether its gains arise from improved harness design or from additional search alone. Second, because the search and the final evaluation share the same benchmark, the reported gains risk overfitting to that specific task set. To address these concerns, we conduct an extensive evaluation comparing harness evolution with simple test-time scaling and discovery baselines under comparable feedback and inference budgets, and also evaluate evolved harnesses on held-out tasks to assess whether the discovered improvements generalize. Experiments on Terminal-Bench 2.1 with GPT-5.4 and Claude Opus 4.6 show that automatic harness evolution does not consistently outperform simple test-time scaling methods and exhibits limited generalization. Our results raise important questions about the effectiveness of automatic harness evolution and highlight the need for fairer evaluation protocols and benchmarks for automatic harness design. Our code is available at https://github.com/rethinking-harness-evolution.",
+    "authors": "Yike Wang, Huaisheng Zhu, Zhengyu Hu, Yige Yuan, Zhengyu Chen, Shakti Senthil, Hannaneh Hajishirzi, Yulia Tsvetkov, Pradeep Dasigi, Teng Xiao",
+    "publish_date": "2026-07-14",
+    "arxiv_url": "http://arxiv.org/abs/2607.12227",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "HF-Hot"
+    ],
+    "hf_rank": 2,
+    "score": 28,
+    "paper_id": "arxiv:2607.12227",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2607.14387": {
+    "arxiv_id": "2607.14387",
+    "title": "Chat2Scenic: An Iterative RAG-Based Framework for Scenario Generation in Autonomous Driving",
+    "abstract": "Validating autonomous driving systems requires diverse, regulation-compliant test scenarios. In simulation-based testing, scenarios are defined as executable scripts. Yet automatically generating such scripts from regulatory descriptions remains an open challenge, and existing approaches face fundamental trade-offs. Retrieval-assemble methods achieve reasonable compilation rates but lack scalability, whereas retrieval-based full-script generation suffers from low compilation success rates. We present Chat2Scenic, the first iterative retrieval-augmented framework to generate scenario scripts in Domain Specific Language (DSL). Specifically, Chat2Scenic provides a chatbot interface that supports interactive scenario refinement and integrates Retrieval-augmented Generation (RAG) to ground scenario generation in regulatory knowledge and DSL syntax. Furthermore, we propose an open benchmark for scenario generation comprising 123 scenarios from various regulations, including NHTSA and United Nations Vehicle Regulations, as well as other sources. Extensive evaluation with State-of-the-Art (SOTA) Large Language Models (LLMs) demonstrates that Chat2Scenic achieves 76.42% Compilation Success Rate (CSR) and 58.17% Framework Accuracy (FA), outperforming existing methods (Retrieval Assemble with 30.08% CSR, 11.03% FA and Retrieval full script generation with 16.26% CSR, 10.86% FA). To facilitate future research, we release our code as open source at https://github.com/TUM-AVS/chat2scenic.",
+    "authors": "Yuan Gao, Wenting Miao, Mattia Piccinini, Haoyu Wang, Qunying Song, Johannes Betz",
+    "publish_date": "2026-07-15",
+    "arxiv_url": "http://arxiv.org/abs/2607.14387",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "HF-Hot"
+    ],
+    "hf_rank": 3,
+    "score": 27,
+    "paper_id": "arxiv:2607.14387",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2607.15278": {
+    "arxiv_id": "2607.15278",
+    "title": "Hierarchical Denoising For Multi-Step Visual Reasoning",
+    "abstract": "Video models are evolving into vision foundation models, yet they still lack human-like multi-step reasoning. Streaming autoregressive diffusion models are efficient but limited in reasoning, while bidirectional diffusion enables global revision with high inference costs due to dense frame-level denoising. Both paradigms struggle to achieve logical consistency and low-latency streaming for complex reasoning tasks. We propose HDR (Hierarchical Denoising for Visual Reasoning), a unified framework that integrates hierarchical latents into causal video generation for multi-step reasoning. HDR organizes video latents into a tree-structured hierarchy, enabling coarse-to-fine reasoning before streaming output. Coarse denoising layers preserve uncertain hypotheses for global planning, while finer layers progressively refine them into concrete visual states. A sparse hierarchical attention pattern (SHAP) further reduces temporal attention costs. We introduce a level-stratified multi-step video reasoning benchmark with out-of-distribution cases, covering six tasks: maze navigation, Tower of Hanoi, one-line drawing, sliding puzzle, Sokoban, and water pouring. Compared with streaming autoregressive diffusion baselines, HDR improves success from 34.22 to 60.29 (76.2% relative gain) and increases average progress from 76.00 to 89.56, demonstrating more consistent reasoning trajectories. HDR maintains low-latency streaming at 0.70 seconds per latent, achieving 54.2 times faster inference than bidirectional diffusion. It also retains 82.9% of full-data performance with only 2% training data, compared with 52.0% for bidirectional diffusion. Real-world robot experiments further demonstrate HDR's potential for physical interaction and world modeling. Project demo: https://hierarchical-diffusion-reasoning.github.io/.",
+    "authors": "Zezhong Qian, Xiaowei Chi, Chak-Wing Mak, Tianze Zhou, Ruibin Yuan, Yuhan Rui, Hengzhe Sun, Zhuoqun Wu, Yuming Li, Siyuan Qian, Sirui Han, Shanghang Zhang",
+    "publish_date": "2026-07-16",
+    "arxiv_url": "http://arxiv.org/abs/2607.15278",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "HF-Hot"
+    ],
+    "hf_rank": 4,
+    "score": 26,
+    "paper_id": "arxiv:2607.15278",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2607.14187": {
+    "arxiv_id": "2607.14187",
+    "title": "RxBrain: Embodied Cognition Foundation Model with Joint Language-Visual Reasoning and Imagination",
+    "abstract": "Embodied cognition requires agents to connect high-level task reasoning with the physical states to be achieved. We introduce Hy-Embodied-RxBrain, an embodied cognition foundation model with joint language-visual reasoning and imagination. Unlike vision-language models that emphasize scene understanding and textual decision making, or generative world models that mainly predict future visual states, RxBrain represents embodied plans in a single planning sequence where language and visual imagination play complementary roles. Language provides the abstract structure of a plan, including task decomposition, planning primitives, constraints, temporal order, and decision logic, while visual imagination grounds this structure through world state prediction and joint subgoal planning, associating each planning step with intermediate and final physical states. RxBrain adopts a unified multimodal Mixture-of-Transformers architecture that supports language, image, and video understanding and generation within one model. To train this capability, we build an automatic pipeline that converts embodied videos into joint text-visual planning supervision by decomposing videos into planning steps and aligning them with visual state transitions. We further introduce RxBrain-Bench to evaluate whether models can represent embodied plans through joint textual and visual components rather than separate understanding or generation. Experiments show that RxBrain maintains embodied understanding and generation abilities, and produces plans with coupled textual reasoning, world state prediction, and joint subgoal planning. We also extend RxBrain to continuous robot action generation, where it shows promising real-robot performance without large-scale action-data pretraining. These results provide an initial step toward foundation models for embodied cognition.",
+    "authors": "Haotian Liang, Mingkang Chen, Yufei Huang, Yuchun Guo, Xiaomeng Zhu, Xiangli Shi, Kaixuan Wang, Yunxuan Mao, Weijie Zhou, Ling Chen, Shirong Zeng, Yueyu Long, Yuchen Si, Yajuan Zhu, Xingyu Zhou, Minghui Wang, Wanjia He, Xin Yang, Lingzhu Xiang, Zhiqing Liu, Bohan Ma, Xiran Huang, Tianshuo Yang, Zhiheng Liu, Xuantang Xiong, Zisheng Lu, Ping Luo, Yao Mu, Han Hu, Zhengyou Zhang",
+    "publish_date": "2026-07-15",
+    "arxiv_url": "http://arxiv.org/abs/2607.14187",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "HF-Hot"
+    ],
+    "hf_rank": 5,
+    "score": 25,
+    "paper_id": "arxiv:2607.14187",
     "source": "arxiv",
     "venue": ""
   }
