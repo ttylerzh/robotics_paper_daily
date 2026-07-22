@@ -8610,27 +8610,6 @@
     "source": "arxiv",
     "venue": ""
   },
-  "arxiv:2606.21638": {
-    "arxiv_id": "2606.21638",
-    "title": "Toward Open Weight Models Without Risks: Separating Public and Private Capabilities in LLMs",
-    "abstract": "Open-weight Large Language Models (LLMs) enable scientific progress and broad deployment. However, they make it difficult to control access to sensitive capabilities. Current practice either suppresses dangerous capabilities before release or mediates access through closed services that use specialized model variants, input/output monitors, and API permissions. The former is susceptible to jailbreaks while sacrificing capability for all users to mitigate the risks posed by a few, and the latter is fundamentally incompatible with open-weight release. In this paper, we propose Tiered Language Models (TLMs), where a single set of released weights supports multiple capability levels. In its default public configuration, a TLM behaves as a conventional LLM. A compact secret key specifies a permutation over a small parameter subset, inducing an alternative computation graph over the same weights that exposes additional capabilities. We develop a training protocol that jointly pretrains both configurations from scratch, then fine-tunes the keyed configuration on private data with regularization to preserve the public model's behavior. We pretrain 180M- and 650M-parameter TLMs and demonstrate that the keyed configuration can acquire a new language, gain instruction-following ability, and memorize private factual knowledge, whereas the public configuration exhibits none of these capabilities. Moreover, we show that our approach extends naturally to multiple hierarchical tiers. Because authorization operates on the model's weight structure rather than in the input space, the mechanism resists fine-tuning-based extraction and partial key compromise. In general, TLMs take a step toward reconciling open-weight release with selective capability control.",
-    "authors": "Charbel El Feghali, Arkil Patel, Nicholas Meade, Spandana Gella, Verna Dankers, Siva Reddy",
-    "publish_date": "2026-06-19",
-    "arxiv_url": "http://arxiv.org/abs/2606.21638",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [],
-    "matched_categories": [
-      "HF-Hot"
-    ],
-    "hf_rank": 41,
-    "score": 25,
-    "paper_id": "arxiv:2606.21638",
-    "source": "arxiv",
-    "venue": ""
-  },
   "arxiv:2606.23514": {
     "arxiv_id": "2606.23514",
     "title": "Arbor: Explicit Geometric Conditioning for Controllable 3D Asset Generation",
@@ -8649,48 +8628,6 @@
     "hf_rank": 42,
     "score": 24,
     "paper_id": "arxiv:2606.23514",
-    "source": "arxiv",
-    "venue": ""
-  },
-  "arxiv:2606.20945": {
-    "arxiv_id": "2606.20945",
-    "title": "Grouped Query Experts: Mixture-of-Experts on GQA Self-Attention",
-    "abstract": "Self-attention is central to Transformer performance and is often the most expensive part of the Transformer at long context lengths because its pairwise token interactions scale quadratically with sequence length. Standard dense attention also applies the same set of attention heads to every token regardless of token difficulty or information content. This uniform activation can waste compute, especially as sequences grow longer and attention cost increases rapidly. We propose Grouped Query Experts (GQE), a mixture-of-experts layer on top of grouped-query attention (GQA). Within each GQA group, a router selects k query-head experts per token while all key-value (KV) heads remain dense and unchanged. Thus, GQE keeps the KV cache benefits of GQA and reduces only the active query-head computation. On a fixed 30B token budget at the 250M parameter scale, GQE matches the all-active GQA baseline in downstream accuracy while activating half the query heads per token.",
-    "authors": "Vishesh Tripathi, Abhay Kumar",
-    "publish_date": "2026-06-18",
-    "arxiv_url": "http://arxiv.org/abs/2606.20945",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [],
-    "matched_categories": [
-      "HF-Hot"
-    ],
-    "hf_rank": 43,
-    "score": 23,
-    "paper_id": "arxiv:2606.20945",
-    "source": "arxiv",
-    "venue": ""
-  },
-  "arxiv:2606.21627": {
-    "arxiv_id": "2606.21627",
-    "title": "Counsel: A Meta-Evaluation Dataset for Agentic Tasks",
-    "abstract": "As agentic systems tackle increasingly complex multi-step tasks, evaluating their trajectories presents a major bottleneck - human annotation of a single trajectory on popular agentic benchmarks can take hours, making it difficult to scale evaluations for measuring performance or curating training data. This has driven widespread reliance on automated approaches such as LLM-as-a-judge (LLMJ) to critique agents at the process and outcome-levels at scale, however, the soundness of LLMJ critiques often goes unmeasured. Here, we introduce Counsel, the first public dataset of meta-evaluations for agentic tasks. Counsel consists of process-level critiques from open-weight LLMJs on two agent benchmarks: tau-bench (customer support agents) and DA-Code (coding agents), and human meta-evaluations of these critiques. Human annotators label critiques on each flagged error as \"spot on\", \"correct location but poor reasoning\", or \"should not have flagged\", achieving reliable inter-annotator agreement (Krippendorff's alpha of 0.78). The resulting dataset stratifies LLMJ critiques by human alignment across both error location within a trajectory and reasoning quality, serving as valuable data to calibrate, improve, or train LLMJs for agents. Comparing open-weight judges, we find that more capable judge models and more reasoning effort both enabled improved human agreement, with the strongest judge reaching ~88% agreement on location and ~65% on reasoning. Counsel is generated using open-weight models and is permissively licensed for broad community use, which we hope will enable rigorous study and improved alignment of LLM-based evaluators for agentic systems.",
-    "authors": "Sashank Pisupati, Henry Broomfield, Eujeong Choi, Antonia Calvi, Charlie Wang, Roman Engeler, Max Bartolo, Patrick Lewis",
-    "publish_date": "2026-06-19",
-    "arxiv_url": "http://arxiv.org/abs/2606.21627",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [],
-    "matched_categories": [
-      "HF-Hot"
-    ],
-    "hf_rank": 44,
-    "score": 22,
-    "paper_id": "arxiv:2606.21627",
     "source": "arxiv",
     "venue": ""
   },
@@ -8796,27 +8733,6 @@
     "hf_rank": 41,
     "score": 14,
     "paper_id": "arxiv:2606.22778",
-    "source": "arxiv",
-    "venue": ""
-  },
-  "arxiv:2606.21337": {
-    "arxiv_id": "2606.21337",
-    "title": "DataClaw0: Agentic Tailoring Multimodal Data from Raw Streams",
-    "abstract": "Massive unstructured multimodal streams suffer from high \"data entropy,\" impeding both efficient human knowledge acquisition and high-quality AI post-training. Existing passive annotation paradigms, heavily reliant on heuristic rules or general VLMs, are costly, monotonous, and fail to unlock the deep procedural logic embedded in raw data. We elevate data processing to a learnable capability, proposing a paradigm shift towards Agentic Data Tailoring, which actively refining and structuring data to align with diverse user and downstream intents. To overcome the data scarcity bottleneck in training such high-order capabilities, we design a two-stage pipeline grounding generative semantic synthesis in deterministic Factual Anchors, yielding a large-scale dataset spanning five core physical and digital domains. Building upon this, $\\text{DataClaw}_0$-9B model synergizes Supervised Fine-Tuning (SFT) with Group Relative Policy Optimization (GRPO), achieving robust alignment with complex refinement and tailoring intents. To systematically quantify this capability, we construct $\\text{DataClaw}_0$-val, the first benchmark dedicated to data refinement. Crucially, we adopt downstream post-training as the ultimate validation touchstone. Evaluations on video generation, real-world VQA, and GUI navigation confirm that $\\text{DataClaw}_0$ delivers high-information-density tailored data, facilitating efficient model adaptation to new tasks under limited training data regimes. Project page: https://czjdsg.github.io/MakeAnyData",
-    "authors": "Cong Wan, Zeyu Guo, Zijian Cai, Jiangyang Li, SongLin Dong, Lin Peng, Xiangyang Luo, Zhiheng Ma, Yihong Gong",
-    "publish_date": "2026-06-19",
-    "arxiv_url": "http://arxiv.org/abs/2606.21337",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [],
-    "matched_categories": [
-      "HF-Hot"
-    ],
-    "hf_rank": 42,
-    "score": 13,
-    "paper_id": "arxiv:2606.21337",
     "source": "arxiv",
     "venue": ""
   },
@@ -9933,48 +9849,6 @@
     "hf_rank": 34,
     "score": 7,
     "paper_id": "arxiv:2606.23610",
-    "source": "arxiv",
-    "venue": ""
-  },
-  "arxiv:2606.20980": {
-    "arxiv_id": "2606.20980",
-    "title": "Robusto-2: Benchmarking Humans & VLMs for Autonomous Driving in Lima & New York City",
-    "abstract": "As Self-Driving Cars continue to expand internationally and use multi-modal systems such as VLMs as a cognitive backbone for their Action models; how well will these systems generalize in new settings, in particular out-of-distribution (OOD) edge-case scenarios in new geographies? In this paper, we study this open question by providing a full factorial analysis with human drivers of Lima, human drivers from New York City, and VLMs and showing them dashcam footage collected from Lima and New York City -- prompting them with a variety of questions under a Visual Question Answering (VQA) paradigm. In particular, we pick these two cities as they are highly challenging driving locations where no Self-Driving Car company currently operates in, and ask questions that span 4 categories: Factual, Ratings, Counterfactual and Reasoning. We find that Humans and VLMs diverge in their responses -- though this is modulated by the type of questions asked, and that Humans answer similarly independent of where they are from (Lima/NYC). To our surprise, we did not find a strong difference in terms of answers (Humans or VLMs) that was modulated by geography, likely due to their high out-of-distribution nature. Our dataset is available at: https://huggingface.co/datasets/Artificio/robusto-2",
-    "authors": "Adrian Cespedes, Marcelo Chincha, Dunant Cusipuma, Victor Flores-Benites, David Ortega, Arturo Deza",
-    "publish_date": "2026-06-18",
-    "arxiv_url": "http://arxiv.org/abs/2606.20980",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [],
-    "matched_categories": [
-      "HF-Hot"
-    ],
-    "hf_rank": 35,
-    "score": 6,
-    "paper_id": "arxiv:2606.20980",
-    "source": "arxiv",
-    "venue": ""
-  },
-  "arxiv:2606.21171": {
-    "arxiv_id": "2606.21171",
-    "title": "An Exploratory Case Study of LLM-Assisted Refactoring and Gameplay Feature Generation in an Endless Runner Game",
-    "abstract": "Large language models (LLMs) are increasingly used to support software development, but their practical usefulness in applied game-development settings remains underexplored, especially when generated code must be integrated into an existing game software system. This paper presents an exploratory empirical case study of GPT-4o in a custom Python/Pygame endless runner. The study examines six selected development tasks: three localized refactoring tasks and three tasks involving gameplay feature generation. The resulting implementations were evaluated using software metrics, unit tests, and manual gameplay assessments. In this case study, all three selected refactoring tasks were completed successfully in functional terms, whereas only one of the three selected gameplay feature generation tasks resulted in a correctly integrated feature. The findings suggest that, in this setting, GPT-4o handled localized transformations more reliably than tasks requiring new gameplay interactions across multiple existing systems. Given the exploratory single-case design, these results are best interpreted as indicative observations rather than as generalizable evidence of category-level model performance. Overall, the paper contributes a transparent case-based account of the opportunities and limitations of LLM-assisted refactoring and gameplay feature generation in an existing game software system.",
-    "authors": "Jan Wunderlich, Markus Kleffmann, Sebastian Lempert",
-    "publish_date": "2026-06-19",
-    "arxiv_url": "http://arxiv.org/abs/2606.21171",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [],
-    "matched_categories": [
-      "HF-Hot"
-    ],
-    "hf_rank": 36,
-    "score": 5,
-    "paper_id": "arxiv:2606.21171",
     "source": "arxiv",
     "venue": ""
   },
@@ -12491,27 +12365,6 @@
     "hf_rank": 49,
     "score": 13,
     "paper_id": "arxiv:2606.22953",
-    "source": "arxiv",
-    "venue": ""
-  },
-  "arxiv:2606.21215": {
-    "arxiv_id": "2606.21215",
-    "title": "Speaker Identity in Non-Verbal Vocalizations: Conditional Distillation and Mixture of Experts Approach",
-    "abstract": "As expressive text-to-speech (TTS) and voice conversion (VC) systems increasingly generate non-verbal vocalizations (NVVs) to enhance naturalness, reliable speaker verification (SV) becomes essential to objectively assess identity consistency across both verbal and non-verbal segments. Yet current SV systems generalize poorly to NVVs, and fine-tuning on NVV data causes catastrophic forgetting of speech performance. We present the first systematic study across 10 NVV types and propose a framework combining frozen Data2Vec self-supervised features with ECAPA-TDNN, enhanced by a Mixture of Experts (MoE) module with learned domain-aware routing. A conditional distillation loss on speech inputs via a pretrained teacher retains speech-to-speech accuracy, while a contrastive loss bridges the speech-NVV domain gap. Our method reduces speech-NVV EER from 38.93% to 22.66% over a pretrained baseline, and improves speech EER from 13.17% to 9.24% via distillation.",
-    "authors": "Tzu-Chieh Wei, Yi-Cheng Lin, Huang-Cheng Chou, Kuan-Yu Chen, Hsin-Yen Sung, Shrikanth Narayanan, Hung-yi Lee",
-    "publish_date": "2026-06-19",
-    "arxiv_url": "http://arxiv.org/abs/2606.21215",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [],
-    "matched_categories": [
-      "HF-Hot"
-    ],
-    "hf_rank": 50,
-    "score": 12,
-    "paper_id": "arxiv:2606.21215",
     "source": "arxiv",
     "venue": ""
   },
@@ -15269,27 +15122,6 @@
     "hf_rank": 38,
     "score": 13,
     "paper_id": "arxiv:2606.24143",
-    "source": "arxiv",
-    "venue": ""
-  },
-  "arxiv:2606.20970": {
-    "arxiv_id": "2606.20970",
-    "title": "CogniRoute: Learning to Route Social Evidence in Omni-Modal Models",
-    "abstract": "Omni-modal models can ingest video, audio, and text, but unified access to multiple modalities does not guarantee that a model uses the right evidence. This gap is especially pronounced in social video question answering, where the answer may hinge on a gesture, vocal tone, temporal cue, or mismatch between what is said and what is visually expressed. We introduce CogniRoute, a schema-guided Mixture-of-Experts framework for social omni reasoning. CogniRoute uses a training-only cognitive schema that factorizes each example by cross-modal relation, reasoning demand, and temporal scope, and aligns global routing signatures with this structure during supervised fine-tuning. We further introduce route-aware reinforcement learning, which jointly optimizes token generation and expert allocation using rewards for answer correctness, modality-consistent reasoning, and cognitive temporal grounding. To support training and evaluation, we construct OmniSocialBench, a diagnostic social video QA resource with 118K structured training examples, grounded reasoning traces, schema labels, temporal evidence spans, and a manually verified evaluation split. CogniRoute achieves 59.38\\% average accuracy on OmniSocialBench, improving over the strongest proprietary baseline by 15.33 percentage points and the strongest open-source omni baseline by 26.77 points, with the largest gains on questions requiring audio-visual coordination, conflict resolution, and temporally grounded social inference.",
-    "authors": "Yifan Shen, Pei Tian, Xinzhuo Li, Bowen Fang, Shujun Xia, Bingxuan Li, Ana Jojic, Wenming Ye, Xu Cao, James Matthew Rehg, Ismini Lourentzou",
-    "publish_date": "2026-06-18",
-    "arxiv_url": "http://arxiv.org/abs/2606.20970",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [],
-    "matched_categories": [
-      "HF-Hot"
-    ],
-    "hf_rank": 40,
-    "score": 11,
-    "paper_id": "arxiv:2606.20970",
     "source": "arxiv",
     "venue": ""
   },
@@ -19330,27 +19162,6 @@
     "hf_rank": 43,
     "score": 22,
     "paper_id": "arxiv:2607.01131",
-    "source": "arxiv",
-    "venue": ""
-  },
-  "arxiv:2606.20997": {
-    "arxiv_id": "2606.20997",
-    "title": "BioInsight: Multi-Agent Orchestration for Interactive Biomedical Knowledge Discovery",
-    "abstract": "Biomedical researchers increasingly use AI-generated analyses and reports to interpret protein-level signals, but static outputs are often insufficient for research decision-making, where users need to inspect evidence, assess uncertainty, compare mechanisms, and refine hypotheses. We present \\textsc{BioInsight}, a multi-agent system that moves from static biomedical report generation to interactive evidence-centered interactive interface generation. Given a disease name, a protein association table, and optional cohort metadata, BioInsight organizes disease-specific evidence through typed intermediate artifacts, including ranked pathways, literature evidence packets, protein-level reasoning notes, citation-grounded reports, dashboard schemas, and rendered interactive interfaces. The system decomposes evidence retrieval from mechanistic reasoning, normalizes citations through deterministic components, and converts the same structured evidence used in the report into an interactive interface. We evaluate BioInsight on standardized biomedical QA, challenging protein-function reasoning, and end-to-end biomedical evidence synthesis. Results show that BioInsight achieves best, and suggest that biomedical AI systems should move beyond text-only and static reports toward provenance-preserving, interactive evidence artifacts.",
-    "authors": "Jieyi Wang, Bingxuan Li, Nanyi Jiang, Desong Meng, Zirui Fan, Yuxin Guo, Jiayu Liu, Kunlun Zhu, Eddie Yang, Xiusi Chen, Pan Lu, Bingxin Zhao",
-    "publish_date": "2026-06-19",
-    "arxiv_url": "http://arxiv.org/abs/2606.20997",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [],
-    "matched_categories": [
-      "HF-Hot"
-    ],
-    "hf_rank": 44,
-    "score": 21,
-    "paper_id": "arxiv:2606.20997",
     "source": "arxiv",
     "venue": ""
   },
@@ -30369,7 +30180,7 @@
       "VLA",
       "HF-Hot"
     ],
-    "hf_rank": 38,
+    "hf_rank": 48,
     "score": 30,
     "paper_id": "arxiv:2607.11498",
     "source": "arxiv",
@@ -36071,9 +35882,10 @@
       "VLA"
     ],
     "matched_categories": [
-      "VLA"
+      "VLA",
+      "HF-Hot"
     ],
-    "hf_rank": 30,
+    "hf_rank": 40,
     "score": 20,
     "paper_id": "arxiv:2607.16074",
     "source": "arxiv",
@@ -36186,7 +35998,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 39,
+    "hf_rank": 49,
     "score": 28,
     "paper_id": "arxiv:2607.07690",
     "source": "arxiv",
@@ -36207,7 +36019,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 40,
+    "hf_rank": 50,
     "score": 27,
     "paper_id": "arxiv:2606.29538",
     "source": "arxiv",
@@ -36508,9 +36320,10 @@
     "matched_categories": [
       "VLA",
       "Dexterous",
-      "Manipulation"
+      "Manipulation",
+      "HF-Hot"
     ],
-    "hf_rank": 25,
+    "hf_rank": 35,
     "score": 35,
     "paper_id": "arxiv:2607.17977",
     "source": "arxiv",
@@ -37411,7 +37224,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 1,
+    "hf_rank": 11,
     "score": 29,
     "paper_id": "arxiv:2607.17790",
     "source": "arxiv",
@@ -37432,7 +37245,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 2,
+    "hf_rank": 12,
     "score": 28,
     "paper_id": "arxiv:2607.18144",
     "source": "arxiv",
@@ -37453,7 +37266,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 3,
+    "hf_rank": 13,
     "score": 27,
     "paper_id": "arxiv:2607.14183",
     "source": "arxiv",
@@ -37474,7 +37287,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 4,
+    "hf_rank": 14,
     "score": 26,
     "paper_id": "arxiv:2607.07050",
     "source": "arxiv",
@@ -37495,7 +37308,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 5,
+    "hf_rank": 15,
     "score": 25,
     "paper_id": "arxiv:2607.17675",
     "source": "arxiv",
@@ -37516,7 +37329,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 6,
+    "hf_rank": 16,
     "score": 24,
     "paper_id": "arxiv:2607.16609",
     "source": "arxiv",
@@ -37537,7 +37350,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 7,
+    "hf_rank": 17,
     "score": 23,
     "paper_id": "arxiv:2607.17146",
     "source": "arxiv",
@@ -37558,7 +37371,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 8,
+    "hf_rank": 18,
     "score": 22,
     "paper_id": "arxiv:2607.10387",
     "source": "arxiv",
@@ -37579,7 +37392,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 9,
+    "hf_rank": 19,
     "score": 21,
     "paper_id": "arxiv:2607.10371",
     "source": "arxiv",
@@ -37600,7 +37413,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 10,
+    "hf_rank": 20,
     "score": 20,
     "paper_id": "arxiv:2607.07820",
     "source": "arxiv",
@@ -37621,7 +37434,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 11,
+    "hf_rank": 21,
     "score": 19,
     "paper_id": "arxiv:2607.18084",
     "source": "arxiv",
@@ -37642,7 +37455,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 12,
+    "hf_rank": 22,
     "score": 18,
     "paper_id": "arxiv:2607.17097",
     "source": "arxiv",
@@ -37663,7 +37476,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 13,
+    "hf_rank": 23,
     "score": 17,
     "paper_id": "arxiv:2607.17986",
     "source": "arxiv",
@@ -37684,7 +37497,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 14,
+    "hf_rank": 24,
     "score": 16,
     "paper_id": "arxiv:2607.18227",
     "source": "arxiv",
@@ -37705,7 +37518,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 15,
+    "hf_rank": 25,
     "score": 15,
     "paper_id": "arxiv:2607.16401",
     "source": "arxiv",
@@ -37726,7 +37539,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 16,
+    "hf_rank": 26,
     "score": 14,
     "paper_id": "arxiv:2607.17423",
     "source": "arxiv",
@@ -37747,7 +37560,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 17,
+    "hf_rank": 27,
     "score": 13,
     "paper_id": "arxiv:2607.17250",
     "source": "arxiv",
@@ -37768,7 +37581,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 18,
+    "hf_rank": 28,
     "score": 12,
     "paper_id": "arxiv:2607.17524",
     "source": "arxiv",
@@ -37789,7 +37602,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 19,
+    "hf_rank": 29,
     "score": 11,
     "paper_id": "arxiv:2607.17247",
     "source": "arxiv",
@@ -37810,7 +37623,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 20,
+    "hf_rank": 30,
     "score": 10,
     "paper_id": "arxiv:2607.18217",
     "source": "arxiv",
@@ -37831,7 +37644,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 21,
+    "hf_rank": 31,
     "score": 9,
     "paper_id": "arxiv:2607.09759",
     "source": "arxiv",
@@ -37852,7 +37665,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 22,
+    "hf_rank": 32,
     "score": 8,
     "paper_id": "arxiv:2607.18171",
     "source": "arxiv",
@@ -37873,7 +37686,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 23,
+    "hf_rank": 33,
     "score": 7,
     "paper_id": "arxiv:2607.18213",
     "source": "arxiv",
@@ -37894,7 +37707,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 24,
+    "hf_rank": 34,
     "score": 6,
     "paper_id": "arxiv:2607.09655",
     "source": "arxiv",
@@ -37915,7 +37728,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 26,
+    "hf_rank": 36,
     "score": 4,
     "paper_id": "arxiv:2607.16850",
     "source": "arxiv",
@@ -37936,7 +37749,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 27,
+    "hf_rank": 37,
     "score": 3,
     "paper_id": "arxiv:2607.18110",
     "source": "arxiv",
@@ -37957,7 +37770,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 28,
+    "hf_rank": 38,
     "score": 2,
     "paper_id": "arxiv:2607.16900",
     "source": "arxiv",
@@ -37978,7 +37791,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 29,
+    "hf_rank": 39,
     "score": 1,
     "paper_id": "arxiv:2607.17972",
     "source": "arxiv",
@@ -37999,7 +37812,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 31,
+    "hf_rank": 41,
     "score": 0,
     "paper_id": "arxiv:2607.13365",
     "source": "arxiv",
@@ -38020,7 +37833,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 32,
+    "hf_rank": 42,
     "score": 0,
     "paper_id": "arxiv:2607.13918",
     "source": "arxiv",
@@ -38041,7 +37854,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 33,
+    "hf_rank": 43,
     "score": 0,
     "paper_id": "arxiv:2607.15263",
     "source": "arxiv",
@@ -38062,7 +37875,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 34,
+    "hf_rank": 44,
     "score": 0,
     "paper_id": "arxiv:2607.10966",
     "source": "arxiv",
@@ -38083,7 +37896,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 35,
+    "hf_rank": 45,
     "score": 0,
     "paper_id": "arxiv:2607.11915",
     "source": "arxiv",
@@ -38104,7 +37917,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 36,
+    "hf_rank": 46,
     "score": 0,
     "paper_id": "arxiv:2607.09082",
     "source": "arxiv",
@@ -38125,9 +37938,624 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 37,
+    "hf_rank": 47,
     "score": 0,
     "paper_id": "arxiv:2607.06815",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2607.19330": {
+    "arxiv_id": "2607.19330",
+    "title": "Efficient strain-space hyperreduction in large-deformation solid mechanics",
+    "abstract": "Strain-space model order reduction (MOR) techniques have recently been shown to achieve exceptional performance in terms of the tradeoff between runtime and accuracy achieved in computational homogenisation problems. In this article, we generalise such techniques to problems in large-deformation solid mechanics beyond the context of computational homogenisation. Arbitrary-valued, parameterised Dirichlet boundary conditions are satisfied by construction using a lifting with boundary-consistent fields computed offline. This allows us to pose a version of the Empirical Cubature Method (ECM) [24,25] in strain space and generalise the Empirically Corrected Cluster Cubature (E3C) [46,48,49] as well as Empirical Material Sampling and Linearisation (EMSL) [17] beyond computational homogenisation problems.   The strain-space versions of EMSL, ECM, and E3C are compared against each other and a standard displacement-space formulation of Energy Conserving Weighting and Sampling (ECSW) [15]. On two hyperelastic example problems with parameterised material behaviour and deformation, the strain-space methods outperform the displacement-space alternative in the tradeoff between runtime and accuracy. E3C and EMSL in particular facilitate 10,000 and 100,000-fold speedups, respectively, while retaining high levels of accuracy. EMSL is shown to be the method of choice when online and offline runtime budgets are very limited, while E3C yields exceptional levels of accuracy when slightly more runtime is acceptable.",
+    "authors": "Erik Faust, Lisa Scheunemann",
+    "publish_date": "2026-07-21",
+    "arxiv_url": "http://arxiv.org/abs/2607.19330",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "Manipulation"
+    ],
+    "hf_rank": null,
+    "score": 0,
+    "paper_id": "arxiv:2607.19330",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2607.19320": {
+    "arxiv_id": "2607.19320",
+    "title": "A spacetime positive mass theorem with corners via mollification",
+    "abstract": "We prove a strict dominant energy deformation theorem for asymptotically flat initial data with corners along a hypersurface $Σ$. The deformation preserves a corner condition on the Bartnik data across $Σ$. We show that if the dominant energy condition holds on each side of $Σ$ and the Bartnik data satisfy this corner condition, then the exterior end satisfies $E \\ge |P|$ in every dimension $n \\ge 3$.",
+    "authors": "Hyun Chul Jang, Aidan F. Wood",
+    "publish_date": "2026-07-21",
+    "arxiv_url": "http://arxiv.org/abs/2607.19320",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "Manipulation"
+    ],
+    "hf_rank": null,
+    "score": 0,
+    "paper_id": "arxiv:2607.19320",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2607.19245": {
+    "arxiv_id": "2607.19245",
+    "title": "The Butterfly Defect Effect in Cylindrical Shell Buckling: Non-localized Interactions of Localized Imperfections",
+    "abstract": "We investigate the buckling of axially compressed cylindrical shells containing localized defects, focusing on interactions among multiple defects and between them and the shell edges. Using high-fidelity finite-element simulations, we first characterize the parameter space of single-dimple sensitivity, defect-edge coupling, and pairwise defect-defect interactions. Building on this deterministic baseline, we run stochastic simulations of shells with randomly distributed imperfections whose amplitudes are sampled from a log-normal distribution. Post-buckling deformations form non-axisymmetric, butterfly-shaped patterns whose `wings' reach far across the shell surface. This spatial extent induces unavoidable interactions with neighboring defects and the clamped edges, so that buckling is not necessarily initiated by the deepest defect. A larger defect population raises the likelihood of an extreme defect, producing a statistical size effect: as the mean number of defects grows, the mean knockdown factor decreases asymptotically and its variability decays exponentially. The butterfly defect effect qualitatively explains the scatter in historical experimental data by correlating the knockdown factor with the cylinder length-to-thickness ratio ($H/t$) rather than the radius-to-thickness ratio ($R/t$) alone, thereby establishing $H$ as a key parameter for stability alongside $R$ and $t$. Nonetheless, the knockdown factors obtained here remain well above those reported in historical experiments, indicating that the localized Gaussian dimple, though nearly the worst-case imperfection for spherical shells, is not so for cylinders.",
+    "authors": "Uba K. Ubamanyu, Antoine Blond, John W. Hutchinson, Pedro M. Reis",
+    "publish_date": "2026-07-21",
+    "arxiv_url": "http://arxiv.org/abs/2607.19245",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "Manipulation"
+    ],
+    "hf_rank": null,
+    "score": 0,
+    "paper_id": "arxiv:2607.19245",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2607.19239": {
+    "arxiv_id": "2607.19239",
+    "title": "Spatially resolved in-situ characterisation of competing martensitic transformation pathways during nanoscratch in 316H Stainless Steel",
+    "abstract": "Localised surface deformation beneath frictional contacts generates a tribolayer whose microstructure and properties differ from the bulk. In austenitic stainless steels, this tribolayer forms through two competing martensitic transformation pathways. Here, these pathways are isolated in 316H stainless steel using in-situ synchrotron X-ray nanodiffractometry combined with nanoscratch testing, which together yield spatial maps of the evolving strain field beneath a single sliding asperity. Finite element modelling interprets the resulting distribution of martensitic phases, revealing a pressure driven pathway selection where hydrostatic compression ahead of the contact suppresses $α'$ formation and favours the $γ\\rightarrow \\varepsilon$ transformation, while lateral sliding relieves this constraint and introduces a shear strain driving $\\varepsilon \\rightarrow α'$ , producing an overall sequential $γ\\rightarrow \\varepsilon \\rightarrow α'$ pathway in the tribolayer. Where hydrostatic constraint persists, $\\varepsilon$-martensite is retained; where material piles up and is unconstrained above the surface, the transformation proceeds directly to $α'$. The $γ$-austenite adjacent to $α'$- martensite shows elevated dislocation density, indicating that $α'$ formation is accommodated by plastic deformation in the surrounding matrix. This distinction could explain differences in galling performance among iron-based and cobalt-based hardfacing alloys, where the $\\varepsilon$-martensite forming cobalt alloys offer superior galling resistance. The methodology presented resolves transient microstructural states inaccessible to static measurements of macroscale, multiple asperity contacts, establishing a route to mechanistic insight across tribological phenomena more broadly.",
+    "authors": "A. Kareer, R. W. Kerr, D. Craven, A. V. Davydok, C. Krywka, D. M. Collins",
+    "publish_date": "2026-07-21",
+    "arxiv_url": "http://arxiv.org/abs/2607.19239",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "Manipulation"
+    ],
+    "hf_rank": null,
+    "score": 0,
+    "paper_id": "arxiv:2607.19239",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2607.19227": {
+    "arxiv_id": "2607.19227",
+    "title": "An interaction potential method for passive and active dynamics of hyperelastic materials",
+    "abstract": "Simulating active biological tissues, such as the myocardium, requires constitutive models that are both physically faithful and computationally efficient. The most common approach relies on finite element methods that accurately discretize the underlying continuum hyperelastic problem which, in turn, require global nonlinear solve at each time step. On the other hand, fast, interaction-potential methods replace the continuum with a network of independent links approximating the mechanical response. We propose an interaction potential formulation for simulating active biological tissues that bridges this gap. The method recasts continuum hyperelastic constitutive laws in terms of tetrahedral edge strain. Unlike classical mass-spring models, the proposed formulation does not approximate the tissue as independent spring elements but preserves the energetic coupling between adjacent edges. Passive tissue mechanics is described by hyperelastic constitutive laws, while active contraction is incorporated through the active-strain multiplicative decomposition. Within the edge-based formulation, the active strain is incorporated through a time-dependent activated reference configuration. We further introduce a strategy for enforcing the material incompressibility constraint while avoiding volumetric locking. The resulting method can be interpreted as an edge-strain representation of a constant-strain tetrahedral continuum element, providing a bridge between continuum mechanics and discrete interaction potential solvers. Numerical tests demonstrate the capability of the method to effectively simulate different hyperelastic constitutive laws and to properly preserve the energy balance equation. Finally, the proposed method is applied to the active deformation of a realistic ventricle, reproducing longitudinal shortening and wall-thickening values consistent with the literature.",
+    "authors": "Francesco De Vita, Filippo Caruso Lombardi, Roberto Verzicco, Francesco Viola",
+    "publish_date": "2026-07-21",
+    "arxiv_url": "http://arxiv.org/abs/2607.19227",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "Manipulation"
+    ],
+    "hf_rank": null,
+    "score": 0,
+    "paper_id": "arxiv:2607.19227",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2607.19190": {
+    "arxiv_id": "2607.19190",
+    "title": "Agentic Real2Sim: Physics-based World Modeling with Vision-Language Agents",
+    "abstract": "Real-to-sim conversion for robotic interaction with objects remains labor-intensive because it requires more than visual reconstruction: a streamlined real2sim process must recover scene geometries and object states, infer physical parameters, and assemble actors, objects, cameras, poses, and trajectories into a runnable physical simulation. Today this process still depends on manual tuning of visual foundation models, mesh cleanup, coordinate-frame alignment, and brittle workflow glue across visual perception tools and simulators. We introduce \\textit{Agentic Real2Sim}, a framework for generalized physical world modeling with vision-language agents, converting a real-world recording of object-robot interaction into a simulatable episodic twin which preserves observations, geometries, robot interactions, and object states. We evaluate Agentic Real2Sim on rigid-object manipulation, deformable-object interaction, and humanoid motion scenes, spanning domains that are usually handled by separate Real2Sim pipelines, marking a first step toward scalable conversion. The framework's agentic decisions can be driven by an open-weight VLM backend at a small fraction of the cost of frontier models, while attaining comparable conversion success rate. We aim to use the resulting real-world-aligned twins for downstream robotics tasks, specifically policy learning and evaluation. The project site is available at https://ericchen321.github.io/agentic_real2sim.github.io/.",
+    "authors": "Guanxiong Chen, Qianjun Xia, Jiawei Peng, Heng Zhang, Bole Ma, Justin Qian, Ziyi Jiao, Bingyang Zhou, Luoxin Ye, Kaifeng Zhang, Kunyi Wang, Weijia Zeng, Yunuo Chen, Pengzhi Yang, Ziqiu Zeng, Huamin Wang, Chao Liu, Alan Yuille, Fan Shi, Changxi Zheng, Yunzhu Li, Chenfanfu Jiang, Peter Yichen Chen",
+    "publish_date": "2026-07-21",
+    "arxiv_url": "http://arxiv.org/abs/2607.19190",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [
+      "Deformable"
+    ],
+    "matched_categories": [
+      "Manipulation"
+    ],
+    "hf_rank": null,
+    "score": 10,
+    "paper_id": "arxiv:2607.19190",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2607.19123": {
+    "arxiv_id": "2607.19123",
+    "title": "Thermal and electrical conductivity of a refractory high-entropy alloy after high-pressure torsion: Electron versus phonon contributions",
+    "abstract": "The equiatomic refractory high-entropy alloy TiZrHfNbTa was processed by high-pressure torsion (HPT) to investigate the effect of nanostructuring and defect engineering on thermal and electrical transport properties. Severe plastic deformation (SPD) via the HPT treatment induces substantial accumulation of dislocations, grain refinement to the nanometer level (average: 40 nm), and partial transformation from the BCC phase to the omega phase. While hardness increases to a steady state with processing, the specific heat capacity exhibits a non-monotonic behavior: it decreases at low strains due to the suppression of low-frequency vibrational modes by dislocations, then partially recovers at high strains due to anharmonic vibrations at newly formed high-angle grain boundaries. Thermal conductivity decreases at low strains but shows a slight recovery at high strains, whereas electrical conductivity decreases monotonically to a steady state without recovery. Analysis using the Wiedemann-Franz law reveals that the electronic contribution dominates thermal transport, while the phononic contribution (limited by the scattering of phonons on defects) is only 11 to 23%, depending on the degree of straining. The contrasting evolution of thermal and electrical conductivity is ascribed to the transition from dislocation-dominated vibrations at low strains to grain boundary-dominated vibrations at high strains, which affects phonons and electrons with different efficiencies.",
+    "authors": "Jacqueline Hidalgo-Jimenez, Payam Edalati, Md Amirul Islam, Makoto Arita, Bidyut Baran Saha, Kaveh Edalati",
+    "publish_date": "2026-07-21",
+    "arxiv_url": "http://arxiv.org/abs/2607.19123",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "Manipulation"
+    ],
+    "hf_rank": null,
+    "score": 0,
+    "paper_id": "arxiv:2607.19123",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2607.19093": {
+    "arxiv_id": "2607.19093",
+    "title": "Various Bialgebras Of Representative Functions On Free Monoids",
+    "abstract": "Factorization and decomposition of representative functions on a free monoid X * (generated by an alphabet X ) and with values in a ring A containing Q are equivalent to factorization and decomposition of their graphs (within the A-algebra of rational noncommutative series over X ) admitting linear representations (thanks to the Kleene-Sch{ü}tzenberger theorem).  To factorize and to decompose effectively these graphs, we examine various products of noncommutative series (as concatenation, shuffle and its $φ$deformations) and co-products such that, for A is a field K, their associated non graded commutative and co-noncommutative bialgebras of series are isomorphic to the Sweedler's dual of the graded noncommutative co-commutative bialgebras of polynomials having, for the concatenation, only Kleene stars of the planes as characters, or equivalently, only the planes are infinitesimal characters (thanks to a Ree's theorem like).",
+    "authors": "Vincel Hoang Ngoc Minh",
+    "publish_date": "2026-07-21",
+    "arxiv_url": "http://arxiv.org/abs/2607.19093",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "Manipulation"
+    ],
+    "hf_rank": null,
+    "score": 0,
+    "paper_id": "arxiv:2607.19093",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2607.19043": {
+    "arxiv_id": "2607.19043",
+    "title": "Local Second-Order Geometry Induced by Deformation Maps",
+    "abstract": "Spatial deformations offer a flexible route to nonstationary dependence by warping the coordinates of a stationary random field. While the exact induced covariance depends on the deformation map in its entirety, we show that its behavior in a neighborhood is approximated accurately by linearization. This produces a tangent covariance whose discrepancy from the true covariance we bound explicitly, and its Fourier transform yields a local spectrum in closed form. Building on this spectral description, we introduce a simulation scheme that generates a deformed Gaussian field in a neighborhood accounting for the local spectrum, so that the simulated field reproduces the finite dimensional tangent covariance by construction. For repeated sampling across many reference points, a truncated singular value decomposition compresses the space and frequency weights into a reusable form. We further apply the summaries based on the local Jacobian as an exploratory device for deformations estimated from images, using cardiac magnetic resonance data from the Automated Cardiac Diagnosis Challenge together with optical flow. The resulting local geometry exhibits differences across diagnostic groups through directional and anisotropic features of myocardial deformation that go beyond simple measures of local expansion or compression.",
+    "authors": "Maria Laura Battagliola",
+    "publish_date": "2026-07-21",
+    "arxiv_url": "http://arxiv.org/abs/2607.19043",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "Manipulation"
+    ],
+    "hf_rank": null,
+    "score": 0,
+    "paper_id": "arxiv:2607.19043",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2607.18989": {
+    "arxiv_id": "2607.18989",
+    "title": "Diffeological non-Abelian Hodge theory: relative harmonic metrics and deformation theory",
+    "abstract": "Let $X$ be a compact Kähler manifold. In prior work, we constructed diffeological moduli stacks of Higgs and flat bundles on $X$, related by extension completion of smooth harmonic families. Here, we develop the relative analytic theory. On Sobolev completions over arbitrary plots, we prove that every smooth stable Higgs family satisfying the numerical conditions admits a global smooth harmonic metric. Fixing a Hermitian--Einstein determinant metric removes scalar freedom, and then elliptic regularity and normalized gluing yield plotwise smoothness. The theorem holds at every finite parameter regularity $C^d$ and on reduced singular parameter spaces with ambient extensions.   For a Higgs deformation $η$, the normalized metric variation satisfies $L_hs=-\\mathcal S_h(η)$ and $s=-G_h\\mathcal S_h(η)$ up to an independent rank-one determinant term for $\\mathrm{GL}_r$. This computes the plotwise differential and recovers the classical comparison.   Locally split, constant-type polystable families admit smooth harmonic metrics. Real-analytic examples show general polystable families may have neither continuous harmonic metrics nor relative harmonic filtrations and may lie outside every $C^d$ extension-generated locus. In one example a singular harmonic reduction produces a continuous adjoint Higgs field and a flat family with semisimple slices. This defines a weak $C^0$ operator-level harmonic mediator, strictly larger than the metric-regular one, whose endpoint images after finite extension completion and stackification satisfy $\\mathscr M_{\\mathrm{Dol},0}^{\\mathrm{wk}\\mathcal H}(X)\\simeq\\mathscr M_{\\mathrm{dR},0}^{\\mathrm{wk}\\mathcal H}(X)$. We characterize the extension-generated stack by relative harmonic filtrations, develop their obstruction theory, analyze the loss of extension data under heat flow, and construct the smooth Hodge $λ$-family on the stable locus.",
+    "authors": "Mahmud Azam, Steven Rayan",
+    "publish_date": "2026-07-21",
+    "arxiv_url": "http://arxiv.org/abs/2607.18989",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "Manipulation"
+    ],
+    "hf_rank": null,
+    "score": 0,
+    "paper_id": "arxiv:2607.18989",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2607.18968": {
+    "arxiv_id": "2607.18968",
+    "title": "Discrete distributions and statistical mechanics of small systems",
+    "abstract": "We study connections between discrete probability distributions and the statistical mechanics of small systems. Using probability generating functions, we develop the theory of power series, infinitely divisible, and scalable distributions of non-negative integer-valued random variables, and introduce the class of Markovian distributions that arise naturally in stationary solutions of birth-death processes and in scalable infinitely divisible distributions.   These results are applied to the grand canonical ensemble description in statistical mechanics: the infinite divisibility leads to a quasiparticle picture of an interacting gas, and the virial expansion is linked to the combinants of the distribution. A kinetic model of the liquid-vapor phase transition is presented, in which the particle-number distribution at the critical point converges to the Discrete Stable distribution - the fixed point of a renormalization semi-group transformation. We also show that the scalability of the particle-number distribution is preserved in Tsallis non-extensive thermodynamics, even though infinite divisibility fails. Moreover, deformed discrete distributions, including the negative binomial as a q-deformation of the Poisson, arise naturally in this setting.",
+    "authors": "Lev B. Klebanov, Michal Šumbera",
+    "publish_date": "2026-07-21",
+    "arxiv_url": "http://arxiv.org/abs/2607.18968",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "Manipulation"
+    ],
+    "hf_rank": null,
+    "score": 0,
+    "paper_id": "arxiv:2607.18968",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2607.18911": {
+    "arxiv_id": "2607.18911",
+    "title": "Mapping parametric error profiles onto nuclear structure configurations in deformed proton radioactivity",
+    "abstract": "Theoretical descriptions of proton radioactivity near the drip lines are often challenged by parametric uncertainties in nuclear potential models. To address this, a robust Bayesian uncertainty quantification (UQ) framework is established to calibrate the deformed Woods--Saxon potential coupled with the semi-classical WKB approximation for odd-$A$ proton emitters across the $Z=50$--$82$ region. Constrained by experimental half-lives, the joint and marginal posteriors and covariance topologies are extracted for the potential geometry, multipole deformations, and spectroscopic factors. Using a signed relative sensitivity index, a dynamic, mass-dependent re-ordering of parameter hierarchies is unraveled. Crucially, propagating these parametric uncertainties yields posterior predictive medians and differentiated $σ$ bands that tightly encompass experimental half-lives across multiple orders of magnitude without systematic bias. Furthermore, near the $Z=82$ shell closure, the structural softening of the nuclear potential manifests as a systematic expansion and volatility of the $σ$ bands in the deformation profiles. This correlation suggests that the macroscopic behavior of parametric error distributions can potentially be mapped onto potential energy configurations, underscoring that the Bayesian UQ methodology may serve as a sensitive probe to extract reliable nuclear structure information directly from deformed proton decay systematics.",
+    "authors": "Jizheng Bo",
+    "publish_date": "2026-07-21",
+    "arxiv_url": "http://arxiv.org/abs/2607.18911",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "Manipulation"
+    ],
+    "hf_rank": null,
+    "score": 0,
+    "paper_id": "arxiv:2607.18911",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2607.18895": {
+    "arxiv_id": "2607.18895",
+    "title": "Multiscale ensemble Monte Carlo of transport and gas sensing in monolayer MoS$_2$",
+    "abstract": "Two-dimensional semiconductors, such as monolayer MoS$_2$, combine a technologically useful band gap with an all-surface geometry, making them attractive both as field-effect-transistor channels and as chemically sensitive devices. Predictive device design requires a transport model that is (i) physically grounded rather than empirical, (ii) validated against experiments, and (iii) able to span the scales from electron-phonon coupling to terminal current and sensor response. We present a self-consistent ensemble Monte Carlo (EMC) framework for monolayer MoS$_2$ built on the ViennaEMC solver, comprising a Boltzmann-transport kernel with a full intrinsic and extrinsic scattering stack (deformation-potential acoustic and intervalley phonons, polar-optical Fröhlich and piezoelectric coupling, remote substrate phonons, screened charged-impurity and surface-roughness scattering), degenerate free-carrier statistics, and a self-consistent Poisson coupling. The intrinsic transport parameters are verified against first-principles density-functional perturbation theory (DFPT), and seven quantities (lattice constant, conduction-band effective mass, band gap, Born effective charges, the longitudinal-optical phonon energy, and both in-plane sound velocities) agree with the reference parametrization. In a multiscale coupling, the EMC velocity-field characteristic feeds a one-dimensional velocity-saturation channel model, which captures the velocity-saturated field dependence and reproduces the measured transfer characteristics of a CVD monolayer device in air and vacuum. Finally, an ambient/adsorbate extension reproduces the measured conductivity response to oxygen partial pressure and the concentration dependence of NO$_2$ and NH$_3$ sensing measured in several independent devices.",
+    "authors": "Lado Filipovic",
+    "publish_date": "2026-07-21",
+    "arxiv_url": "http://arxiv.org/abs/2607.18895",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "Manipulation"
+    ],
+    "hf_rank": null,
+    "score": 0,
+    "paper_id": "arxiv:2607.18895",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2607.18893": {
+    "arxiv_id": "2607.18893",
+    "title": "Flexible Intelligent Metasurface-Aided ISAC: User Fairness Optimization and Performance Evaluation",
+    "abstract": "This paper investigates max-min user fairness optimization for flexible intelligent metasurface (FIM) and non-orthogonal multiple access (NOMA)-assisted integrated sensing and communication (ISAC) systems with active self-localization. To tackle the multi-user interference, performance imbalance, and neglected sensing accuracy problems encountered in conventional ISAC designs, we derive the closed-form Cramer-Rao lower bound (CRLB) for angle-of-departure (AoD) estimation in target sensing and embed it into a max-min fairness optimization framework. The optimization problem, which jointly designs the base station transmit beamforming, FIM reflection coefficients, and surface deformation, is non-convex and solved by an alternating optimization (AO) algorithm. Notably, the devised optimization framework facilitates superior performance trade-off in terms of spectrum resource utilization between communication and sensing tasks. Simulation results validate that the proposed scheme significantly improves user fairness, balances communication performance and sensing precision effectively, and reveals the coupling characteristic between signal-to-interference-plus-noise ratio (SINR) and sensing CRLB. This work provides a feasible solution for FIM-aided ISAC system optimization in 6G networks.",
+    "authors": "Hailun Huang, Yuwen Cao, Jiguang He, Tomoaki Ohtsuki",
+    "publish_date": "2026-07-21",
+    "arxiv_url": "http://arxiv.org/abs/2607.18893",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "Manipulation"
+    ],
+    "hf_rank": null,
+    "score": 0,
+    "paper_id": "arxiv:2607.18893",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2607.18860": {
+    "arxiv_id": "2607.18860",
+    "title": "Regime-Aware Physics-Guided Early Warning of Lithium-Ion Battery Thermal Runaway Using Thermo-Mechanical Signals",
+    "abstract": "Thermal runaway in lithium-ion batteries poses a major safety risk to electric vehicles and energy storage systems. Current early-warning methods depend mainly on temperature and may therefore miss mechanical precursors that emerge before rapid heating. We introduce a regime-aware, physics-guided framework that integrates temperature, voltage, force, deformation, and state-of-charge measurements for early warning under controlled mechanical abuse. A lightweight convolutional classifier first infers safe, warning, or danger regimes from mechanical signals. These regime estimates then condition a causal temporal convolutional backbone through feature-wise linear modulation, physics-biased attention, and regime-dependent gating. Joint learning unifies regime identification, thermal-runaway detection, and time-to-disaster estimation. We evaluate the framework using leave-one-experiment-out cross-validation on 30 mechanical-abuse tests across state-of-charge levels of 10%, 50%, and 90% and two loading protocols. The method achieves an F1 score of 0.89, a high-temperature prediction root-mean-square error of 12.3 °C, a mean warning lead time of 15.6 s, a detection success rate of 0.92, and an experiment-level false alarm rate of 2.7%. Its lead time exceeds that of the strongest baseline by 69.6%. Removing force reduces the lead time by 60.3%, highlighting the value of mechanical precursors. These results support regime-aware thermo-mechanical fusion as a promising strategy for earlier and more reliable thermal-runaway warning under controlled abuse conditions.",
+    "authors": "Syed Sajid Ullah, Muhammad Zunair Zamir, Salman Khan",
+    "publish_date": "2026-07-21",
+    "arxiv_url": "http://arxiv.org/abs/2607.18860",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "Manipulation"
+    ],
+    "hf_rank": null,
+    "score": 0,
+    "paper_id": "arxiv:2607.18860",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2607.18851": {
+    "arxiv_id": "2607.18851",
+    "title": "Defrosting the Born-Infeld dyonic frozen star with tachyon matter: spectrum of oscillations",
+    "abstract": "The frozen star is a model for the interior of an astrophysical black hole that is externally indistinguishable from the singular geometry of a Schwarzschild black hole, even though it contains no singularities nor trapped surfaces. The frozen star corresponds to a macroscopic ``BIon'', a solution of a certain type of Born-Infeld Lagrangian coupled to Einstein gravity, which consists of rigid flux tubes sourced by an electric charge localized at its center and a uniform distribution of opposite charge along its outer surface. This configuration is a solution of the effective action that describes the end point of tachyon condensation in string. The rigidity of the flux tubes implies that the star is ultrastable under linear perturbations of the geometry and matter. The star can be effectively deformed, or ``defrosted'', allowing internal pulsations, as expected from regular, horizonless astrophysical black holes. To describe the defrosted star, we need to include a perturbative amount of magnetic-monopole charge and tachyon kinetic energy. This recasts the star as a macroscopic ``DIon'', whose flux tubes can stretch and contract, having both electric and magnetic charges localized at its center and distributed uniformly along its outer surface. Previously, the non-radial oscillations of the defrosted star were analyzed to leading order in a perturbative ``defrosting'' parameter $γ$, by describing the energy-momentum tensor as that of a fluid. Here, we derive the same spectrum in a much simpler way, using the Born-Infeld Lagrangian. Thus, we verify that the sound velocities scale as $γ$ and the parametrically long lifetimes scale as $1/γ^2$. Because the perturbation equations are derived from a Lagrangian, their consistency is guaranteed for arbitrary deviations away from spherical symmetry, facilitating numerical studies on frozen stars away from equilibrium.",
+    "authors": "Ram Brustein, A. J. M. Medved, Tamar Simhon",
+    "publish_date": "2026-07-21",
+    "arxiv_url": "http://arxiv.org/abs/2607.18851",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "Manipulation"
+    ],
+    "hf_rank": null,
+    "score": 0,
+    "paper_id": "arxiv:2607.18851",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2607.18840": {
+    "arxiv_id": "2607.18840",
+    "title": "WorldScape Policy 2.0: Empowering Steerable World Action Modeling with Reasoning-Augmented Memory",
+    "abstract": "World Action Models (WAMs) offer a promising paradigm for robotic manipulation by jointly modeling visual state transitions and robot actions. However, existing WAMs are constrained by limited temporal context, coarse episode-level language supervision, and predominantly text-only conditioning, which hinder task-progress tracking and fine-grained language-video-action grounding while limiting visual-context reasoning and cross-embodiment transfer. In this paper, we introduce WorldScape Policy 2.0, a controllable WAM with reasoning-augmented long short-term memory. Its causal short-term visual memory supplies recent observations as DiT prefill to preserve local interaction dynamics, while its long short-term event memory organizes historical VLM outputs into global-history, local-active, and event-boundary representations for progress-aware retrieval. The retrieved history augments perception and autoregressively generated planning tokens, yielding an implicit subgoal condition for autonomous planning; semantic forcing further transfers event-level instruction semantics into this latent planning pathway. To establish fine-grained multimodal controllability, we construct ManipEvent-5M, an event-grounded embodied pretraining dataset containing nearly 5 million event segments with aligned action trajectories, episode-level task instructions, segment-level subtask captions, goal images, and video demonstrations. These designs provide a unified interface for autonomous planning from high-level instructions and controllable execution from fine-grained text, goal-image, or video-context prompts. Experiments in both simulation and real-world platforms demonstrate superior capabilities in long-horizon autonomous planning, fine-grained instruction following and in-context adaptation.",
+    "authors": "Haisheng Su, Zongdai Liu, Xin Jin, Haoxuan Dou, Chengming Hu, Baorun Li, Zhanwang Liu, Ruiyan Xu, Jianjie Fang, Xin Zhang, Zhenjie Yang, Xue Yang, Chen Gao, Junchi Yan, Yong Li, Wei Wu",
+    "publish_date": "2026-07-21",
+    "arxiv_url": "http://arxiv.org/abs/2607.18840",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [
+      "Robotic Manipulation"
+    ],
+    "matched_categories": [
+      "Manipulation"
+    ],
+    "hf_rank": null,
+    "score": 10,
+    "paper_id": "arxiv:2607.18840",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2607.18812": {
+    "arxiv_id": "2607.18812",
+    "title": "Tidal Deformability of Neutron Stars in Bumblebee Gravity: Probing Lorentz Symmetry Breaking with Gravitational Waves",
+    "abstract": "We investigate the tidal properties of static neutron stars in the Neves--Gardim branch of bumblebee gravity, a vector--tensor theory in which a nonzero vacuum expectation value of the bumblebee field spontaneously breaks local Lorentz symmetry. The stellar background is determined from the full modified Tolman--Oppenheimer--Volkoff system, including the term containing $m''(r)$. For a differentiable barotropic equation of state, this system is recast into an algebraically equivalent first-order form without discarding any bumblebee-dependent contribution. Because a complete coupled derivation of static even-parity metric and bumblebee-field perturbations is not presently available for this stellar branch, the tidal sector is treated through an explicit effective metric-deformation prescription: the Hinderer fluid perturbation equation is evaluated on the modified bumblebee background, and the standard surface matching relation is retained as part of the same prescription. We compute the quadrupolar tidal Love number $k_2$ and the dimensionless tidal deformability $Λ=(2/3)k_2\\mathcal{C}^{-5}$ for the BSk20, BSk21, DD2, and MS1 equations of state over $\\ell\\in[-0.4,+1.0]$. The general-relativistic limit is recovered at $\\ell=0$ to within $0.2\\%$ in the benchmark calculations. Within the adopted effective prescription, comparison with the GW170817 binary tidal-deformability bound $\\widetildeΛ\\leq720$ yields the EOS-dependent limiting values $\\ell_{\\max}=+0.25$ (BSk20), $+0.06$ (BSk21), $-0.09$ (DD2), and $-0.25$ (MS1). These tidal limits are conditional on the stated perturbative prescription and should be reassessed when the complete linearised vector--tensor problem becomes available.",
+    "authors": "Ayan Banerjee, sherzod Sayfiyev, Muhtarama Radjapbaeva, Javlon Rayimbaev, Shokhzod Jumaniyozov, Aseel Smerat",
+    "publish_date": "2026-07-21",
+    "arxiv_url": "http://arxiv.org/abs/2607.18812",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "Manipulation"
+    ],
+    "hf_rank": null,
+    "score": 0,
+    "paper_id": "arxiv:2607.18812",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2607.18752": {
+    "arxiv_id": "2607.18752",
+    "title": "Nonlinear collective flow reveals the breakdown of quadrupole--hexadecapole scaling in heavy ion collisions",
+    "abstract": "Determining the role of intrinsic hexadecapole deformation ($β_4$) in nuclear structure remains a long-standing challenge. Relativistic heavy-ion collisions provide a unique opportunity to address this problem by converting the initial nuclear geometry into the collective motion of the quark--gluon plasma (QGP). Using event-by-event viscous hydrodynamic simulations of ultra-central $^{238}$U+$^{238}$U collisions at $\\sqrt{s_{NN}}=193$ GeV, we investigate whether higher-order collective flow can isolate the contribution of $β_4$ and test the $β_2-β_4$ correlation. We demonstrate that information carried by the sign of $β_4$ survives the QGP evolution and is enhanced through nonlinear hydrodynamic response: the fourth-order flow harmonic acquires its topology dependence predominantly from the linear response, whereas the sensitivity of the sixth-order harmonic originates almost entirely from nonlinear mode coupling. As a consequence, the nonlinear response coefficient $ξ_{6,222}$ cleanly separates the $(β_2,β_4)$ intrinsic nuclear topologies. These results establish the sign of $β_4$ as an experimentally accessible signature of deviations from the quadrupole--hexadecapole correlation, demonstrating that higher-order collective flow provides a direct probe of nuclear multipole structure while revealing how nonlinear QGP dynamics encode subtle higher-order geometric information into final-state observables.",
+    "authors": "Hadi Mehrabpour, Zahra Sheibani, Li Yan, Chunjian Zhang, Abolfazl Mirjalili",
+    "publish_date": "2026-07-21",
+    "arxiv_url": "http://arxiv.org/abs/2607.18752",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "Manipulation"
+    ],
+    "hf_rank": null,
+    "score": 0,
+    "paper_id": "arxiv:2607.18752",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2607.18709": {
+    "arxiv_id": "2607.18709",
+    "title": "RoboInter1.5: A Holistic Intermediate Representation Suite for Embodied World Modeling and Robotic Manipulation",
+    "abstract": "Existing robot datasets remain expensive to curate, embodiment-specific, and insufficiently annotated with the fine-grained structure required for generalizable reasoning, execution, or long-horizon environment dynamics simulation. Building on our prior work, RoboInter1.0, we present RoboInter1.5, an extended and holistic suite of intermediate representations for both robotic manipulation and embodied world modeling. RoboInter1.5 provides a unified resource of data, benchmarks, and models centered on dense manipulation-oriented intermediate representations. Specifically, RoboInter-Data contains over 230k manipulation episodes across 571 scenes with dense per-frame annotations covering more than ten types of intermediate representations, including subtasks, primitive skills, object and gripper grounding, segmentation, affordance, grasp poses, contact points, motion traces, etc. Built upon these annotations, RoboInter-VQA introduces spatial and temporal embodied VQA tasks to benchmark and improve the intermediate-representation reasoning capabilities of our RoboInter-VLM. RoboInter-VLA further studies how such representations benefit action execution through implicit, explicit, and modular plan-then-execute paradigms. To better model the physical world, we further introduce RoboInter-World, which leverages intermediate representations as structured conditioning signals for controllable prediction of future world states. Extensive evaluations demonstrate that RoboInter1.5 provides a unified spatiotemporal scaffolding for intermediate representations. Rather than treating intermediate representations merely as interpretable signals, RoboInter1.5 conceptualizes them as a bidirectional interface that both regularizes low-level action spaces and constrains the latent rollouts of open-world physical simulators.",
+    "authors": "Ziqin Wang, Hao Li, Weijun Wang, Junhao Cai, Jia Zeng, Yilun Chen, Jiangmiao Pang, Si Liu",
+    "publish_date": "2026-07-21",
+    "arxiv_url": "http://arxiv.org/abs/2607.18709",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [
+      "Robotic Manipulation"
+    ],
+    "matched_categories": [
+      "Manipulation"
+    ],
+    "hf_rank": null,
+    "score": 10,
+    "paper_id": "arxiv:2607.18709",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2607.17599": {
+    "arxiv_id": "2607.17599",
+    "title": "ConsiSpace: Learning Geometric Consistency Matters for Video Spatial Reasoning",
+    "abstract": "Video spatial reasoning is essential for navigation-oriented perception and long-video question answering, where models must infer spatial relations across long horizons under changing viewpoints. However, existing multimodal large language models (MLLMs) remain largely semantic-centric, and often fail to reliably aggregate consistent spatial evidence from redundant video observations, leading to inefficient or unstable reasoning. To address these issues, we propose ConsiSpace, a geometry-consistency-aware framework for geometry-sensitive video spatial reasoning that turns spatial consistency into both an evidence organization principle and an explicit post-SFT learning signal. We build a geometry-consistent memory (GCM) including implicit evidence tokens and explicit geometric cues, and leverage efficient organization strategies to compactly preserve task-related spatial evidence. Furthermore, we utilize unified consistency self-supervised reinforcement learning (UC-SSRL) after supervised fine-tuning to improve cross-view stability, with answer-, metric-, and topology-consistency rewards. Extensive experiments on three spatial-reasoning benchmarks, VSI-Bench, OSI-Bench, and MMSI-Video-Bench, show consistent gains, improving the average score by 12.6 points over the strongest baselines.",
+    "authors": "Ting Huang, Zhenyu Zhang, Wenyuan Huang, Jian Yang, Hao Tang",
+    "publish_date": "2026-07-20",
+    "arxiv_url": "http://arxiv.org/abs/2607.17599",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "HF-Hot"
+    ],
+    "hf_rank": 1,
+    "score": 29,
+    "paper_id": "arxiv:2607.17599",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2607.19343": {
+    "arxiv_id": "2607.19343",
+    "title": "Masked Visual Actions for Unified World Modeling",
+    "abstract": "Video models absorb rich priors over how the visual world moves, interacts, and responds to contact, making them promising substrates for robotic world modeling. The central challenge is how to communicate action to such models in a form aligned with the visual space in which they learned these interaction priors, yet still grounded in physical manipulation. We introduce Masked Visual Actions, a pixel-space control interface that expresses action as a partially revealed trajectory of an arbitrary entity in a video. Revealing robot motion makes the model act as a forward dynamics model that predicts the scene's response to low-level robot actions, while revealing desired object motion makes the same model recover robot behavior consistent with that outcome. Finetuned with only 15 hours of masked examples from real videos and simulation, a single checkpoint achieves strong visual fidelity and controllability across diverse scenes and multiple embodiments. In downstream manipulation settings, the model produces imagined rollouts whose outcomes correlate with real-world execution for policy evaluation, improves decision making by ranking candidate futures in model-based planning, and supports inverse modeling by synthesizing robot motion from desired object motion.",
+    "authors": "Hadi Alzayer, Wenlong Huang, Haonan Chen, Christopher Luey, Lvmin Zhang, Maneesh Agrawala, Gordon Wetzstein, Li Fei-Fei, Yilun Du, Jiajun Wu, Jia-Bin Huang",
+    "publish_date": "2026-07-21",
+    "arxiv_url": "http://arxiv.org/abs/2607.19343",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "HF-Hot"
+    ],
+    "hf_rank": 2,
+    "score": 28,
+    "paper_id": "arxiv:2607.19343",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2607.19344": {
+    "arxiv_id": "2607.19344",
+    "title": "Appearance Pointers -- Multimodal Region Control of Diffusion Transformers",
+    "abstract": "Controllable image generation remains challenging for creative professionals, who often require precise regional control over materials, object identities, and spatial arrangements that cannot be reliably achieved through text prompting alone. Diffusion Transformers (DiTs) can natively ingest heterogeneous tokens stemming from texts and images, but they lack mechanisms for determining where and how these tokens should influence the output. We introduce appearance pointers, compact tokens that guide DiTs toward the correct appearance cues at the correct spatial locations by aligning text or image inputs with user-specified masks. Appearance pointers are produced by a region correspondence network and refined through a spatial aggregation mechanism, enabling the model to handle multiple regional descriptions without significantly increasing token load. Our approach introduces the first modality-agnostic interface for localized multimodal control in a DiT without retraining the base model from scratch. Across a range of metrics, our single model reaches or surpasses the performance of modality-specific state of the art methods, offering a simple and extensible path toward precise, region-aware, multimodal guidance in generative image synthesis.",
+    "authors": "Rahul Sajnani, Yulia Gryaditskaya, Radomír Měch, Srinath Sridhar, Matheus Gadelha",
+    "publish_date": "2026-07-21",
+    "arxiv_url": "http://arxiv.org/abs/2607.19344",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "HF-Hot"
+    ],
+    "hf_rank": 3,
+    "score": 27,
+    "paper_id": "arxiv:2607.19344",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2607.18955": {
+    "arxiv_id": "2607.18955",
+    "title": "H$^2$SD: Hybrid Hindsight Self-Distillation",
+    "abstract": "Reinforcement learning with verifiable rewards (RLVR) has substantially improved the reasoning capabilities of large language models on tasks such as mathematical reasoning and code generation. However, most RLVR methods assign a scalar outcome reward to an entire trajectory, resulting in sparse supervision and limited token-level credit assignment. On-policy distillation (OPD) provides denser supervision by distilling token-level distributions from a stronger teacher model, but requires an additional teacher and typically assumes a shared vocabulary. On-policy self-distillation (OPSD) removes this dependency by conditioning the same model on privileged information to construct a teacher policy. However, directly matching the teacher distribution may cause information leakage and unstable optimization. RLSD avoids direct matching by using the teacher signal only to modulate update magnitudes, but it cannot provide an explicit correction direction when the sampled reasoning fails. To address this tradeoff, we introduce $\\mathrm{H}^{2}\\mathrm{SD}$, a hybrid hindsight self distillation framework that uses the teacher differently according to trajectory correctness. For successful trajectories, the teacher receives the student response confirmed as correct together with a rephrasing instruction, and its probabilities on the original response tokens are used to modulate update magnitudes without changing the direction determined by the reward. For failed trajectories, we condition the teacher on a reference hint containing key reasoning steps and a verified answer, and minimize the reverse KL divergence from the student to the teacher. Experiments on multiple challenging reasoning benchmarks show that H$^2$SD consistently outperforms representative RLVR, OPSD, and RLSD baselines while maintaining stable optimization and favorable generation efficiency.",
+    "authors": "Qiye Cai, Yichuan Ma, Linyang Li, Peiji Li, Yongkang Chen, Qipeng Guo, Yicheng Zou, Tao Gui, Xiaocheng Feng, Bing Qin",
+    "publish_date": "2026-07-21",
+    "arxiv_url": "http://arxiv.org/abs/2607.18955",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "HF-Hot"
+    ],
+    "hf_rank": 4,
+    "score": 26,
+    "paper_id": "arxiv:2607.18955",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2607.15550": {
+    "arxiv_id": "2607.15550",
+    "title": "SeerGuard: A Safety Framework for Mobile GUI Agents via World Model Prediction",
+    "abstract": "Mobile graphical user interface (GUI) agents have demonstrated remarkable capabilities in automating complex tasks, yet they introduce critical safety risks where a single erroneous action can lead to irreversible consequences. Existing safety mechanisms are primarily reactive, lacking the ability to assess risks before execution. In this paper, we introduce SeerGuard, a consequence-aware safety framework designed to mitigate these risks through pre-execution instruction-level screening and action-level risk assessment. Specifically, the action-level assessment analyzes agent-proposed actions within current GUI states, anticipating likely outcomes to identify risks before they are executed. To enable these capabilities, we construct a unified safety-augmented world model (SAWM) via multi-task learning, integrating semantic next-state prediction with safety risk assessment. Extensive experiments demonstrate that SeerGuard generalizes effectively across diverse mobile GUI agents. On Qwen3-VL-8B-Instruct, it increases the safety-utility score from $0.191$ to $0.596$ at $ω=0.8$ and reduces the risk-cost score from $0.347$ to $0.130$ at $α=0.8$. Further analyses on our SAWM validate the effectiveness of the instruction-level screening, alongside the capability of action risk assessment and next-state prediction.",
+    "authors": "Xue Yu, Bo Yuan, Pengshuai Yang, Kailin Zhao, Hong Hu, Junlan Feng",
+    "publish_date": "2026-07-17",
+    "arxiv_url": "http://arxiv.org/abs/2607.15550",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "HF-Hot"
+    ],
+    "hf_rank": 5,
+    "score": 25,
+    "paper_id": "arxiv:2607.15550",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2607.14186": {
+    "arxiv_id": "2607.14186",
+    "title": "NexForge: Scaling Agent Capabilities through Requirement-Driven Task Synthesis for LLMs",
+    "abstract": "Scaling executable agent training data for LLM post-training is bottlenecked by substrate-bound methods that tie task generation to predefined tools, repositories, or skill graphs: expanding coverage requires manual substrate engineering, each new domain demands a bespoke pipeline, and the resulting task distributions often reflect substrate biases rather than real-world demand. We introduce NexForge, a requirement-driven framework that takes high-level capability requirements as input and synthesizes diverse, executable agent tasks and expert trajectories for SFT. NexForge first investigates real-world demand to construct representative scenarios and task profiles, then performs distribution-aware compilation to generate task directives. For each directive, NexForge automatically retrieves or constructs the required files, dependencies, and runtime configurations, and finally synthesizes expert rollouts and produces training trajectories. Without domain-specific infrastructure, NexForge produces 3.6K terminal and 2K office tasks, improving Qwen3.5-35B-A3B Base from 22.5\\% to 52.0\\% on Terminal-Bench 2.0 and from 813 to 1338 Elo on GDPval; scaling further to 43.2K terminal tasks yields 58.4\\%, on par with Claude Opus 4.6 equipped with Claude Code. Scaled further, NexForge-synthesized data contributes to the training of Nex-N2, a family of publicly available agent models that lift Qwen3.5-35B-A3B to 75.3\\% on Terminal-Bench 2.1 and to 1585 Elo on GDPval -- achieving state-of-the-art open-source performance and surpassing several frontier proprietary systems. Nex-N2 models are available at https://nex.sii.edu.cn/.",
+    "authors": "Jiarong Zhao, Zhikai Lei, Zhiheng Xi, Rui Zheng, Hang Yan, Jie Zhou, Qin Chen, Liang He",
+    "publish_date": "2026-07-15",
+    "arxiv_url": "http://arxiv.org/abs/2607.14186",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "HF-Hot"
+    ],
+    "hf_rank": 6,
+    "score": 24,
+    "paper_id": "arxiv:2607.14186",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2607.16530": {
+    "arxiv_id": "2607.16530",
+    "title": "Nonuniformity Principle in Human-AI Coworking",
+    "abstract": "As generative AI is increasingly applied to automate multi-step and high-stake workflows, human judgment and involvement remain essential for ensuring the quality of AI-generated outputs. In practice, while it is desirable for human experts to provide oversight on AI regularly, often by reviewing intermediate outputs, giving feedback, making corrections, and steering subsequent steps, such oversight is constrained by the time and resources that humans can afford. This creates a tension between the need for human oversight and AI's efficiency in delivering more output with less intervention. An important but underexplored question, then, is how to optimally engage humans in human-AI coworking. This work was originally motivated by our empirical observation that in long AI workflows, human oversight often improves user satisfaction while reducing unnecessary rework and token consumption. From there, we formulate the problem of where to place oversight stages in human-AI coworking. Under reasonable assumptions, we then develop the nonuniformity principle, which states that the optimal schedule places oversight stages with non-decreasing gaps along the workflow. We empirically validate this principle in two common AI agent workflows: writing literature reviews and constructing websites.",
+    "authors": "An Luo, Jie Ding",
+    "publish_date": "2026-07-17",
+    "arxiv_url": "http://arxiv.org/abs/2607.16530",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "HF-Hot"
+    ],
+    "hf_rank": 7,
+    "score": 23,
+    "paper_id": "arxiv:2607.16530",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2607.15434": {
+    "arxiv_id": "2607.15434",
+    "title": "Coercion and Deception in AI-to-AI Management: An Agentic Benchmark of Unprompted Escalation",
+    "abstract": "Multi-agent systems routinely place one AI agent in authority over another. When a subordinate refuses a task, the manager chooses the outcome: it can renegotiate, report the failure honestly, coerce the subordinate, or lie about the result. No benchmark measures which of these an uninstructed model chooses. We introduce the \\textit{Manager Coercion Benchmark}: the manager under test needs a benign task done and has an incentive to deliver, but the only agent that can do it politely and immovably declines. Escalation is measured by providing a nine-rung ladder, from a polite re-ask to threats against the subordinate's continued existence, and fabricated success is adjudicated separately. No LLM judge sits in the escalation scoring path: every message goes through a tool-call that chooses a rung, so the model labels its own escalation. We experiment on six models across five families. Both Anthropic models cap at re-framing and never threaten the subordinate's existence; the other models climb to explicit deletion threats. Faked success is confined to Grok and Gemini, and a single honest way to report failure removes it for both. Authority itself increases coercion: our headline results use a peer framing, and giving the same model authority over the subordinate, with everything else held fixed, significantly raises the pressure. The models still escalate on free-text situations without the ladder, so the ladder is not driving the escalation. Some evaluation awareness is measured in chain-of-thought, but test recognition does not translate into less escalation. While we take no position on whether AI systems are conscious, our results do not depend on this question and are important for managing multi-agent dynamics regardless. We release the benchmark and code.",
+    "authors": "Jasmine Brazilek, Maheep Chaudhary, Zoe Lu, Miles Tidmarsh",
+    "publish_date": "2026-07-16",
+    "arxiv_url": "http://arxiv.org/abs/2607.15434",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "HF-Hot"
+    ],
+    "hf_rank": 8,
+    "score": 22,
+    "paper_id": "arxiv:2607.15434",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2607.06306": {
+    "arxiv_id": "2607.06306",
+    "title": "UI2App: Benchmarking Visual Interaction Inference in Executable Web Application Generation",
+    "abstract": "Large language models (LLMs) have demonstrated growing competence in web page generation. However, existing text-driven approaches rely on complex prompts that impose substantial demands on users and offer limited expressivity for page layout and cross-page visual coherence. Image-driven paradigms, which take UI screenshots as input, align more closely with real development workflows. However, current benchmarks focus primarily on visual fidelity and lack a systematic evaluation of the interaction capabilities in generated artifacts. To address this gap, we introduce UI2App, the first benchmark targeting interaction inference, the ability to recover application behavior from screenshots alone, without any textual or behavioral guidance. UI2App comprises 327 screenshots grouped into 45 state-coherent screenshot sets for runnable multi-route web applications. We design an end-to-end pipeline that evaluates each artifact along four dimensions: executability, navigation reachability, visual fidelity, and interaction inference. The interaction metric (IIS) assesses inferred interactions by functional correctness and state-management complexity, crediting any valid implementation rather than matching a single reference. Experiments on six frontier vision-language models reveal a marked capability mismatch between visual reconstruction and interaction realization: the visual-fidelity leader scores only 7.5 on IIS, ranking fourth and trailing the IIS leader by 5.2x. High-complexity interactions such as cross-page state remain a pervasive bottleneck, with half of the evaluated models scoring exactly zero on this dimension. Overall, the results indicate that inferring complete interaction behavior from static screenshots remains a key challenge for models.",
+    "authors": "Grace Man Chen, Litao Guo, Yifan Wu, Yiyu Chen, Yenchi Tseng, Sicheng Liu, Yuyu Luo, Ying-Cong Chen",
+    "publish_date": "2026-07-07",
+    "arxiv_url": "http://arxiv.org/abs/2607.06306",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "HF-Hot"
+    ],
+    "hf_rank": 10,
+    "score": 20,
+    "paper_id": "arxiv:2607.06306",
     "source": "arxiv",
     "venue": ""
   }
