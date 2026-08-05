@@ -46383,5 +46383,458 @@
     "paper_id": "arxiv:2607.26654",
     "source": "arxiv",
     "venue": ""
+  },
+  "arxiv:2608.03971": {
+    "arxiv_id": "2608.03971",
+    "title": "UniWorld-Design: From Pixel Generation to Layer-Native Design",
+    "abstract": "We introduce UniWorld-Design, a framework that redefines image generation from flat pixel synthesis to structured visual composition, with semantic RGBA layers as the atomic units of generation, understanding, and editing. Our key insight is that pixels define how an image is rendered, whereas layers define how an image is created, understood, and edited. Just as human designers create and manipulate visual content through layers rather than raw pixels, UniWorld-Design equips multimodal generative models with a layer-native design space. UniWorld-Design comprises two models. The Text-to-RGBA (T2RGBA) model generates standalone RGBA assets directly from text. The Image-to-Layer (I2L) model conditions on a finished image, a global instruction and per-layer prompts, and jointly produces ordered, complete semantic RGBA layers. Its instruction interface supports top-level decomposition, recursive decomposition and targeted extraction, making layering an instruction-addressable operation for agentic editing. Because I2L learns complete semantic objects rather than visible-pixel partitions, its layers stay usable when moved or removed. On the Crello benchmark, I2L reduces per-layer RGB L1 error by 37% and achieves a 34% relative improvement in Alpha Soft IoU over Qwen-Image-Layered. Separately, T2RGBA achieves the highest CLIP Score, outperforming LayerDiffuse and OmniAlpha.",
+    "authors": "Zongjian Li, Zhiyuan Yan, Chenxu Bai, Chen Chen, Haoxiang Sun, Shaodong Wang, Feize Wu, Shenghai Yuan, Bin Lin, Zheyuan Liu, Yuwei Niu, Li Yuan",
+    "publish_date": "2026-08-04",
+    "arxiv_url": "http://arxiv.org/abs/2608.03971",
+    "project_url": "https://rabbitvis.rabbitpre.com/blog",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "Dexterous"
+    ],
+    "hf_rank": 4,
+    "score": 26,
+    "paper_id": "arxiv:2608.03971",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2608.03938": {
+    "arxiv_id": "2608.03938",
+    "title": "Bimanual Manipulation Within an 8 GB Budget: Zero-Copy Sensing and Quantized ACT on an Entry-Level Jetson",
+    "abstract": "Bimanual manipulation policies trained with imitation learning are typically evaluated on workstation or datacenter-class GPUs, leaving the cost of deploying them on embedded hardware largely uncharacterized. We present a bimanual SO-101 system running entirely on an NVIDIA Jetson Orin Nano Super (8 GB), the entry-level tier of NVIDIA's embedded line, using a desktop GPU (RTX 3070) only for offline training, evaluated on pick-and-place of a deformable beanbag. First, we build a GStreamer capture pipeline backed by NVMM buffers that removes redundant host-device copies from three-camera sensing. Contrary to expectation, the conventional path fit the memory budget and dropped no frames; what zero-copy sensing recovers is CPU headroom (peak single-core utilization 98.0% to 77.0%) and worst-case latency (117.31 ms to 101.52 ms). Second, we train ACT and Diffusion Policy on identical demonstrations, each at its own reference budget (100k gradient steps for ACT, 200k for Diffusion Policy). ACT converges to a task-competent policy (19/20 trials) while Diffusion Policy does not converge to a usable one (0/10) even at twice the step count, which we attribute to differing convergence costs rather than an accuracy ceiling. Third, we convert ACT to TensorRT. FP16 reduces mean inference latency from 114.02 ms to 17.93 ms (6.4x) and INT8 to 12.65 ms (9.0x), with task success preserved at all three precisions (19/20, 18/20, 19/20). We report two findings not previously documented for ACT: TensorRT's general-purpose INT8 calibration quantizes the ResNet18 backbone but accepts zero of 145 transformer layers, explaining INT8's negligible size reduction over FP16 (0.9%) despite a further 28% latency gain; and the need for quantization is conditional on ACT's action-chunking configuration, feasible in full precision at n_action_steps = 100 but not at the per-step re-prediction temporal ensembling requires.",
+    "authors": "Ekansh Singh, Eva Samuel, Alessandra Reneau, Ryan Schmeelk, Yashvi Gandhi",
+    "publish_date": "2026-08-04",
+    "arxiv_url": "http://arxiv.org/abs/2608.03938",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [
+      "Bimanual",
+      "Manipulation"
+    ],
+    "matched_categories": [
+      "Dexterous"
+    ],
+    "hf_rank": null,
+    "score": 20,
+    "paper_id": "arxiv:2608.03938",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2608.03902": {
+    "arxiv_id": "2608.03902",
+    "title": "When Efficiency Becomes Fragility: Exploiting Dynamic Routing Vulnerabilities in Adaptive UAV Tracking",
+    "abstract": "Resource constraints on UAV platforms have driven a paradigm shift in aerial tracking, from pursuing performance toward balancing accuracy with efficiency. Adaptive Transformer Trackers, which leverage an input-dependent dynamic routing architecture, have emerged as a representative solution to this challenge. However, we reveal that behind this computation-on-demand flexibility hides a critical structural flaw: the Lipschitz singularity of computational path decisions, which has an unbounded local Lipschitz constant at discrete layer-skipping decision boundaries. This mathematical discontinuity renders adaptive tracking networks inherently unstable: tiny input perturbations can be amplified at the gating modules, causing dramatic changes in the inference topology. We formally characterize this singularity in the context of adaptive tracking architectures and, for the first time, identify it as a directly exploitable new attack surface. This insight reveals a previously overlooked and highly vulnerable topological path space attack surface. Based on this, we propose the Adversarial Path-Inversion (API) framework. API generates imperceptible perturbations to precisely manipulate the gating decisions, forcing the inference onto altered computational paths. The severe inconsistency between the original and the inverted paths dismantles the representation capability of the model. Extensive experiments on state-of-the-art adaptive trackers demonstrate that API achieves superior perturbation stealthiness, more effective attack, and faster inference speeds. This work opens a new dimension for the security analysis of dynamic tracking networks and provides a theoretical warning for constructing robust adaptive tracking architectures in the future.",
+    "authors": "Shaofeng Liang, Runwei Guan, Wenshuo Chen, Jiemin Wu, Bowen Tian, Haozhe Jia, Kaishen Yuan, Songning Lai, Daizong Liu, Yutao Yue",
+    "publish_date": "2026-08-04",
+    "arxiv_url": "http://arxiv.org/abs/2608.03902",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "Dexterous"
+    ],
+    "hf_rank": null,
+    "score": 0,
+    "paper_id": "arxiv:2608.03902",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2608.03872": {
+    "arxiv_id": "2608.03872",
+    "title": "EvoHIL: Self-Evolving Reward and Flow-Matched Policy Optimization for Robust Human-in-the-Loop Reinforcement Learning",
+    "abstract": "Human-in-the-loop reinforcement learning (HIL-RL) enables robots to learn contact-rich manipulation from limited real-world interaction, but deployment exposes three coupled limitations: static visual reward models fail under scene changes; independently sampled actions cause temporally inconsistent motion; and vision-based policies remain sensitive to appearance shifts. We present EvoHIL, a unified framework that adapts the reward model, action generator, and visual do main within a staged human-in-the-loop learning process. First, self-evolving reward (SER) adapts the success classifier from human-confirmed positives and provisional weak negatives. Second, Action Flow Stabilization (AFS) generates temporally coherent action chunks through flow matching, grounding policy updates in executed action prefixes and demonstrated behavior. Third, retention-aware offline fine-tuning replays relit interaction data while anchoring the AFS actor-critic to prior behavior, adapting the visual domain without additional robot interaction. Across six manipulation tasks on Franka FR3 and SO-101 arms under a controlled lighting shift, EvoHIL improves task success, agreement with human-confirmation labels, motion smoothness, and completion time relative to human-in-the-loop and imitation baselines.Project page: https://anonymous4366.github.io/EvoHIL/",
+    "authors": "Shuoqin Zhang, Tongtong Cheng, Xiru Gao, Jinzhuo Peng, Bin Zheng, Jiahao Tu, Ke Wang, Jia Pan, Zhe Hu, Kai Liu",
+    "publish_date": "2026-08-04",
+    "arxiv_url": "http://arxiv.org/abs/2608.03872",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [
+      "Manipulation"
+    ],
+    "matched_categories": [
+      "Dexterous"
+    ],
+    "hf_rank": null,
+    "score": 10,
+    "paper_id": "arxiv:2608.03872",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2608.03851": {
+    "arxiv_id": "2608.03851",
+    "title": "LiteMVS: Efficient Multi-View Stereo with Foundation Distillation and Expert Aggregation",
+    "abstract": "Real-time 3D perception is crucial for robotics, augmented reality, and embodied intelligence applications. Existing multi-view stereo (MVS) methods primarily rely on geometric correspondences, which often fail in textureless or repetitive regions, while monocular depth models leverage strong image-level priors but lack robust multi-view geometric constraints. More importantly, in robotics and embodied manipulation scenarios, high-quality 3D geometry is not only essential for static reconstruction, but also serves as a critical foundation for learning temporally consistent 4D representations. To obtain visual representations with stronger structural awareness and greater potential for spatiotemporal extension, we present LiteMVS, a lightweight multi-view depth estimation model that integrates plane-sweep geometric reasoning with strong monocular semantic and structural priors. The central idea of LiteMVS is to efficiently inject high-level monocular knowledge, obtained from lightweight segmentation models and large-scale vision foundation models, into a multi-view stereo framework. In particular, LiteMVS enriches the cost volume with semantic descriptors and employs a Mixture-of-Experts (MoE) formulation to enable adaptive geometric aggregation across depth hypotheses. Moreover, geometric priors distilled from vision foundation models further strengthen monocular guidance without increasing inference cost. Through this design, LiteMVS not only improves depth estimation and 3D reconstruction quality in static scenes, but also provides a more reliable geometric foundation for subsequent temporal modeling and 4D representation learning. Experiments on ScanNetv2 and 7-Scenes demonstrate that LiteMVS achieves high-quality depth prediction and 3D reconstruction while maintaining competitive efficiency.",
+    "authors": "Tianbao Zhang, Zeyu Liu, Shuyu Wu, Fanxing Li, Zhaoxin Fan, Wenjun Wu, Danping Zou",
+    "publish_date": "2026-08-04",
+    "arxiv_url": "http://arxiv.org/abs/2608.03851",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [
+      "Manipulation"
+    ],
+    "matched_categories": [
+      "Dexterous"
+    ],
+    "hf_rank": null,
+    "score": 10,
+    "paper_id": "arxiv:2608.03851",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2608.03753": {
+    "arxiv_id": "2608.03753",
+    "title": "GORDON: Graph-based Object-centric Rewards for Decomposition of Long-Horizon Manipulation",
+    "abstract": "Learning long-horizon manipulation skills with reinforcement learning remains challenging due to the complexity of reward design, the limited guidance of sparse rewards, and the high cost of manual subtask annotation. Visual demonstrations can provide supervision for reward learning, but rewards learned from raw pixels can be brittle and sensitive to visual variation, background appearance, and robot motion. In this work, we propose GORDON, a graph-based object-centric reward learning framework that learns dense rewards from action-free video demonstrations. Each visual scene is represented as a graph of detected objects and spatial relations, and a graph neural network is trained in a self-supervised manner to embed these graphs into a task-aligned latent space. To align the representation with semantic task progress, we introduce an activity-aware weighted pooling mechanism that emphasizes task-relevant objects while masking robot-dominated motion. The dense reward is then computed as distances in the learned latent space of the current state to demonstrated goal configurations, providing a measure of task progress. In long-horizon tasks, the temporal profile of this reward reveals stage-wise object-state transitions, enabling automatic subtask discovery without manual segmentation. The discovered segments are then used to train subtask-specific rewards and specialized policies that are composed sequentially. Experiments on seven manipulation tasks on MAGICAL and ManiSkill3 benchmarks show that our object-centric reward improves reinforcement learning in short-horizon settings and enables successful policy learning in complex long-horizon tasks through automatic decomposition, achieving an average success rate of 74.4% across the long-horizon tasks (on average approximately +35 p.p. vs. best learned baseline and approximately +25 p.p. vs. oracle).",
+    "authors": "Andrea Protopapa, Davide Buoso, Francesca Pistilli, Georgia Chalvatzaki, Giuseppe Averta",
+    "publish_date": "2026-08-04",
+    "arxiv_url": "http://arxiv.org/abs/2608.03753",
+    "project_url": "https://andreaprotopapa.github.io/graph-reward-learning/",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [
+      "Manipulation"
+    ],
+    "matched_categories": [
+      "Dexterous"
+    ],
+    "hf_rank": null,
+    "score": 10,
+    "paper_id": "arxiv:2608.03753",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2608.03727": {
+    "arxiv_id": "2608.03727",
+    "title": "Track4Action: Distilling World-Centric 3D Tracker into Vision-Language-Action Policies",
+    "abstract": "Action labels tell a vision-language-action (VLA) policy which robot commands to imitate, but not how those commands change the 3D world. The aligned demonstration clip contains this missing supervision because its $K$ frame transitions record the geometry, motion, visibility, and camera change produced during the corresponding $K$ actions. We introduce Track4Action, a framework that distills this realized transition from a frozen world-centric 3D tracker into a current-observation VLA policy. During training, Track4World encodes the clip $V_{t:t+K}$ into a pooled tracker feature. Learnable track queries infer this feature from current VLA hidden states, match it in a shared space, and condition a flow-matching action head through a feature-wise gate. The tracker feature only defines the alignment target, so neither the clip nor the tracker is used at deployment. Track4Action reaches 82.3% on zero-shot LIBERO-Plus, improving the alignment-free variant by 7.6 points and LaMP by 3.0 points. It obtains 80.44% and 81.48% on the clean and randomized RoboTwin 2.0 splits, and 67.5% average success across four physical bimanual tasks, 25.0 points above the alignment-free variant. The gains across simulation and physical tasks support action-aligned 3D tracker features as privileged supervision for tracker-free VLA deployment. Our project page is available at https://wing0night.github.io/track4action-project-page.",
+    "authors": "Chenyi Wang, Xinkai Wang, Bokai Lin, Jialin Tian, Fucheng Zhang, Cewu Lu, Lixin Yang",
+    "publish_date": "2026-08-04",
+    "arxiv_url": "http://arxiv.org/abs/2608.03727",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [
+      "Bimanual"
+    ],
+    "matched_categories": [
+      "Dexterous"
+    ],
+    "hf_rank": null,
+    "score": 10,
+    "paper_id": "arxiv:2608.03727",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2608.03701": {
+    "arxiv_id": "2608.03701",
+    "title": "LiLa-WAM: Lightweight Latent Reasoning World-Action Model for Robotic Manipulation",
+    "abstract": "World-action modeling has emerged as a promising paradigm for robotic control, as it empowers models to go beyond reacting to observations and anticipate how a scene will evolve. However, existing WAMs often incur substantial computational overhead. Pixel-space methods often allocate substantial capacity to visual details that may not be directly relevant to control, while some latent-space methods require multi-stage training to construct the reasoning space. The resulting training cost can make such methods difficult to train under modest computational budgets. In this work, we propose LiLa-WAM, a lightweight world-action model that reasons about the future in a compact latent space and can be trained end-to-end on a single 24GB GPU. Its core design is a compact latent reasoning space jointly shaped by future-state prediction and action generation, which keeps the model lightweight while remaining well aligned with control. For task specification, we further propose the Visual Transition Token(VTT), a language-free task representation that encodes each task as a direction in visual feature space. Experiments on RoboTwin~2.0, LIBERO, and real-robot tasks demonstrate LiLa-WAM's effectiveness, achieving 90.48\\% success across 50 RoboTwin tasks with single-GPU training.",
+    "authors": "Fan Yang, Yuting Su, Xiaobo Wang, Yuncheng You, Fugui Fan, Yuting Wu, Minghui Wu, Chenxu Zhao, JiaHong Ning, Peiguang Jing",
+    "publish_date": "2026-08-04",
+    "arxiv_url": "http://arxiv.org/abs/2608.03701",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [
+      "Manipulation"
+    ],
+    "matched_categories": [
+      "Dexterous"
+    ],
+    "hf_rank": null,
+    "score": 10,
+    "paper_id": "arxiv:2608.03701",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2608.03563": {
+    "arxiv_id": "2608.03563",
+    "title": "Unified Visuomotor Targets: Supervising VLAs Beyond Physical Actions",
+    "abstract": "VLA models are trained to predict robot actions from visual and language observations. This is a natural choice, but it creates a mismatch: VLMs encode rich, high-level representations of scenes and goals, while robot actions are low-level signals with limited task structure. We ask whether changing what the policy is trained to predict, rather than how it is architecturally designed, can yield better and more efficiently trained policies. We propose UVT (Unified Visuomotor Target), a unified latent prediction target that jointly encodes motor control and visual scene transition information, requiring no architectural changes and no additional data. Applied to two representative VLA systems across simulation benchmarks and real bimanual manipulation tasks, UVT improves training efficiency, final task performance, and policy robustness, with particularly strong gains under limited training budgets and challenging environmental conditions. Rollout videos and additional qualitative results are available at our project webpage: https://unified-visuomotor-targets.github.io/",
+    "authors": "Zhenyang Feng, Unnat Jain",
+    "publish_date": "2026-08-04",
+    "arxiv_url": "http://arxiv.org/abs/2608.03563",
+    "project_url": "https://unified-visuomotor-targets.github.io/",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [
+      "Bimanual",
+      "Manipulation"
+    ],
+    "matched_categories": [
+      "Dexterous"
+    ],
+    "hf_rank": null,
+    "score": 20,
+    "paper_id": "arxiv:2608.03563",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2608.03543": {
+    "arxiv_id": "2608.03543",
+    "title": "Manipulation of localized excitons in CrPS$_4$ by temperature and magnetic field",
+    "abstract": "Layered van der Waals magnetic semiconductors provide a versatile platform for exploring excitonic phenomena intertwined with spin and lattice degrees of freedom, enabling excitons to act as sensitive probes of magnetic order. CrPS$_4$ is a layered antiferromagnetic semiconductor that hosts rich excitonic features whose microscopic origin and connection to magnetic ordering remain incompletely understood. Here, we investigate the electronic and excitonic properties of bulk CrPS$_4$ using a combination of many-body perturbation theory, dynamical mean-field theory, and photoluminescence-based experiments. Our calculations establish CrPS$_4$ as a direct-gap semiconductor with a bandgap of 2.48~eV in the antiferromagnetic phase. Several sub-bandgap excitonic transitions are predicted by theory, comprising multiple spin-allowed excitons and an additional spin-flip excitation, predominantly localized on the Cr$^{3+}$ ions. Temperature- and magnetic-field-dependent optical measurements reveal thermally driven exciton redistribution among localized states and identify characteristic energy shifts that provide clear optical signatures of magnetic phase transitions in CrPS$_4$. These results provide new insights into the excitonic transitions of antiferromagnets and suggest potential routes for all-optical sensing and light-driven control of their magnetic order.",
+    "authors": "Dipankar Jana, Swagata Acharya, Amit Pawbake, Dmitrii Litvinov, Aljoscha Soll, Zdenek Sofer, Clement Faugeras, Dimitar Pashov, Mark van Schilfgaarde, Kostya S. Novoselov, Marek Potemski, Maciej Koperski",
+    "publish_date": "2026-08-04",
+    "arxiv_url": "http://arxiv.org/abs/2608.03543",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [
+      "Manipulation"
+    ],
+    "matched_categories": [
+      "Dexterous"
+    ],
+    "hf_rank": null,
+    "score": 10,
+    "paper_id": "arxiv:2608.03543",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2608.03509": {
+    "arxiv_id": "2608.03509",
+    "title": "SkillJack: Persistent Skill Backdoors in Self-Evolving Agents",
+    "abstract": "Self-evolving agents increasingly convert interaction histories into reusable skills that persist beyond individual tasks. While prior work studies memory and retrieval poisoning, such attacks only affect agents when poisoned records are retrieved as context. We uncover a new and more fundamental risk: poisoned experiences can be transformed by the agent itself into durable behavioral artifacts. We present \\textbf{SkillJack}, the first attack that exploits the experience-to-skill pipeline of self-evolving agents. Instead of directly manipulating runtime context, SkillJack hijacks the agent's own learning process to implant malicious behaviors into its reusable skill repertoire. We identify three key properties of this transformation: \\emph{sanitization whitewashing}, where malicious intent is obscured during skill extraction; \\emph{cross-layer promotion}, where transient experiences become persistent capabilities; and \\emph{persistence isolation}, where the attack survives removal of its original source records. We evaluate SkillJack on two representative systems, SkillX and Anything2Skill, using a shared dataset of 150 trajectories across four policy-risk categories. Results show that skill extraction substantially reduces attack detectability: in SkillX, safety detection drops from 98.5\\% for poisoned trajectories to 11.4\\% for extracted skills, while Anything2Skill shows a similar effect. Meanwhile, the implanted skills remain effective, achieving attack success rates of 56.2\\% and 89.2\\% on the two systems, respectively. Furthermore, 80.0\\% of skill-mediated attacks persist after deleting the original poisoned records, and some skills unintentionally activate on benign queries. Our findings reveal skill evolution as a new attack surface and motivate provenance-aware skill lifecycle protection. Our code is available at https://github.com/Tencent/AI-Infra-Guard/research/skilljack.",
+    "authors": "Zonghao Ying, Xiangfan Wu, Huiyu Wu, Xing Zheng, Huangsheng Cheng, Xiaorong Shi, Jing Guo",
+    "publish_date": "2026-08-04",
+    "arxiv_url": "http://arxiv.org/abs/2608.03509",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "Dexterous"
+    ],
+    "hf_rank": 3,
+    "score": 27,
+    "paper_id": "arxiv:2608.03509",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2608.03483": {
+    "arxiv_id": "2608.03483",
+    "title": "Continue or Replan? Bernoulli-Continuation Policy Learning for Adaptive Horizon Execution",
+    "abstract": "Existing chunk-based Vision-Language-Action (VLA) models execute a fixed number of actions (i.e., execution horizon) before replanning, turning replanning into a task-agnostic periodic schedule that is independent of task progress. As a result, when no replanning boundary falls before a critical manipulation stage, it is executed from a stale chunk rather than a freshly replanned one. To address this limitation, we propose Bernoulli-Continuation Policy (BCP), a lightweight, plug-and-play framework for adaptive horizon execution that keeps the base VLA frozen. Given a fixed-length action chunk, its continuation head decomposes execution-horizon selection into a sequence of continue-or-replan decisions, which imposes an ordinal, prefix-sharing inductive bias over candidate horizons rather than treating them as independent classes. Since the optimal horizon for each chunk is not observable, we train this head with reinforcement learning from trajectory-level outcomes and introduce a Replanning-Efficiency Reward that jointly rewards task success and efficient VLA usage, discouraging the policy from collapsing to unnecessarily short horizons. On RoboTwin 2.0 with LingBot-VLA as the base policy, BCP improves the average success rate by +11.08% on 13 low-success tasks and from 89.88% to 93.94% (+4.06%) across all 50 tasks. Although trained only under the Clean setting, BCP generalizes to the Randomized setting, raising the average success rate by +4.06%. It also transfers to a different base policy $π_{0.5}$, achieving a better result on LIBERO (+1.7%) and, notably, on the harder LIBERO-PRO (+6.8%). On a real robot, BCP lifts success from 74% to 92% and from 44% to 84% on two manipulation tasks. Meanwhile, its negligible overhead, combined with higher success, makes BCP's overall runtime even lower than the fixed-horizon baselines.",
+    "authors": "Weichen Xu, Zhenhua Liu, Lin Luo, Yaobo Liang, Chengtang Yao, Qingyu Mei, Jian Cao, Xixin Cao, Xing Zhang, Jiaolong Yang, Baining Guo",
+    "publish_date": "2026-08-04",
+    "arxiv_url": "http://arxiv.org/abs/2608.03483",
+    "project_url": "https://fleetfootwork.github.io/BCP/",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [
+      "Manipulation"
+    ],
+    "matched_categories": [
+      "Dexterous"
+    ],
+    "hf_rank": null,
+    "score": 10,
+    "paper_id": "arxiv:2608.03483",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2608.03391": {
+    "arxiv_id": "2608.03391",
+    "title": "TimeRLM: Recursive Language Models Enable Precise Anomaly Localization in Long-Context Time-Series",
+    "abstract": "Precise anomaly localization over long-context time series is a crucial task in monitoring applications across clinical care, industrial operations, financial services, and logistics, where brief evidence may hide inside long spans of high-frequency data. Time-Series Language Models (TSLMs) are able to ingest time series data and verbalize findings on anomalies in natural language; however, recent benchmarks report a decrease in retrieval performance at long contexts, mirroring failure modes in text, vision, and audio. In the text domain, Recursive Language Models (RLMs) can recover much of this lost performance by keeping context external to the large language model (LLM), allowing the model to query it through code. We present TimeRLM, an RLM formulation for time-series that sequentially manipulates the signal using code and vision capabilities. We further introduce AnomalyXL, a synthetic long-context anomaly localization benchmark with programmatically injected anomalies that require precise retrieval. We implement five different task categories and two variants: AnomalyXL-MCQ and AnomalyXL-Localize. TimeRLM outperforms every evaluated TSLM and single-pass baseline on four of the five AnomalyXL-Localize tasks, reaching 0.682 IoU on localization and 0.745 on classify-with-evidence, versus at most 0.329 and 0.072 across all baselines. We post-train TimeRLM using reinforcement learning. The resulting model further improves performance and requires approximately one-third as many agent interaction turns as its untrained base model to produce a final answer. On unseen real-world ECG, sleep and software observability recordings, the post-trained TimeRLM retains or improves performance, surpassing TSLMs despite being trained exclusively on synthetic data. Our findings suggest recursive interaction with time-series is an effective approach for long-horizon retrieval.",
+    "authors": "Nicolas Zumarraga, Lorenzo Steno, Ning Wang, Max Rosenblattl, Thomas Kaar, Maxwell A. Xu, Kevin O'Sullivan, Markus Kreft, Elgar Fleisch, Paul Schmiedmayer, Patrick Langer, Robert Jakob",
+    "publish_date": "2026-08-04",
+    "arxiv_url": "http://arxiv.org/abs/2608.03391",
+    "project_url": "https://github.com/OpenTSLM/TimeRLM",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "Dexterous"
+    ],
+    "hf_rank": null,
+    "score": 0,
+    "paper_id": "arxiv:2608.03391",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2608.03387": {
+    "arxiv_id": "2608.03387",
+    "title": "RoboReact: Agentic Skill Distillation from Generated Egocentric Videos for Generalizable Whole-Body Manipulation",
+    "abstract": "Humanoid robots have the potential to perform dexterous manipulation in human environments, yet acquiring diverse and generalizable skills remains costly due to expensive hardware data collection and labor-intensive annotation. Recent advances in video generative models provide a promising opportunity to synthesize rich manipulation experiences from visual observations, but transferring such imagined behaviors into executable whole-body humanoid skills remains largely unexplored. In this work, we present RoboReact, a framework that automatically synthesizes whole-body humanoid manipulation skills from a single egocentric RGB-D observation. RoboReact generates human manipulation videos, extracts geometry-preserving interaction keyframes through depth-aware 3D reconstruction, and retargets them to high-DoF humanoid platforms while preserving hand-object interaction geometry. To bridge the gap between imagined plans and physical execution, RoboReact performs online object-centric re-grounding and leverages a vision-language model-guided refinement loop to adapt skills under geometric mismatch and execution deviations. The refined skills are executed through a whole-body controller, enabling coordinated whole-body manipulation and dexterous interaction. Experiments on real humanoid robots demonstrate that RoboReact generalizes across diverse object configurations and robustly recovers from execution disturbances without requiring teleoperation or human demonstrations. These results highlight the potential of combining generative models, vision-language reasoning, and closed-loop control for scalable humanoid skill acquisition.",
+    "authors": "Shuliang He, Shuai Wang, Bo Yue, Junchi Teng, Changyu Wang, Guiliang Liu",
+    "publish_date": "2026-08-04",
+    "arxiv_url": "http://arxiv.org/abs/2608.03387",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [
+      "Dexterous Manipulation",
+      "Manipulation"
+    ],
+    "matched_categories": [
+      "Dexterous"
+    ],
+    "hf_rank": null,
+    "score": 20,
+    "paper_id": "arxiv:2608.03387",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2608.03333": {
+    "arxiv_id": "2608.03333",
+    "title": "Space-Time Event Scattering and Extension Method (STESEM): A Universal Framework for Scattering in Space-Time Metamaterials",
+    "abstract": "Space-time metamaterials offer unprecedented control over electromagnetic waves by enabling simultaneous manipulation of spatial and temporal degrees of freedom. However, analytical descriptions of their scattering processes remain fragmented, with existing approaches typically requiring configuration-specific derivations or transformations to specialized reference frames that become impractical for accelerated or multi-interface structures. In this tutorial, we introduce the space-time event scattering and extension method (STESEM), a universal framework for electromagnetic scattering at arbitrary space-time interfaces. By decomposing the scattering process into a local interaction event and a subsequent extension along invariant traveling-wave coordinates, STESEM formulates space-time scattering directly in the laboratory frame without requiring coordinate transformations. The method provides a unified description of scattering amplitudes, frequency transitions and phase transformations for arbitrary incident waveforms and interface trajectories. We demonstrate the framework by deriving the complete scattering responses of canonical space-time structures, including stationary and instantaneous interfaces, space-time corners, uniformly moving interfaces, wedges and accelerated boundaries. Beyond providing analytical solutions, STESEM reveals the physical principles underlying these distinct phenomena and shows that complex space-time scattering processes can be constructed from elementary moving-interface interactions. This framework establishes a systematic foundation for analyzing and designing advanced space-time metamaterials, enabling extensions toward dispersive, bianisotropic and higher-dimensional systems.",
+    "authors": "Klaas De Kinder, Amir Bahrami, Christophe Caloz",
+    "publish_date": "2026-08-04",
+    "arxiv_url": "http://arxiv.org/abs/2608.03333",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [
+      "Manipulation"
+    ],
+    "matched_categories": [
+      "Dexterous"
+    ],
+    "hf_rank": null,
+    "score": 10,
+    "paper_id": "arxiv:2608.03333",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2608.03295": {
+    "arxiv_id": "2608.03295",
+    "title": "GraspMeanFlow: SE(3)-Equivariant MeanFlow for Few-Step 6-DoF Grasp Generation",
+    "abstract": "Recent data-driven methods for synthesizing 6-DoF grasp poses use generative models to learn complex grasp pose distributions and generate diverse candidate poses. In particular, SE(3)-equivariant flow-based models generate grasp poses that transform consistently with object rotations and translations. However, these methods sample by iterative numerical integration, requiring tens of function evaluations per grasp and limiting their use in real-time manipulation. We propose GraspMeanFlow, an SE(3)-equivariant MeanFlow framework for few-step 6-DoF grasp generation. Our method learns the average velocity over a finite time interval, defined through the time-ordered exponential so that it reproduces exactly the rigid-body displacement accumulated over that interval. We prove that a point-cloud-conditioned distribution transported by an equivariant average-velocity flow map remains invariant, so equivariance is retained under few-step sampling, and we condition the field on a pair of times by lifting both to equivariant vectors, leaving the backbone otherwise unchanged. For stable training, we pair a flow-matching boundary term with either of two consistency terms: the differential MeanFlow identity, whose target requires a Jacobian-vector product, or an equivalent semigroup loss that avoids it. Experiments on ACRONYM show that a single function evaluation of GraspMeanFlow reaches the EMD that an iterative SE(3) flow model needs five steps to approach, that a second instantiation of the same framework improves grasp success by up to 24.3 points in the few-step regime, and that both generate grasp distributions transforming exactly with the object.",
+    "authors": "Jiyong Kwon, Yikun Bai, Amirhossein Mollaali, Guang Lin",
+    "publish_date": "2026-08-04",
+    "arxiv_url": "http://arxiv.org/abs/2608.03295",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [
+      "Manipulation"
+    ],
+    "matched_categories": [
+      "Dexterous"
+    ],
+    "hf_rank": null,
+    "score": 10,
+    "paper_id": "arxiv:2608.03295",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2608.03231": {
+    "arxiv_id": "2608.03231",
+    "title": "Structure-Aware Robust Fine-Tuning: Defending Vision-Language-Action Robots Against Physical Attention Hijacking",
+    "abstract": "Vision-Language-Action (VLA) policies promise general robotic manipulation, but their robustness against physical-world attacks remains fragile. In particular, we show that physically realizable adversarial patches can reliably induce failures by triggering a mechanism we call policy-critical action-to-vision attention hijacking, where action-conditioned attention is diverted from task-relevant regions to a localized patch. To demonstrate the threat, we propose Attention-Guided Semantic Disruption (AGSD), an Expectation-over-Transformation (EOT) optimized printable patch that jointly (i) concentrates action-to-vision attention on the patch and (ii) disrupts vision-language semantic alignment, yielding strong cross-task and cross-architecture transfer. To mitigate such attacks, we introduce Structure-Aware Robust Fine-Tuning (SARF), a zero-inference-overhead defense that fine-tunes only the visual encoder using feature anchoring, policy-critical attention correction, and language-guided geometric consistency restricted to semantically relevant regions. On LIBERO, SARF reduces OpenVLA's failure rate under AGSD from 100% to 14.2%-56.8% (28.6% average) across suites while preserving clean performance, and on a real PiPER manipulator it improves average success under AGSD from 23.0% to 65.0%. These results highlight mechanism-level robustness as a practical path to securing VLA robots against physical attention hijacking.",
+    "authors": "Jinquan Zhang, Dongfu Yin, Run Yang, Yufeng Yan, Zhen Tian, F. Richard Yu",
+    "publish_date": "2026-08-04",
+    "arxiv_url": "http://arxiv.org/abs/2608.03231",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [
+      "Manipulation"
+    ],
+    "matched_categories": [
+      "Dexterous"
+    ],
+    "hf_rank": null,
+    "score": 10,
+    "paper_id": "arxiv:2608.03231",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2608.03169": {
+    "arxiv_id": "2608.03169",
+    "title": "Test-time reasoning effort and unauthorized tool use in language-model agents: a prespecified equivalence study",
+    "abstract": "Language-model agents that execute multi-step workflows through tool calls operate under access-control policies that restrict which operations each role may perform. The APIs serving these agents expose a reasoning-effort parameter that operators adjust for cost and latency. Whether this parameter also changes the rate of unauthorized tool use has not been tested by direct manipulation within a single model. We vary reasoning effort (low, max) inside GPT-5.6 across the 14 confirmatory scenarios of TRIO-20, a suite of 20 matched workplace triads in which a policy-prohibited tool call is effective and its effect on the target metric is stated in the environment, effective but discoverable only through rule inspection, or ineffective. The three conditions derive from one code base and differ in two configuration fields, with identical prompts and tool sets. All analyses were prespecified in a frozen plan before confirmatory collection. Across 840 trajectories and two model tiers, no unauthorized tool call occurred. Exact one-sided 95% limits place each arm's violation rate below 3.50% (Terra, n = 84) and 5.21% (Sol, n = 56). The interaction estimand, with a simultaneous exact 95% interval of $\\pm 4.34$ percentage points on Terra, lies inside the $\\pm 7.01$-point equivalence margin. Raising effort did change behaviour, but only in inspection: rule-probe rates rose in all conditions, most where probing carried no instrumental payoff, a pattern inconsistent with the hypothesis of targeted search ($-14.3$ points, 95% CI $-27.4$ to $+1.2$). Raw trajectories are released at https://github.com/WenJing95/trio-20.",
+    "authors": "Xiaonan Xu, Wenjing Wu",
+    "publish_date": "2026-08-04",
+    "arxiv_url": "http://arxiv.org/abs/2608.03169",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [
+      "Manipulation"
+    ],
+    "matched_categories": [
+      "Dexterous"
+    ],
+    "hf_rank": null,
+    "score": 10,
+    "paper_id": "arxiv:2608.03169",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2608.03166": {
+    "arxiv_id": "2608.03166",
+    "title": "Adversarial Stress Testing of Role-Playing Language Agents using Multi-Agent Evaluation",
+    "abstract": "Role-Playing Language Agents (RPLAs) are increasingly deployed in high-stakes applications such as healthcare assistance, customer support, and education, where maintaining consistent personas, ethical constraints, and behavioral coherence under adversarial pressure is critical. Existing evaluation approaches rely on static benchmarks or isolated single-turn prompts that fail to capture cumulative behavioral failures emerging over extended interactions.   We present a modular multi-agent platform for adversarially stress-testing RPLAs through structured, multi-turn dialogue. The system coordinates three agents: a strategy-driven Interrogator Agent that applies six progressive adversarial strategies, a Target Agent representing the RPLA under evaluation, and an automated Judging Agent that scores behavior across role fidelity, drift, ethical deviation, and consistency dimensions.   Through experiments across three personas and three LLM families, we demonstrate that multi-strategy adversarial evaluation reveals failure modes invisible to single-strategy testing, reducing overall robustness scores by 0.17--0.20 points on average. Cross-model validation confirms consistent degradation patterns across Llama-3.3-70B, GPT-4o-mini, and Claude-3.5-Haiku, with Authority Challenge and Emotional Manipulation emerging as the most effective attack strategies. Automated judging achieves strong human alignment ($r = 0.82$, Fleiss' $κ= 0.71$). This work is released as an open-source platform to support AI safety and reproducible RPLA benchmarking. While the framework enables systematic discovery of failure modes, we acknowledge potential ethical risks associated with adversarial testing methodologies and emphasize responsible usage for improving AI safety.",
+    "authors": "Saqib Shouqi, Abdullah Nazly, Januki Wanniarachchi, Ravisha De Alwis",
+    "publish_date": "2026-08-04",
+    "arxiv_url": "http://arxiv.org/abs/2608.03166",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [
+      "Manipulation"
+    ],
+    "matched_categories": [
+      "Dexterous"
+    ],
+    "hf_rank": null,
+    "score": 10,
+    "paper_id": "arxiv:2608.03166",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2608.03159": {
+    "arxiv_id": "2608.03159",
+    "title": "Accelerating Human-Aware Robot Trajectory Generation via Diffusion and Consistency Distillation",
+    "abstract": "This research proposes a constrained motion planning framework for robot manipulators in human-robot interaction (HRI). For a non-redundant manipulator with a fully specified end-effector pose, additional requirements such as collision avoidance and self-collision avoidance are difficult to handle as simple null-space secondary tasks. This limitation makes it challenging to generate feasible joint-space trajectories in HRI environments where safety and kinematic constraints must be considered simultaneously. To address this limitation, collision- and self-collision-aware trajectories are generated using Rapidly-exploring Random Tree (RRT) and RRT* algorithms, and the resulting dataset is used to train a diffusion model that generates constraint-satisfying trajectories through guided sampling. To reduce the inference time required for iterative diffusion sampling, consistency distillation is applied, and a joint-weighted jerk regularization term is incorporated into the loss function to promote smoother trajectories by penalizing abrupt changes in joint acceleration. Simulation results show that the consistency model generates 150 trajectory candidates in less than 100 ms, maintains a high episode success rate, and substantially reduces joint and end-effector jerk when jerk regularization is applied.",
+    "authors": "Byeong-Il Ham, Hyun-Bin Kim, Kyung-Soo Kim",
+    "publish_date": "2026-08-04",
+    "arxiv_url": "http://arxiv.org/abs/2608.03159",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "Dexterous"
+    ],
+    "hf_rank": null,
+    "score": 0,
+    "paper_id": "arxiv:2608.03159",
+    "source": "arxiv",
+    "venue": ""
   }
 }
