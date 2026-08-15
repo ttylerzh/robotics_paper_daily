@@ -25760,111 +25760,6 @@
     "source": "arxiv",
     "venue": ""
   },
-  "arxiv:2607.15058": {
-    "arxiv_id": "2607.15058",
-    "title": "SUFLECA: Scaling Up Feature Learning for CAD-to-image Alignment",
-    "abstract": "CAD-to-image alignment aims to estimate an object's 9D pose (rotation, translation, and anisotropic scale) from a single RGB image, enabling applications in robotics and augmented reality. Recent zero-shot methods use visual foundation models to match image regions to CAD models, yet typically their correspondences are appearance-driven and degrade under occlusion or sim-to-real domain shift. To address these limitations, we introduce SUFLECA (Scaling Up Feature LEarning for CAD Alignment), a weakly-supervised framework for zero-shot CAD alignment with two key contributions. First, SUFLECA scales up geometry-grounded feature learning from pretrained visual representations through Normalized Object Coordinates (NOCs) supervision on 674K images spanning 12 real and synthetic datasets, learning compact geometry-aware features that generalize across domains. Second, we propose a geometrically consistent matching algorithm that establishes reliable one-to-one CAD-to-image correspondences. Together, these contributions enable accurate, sub-second alignment per object instance without iterative pose refinement. On ScanNet25k, SUFLECA achieves 33.4%/42.3% category/instance accuracy, outperforming, with a smaller computational footprint, the strongest zero-shot baseline by 10.3/12.2 percentage points and, for the first time on this benchmark, even surpassing fully supervised methods. Code is available at: https://github.com/snt-arg/SUFLECA",
-    "authors": "Saad Ejaz, Miguel Fernandez-Cortizas, Javier Civera, Holger Voos, Jose Luis Sanchez-Lopez",
-    "publish_date": "2026-07-16",
-    "arxiv_url": "http://arxiv.org/abs/2607.15058",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [],
-    "matched_categories": [
-      "HF-Hot"
-    ],
-    "hf_rank": 35,
-    "score": 29,
-    "paper_id": "arxiv:2607.15058",
-    "source": "arxiv",
-    "venue": ""
-  },
-  "arxiv:2607.15277": {
-    "arxiv_id": "2607.15277",
-    "title": "Partition, Prompt, Aggregate: Statistical Self-Consistency in Language Models",
-    "abstract": "In-context learning is commonly interpreted as a form of conditional inference, in which the prompt specifies a context and the model's output is treated as an estimate of the corresponding conditional distribution. If this interpretation holds, then LLM estimates should satisfy basic probabilistic identities. In particular, the law of total probability asserts that prior-weighted conditional distributions aggregate into population-level marginals over any valid partition of the population. In this work, we investigate to what extent LLM estimates adhere to this self-consistency principle. We use binary trees as an evaluation scaffold to recursively partition a population into increasingly fine-grained subpopulations. We then prompt LLMs with verbalized subpopulation descriptions in context, aggregate the resulting estimates back into population-level estimates, and compare them across partitions of varying granularity. Applying this protocol across problem domains and state-of-the-art frontier models, we show widespread violations of basic consistency properties. An in-depth study of persona prompting reveals a pattern we call the macro fallacy: estimates reconstructed from more fine-grained subpopulation responses are often better aligned with human reference data than direct population-level estimates. This effect persists across variations in tree structure and estimation task, and can be partially recovered through implicit prompting. Together, these findings suggest that models possess relevant subpopulation knowledge but do not reliably propagate it into aggregate estimates. This gap establishes statistical self-consistency as an unsaturated, reference-free criterion for evaluating LLMs.",
-    "authors": "Patrik Wolf, Thomas Kleine Buening, Andreas Krause, Celestine Mendler-Dünner",
-    "publish_date": "2026-07-16",
-    "arxiv_url": "http://arxiv.org/abs/2607.15277",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [],
-    "matched_categories": [
-      "HF-Hot"
-    ],
-    "hf_rank": 41,
-    "score": 23,
-    "paper_id": "arxiv:2607.15277",
-    "source": "arxiv",
-    "venue": ""
-  },
-  "arxiv:2607.15257": {
-    "arxiv_id": "2607.15257",
-    "title": "SearchOS-V1: Towards Robust Open-Domain Information-Seeking Agent Collaboration",
-    "abstract": "Recent advances in Tool-Integrated Large Language Models have made web search a core capability of information-seeking agents. However, as interaction histories grow, agents increasingly struggle to track task progress. When search attempts fail to yield useful evidence, current single- and multi-agent systems can become trapped in repetitive loops, wasting search budgets and ultimately compromising the quality and completeness of the final output. We introduce SearchOS, a system-level multi-agent framework that turns fragile, implicit search progress into explicit, persistent, and shared state. First, we formulate open-domain information seeking as relational schema completion with grounded citations, where agents discover entities, populate attributes across linked tables, and anchor each value to source evidence. Then we design Search-Oriented Context Management (SOCM), which externalizes the evolving state into Frontier Task, an Evidence Graph, a Coverage Map, and Failure Memory. Built on SOCM, SearchOS applies a pipeline-parallel scheduling mechanism that overlaps the execution of sub-agents and continuously refills freed slots with tasks targeting unresolved coverage gaps to improve utilization and throughput. To schedule and control the execution of search agents, SearchOS introduces a Search Tool Middleware Harness that intercepts model and tool interactions to record grounded evidence and react to stalls or budget exhaustion, and provides a reusable hierarchical skill system comprising strategy and access skills to augment the agents' search process and avoid repeating failed search patterns across runs. On WideSearch and GISA, SearchOS leads all metrics among the evaluated single- and multi-agent baselines, paving the way toward robust information-seeking collaboration.",
-    "authors": "Yuyao Zhang, Junjie Gao, Zhengxian Wu, Jiaming Fan, Jin Zhang, Shihan Ma, Yao Yao, Weiran Qi, Chuyan Jin, Guiyu Ma, Xingzhong Xu, Kai Yang, Ji-Rong Wen, Zhicheng Dou",
-    "publish_date": "2026-07-16",
-    "arxiv_url": "http://arxiv.org/abs/2607.15257",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [],
-    "matched_categories": [
-      "HF-Hot"
-    ],
-    "hf_rank": 43,
-    "score": 13,
-    "paper_id": "arxiv:2607.15257",
-    "source": "arxiv",
-    "venue": ""
-  },
-  "arxiv:2607.15207": {
-    "arxiv_id": "2607.15207",
-    "title": "BadWAM: When World-Action Models Dream Right but Act Wrong",
-    "abstract": "World-action models (WAMs) are emerging as a promising foundation for embodied control: rather than predicting actions alone, they learn representations that couple action generation with future world prediction. This coupling is often viewed as a source of robustness, interpretability, and safety, as a robot's action can in principle be checked against its imagined future. In this paper, we show that this assumption is fragile. We introduce BadWAM, a unified framework for modeling and evaluating World-Action Drift Attacks: a new class of WAM-specific adversarial attacks that use small visual perturbations to break the alignment between what a WAM imagines and what it executes. BadWAM characterizes this attack surface along two natural criteria: attack strength and stealthiness. When the adversary prioritizes disruption, BadWAM instantiates an action-only adversarial attack, which directly drives the model toward task-failing actions. When the adversary additionally prioritizes stealth, BadWAM instantiates an imagination-preserving adversarial attack, which seeks to induce harmful action shifts while keeping the model's predicted future close to its clean imagination. Together, these two attacks capture a spectrum of WAM-specific failures: from overt action hijacking to stealthier cases where the model appears to imagine a plausible future but executes a desynchronized action. We evaluate BadWAM across different variants of WAMs. Results show that our attacks substantially reduce task success rates under closed-loop execution. For example, our action-only attack reduces the model performance from 96.5% to 43.1% success. The results of our imagination-preserving attack further exposes a WAM-specific vulnerability: moderate future-preserving regularization can maintain strong attack performance while reducing future imagination drift.",
-    "authors": "Qi Li, Xingyi Yang, Xinchao Wang",
-    "publish_date": "2026-07-16",
-    "arxiv_url": "http://arxiv.org/abs/2607.15207",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [],
-    "matched_categories": [
-      "HF-Hot"
-    ],
-    "hf_rank": 44,
-    "score": 12,
-    "paper_id": "arxiv:2607.15207",
-    "source": "arxiv",
-    "venue": ""
-  },
-  "arxiv:2607.15273": {
-    "arxiv_id": "2607.15273",
-    "title": "MeanFlowNFT: Bringing Forward-Process RL to Average-Velocity Generators",
-    "abstract": "MeanFlow generators achieve fast few-step sampling by predicting average velocities over time intervals, making them attractive for efficient generation. Reinforcement learning (RL) has become a powerful way to align diffusion and flow models with human preferences and task-specific objectives. In particular, DiffusionNFT offers an efficient forward-process RL framework that does not require reverse-process trajectories or likelihood estimation. However, applying such RL methods to MeanFlow remains underexplored. DiffusionNFT optimizes instantaneous velocities, whereas MeanFlow samples with average velocities. To bridge this gap, we introduce MeanFlowNFT. Inspired by the MeanFlow identity, which bridges average and instantaneous velocities, we construct an induced instantaneous-velocity predictor. We apply the DiffusionNFT objective to this predictor, making reward optimization well-defined for MeanFlow. Sampling remains based on the average velocity, preserving MeanFlow's fast few-step generation. We further prove that MeanFlowNFT inherits DiffusionNFT's strict policy-improvement guarantee. Experiments on image and video generation show that MeanFlowNFT consistently improves baselines. Moreover, it outperforms prior state-of-the-art RL-tuned few-step generators on most metrics ($6$ of $8$ on SD3.5-M), and can even surpass multi-step RL-tuned diffusion while using only a few sampling steps. For instance, on Wan 2.1, $4$-step MeanFlowNFT reaches a VBench score of $84.33$, surpassing $50$-step LongCat-Video RL ($82.57$).",
-    "authors": "Yushi Huang, Xiangxin Zhou, Jun Zhang, Liefeng Bo, Tianyu Pang",
-    "publish_date": "2026-07-16",
-    "arxiv_url": "http://arxiv.org/abs/2607.15273",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [],
-    "matched_categories": [
-      "HF-Hot"
-    ],
-    "hf_rank": 45,
-    "score": 11,
-    "paper_id": "arxiv:2607.15273",
-    "source": "arxiv",
-    "venue": ""
-  },
   "arxiv:2607.15278": {
     "arxiv_id": "2607.15278",
     "title": "Hierarchical Denoising For Multi-Step Visual Reasoning",
@@ -26878,27 +26773,6 @@
     "hf_rank": 43,
     "score": 24,
     "paper_id": "arxiv:2607.15686",
-    "source": "arxiv",
-    "venue": ""
-  },
-  "arxiv:2607.15161": {
-    "arxiv_id": "2607.15161",
-    "title": "On-Policy Delta Distillation",
-    "abstract": "On-policy distillation is an alternative post-training method in reinforcement learning that alleviates the constraints imposed by reward models by providing token-level supervision from a teacher model. Although on-policy distillation has been studied and applied across various settings, its fundamental design remains underexplored. In this paper, we introduce a new distillation reward, termed the delta signal, instead of directly imitating the teacher's output distribution. The delta signal is defined as the difference between the teacher model and its base model prior to instruction tuning for reasoning capability. It therefore captures the changes induced by reasoning tuning and provides a more direct signal for transferring reasoning capabilities. Using extensive empirical evidence, we show that the delta signal substantially improves on-policy distillation and refer to the new distillation method as On-Policy Delta Distillation (OPD$^2$). Experiments across mathematics, science, and code-reasoning benchmarks demonstrate that OPD$^2$ consistently outperforms conventional on-policy distillation, enabling reasoning LLMs to achieve strong performance with only a short post-training period. Code will be available at https://github.com/naver-ai/opd2",
-    "authors": "Byeongho Heo, Jaehui Hwang, Sangdoo Yun, Dongyoon Han",
-    "publish_date": "2026-07-16",
-    "arxiv_url": "http://arxiv.org/abs/2607.15161",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [],
-    "matched_categories": [
-      "HF-Hot"
-    ],
-    "hf_rank": 48,
-    "score": 19,
-    "paper_id": "arxiv:2607.15161",
     "source": "arxiv",
     "venue": ""
   },
@@ -28377,27 +28251,6 @@
     "hf_rank": 39,
     "score": 1,
     "paper_id": "arxiv:2607.17972",
-    "source": "arxiv",
-    "venue": ""
-  },
-  "arxiv:2607.15263": {
-    "arxiv_id": "2607.15263",
-    "title": "Beyond Success Rate: Cost-Aware Evaluation of Offensive and Defensive Security Agents",
-    "abstract": "Security-agent evaluations commonly measure peak offensive capability under generous inference budgets, emphasizing vulnerability discovery, exploit development, penetration testing, and CTF completion. Such measurements are useful but incomplete: in operational security, every reasoning step, tool call, telemetry query, and enrichment request consumes budget. We evaluate language-model security agents through this cost-success lens on offensive Cybench challenges and defensive Splunk BOTS v1 investigation challenges. Instead of reporting only best-case success, we compare models at fixed cost levels and decompose performance by inference spend and tool spend. Our results show distinct scalingregimes for red- and blue-team tasks. Offensive CTF performance improves with additional test-time compute, and scaled open-weight models can approach frontier proprietary systems while remaining cost-competitive. Defensive SOC investigation does not scale in the same way: success depends more heavily on disciplined tool use, telemetry navigation, and selective enrichment than on raw reasoning budget alone. We argue that security-agent benchmarks should measure economic efficiency and operational fit alongside task success. Cost-aware, SOC-native evaluations provide a clearer picture of which models are practically useful today and where defensive agents still need to improve. We present an interactive website with our results https://evals.frontier.security.",
-    "authors": "Paul Kassianik, Blaine Nelson, Yaron Singer",
-    "publish_date": "2026-07-16",
-    "arxiv_url": "http://arxiv.org/abs/2607.15263",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [],
-    "matched_categories": [
-      "HF-Hot"
-    ],
-    "hf_rank": 43,
-    "score": 0,
-    "paper_id": "arxiv:2607.15263",
     "source": "arxiv",
     "venue": ""
   },
@@ -46595,7 +46448,7 @@
       "Dexterous",
       "HF-Hot"
     ],
-    "hf_rank": 40,
+    "hf_rank": 47,
     "score": 30,
     "paper_id": "arxiv:2608.06729",
     "source": "arxiv",
@@ -51516,7 +51369,7 @@
       "Dexterous",
       "HF-Hot"
     ],
-    "hf_rank": 2,
+    "hf_rank": 9,
     "score": 20,
     "paper_id": "arxiv:2608.12313",
     "source": "arxiv",
@@ -52222,7 +52075,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 30,
+    "hf_rank": 37,
     "score": 29,
     "paper_id": "arxiv:2608.05604",
     "source": "arxiv",
@@ -52243,7 +52096,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 31,
+    "hf_rank": 38,
     "score": 28,
     "paper_id": "arxiv:2608.09805",
     "source": "arxiv",
@@ -52264,7 +52117,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 32,
+    "hf_rank": 39,
     "score": 27,
     "paper_id": "arxiv:2608.12036",
     "source": "arxiv",
@@ -52285,7 +52138,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 33,
+    "hf_rank": 40,
     "score": 26,
     "paper_id": "arxiv:2608.12123",
     "source": "arxiv",
@@ -52306,7 +52159,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 34,
+    "hf_rank": 41,
     "score": 25,
     "paper_id": "arxiv:2608.11350",
     "source": "arxiv",
@@ -52327,7 +52180,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 35,
+    "hf_rank": 42,
     "score": 24,
     "paper_id": "arxiv:2608.11215",
     "source": "arxiv",
@@ -52348,7 +52201,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 36,
+    "hf_rank": 43,
     "score": 23,
     "paper_id": "arxiv:2608.10615",
     "source": "arxiv",
@@ -52369,7 +52222,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 37,
+    "hf_rank": 44,
     "score": 22,
     "paper_id": "arxiv:2608.11574",
     "source": "arxiv",
@@ -52390,7 +52243,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 38,
+    "hf_rank": 45,
     "score": 21,
     "paper_id": "arxiv:2608.10450",
     "source": "arxiv",
@@ -52411,7 +52264,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 39,
+    "hf_rank": 46,
     "score": 20,
     "paper_id": "arxiv:2608.00677",
     "source": "arxiv",
@@ -52432,7 +52285,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 41,
+    "hf_rank": 48,
     "score": 18,
     "paper_id": "arxiv:2608.10708",
     "source": "arxiv",
@@ -52453,7 +52306,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 42,
+    "hf_rank": 49,
     "score": 17,
     "paper_id": "arxiv:2608.08160",
     "source": "arxiv",
@@ -52474,7 +52327,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 43,
+    "hf_rank": 50,
     "score": 16,
     "paper_id": "arxiv:2608.06270",
     "source": "arxiv",
@@ -52705,7 +52558,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 26,
+    "hf_rank": 33,
     "score": 29,
     "paper_id": "arxiv:2608.12836",
     "source": "arxiv",
@@ -52726,7 +52579,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 27,
+    "hf_rank": 34,
     "score": 28,
     "paper_id": "arxiv:2608.11045",
     "source": "arxiv",
@@ -52747,7 +52600,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 28,
+    "hf_rank": 35,
     "score": 27,
     "paper_id": "arxiv:2608.11367",
     "source": "arxiv",
@@ -52768,7 +52621,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 29,
+    "hf_rank": 36,
     "score": 26,
     "paper_id": "arxiv:2608.09926",
     "source": "arxiv",
@@ -53082,7 +52935,7 @@
       "Dexterous",
       "Manipulation"
     ],
-    "hf_rank": 14,
+    "hf_rank": 21,
     "score": 36,
     "paper_id": "arxiv:2608.13489",
     "source": "arxiv",
@@ -53297,7 +53150,7 @@
       "Dexterous",
       "Manipulation"
     ],
-    "hf_rank": 12,
+    "hf_rank": 19,
     "score": 48,
     "paper_id": "arxiv:2608.13049",
     "source": "arxiv",
@@ -53769,7 +53622,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 1,
+    "hf_rank": 8,
     "score": 29,
     "paper_id": "arxiv:2608.12440",
     "source": "arxiv",
@@ -53790,7 +53643,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 3,
+    "hf_rank": 10,
     "score": 27,
     "paper_id": "arxiv:2608.12997",
     "source": "arxiv",
@@ -53811,7 +53664,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 4,
+    "hf_rank": 11,
     "score": 26,
     "paper_id": "arxiv:2608.11951",
     "source": "arxiv",
@@ -53832,7 +53685,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 5,
+    "hf_rank": 12,
     "score": 25,
     "paper_id": "arxiv:2608.13430",
     "source": "arxiv",
@@ -53853,7 +53706,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 6,
+    "hf_rank": 13,
     "score": 24,
     "paper_id": "arxiv:2607.29211",
     "source": "arxiv",
@@ -53874,7 +53727,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 7,
+    "hf_rank": 14,
     "score": 23,
     "paper_id": "arxiv:2608.07193",
     "source": "arxiv",
@@ -53895,7 +53748,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 8,
+    "hf_rank": 15,
     "score": 22,
     "paper_id": "arxiv:2608.10538",
     "source": "arxiv",
@@ -53916,7 +53769,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 9,
+    "hf_rank": 16,
     "score": 21,
     "paper_id": "arxiv:2608.11752",
     "source": "arxiv",
@@ -53937,7 +53790,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 10,
+    "hf_rank": 17,
     "score": 20,
     "paper_id": "arxiv:2608.11745",
     "source": "arxiv",
@@ -53958,7 +53811,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 11,
+    "hf_rank": 18,
     "score": 19,
     "paper_id": "arxiv:2608.12773",
     "source": "arxiv",
@@ -53979,7 +53832,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 13,
+    "hf_rank": 20,
     "score": 17,
     "paper_id": "arxiv:2608.06867",
     "source": "arxiv",
@@ -54000,7 +53853,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 15,
+    "hf_rank": 22,
     "score": 15,
     "paper_id": "arxiv:2608.12743",
     "source": "arxiv",
@@ -54021,7 +53874,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 16,
+    "hf_rank": 23,
     "score": 14,
     "paper_id": "arxiv:2608.07545",
     "source": "arxiv",
@@ -54042,7 +53895,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 17,
+    "hf_rank": 24,
     "score": 13,
     "paper_id": "arxiv:2608.12149",
     "source": "arxiv",
@@ -54063,7 +53916,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 18,
+    "hf_rank": 25,
     "score": 12,
     "paper_id": "arxiv:2608.13560",
     "source": "arxiv",
@@ -54084,7 +53937,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 19,
+    "hf_rank": 26,
     "score": 11,
     "paper_id": "arxiv:2608.12990",
     "source": "arxiv",
@@ -54105,7 +53958,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 20,
+    "hf_rank": 27,
     "score": 10,
     "paper_id": "arxiv:2608.13552",
     "source": "arxiv",
@@ -54126,7 +53979,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 21,
+    "hf_rank": 28,
     "score": 9,
     "paper_id": "arxiv:2608.08888",
     "source": "arxiv",
@@ -54147,7 +54000,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 22,
+    "hf_rank": 29,
     "score": 8,
     "paper_id": "arxiv:2608.13546",
     "source": "arxiv",
@@ -54168,7 +54021,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 23,
+    "hf_rank": 30,
     "score": 7,
     "paper_id": "arxiv:2608.08975",
     "source": "arxiv",
@@ -54189,7 +54042,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 24,
+    "hf_rank": 31,
     "score": 6,
     "paper_id": "arxiv:2608.13558",
     "source": "arxiv",
@@ -54210,9 +54063,156 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 25,
+    "hf_rank": 32,
     "score": 5,
     "paper_id": "arxiv:2608.13505",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2608.02870": {
+    "arxiv_id": "2608.02870",
+    "title": "Maglev: Sliding Recurrent Memory",
+    "abstract": "We introduce \\ours{}, a recurrent Transformer architecture with fixed-size memory that generalizes sliding-window attention while remaining parallelizable during training. \\ours{} consists of two coupled models: a prefiller $Q$, which leverages full attention\\footnote{In practice, we use interleaved full and sliding-window attention for $Q$, as this yields stronger performance. The essential requirement is that $Q$ be more expressive than $P$, with access to the full history.} to produce memory targets $m'_t$, and a decoder $P$, which uses only sliding-window attention and recurrent K/V injection to produce decoder memories $m_t$ for next-token prediction. We train \\ours{} with a memory consistency loss that aligns $m_t$ with $m'_t$, allowing inference to use $P$ alone. Empirically, \\ours{} improves validation loss and downstream pretraining benchmarks over sliding-window and latent recurrent transformer baselines. Moreover, sharing parameters between $P$ and $Q$ reduces parameter memory while preserving most of the gains.",
+    "authors": "Bo Liu, Qiang Liu",
+    "publish_date": "2026-08-03",
+    "arxiv_url": "http://arxiv.org/abs/2608.02870",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "HF-Hot"
+    ],
+    "hf_rank": 1,
+    "score": 29,
+    "paper_id": "arxiv:2608.02870",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2608.08020": {
+    "arxiv_id": "2608.08020",
+    "title": "Thought-Level Beam Search for Reasoning",
+    "abstract": "Test-time compute scaling is a primary driver of performance in large reasoning models (LRMs), but extreme inefficiency bounds current approaches, shifting the critical question from \\emph{how much} compute to spend, to \\emph{where} to allocate it. We formalize test-time reasoning as a constrained compute allocation problem over partial trajectories. Under a fixed hardware budget, existing paradigms fail to actively allocate the compute to the most promising partial progress: traditional parallel sampling treats traces independently and induces severe memory bottlenecks, while subtractive pruning starves hardware and fails to actively and sufficiently shift the output distribution. To overcome this dichotomy, we introduce Gambit, an inference algorithm that executes \\emph{thought-level beam search}. By periodically pruning unpromising trajectories and immediately branching from high-quality prefixes, Gambit dynamically concentrates compute onto the most promising reasoning traces via a light-weight scorer probing hidden states while maintaining continuous high hardware utilization. Extensive evaluations across multiple models and benchmarks demonstrate that Gambit strictly dominates existing baselines. Under identical hardware constraints, our method yields up to a +6.7\\% absolute accuracy gain on HMMT-24 and +3.3\\% on AIME-25 over pruning baselines, delivers $>2\\times$ higher throughput on trace completion, and reduces total token consumption by up to 68.5\\% relative to standard parallel sampling.",
+    "authors": "Lijie Yang, Hongyin Luo, Jiawei Zhao, Tri Dao, Ravi Netravali",
+    "publish_date": "2026-08-08",
+    "arxiv_url": "http://arxiv.org/abs/2608.08020",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "HF-Hot"
+    ],
+    "hf_rank": 2,
+    "score": 28,
+    "paper_id": "arxiv:2608.08020",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2608.06914": {
+    "arxiv_id": "2608.06914",
+    "title": "RibAssist 3D: Biplanar Rib-Fracture Detection, Addressing, and Selective 3D Localization from CT-Derived Projections",
+    "abstract": "Rib fractures are common and time-consuming to localize on computed tomography (CT). We ask whether fractures detected independently in two orthogonal CT-derived projections (anteroposterior and lateral) can be paired across views and triangulated into reliable 3D points at a controlled rate of false outputs, and we answer it with a staged diagnostic study. The projection geometry is exact, and given correct correspondence, localization is accurate (median 4.0 mm, 88% within 10 mm, 93.6% rib-exact). On a sealed 55-case cohort, a large share of fractures is in principle recoverable (61.1% dual-view availability, and a correct pair present in the candidate graph for 58.4% of fractures), yet the binding limitation is neither geometry nor localization but confidence-limited cross-view correspondence. A controlled detector-by-correspondence factorial attributes the operational gain to lateral-detector quality rather than the tested matching methods; retraining the lateral detector produces the first nonzero controlled-budget reconstructions. Under a deliberately conservative commitment policy, a pre-specified sealed pass promotes 15 of 601 fractures to correct 3D localizations at 0.436 false points per case (2.50% end-to-end commitment yield), and committed points are accurate (median 1.49 mm, 93% rib-exact). The low yield is a consequence of confidence-gated abstention, not of geometry or detection: the study establishes a reproducible framework for selective 3D localization and identifies cross-view correspondence as the dominant operational bottleneck.",
+    "authors": "Kabila Haile Soboka",
+    "publish_date": "2026-08-07",
+    "arxiv_url": "http://arxiv.org/abs/2608.06914",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "HF-Hot"
+    ],
+    "hf_rank": 3,
+    "score": 27,
+    "paper_id": "arxiv:2608.06914",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2608.13391": {
+    "arxiv_id": "2608.13391",
+    "title": "Context-Matched Distillation: Teacher Causality for Autoregressive Video Distillation",
+    "abstract": "Interactive autoregressive video generation demands both low-latency rollouts and precise online control. Few-step distillation accelerates generation by reducing denoising steps, while online control imposes a causal constraint: frames and blocks should depend on history and controls available during generation. Existing video distribution matching distillation (DMD) pipelines, however, often supervise causal few-step students using bidirectional teachers that score complete clips. The score for a target can therefore depend on future frames and controls that were unavailable when the student generated it, misaligning teacher supervision with the student's causal information set. We introduce Context-Matched Distillation (CMD), a causal DMD framework that aligns teacher supervision with the information available when each target is generated. CMD replaces bidirectional full-clip scoring with a causal teacher that evaluates each target without access to future frames or controls. The same causal teacher initializes the few-step student, establishing a consistent causal formulation across teacher training, student distillation, and inference. Beyond aligning the temporal information boundary, Prefix Scoring matches supervision to the student's realized rollout context by evaluating each target under the cached student-generated prefix that produced it. Prefix Corruption further stabilizes training by perturbing unreliable prefixes produced early in training while preserving this target-context alignment. With a simple causal formulation, CMD naturally extends to frame-wise and chunk-wise generation, long video distillation, and camera-conditioned distillation. Experiments demonstrate state-of-the-art aggregate performance among autoregressive methods on both short- and long-video benchmarks, together with substantially improved adherence to time-varying camera controls.",
+    "authors": "Hmrishav Bandyopadhyay, Xuanchi Ren, Zijian Huang, Jay Zhangjie Wu, Tianshi Cao, Ruilong Li, Bryan Chu, Sanja Fidler, Yi-Zhe Song, Zian Wang",
+    "publish_date": "2026-08-13",
+    "arxiv_url": "http://arxiv.org/abs/2608.13391",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "HF-Hot"
+    ],
+    "hf_rank": 4,
+    "score": 26,
+    "paper_id": "arxiv:2608.13391",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2608.09158": {
+    "arxiv_id": "2608.09158",
+    "title": "From Inaudible Inputs to Model Failures: Low-Frequency Safety Risks in LALMs",
+    "abstract": "Large audio-language models (LALMs) have demonstrated strong capabilities in understanding diverse audio inputs. This diversity includes low-frequency signals that are inaudible to humans but can still enter the model and influence its generation. However, the practical impact of such low-frequency inputs on LALMs remains largely unexplored. In this paper, we propose Intermittent Low-Frequency Lockout (ILL), an inaudible red teaming method that evaluates this risk using a universal waveform template in a black box setting. ILL uses Sentence Attention Scale Estimation to determine active intervals and Frequency Confusion Transfer to construct a low-frequency waveform with continuous phase from corpus spectral variation. To mitigate this risk, we propose Distributional Requery Guard (DRG) to detect low-frequency distribution shifts and conditionally request a second recording for semantic recovery. Across six LALMs and multiple audio understanding tasks, ILL reduces accuracy by up to 67 percentage points while receiving a mean human audibility rating of 1.33, close to 1.17 for clean audio; DRG raises mean attacked accuracy from 28.5\\% to 46.1\\% after clean reacquisition. These findings identify a previously overlooked safety risk for LALMs and provide a foundation for future research on robust audio understanding.",
+    "authors": "Yuanhe Zhang, Weiliu Wang, Jie Ren, Liang Lin, Zhenhong Zhou, Haoran Gao, Kun Wang, Chen Li, Li Sun, Sen Su",
+    "publish_date": "2026-08-10",
+    "arxiv_url": "http://arxiv.org/abs/2608.09158",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "HF-Hot"
+    ],
+    "hf_rank": 5,
+    "score": 25,
+    "paper_id": "arxiv:2608.09158",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2608.08606": {
+    "arxiv_id": "2608.08606",
+    "title": "Mitigating Gender Bias in English to Romanian Machine Translation",
+    "abstract": "Machine translation (MT) systems often fail to correctly translate gender, especially when converting from a gender-neutral language like English to a gendered target language such as Romanian. This bias results in translations that default to masculine forms or reinforce gender stereotypes. We propose a hybrid pipeline to mitigate this issue by combining large language model (LLM)-based gender classification with neural machine translation (NMT). Our system uses a fine-tuned LLM to detect the intended gender of target words in English sentences and insert inline gender hint tags. These tagged sentences are then passed to a Transformer model fine-tuned to generate morphologically correct Romanian translations. To support this, we introduce three novel datasets for gender disambiguation and translation. Our approach improves gender accuracy on the WinoMT and WinoGender benchmarks by over 40 percentage points compared to a baseline MT system. This is the first method to explicitly address and evaluate gender bias in English-Romanian MT using both LLM inference and tag-aware translation.",
+    "authors": "Ioana Grigore, Sergiu Nisioi",
+    "publish_date": "2026-08-09",
+    "arxiv_url": "http://arxiv.org/abs/2608.08606",
+    "project_url": "https://doi.org/10.1007/978-3-032-29532-3_11",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "HF-Hot"
+    ],
+    "hf_rank": 6,
+    "score": 24,
+    "paper_id": "arxiv:2608.08606",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2608.11660": {
+    "arxiv_id": "2608.11660",
+    "title": "Hybrid-Policy Self-Editing for Composable Unstructured Knowledge Editing",
+    "abstract": "Large language models (LLMs) achieve remarkable performance across natural language tasks, yet they are trained on static corpora and their knowledge quickly becomes outdated in a fast-changing world. This motivates knowledge editing (KE), which updates specific knowledge in an LLM without changing unrelated others. Recent works move from structured knowledge triples toward unstructured KE (UKE), where the edit is a free-form passage that may state multiple facts at once. Nonetheless, existing editors inject such a passage yet fail to use it: the edited model can recall the passage, but can neither answer atomic questions about its facts nor compose them into multi-hop reasoning. We attribute this missing property, which we term composability, to editors' passive reliance on the fixed passage as the sole learning source. In response, we cast editing as a proactive self-distillation from a privileged in-context state of the same model, which requires no external supervision. We further reveal that due to the novelty of the injected knowledge, the pre-edited model's own rollouts rarely cover it, which limits the effectiveness of pure on-policy distillation. To close this gap, we propose HPSE, which builds a hybrid rollout that steps in to place missing facts onto the student's own trajectory precisely where its coverage fails, while staying on-policy elsewhere. We theoretically analyze HPSE's advantage over pure on-policy distillation, and empirically establish its plug-and-play improvements across four LLM backbones and two KE editors under various scenarios.",
+    "authors": "Tianci Liu, Zihan Dong, Tianchun Li, Yi-Chung Chen, Qiming Cao, Xingchen Wang, Shiyang Wang, Zichen Miao, Linjun Zhang, Haoyu Wang, Jing Gao",
+    "publish_date": "2026-08-12",
+    "arxiv_url": "http://arxiv.org/abs/2608.11660",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "HF-Hot"
+    ],
+    "hf_rank": 7,
+    "score": 23,
+    "paper_id": "arxiv:2608.11660",
     "source": "arxiv",
     "venue": ""
   }
