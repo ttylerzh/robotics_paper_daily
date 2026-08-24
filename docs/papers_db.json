@@ -58969,7 +58969,8 @@
     "framework": "",
     "matched_keywords": [],
     "matched_categories": [
-      "Dexterous"
+      "Dexterous",
+      "HF-Hot"
     ],
     "hf_rank": 12,
     "score": 26,
@@ -59606,6 +59607,447 @@
     "hf_rank": 8,
     "score": 22,
     "paper_id": "arxiv:2608.19776",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2608.21355": {
+    "arxiv_id": "2608.21355",
+    "title": "ViTacPhys: Physical Property-Aware Grasping from Human Visual-Tactile Demonstrations",
+    "abstract": "Recent vision-based action models have demonstrated strong capabilities in complex manipulation, but they rarely leverage explicit object physical properties to adapt their policies. We introduce ViTacPhys, a visual-tactile framework and data acquisition system that estimates object mass and friction-coefficient classes, together with continuous stiffness, from human manipulation demonstrations. Trained on data from 60 rigid and deformable objects, ViTacPhys combines temporal visual-tactile modeling, cross-attention multimodal fusion, and a semantic prior derived from a vision-language model. On seen objects, it achieves 97.2% mass classification accuracy, 98.8% friction-coefficient classification accuracy, and a stiffness mean absolute percentage error (MAPE) of 5.51%. On held-out objects from known categories, it achieves 87.5% mass accuracy, 97.5% friction-coefficient accuracy, and a stiffness MAPE of 9.08%. We transfer ViTacPhys from the human domain to the robot domain using limited robot teleoperation data, robot-style video augmentation, and human demonstrations with matched actions, and deploy it as an online module for adaptive grasping. The resulting physical-property-conditioned policy achieves total grasping success rates of 95.0% on in-distribution objects and 83.4% on out-of-distribution objects. For out-of-distribution objects successfully grasped by both methods, its force profiles are more consistent with human teleoperation than those produced by ACT. These results demonstrate the feasibility of explicitly estimating and conditioning on object physical properties for real-world adaptive grasping.",
+    "authors": "Yiwen Liu, Yujun Zhu, Kui Jia, Zhao Liao, Yangwei You, Shuaijun Wang",
+    "publish_date": "2026-08-21",
+    "arxiv_url": "http://arxiv.org/abs/2608.21355",
+    "project_url": "https://vitacphys.github.io/ViTacPhys/",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [
+      "Deformable",
+      "Teleoperation"
+    ],
+    "matched_categories": [
+      "Manipulation"
+    ],
+    "hf_rank": null,
+    "score": 20,
+    "paper_id": "arxiv:2608.21355",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2608.21332": {
+    "arxiv_id": "2608.21332",
+    "title": "Anatomy-Informed Neural Networks: Encoding Anatomic Priors in Loss and Architecture, with an SE(3) Formulation of Guidewire-Induced Aortoiliac Deformation",
+    "abstract": "Deep-learning models of anatomy can be numerically plausible yet anatomically impossible, and they generalize poorly when data are scarce. We introduce Anatomy-Informed Neural Networks (AINN), in which soft anatomic priors enter as penalty terms in the loss (e.g., a branching penalty that treats a renal transplant artery off the iliac instead of the aorta as unexpected rather than impossible), in direct analogy to a physics-informed neural network, and hard anatomic priors (e.g., continuity of the vessel) are built into the architecture and state representation, making such invalid predictions impossible by construction wherever the prior admits architectural enforcement.   We develop it on a clinical test case with limited data: how the aortoiliac tree deforms when a stiff wire is introduced endoluminally. This is important to contemporary aortic surgery and will matter to autonomous endovascular navigation. We lift the vessel centerline and the wire path from R^3 to curves of frames in the Lie group SE(3), and couple a Cosserat-rod wire to a tortuosity-modulated, anatomically anchored vessel through a unilateral lumen-contact inequality. The prediction is a constrained minimizer of the coupled elastic energy, with contact forces as its Lagrange multipliers. Supervision is a Wasserstein-2 optimal-transport loss between the predicted projection through the C-arm geometry and the observed angiogram, so a 2D angiogram can train a 3D prediction. The kinematics, loss and projection are verified against known ground truth; the mechanics solver only against its own optimality conditions, and predicted displacement is not yet mesh-converged. Here, no network is trained. Future work will transfer this in silico model to real CT scans and test whether it improves predictive accuracy and reduces the training data required.",
+    "authors": "David P. Stonko",
+    "publish_date": "2026-08-21",
+    "arxiv_url": "http://arxiv.org/abs/2608.21332",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "Manipulation"
+    ],
+    "hf_rank": null,
+    "score": 0,
+    "paper_id": "arxiv:2608.21332",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2608.21330": {
+    "arxiv_id": "2608.21330",
+    "title": "NeSAM: Neuro-Symbolic Kinodynamics with Soil Adaptation for Off-Road Mobility",
+    "abstract": "Accurate prediction of off-road vehicle motion over deformable terrain remains challenging because sinkage, slip, and traction vary with local soil conditions. Existing learning-based kinodynamic models directly approximate vehicle-terrain interactions from data but do not explicitly represent soil mechanics and offer limited physical interpretability. To address these limitations, we present NeSAM, a neuro-symbolic framework that combines differentiable Bekker-Wong terramechanics with learned terrain representations and a Transformer-based residual dynamics model for long-horizon, six degree-of-freedom kinodynamic prediction. The terramechanics component models soil-dependent interaction forces, while the residual model corrects discrepancies between the analytical prediction and the observed vehicle dynamics. NeSAM further estimates physically meaningful soil parameters from terrain observations and updates them online using an extended Kalman filter. We evaluate NeSAM in Verti-Bench, a simulator built on the Chrono multiphysics engine, and validate its performance on a physical Verti-4-Wheeler platform. NeSAM improves prediction accuracy by up to 30% in simulation and 29% on real-world data relative to the strongest compared baselines. When integrated with a close-loop navigation controller, NeSAM further improves traversal success rate through online soil adaptation while reduces Hausdorff distance to the reference trajectory by 69.4%, indicating improved trajectory tracking accuracy.",
+    "authors": "Chenhui Pan, Tong Xu, Francesco Cancelliere, Xuesu Xiao",
+    "publish_date": "2026-08-21",
+    "arxiv_url": "http://arxiv.org/abs/2608.21330",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [
+      "Deformable"
+    ],
+    "matched_categories": [
+      "Manipulation"
+    ],
+    "hf_rank": null,
+    "score": 10,
+    "paper_id": "arxiv:2608.21330",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2608.21204": {
+    "arxiv_id": "2608.21204",
+    "title": "Beyond Imitation: Self-Improving Robot Policies via Off-Policy Q-Planning",
+    "abstract": "Behaviour Cloning (BC) has driven remarkable progress in robot manipulation, yet it is fundamentally limited by its inability to self-improve: a policy that fails cannot learn from that failure without additional human demonstrations. Reinforcement Learning fine-tuning offers a path to self-improvement but has proven difficult to scale to the multi-billion-parameter models underpinning modern robot policies. We propose Q-Planning, which equips a large visuomotor BC policy with a small off-policy Q-function. Because a Q-function estimates value rather than imitates actions, it can be trained on the same successful demonstrations as the BC policy and later absorb both successful and failed deployment rollouts, an asymmetry BC does not have. We exploit this asymmetry to enable value-guided action selection at inference (a single-step Q-weighted average over BC draws) and online self-improvement that fine-tunes only the Q-function, leaving the BC weights untouched. On LIBERO and bimanual RoboTwin, ten iterations of self-improvement lift every benchmark score we tested (LIBERO-10 93% to 99%, RoboTwin 83.8% to 91.4%) and shorten successful episodes on the near-ceiling suites (LIBERO-Object, LIBERO-Goal). On two contact-rich bimanual real-robot tasks, the same loop (BC frozen, no human intervention) improves purely from its own deployment rollouts: stack-cups 40% to 90% and insert-wallet 25% to 80% in five iterations, whereas SFT on successful rollouts alone stalls at 55% and 30%. Under an identical online budget Q-Planning is the only method, among Best-of-N, filtered SFT, IBRL, DSRL, and DAWR, that improves stably from failures without training an auxiliary actor.",
+    "authors": "Varun Giridhar, Anant Khandelwal, Jeremy A. Collins, Ignat Georgiev, Animesh Garg",
+    "publish_date": "2026-08-21",
+    "arxiv_url": "http://arxiv.org/abs/2608.21204",
+    "project_url": "https://varungiridhar.github.io/qplanning/",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [
+      "Robot Manipulation"
+    ],
+    "matched_categories": [
+      "Manipulation"
+    ],
+    "hf_rank": null,
+    "score": 10,
+    "paper_id": "arxiv:2608.21204",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2608.21152": {
+    "arxiv_id": "2608.21152",
+    "title": "Information Geometry of Gradient Flows",
+    "abstract": "Taking classical information geometry as its point of departure, this paper investigates, through gradient flows, how dually flat geometry extends beyond regular convexity, non-degeneracy, and smoothness. The regular theory is developed from the log-determinant potential on positive definite Gram matrices, establishing its Legendre dual, Fisher--Rao metric, Bregman divergence, and generalized Pythagorean theorem. We connect this framework to Craig--Sakamoto deformation, Wolfe duality, and, via Yoshizawa's embedding, Brockett--Bloch--Ratiu double-bracket flows, linking isospectral dynamics, Stiefel optimization, and component learning. The Bures--Wasserstein geometry provides a complementary gradient-flow structure. The singular theory emerges from boundary behavior: difference-of-convex deformations produce indefinite or degenerate Hessians while retaining pseudo-Hessian, dually flat, Legendre-self-dual structures. Newton flows exhibit finite-time collapse or Łojasiewicz-controlled convergence near non-Morse critical sets. Fisher-metric degeneracies on the Birkhoff polytope and elliptic-curve moduli are resolved by explicit blow-ups, yielding a birationally invariant exponential decay law. We further derive a closed-form Kirillov Jacobian and introduce cross curvature as a spectral diagnostic of local escape rates, including a new Box--Cox interpolation. Reproducible numerical experiments support the closed-form results. Rather than claiming a completed theory, the paper provides foundations for singular information geometry centered on degenerate pencils, indefinite dual flatness, blow-up geometry, and Łojasiewicz-type convergence.",
+    "authors": "Shintaro Yoshizawa",
+    "publish_date": "2026-08-21",
+    "arxiv_url": "http://arxiv.org/abs/2608.21152",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "Manipulation"
+    ],
+    "hf_rank": null,
+    "score": 0,
+    "paper_id": "arxiv:2608.21152",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2608.21116": {
+    "arxiv_id": "2608.21116",
+    "title": "Canonical representation of the Snyder-de Sitter algebra with correct flat and commutative limits",
+    "abstract": "The Snyder--de Sitter algebra provides a Lorentz-covariant deformation of phase-space geometry characterized by a curvature parameter $α$ and a noncommutativity parameter $β$. We construct an explicit canonical (Darboux) representation of this algebra that is regular in both parameters. Starting from the symplectic structure associated with the Snyder--de Sitter Poisson brackets, we derive the canonical transformation between the physical phase-space variables and Darboux coordinates and obtain its inverse in closed form to all orders in $α$ and $β$. The resulting representation has well-defined flat ($α\\to0$) and commutative ($β\\to0$) limits, reducing respectively to the Snyder and de Sitter phase-space algebras, while the simultaneous limit $(α,β)\\to(0,0)$ yields the standard canonical phase-space coordinates. We then apply this representation to the construction of Poisson gauge transformations on Snyder--de Sitter phase space. In particular, we derive the corresponding gauge transformation matrix and Poisson field strength, both of which are regular in $α$ and $β$. Our construction provides a convenient framework for investigating gauge theories and other physical systems formulated on Snyder--de Sitter phase space.",
+    "authors": "V. G. Kupriyanov, E. L. F. de Lima",
+    "publish_date": "2026-08-21",
+    "arxiv_url": "http://arxiv.org/abs/2608.21116",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "Manipulation"
+    ],
+    "hf_rank": null,
+    "score": 0,
+    "paper_id": "arxiv:2608.21116",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2608.21083": {
+    "arxiv_id": "2608.21083",
+    "title": "Teaching is a Process: The TOSS Framework for Modeling Human Teaching Decisions in Human-Interactive Robot Learning",
+    "abstract": "Successful Human-Robot Teaching assumes alignment between robot processing needs and human teaching intent. To better understand this alignment, this work seeks to uncover the underlying logic that humans intuitively apply when teaching. Through an exploratory, bottom-up study with N=34, participants observing two distinct robot Reinforcement Learning (RL) scenarios, we analyze 204 intuitive teaching responses across early, middle, and late learning phases. Results reveal that teaching decisions consist of a nuanced, interconnected network of Triggers (situational catalysts), Objectives (subjective teaching targets), Signals (communicative acts), and Strategies (high-level governance) in which teachers spontaneously adopt diverse roles, acting as coaches, engineers, or designers and prioritize different objectives. Based on these results, we introduce the TOSS Framework, which conceptualizes Human-Robot teaching as a procedural loop between robot behavior and human teaching actions, in which human teaching decisions are modeled as Trigger-Signal responses modulated by teaching Objectives and Strategies. It provides future research with an openly accessible dataset and a theoretical foundation for a) understanding teaching decisions and b) simulating realistic oracles as well as c) designing human-centered teaching settings and novel robot learning algorithms that go beyond the constraints of current robot learning settings.",
+    "authors": "Bernhard Hilpert, Kim Baraka, Joost Broekens",
+    "publish_date": "2026-08-21",
+    "arxiv_url": "http://arxiv.org/abs/2608.21083",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [
+      "Robot Learning"
+    ],
+    "matched_categories": [
+      "Manipulation"
+    ],
+    "hf_rank": null,
+    "score": 10,
+    "paper_id": "arxiv:2608.21083",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2608.21031": {
+    "arxiv_id": "2608.21031",
+    "title": "PhysCaP: Grounding Code-as-Policy Agent with Physics-Informed Exploration",
+    "abstract": "We present PhysCaP, a Physics-Informed Code-as-Policy agent for active perception in robotic manipulation. While vision-language-action policies excel at imitating demonstrations, they rely on passive observation and fail to infer latent physical properties critical for manipulation. PhysCaP augments code-as-policy frameworks with a physics-informed exploration layer that enables explicit information-seeking through interaction. It introduces training-free physical property extraction modules that estimate object mass and stiffness from robot proprioception without additional sensors. To balance exploration costs and the efficiency of information obtained, PhysCaP employs a dual-agent design: a Planner that decides when to explore and when to stop, and a Prioritizer that filters implausible interactions and ranks the remainder using a heuristic priority score, enabling efficient, targeted exploration. We evaluate PhysCaP on real-world tabletop manipulation tasks (searching for hidden objects, detecting empty cans, and finding ripe avocados) and a simulated task in LIBERO. The results show that existing passive and naive interactive baselines either fail when physical properties are hidden or over-explore, whereas PhysCaP achieves comparable performance with fewer interactions and reduced execution time. Ablation studies further validate the effectiveness of the proposed physical property extraction modules. Project page: https://physcap.github.io",
+    "authors": "Chen-Yu Lin, Jing-Wen Chen, Hsueh-En Chang, Hung-An Chen, Sheng-Hsun Chang, Chi-Pin Huang, Fu-En Yang, Min-Hung Chen, Yi-Ting Chen, Yu-Chiang Frank Wang, Shao-Hua Sun",
+    "publish_date": "2026-08-21",
+    "arxiv_url": "http://arxiv.org/abs/2608.21031",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [
+      "Robotic Manipulation"
+    ],
+    "matched_categories": [
+      "Manipulation"
+    ],
+    "hf_rank": null,
+    "score": 10,
+    "paper_id": "arxiv:2608.21031",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2608.21018": {
+    "arxiv_id": "2608.21018",
+    "title": "Optical-area minimum method for static spherical black hole shadows",
+    "abstract": "We formulate a global optical-area method for shadows of static, spherically symmetric black holes. For the metric \\(ds^{2}=-A(r)dt^{2}+B(r)dr^{2}+C(r)dΩ^{2}\\), spherical sections of the optical geometry have area \\(\\mathcal{A}_{\\rm opt}=4πC/A\\). A null ray with impact parameter \\(b\\) can cross a spherical section only if \\(b^{2}\\leq C/A\\). The capture threshold is fixed by the infimum of \\(C/A\\) on the connected interval between the observer and the black hole horizon. When attained at an interior point, the infimum gives \\(b_{\\rm sh}^{2}=\\min(C/A)\\), while a static observer outside the controlling minimum, on the inward-sky branch, measures \\(\\sin^{2}α_{\\rm sh}=\\mathcal{A}_{*}/ \\mathcal{A}_{\\rm opt}(r_{\\rm o})\\). The usual photon-sphere equation follows when the minimum occurs at a smooth interior point. Exponential instability additionally requires the minimum to be nondegenerate. The local optical-radius and photon-sphere formulas are established results. Our contribution is to organize them into an observer-to-horizon global selection rule that compares all stationary candidates and relevant endpoint limits. The radial function \\(B(r)\\) does not affect the shadow angle, although it enters the coordinate-time instability rate, whose numerical value also depends on the normalization of the static time coordinate. We derive compact first- and second-order formulas for deformed metrics, demonstrate candidate comparison with a synthetic two-minimum profile, and apply the construction to Reissner--Nordström, Bardeen, charged dilaton, and Kottler black holes. An explicit transformation of the charged-dilaton example from a nonareal to an areal radial coordinate verifies radial-coordinate invariance, while the Kottler example probes a nonasymptotically flat static region.",
+    "authors": "Vitalii Vertogradov, Nikko John Leo S. Lobos, Ali Ovgun, Reggie C. Pantig",
+    "publish_date": "2026-08-21",
+    "arxiv_url": "http://arxiv.org/abs/2608.21018",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "Manipulation"
+    ],
+    "hf_rank": null,
+    "score": 0,
+    "paper_id": "arxiv:2608.21018",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2608.20989": {
+    "arxiv_id": "2608.20989",
+    "title": "Neutron star matter with hyperons: Bayesian comparison of nucleonic and SU(6)/SU(3) hyperonic models",
+    "abstract": "We investigate neutron star matter with hyperons within a density-dependent relativistic mean-field framework using Bayesian inference, considering three composition scenarios: purely nucleonic matter, hyperonic matter under SU(6) flavor symmetry, and hyperonic matter under SU(3) symmetry with free vector-sector parameters. The analysis incorporates constraints from empirical nuclear matter properties, theoretical inputs at low densities, and multimessenger observations of neutron stars. We find that the SU(6) scheme, grounded in the quark model and isospin counting rule, leads to a significantly softer equation of state. In contrast, the additional flexibility of the SU(3) framework enhances vector repulsion and yields a comparatively stiffer equation of state consistent with observational bounds across the explored parameter space; in particular, the posterior distributions favor values of the vector coupling ratio $α_v$ lower than the SU(6) limit $α_v = 1$. These differences are reflected in neutron star observables, including mass--radius relations, tidal deformabilities, direct Urca thresholds, and oscillation properties, all of which remain compatible with current constraints within the SU(3) scenario. We further examine structural signatures through the curvature of the mass--radius relation and find that, although hyperon-rich configurations can induce noticeable variations, such features depend sensitively on the stiffness of the equation of state and are therefore not universally robust indicators. Bayesian model comparison further shows that present constraints do not meaningfully discriminate between the purely nucleonic and SU(3) hyperonic scenarios, while providing positive, but not decisive, evidence against the more restrictive SU(6) framework.",
+    "authors": "Athira S., Vishal Parmar, Monika Sinha, Ignazio Bombaci",
+    "publish_date": "2026-08-21",
+    "arxiv_url": "http://arxiv.org/abs/2608.20989",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "Manipulation"
+    ],
+    "hf_rank": null,
+    "score": 0,
+    "paper_id": "arxiv:2608.20989",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2608.20967": {
+    "arxiv_id": "2608.20967",
+    "title": "Generalizing Soft Tissue Deformation and Force Prediction Across Material Stiffness and Geometry",
+    "abstract": "Accurate soft tissue simulation is essential for surgical training, pre-operative planning, and haptic feedback systems. While learning-based surrogate models trained on data using the finite element method (FEM) offer a promising path to real-time inference, their reliability depends on well-calibrated constitutive models. Existing approaches neither provide systematic guidance on model selection across stiffness levels, nor generalize across different tissue stiffnesses or geometries. We perform a comprehensive calibration of hyperelastic constitutive models in the SOFA Framework using gravity-loaded silicone beams with different stiffnesses. Using calibrated simulations as training data, we use a softness conditioned equivariant graph neural network, enabling deformation and force prediction across multiple tissue types and unseen geometries. Our model achieves sub-millimeter mean deformation accuracy at 0.010s inference time, while showing that force prediction quality is directly tied to upstream calibration consistency.",
+    "authors": "Madina Kojanazarova, Sidaty El Hadramy, Philippe C. Cattin",
+    "publish_date": "2026-08-21",
+    "arxiv_url": "http://arxiv.org/abs/2608.20967",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "Manipulation"
+    ],
+    "hf_rank": null,
+    "score": 0,
+    "paper_id": "arxiv:2608.20967",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2608.20948": {
+    "arxiv_id": "2608.20948",
+    "title": "Neural-Primitive: An Efficient End-to-end Local Planner with Primitive-based Imitation Learning for Autonomous Flight",
+    "abstract": "Autonomous flight in unknown cluttered environments is hindered by the computation-quality-memory trilemma of onboard trajectory generation. In this paper, we propose an efficient end-to-end local planner via imitation learning. A lightweight offline-primitive-based dataset collection framework is designed to produce safe and high-quality trajectory primitives in non-convex environments. A compact neural network directly maps sensory inputs to polynomial coefficients that inherently encode higher-order dynamical information. The learned policy generates smooth, empirically collision-free and dynamically feasible trajectories in real time without back-end solving. It achieves ultra-fast computation (below 1ms on a standard desktop and average 3.68ms during onboard flight), while maintaining low onboard memory requirements (less than 1.5MiB). Extensive simulation benchmarks demonstrate superiority in both planning latency and target-reaching progress quality. Zero-shot deployment in real-world experiments further validates the robust sim-to-real transfer capability of the proposed method.",
+    "authors": "Zhitao Liu, Guangtong Xu, Zihan Wang, Jialiang Hou, Chao Xu, Fei Gao",
+    "publish_date": "2026-08-21",
+    "arxiv_url": "http://arxiv.org/abs/2608.20948",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [
+      "Imitation Learning"
+    ],
+    "matched_categories": [
+      "Manipulation"
+    ],
+    "hf_rank": null,
+    "score": 10,
+    "paper_id": "arxiv:2608.20948",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2608.20921": {
+    "arxiv_id": "2608.20921",
+    "title": "Hyperonic compact stars with vector portal dark matter",
+    "abstract": "The appearance of hyperons in the core of neutron stars generally softens the equation of state (EOS), posing a longstanding challenge to the existence of observed two-solar-mass compact stars. We investigate whether repulsive interactions mediated by a dark-sector vector portal can provide an additional source of high-density pressure and thereby modify the structure of hyperonic compact stars. The baryonic sector is described within the modified quark-meson coupling (MQMC) model, in which the octet baryons are treated as confined relativistic constituent-quark systems interacting self-consistently through the $σ$, $ω$, and $ρ$ fields within a mean field approximation. The dark sector consists of a fermionic dark matter coupled to baryonic matter through a neutral vector mediator $Z^\\prime$, generating an additional repulsive contribution to the dense-matter EOS. We investigate the resulting equation of state, mass--radius relation, tidal deformability, and moment of inertia. The resulting mass--radius relations satisfy the observational bounds from massive pulsars, including PSR J0740 + 6620, with maximum neutron star masses reaching approximately $2 M_{\\odot}$. The resulting changes in tidal and rotational observables provide additional avenues for testing the dark-sector interaction through multimessenger observations.",
+    "authors": "Prafulla K. Panda, Deepak Kumar, Hiranmaya Mishra, Sudhanwa Patra",
+    "publish_date": "2026-08-21",
+    "arxiv_url": "http://arxiv.org/abs/2608.20921",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "Manipulation"
+    ],
+    "hf_rank": null,
+    "score": 0,
+    "paper_id": "arxiv:2608.20921",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2608.20909": {
+    "arxiv_id": "2608.20909",
+    "title": "Decoupling Policy Extraction for Offline Reinforcement Learning",
+    "abstract": "Offline RL methods commonly jointly train the actor and critic, where the critic is used to guide the actor toward higher-value actions. This coupled learning process is well motivated in online RL, where an improved actor collects new data that can further update the actor and the critic. However, training data remains fixed in offline RL, making actor-side policy improvement unable to generate new data to validate or correct the critic. Moreover, retaining this coupled paradigm leads to two related challenges. Firstly, actor updates can drift toward high-valued but potentially out-of-distribution (OOD) actions and amplify critic overestimation. Secondly, conservative value estimation or behavior-cloning regularization creates a difficult trade-off between suppressing OOD actions and selecting high-value actions within the data-supported region. Motivated by this observation, we revisit the conventional offline RL paradigm and propose decoupling policy improvement from actor training. Specifically, we train the actor solely to model the behavior distribution and perform policy improvement at inference time by reranking multiple actor-generated proposals with a separately learned critic. We refer to this paradigm as the decoupled policy extraction paradigm. Under such paradigm, the actor provides behavior-supported action candidates, while the critic performs value-based selection within this candidate set. Extensive experiments show that the decoupled policy extraction paradigm outperforms both behavior cloning and jointly learned offline RL methods, while remaining effective even with a naive Q-learning critic.",
+    "authors": "Xuyao Lin, Yixiang Shan, Jinru Duan, Tao Yang, Xinyu Zhao, Runyu Lei, Yiming Zhao, Jiaxin Fan, Zongbao Feng, Peng Jia",
+    "publish_date": "2026-08-21",
+    "arxiv_url": "http://arxiv.org/abs/2608.20909",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [
+      "behavior cloning"
+    ],
+    "matched_categories": [
+      "Manipulation"
+    ],
+    "hf_rank": null,
+    "score": 10,
+    "paper_id": "arxiv:2608.20909",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2608.20907": {
+    "arxiv_id": "2608.20907",
+    "title": "Strict Convexity and Sharp Power Concavity for a Graphical $σ_2$-Curvature Equation",
+    "abstract": "We prove strict convexity of the square-root transformation $v=-\\sqrt{-u}$ for admissible solutions of a graphical $σ_2$-curvature Dirichlet problem on smooth uniformly convex domains. A key ingredient is a constant-rank theorem for $D^2v$, proved by a direct Ma-Xu type argument in dimension three and by the Bian-Guan microscopic convexity principle together with inverse-convexity methods in arbitrary dimensions. Combined with boundary strict convexity and a domain-deformation argument, the constant-rank theorem yields $D^2v>0$ throughout the domain.",
+    "authors": "Shuning Xu",
+    "publish_date": "2026-08-21",
+    "arxiv_url": "http://arxiv.org/abs/2608.20907",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "Manipulation"
+    ],
+    "hf_rank": null,
+    "score": 0,
+    "paper_id": "arxiv:2608.20907",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2608.20888": {
+    "arxiv_id": "2608.20888",
+    "title": "Almost Positive Sectional Curvature with Bounded Geometry on $S^2\\times S^2$",
+    "abstract": "Let $M=S^2\\times S^2$. We prove that there is a fixed smooth open ball $U\\subset M$ such that, for every $\\varepsilon>0$, one can find a smooth metric $g_\\varepsilon$ and a closed set $S_\\varepsilon$ with the following properties: $\\sec_{g_\\varepsilon}>0$ on $M\\setminus S_\\varepsilon$; the relative volume of $S_\\varepsilon$ is less than $\\varepsilon$; every sectional curvature on $U$ is greater than $1$; $-\\varepsilon<\\sec_{g_\\varepsilon}\\leqΛ$ for one constant $Λ$ independent of $\\varepsilon$; the volume and diameter have uniform positive lower and upper bounds; and the injectivity radius has a uniform positive lower bound. In fact, $U\\cap S_\\varepsilon=\\varnothing$.   The construction starts from the product of the unit round metrics. A small conformal factor, obtained by smoothing the absolute value of the height function on each sphere, has negative definite Hessian away from two thin equatorial bands. It makes every formerly flat mixed plane strictly positive outside a set of arbitrarily small relative volume, while the negative curvature created in the bands is only $O(\\varepsilon)$. A second conformal deformation supported in a very small region produces a core on which all sectional curvatures are greater than $1$; its transition has Hessian bounded above by $O(\\varepsilon)$. Finally, a diffeomorphism compresses the fixed topological ball $U$ into that core. Pullback preserves all intrinsic bounded-geometry estimates. The main content of this paper is generated by ChatGPT 5.6 and verified by the author.",
+    "authors": "Yuhang Liu",
+    "publish_date": "2026-08-21",
+    "arxiv_url": "http://arxiv.org/abs/2608.20888",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "Manipulation"
+    ],
+    "hf_rank": null,
+    "score": 0,
+    "paper_id": "arxiv:2608.20888",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2608.20874": {
+    "arxiv_id": "2608.20874",
+    "title": "Multi-Modal Traffic Sign Detection with Semantic Attributes for Autonomous Driving",
+    "abstract": "Reliable traffic sign detection is a prerequisite for the global deployment of autonomous driving systems, where regulatory compliance and road safety depend on perceiving signs correctly across regions, ranges, and weather conditions. Despite recent progress, vision-based methods continue to face three fundamental limitations: poor cross-regional generalization due to high diversity across countries, degraded performance on small-object detection at long ranges (traffic signs occupy as little as $10{\\times}10$ pixels at 200m), and fragile temporal tracking under the strongly non-linear perspective distortion that occurs as a vehicle approaches a sign. In this paper, we address the problem of robust, long-range, region-agnostic traffic sign perception by combining camera and Light Detection and Ranging (LiDAR) sensing. We present a multi-modal detection framework whose Intensity-Aware Deformable Fusion module aligns retro-reflective LiDAR cues with camera features, anchoring detection on geometric invariants rather than region-specific visual appearance. We further introduce a dual motion-model tracker that explicitly accounts for non-linear perspective transformations during vehicle approach, substantially improving temporal consistency over linear motion assumptions. Additionally, we develop a semantic attribute classification pipeline that estimates occlusion level, readability, sign embeddedness, and road relevance, providing actionable context to downstream planning. Extensive evaluation on our dataset, spanning 60+ countries and 2,500+ hours of driving data, shows that the proposed pipeline achieves an Object Miss Ratio (OMR) of 0.49% across 221,068 evaluation sequences, demonstrating globally generalizable traffic sign perception in commercial-grade autonomous driving systems.",
+    "authors": "Meda Lazar, Sourab Sridhar, Shashwata Gupta, Alexandra Tripcea, Varun Ravi, Senthil Yogamani",
+    "publish_date": "2026-08-21",
+    "arxiv_url": "http://arxiv.org/abs/2608.20874",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [
+      "Deformable"
+    ],
+    "matched_categories": [
+      "Manipulation"
+    ],
+    "hf_rank": null,
+    "score": 10,
+    "paper_id": "arxiv:2608.20874",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2608.20852": {
+    "arxiv_id": "2608.20852",
+    "title": "Demonstration-Guided Humanoid Stand-Up on an Emulated Deformable Surface",
+    "abstract": "This paper presents a reference-guided reinforcement learning framework to generate stand-up motion for a 29-DOF Unitree G1 humanoid on deformable soft ground, using a human demonstration recorded on hard ground. The terrain compliance is modelled using solref and solimp parameters from MuJoCo's rigid body soft-contact model. The rewards consists of (i) reference motion tracking through residual joint-position control and (ii) explicit recovery objectives such as pelvis height, torso uprightness, and the final posture. First, the policy is trained with the specified rewards considering hard ground. Next, the terrain stiffness is lowered by updating solref and the nominal surface penetration zone is expanded using solimp. Subsequent training enables the policy to adapt to the delayed support force generation due to significant surface penetration during contact-intensive phases while preserving the original demonstration pattern. The learned policy successfully completes the fallen-to-standing task in simulation, reaching the targeted pelvis height and uprightness, with a maximum contact penetration of approximately 40 mm during the process. The proposed method is demonstrated on two stand-up sequences and successfully achieves the final recovery objective on both hard and soft ground. Ablation studies show that reference tracking alone is insufficient for successful stand-up, and that explicit recovery rewards are essential.",
+    "authors": "Aniruddh Kushwah, Vyankatesh Ashtekar, Ashish Dutta",
+    "publish_date": "2026-08-21",
+    "arxiv_url": "http://arxiv.org/abs/2608.20852",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [
+      "Deformable"
+    ],
+    "matched_categories": [
+      "Manipulation"
+    ],
+    "hf_rank": null,
+    "score": 10,
+    "paper_id": "arxiv:2608.20852",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2608.20784": {
+    "arxiv_id": "2608.20784",
+    "title": "Rethinking Demonstration Unlearning in Imitation Learning for Robotics",
+    "abstract": "Imitation learning for robotics depends on human demonstrations, some of which people may later ask to remove. Retraining without them is the natural reference, but its cost grows with policy and dataset scale, motivating cheaper operators that edit a trained policy. Metrics inherited from machine unlearning, such as forgetting loss or a single membership attack, do not establish what an edit removed from a policy acting in closed loop. We therefore introduce a retrain-calibrated audit that reads demonstration unlearning along two axes: behavior, whether the edited policy acts like one retrained without the removed demonstrations, and evidence, whether an auditor can still detect it was trained on them. The behavior axis measures action divergence to that retrain at matched states, calibrated by a floor built from independent retrains, so a policy at the floor is as close to a retrain as retrains are to each other. The evidence axis applies a per-demonstration membership attack against a retrain null, reporting both its rank and its absolute member-loss level, since rank alone accepts operators that inflate member losses past the null. A conformal test then combines both axes into one hypothesis of joint retrain consistency, against a fleet of independent retrains large enough to reject at conventional significance. Across five preregistered conditions on three real-robot policy classes and two simulation suites, the axes dissociate in both directions on one checkpoint, as an edit may repair task behavior while leaving evidence unchanged, or reduce evidence while moving behavior away from retraining. On the ACT arm, a redirect edit restores blind-scored robot success to 18 of 20 trials.",
+    "authors": "Jiazhuo Li, Yu Zhang, Yiming Fei, Kangkang Dong, Xiaojun Zhu, Houde Liu, Jinze Tao",
+    "publish_date": "2026-08-21",
+    "arxiv_url": "http://arxiv.org/abs/2608.20784",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [
+      "Imitation Learning"
+    ],
+    "matched_categories": [
+      "Manipulation"
+    ],
+    "hf_rank": null,
+    "score": 10,
+    "paper_id": "arxiv:2608.20784",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2608.20740": {
+    "arxiv_id": "2608.20740",
+    "title": "VisTa3D: A Dataset and Benchmark for Thin Object Reconstruction from Vision, Tactile, and 3D Point Clouds",
+    "abstract": "State-of-the-art 3D reconstruction models, whether from visual, range, or both, tend to underperform on thin objects. This is partially due to the small amount of space such objects occupy in RGB images and in 3D point clouds. To test the extent of their errors, we collected the first thin object dataset comprising of synchronized RGB images, depth maps, and tactile response maps, where each frame is associated with inertial measurements, camera pose and calibration, and groundtruth depth and segmentation maps obtained from laser scanning of thin objects. We hypothesize that tactile data can aid in the reconstruction of thin objects as their response maps provide local shape and deformation information. Our dataset, termed VisTa3D, comprises of 387 scenes covering 70 thin objects over 17 environments. We benchmarked current 3D reconstruction models on VisTa3D and found that, indeed, they exhibit low fidelity on thin objects. To test if tactile data can help, we introduce the first visual-range-tactile 3D reconstruction model as a baseline. Code and data: https://huggingface.co/datasets/shaniaguo/VisTa3D.",
+    "authors": "Shania Guo, Yeongsik Seo, Andrew Fu, Mei Hao, Iris Xia, Jiwon Jenny Lee, Xinyi Mary Xie, Hyoungseob Park, Aaron Dollar, Alex Wong",
+    "publish_date": "2026-08-21",
+    "arxiv_url": "http://arxiv.org/abs/2608.20740",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "Manipulation"
+    ],
+    "hf_rank": null,
+    "score": 0,
+    "paper_id": "arxiv:2608.20740",
     "source": "arxiv",
     "venue": ""
   }
