@@ -31954,27 +31954,6 @@
     "source": "arxiv",
     "venue": ""
   },
-  "arxiv:2607.25091": {
-    "arxiv_id": "2607.25091",
-    "title": "Towards Robust Reinforcement Learning for Small-Scale Language Model Agents",
-    "abstract": "The alignment of Small Language Models (SLMs) in the 70--500M parameter range using reinforcement learning is often considered unstable, though the underlying failure mechanisms have not been systematically investigated. In the State-of-the-Art (SOTA) research, fifteen (model, corpus) configurations were trained using Proximal Policy Optimization (PPO). The experiments included Pythia-70M, 160M, 410M and SmolLM2-135M, 360M on the TinyStories, CNN/DailyMail, and Wikitext-103 corpora. Three reproducible failure modes were identified in small-scale language models: silent LoRA parameter freezing in standard PEFT/TRL pipelines, numerical overflow in importance ratios when using bfloat16, and catastrophic policy collapse due to reward-model error. These issues were addressed using a merge-and-reinitialize adapter technique, float32 precision during PPO updates, and a three-layer safety mechanism comprising reward whitening, importance-ratio guarding, and weight rollback. In this paper, a capacity-headroom hypothesis is proposed, which states that PPO performance at the SLM scale depends on both a fluent supervised model ($\\text{PPL}<20$) and a discriminative reward signal, rather than on the number of model parameters. The proposed system converged stably in all experiments and improved preference win rate over the SFT baseline in configurations with a fluent prior and an informative reward signal. Furthermore, it outperformed instruction-tuned baselines while requiring significantly less training data. All checkpoints, preference datasets, and training scripts are publicly released$^§$.",
-    "authors": "Md Rezwanul Haque, Md. Milon Islam, Fakhri Karray",
-    "publish_date": "2026-07-27",
-    "arxiv_url": "http://arxiv.org/abs/2607.25091",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [],
-    "matched_categories": [
-      "HF-Hot"
-    ],
-    "hf_rank": 46,
-    "score": 22,
-    "paper_id": "arxiv:2607.25091",
-    "source": "arxiv",
-    "venue": ""
-  },
   "arxiv:2607.25703": {
     "arxiv_id": "2607.25703",
     "title": "Simulation-based tension quantification of the cosmic dipole",
@@ -32040,27 +32019,6 @@
     "hf_rank": 43,
     "score": 26,
     "paper_id": "arxiv:2607.25431",
-    "source": "arxiv",
-    "venue": ""
-  },
-  "arxiv:2607.25236": {
-    "arxiv_id": "2607.25236",
-    "title": "VisualPatchWorld: Code World Models as Latent Structured Representations for Planning",
-    "abstract": "Different research lines use the term world model in different ways, yet they share a common aim: to capture how the world evolves under action in a form that supports perception, simulation, and planning. Two prominent realizations are neural predictors that learn dynamics in continuous vector spaces, and hand-built physics engines that expose explicit state and physical laws. Neural predictors scale from data but leave the form of the dynamics implicit; physics engines are inspectable and editable but difficult to construct at scale. We introduce VisualPatchWorld (VPW), which represents world dynamics as code. VPW first selects a qualitative dynamical form with short active probes, then fits that form's free parameters from recorded state-action traces by minimizing multi-step prediction error. The resulting programs can be rolled forward like a simulator, inspected in source form, and used inside model-predictive control; image-derived scene graphs can supply the live state at replan time. Across comparisons with prior code-based world models, VPW attains 69.0% mean planning success and exceeds the strongest code baseline by 23.5 points. The largest gains arise when choosing the correct qualitative dynamics is essential. Under the same planner, the induced models approach ground-truth engine success on navigation and grasp-rich control; a residual gap remains for contact-rich pushing, and checking a shortlist of promising plans in the engine closes most of that gap. These results establish a practical route toward automatically constructed code world models that are useful for planning. Code is available at https://github.com/HKBU-KnowComp/VisualPatchWorld/.",
-    "authors": "Jiaxin Bai, Jiaxuan Xiong",
-    "publish_date": "2026-07-28",
-    "arxiv_url": "http://arxiv.org/abs/2607.25236",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [],
-    "matched_categories": [
-      "HF-Hot"
-    ],
-    "hf_rank": 45,
-    "score": 24,
-    "paper_id": "arxiv:2607.25236",
     "source": "arxiv",
     "venue": ""
   },
@@ -33414,27 +33372,6 @@
     "hf_rank": 37,
     "score": 9,
     "paper_id": "arxiv:2607.25970",
-    "source": "arxiv",
-    "venue": ""
-  },
-  "arxiv:2607.25108": {
-    "arxiv_id": "2607.25108",
-    "title": "OPERA: Offline Policy-guided Expert Routing and Adaptation for Universal Biomedical Image Analysis",
-    "abstract": "Biomedical image analysis spans diverse modalities and tasks, yet real-world deployment is hindered by severe distribution shifts across scanners, protocols, and patient populations. High-performing models consequently require repeated domain-specific fine-tuning, which is a costly cycle that becomes impractical when labels are scarce or privacy constraints limit data sharing. We propose OPERA (Offline Policy-guided Expert Routing and Adaptation), a multi-agent ensemble framework that addresses this deployment bottleneck by treating expert weight assignment as an offline policy learning problem: a routing policy is learned from a small validation set without gradient updates to any expert agent, then deployed with test-time adaptation to handle distribution shift. OPERA coordinates heterogeneous specialist agents through complementary mechanisms. The expert profiling module learns selection policies offline, enabling informed allocation of expertise. Each agent undergoes confidence calibration through temperature adjustment, ensuring more reliable probabilistic outputs. OPERA also incorporates distribution aware adaptation, where class weights are dynamically adjusted at the batch level using statistics derived from unlabeled test data. Instance level routing assigns each sample to the most suitable expert by leveraging inter model agreement and predictive entropy. We evaluate OPERA on 9 datasets covering fundus photography, chest X-ray, CT, MRI, and multimodal diagnostic benchmarks, comparing against 30+ baselines across classification, segmentation, and multimodal settings. OPERA consistently improves performance and calibration quality, demonstrating that offline policy-guided expert agents coordination is a practical path to deployable biomedical AI without retraining. Code is on \\href{https://github.com/HUANGLIZI/OPERA}{GitHub}.",
-    "authors": "Zihan Li, Feiyang Liu, Dandan Shan, Ruibo Wang, Qingqi Hong",
-    "publish_date": "2026-07-27",
-    "arxiv_url": "http://arxiv.org/abs/2607.25108",
-    "project_url": "https://doi.org/10.1145/3767308.3836169",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [],
-    "matched_categories": [
-      "HF-Hot"
-    ],
-    "hf_rank": 38,
-    "score": 8,
-    "paper_id": "arxiv:2607.25108",
     "source": "arxiv",
     "venue": ""
   },
@@ -52855,7 +52792,7 @@
       "Manipulation",
       "HF-Hot"
     ],
-    "hf_rank": 21,
+    "hf_rank": 26,
     "score": 50,
     "paper_id": "arxiv:2608.16885",
     "source": "arxiv",
@@ -55060,9 +54997,10 @@
       "world action model"
     ],
     "matched_categories": [
-      "World Model"
+      "World Model",
+      "HF-Hot"
     ],
-    "hf_rank": null,
+    "hf_rank": 4,
     "score": 10,
     "paper_id": "arxiv:2608.18077",
     "source": "arxiv",
@@ -57562,7 +57500,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 40,
+    "hf_rank": 45,
     "score": 12,
     "paper_id": "arxiv:2608.18580",
     "source": "arxiv",
@@ -57721,7 +57659,7 @@
       "Manipulation",
       "HF-Hot"
     ],
-    "hf_rank": 42,
+    "hf_rank": 47,
     "score": 40,
     "paper_id": "arxiv:2608.19891",
     "source": "arxiv",
@@ -58165,7 +58103,7 @@
       "Manipulation",
       "HF-Hot"
     ],
-    "hf_rank": 24,
+    "hf_rank": 29,
     "score": 10,
     "paper_id": "arxiv:2608.19759",
     "source": "arxiv",
@@ -58636,7 +58574,7 @@
       "Dexterous",
       "HF-Hot"
     ],
-    "hf_rank": 29,
+    "hf_rank": 34,
     "score": 26,
     "paper_id": "arxiv:2608.19936",
     "source": "arxiv",
@@ -58764,7 +58702,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 26,
+    "hf_rank": 31,
     "score": 29,
     "paper_id": "arxiv:2608.17744",
     "source": "arxiv",
@@ -58785,7 +58723,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 27,
+    "hf_rank": 32,
     "score": 28,
     "paper_id": "arxiv:2608.13210",
     "source": "arxiv",
@@ -58806,7 +58744,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 28,
+    "hf_rank": 33,
     "score": 27,
     "paper_id": "arxiv:2608.19863",
     "source": "arxiv",
@@ -58827,7 +58765,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 30,
+    "hf_rank": 35,
     "score": 25,
     "paper_id": "arxiv:2608.19799",
     "source": "arxiv",
@@ -58848,7 +58786,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 31,
+    "hf_rank": 36,
     "score": 24,
     "paper_id": "arxiv:2608.18027",
     "source": "arxiv",
@@ -58869,7 +58807,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 32,
+    "hf_rank": 37,
     "score": 23,
     "paper_id": "arxiv:2608.19758",
     "source": "arxiv",
@@ -58890,7 +58828,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 33,
+    "hf_rank": 38,
     "score": 22,
     "paper_id": "arxiv:2608.13120",
     "source": "arxiv",
@@ -58911,7 +58849,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 34,
+    "hf_rank": 39,
     "score": 21,
     "paper_id": "arxiv:2608.19854",
     "source": "arxiv",
@@ -58932,7 +58870,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 35,
+    "hf_rank": 40,
     "score": 20,
     "paper_id": "arxiv:2608.20281",
     "source": "arxiv",
@@ -58953,7 +58891,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 36,
+    "hf_rank": 41,
     "score": 19,
     "paper_id": "arxiv:2608.20335",
     "source": "arxiv",
@@ -58974,7 +58912,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 37,
+    "hf_rank": 42,
     "score": 18,
     "paper_id": "arxiv:2608.20202",
     "source": "arxiv",
@@ -58995,7 +58933,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 38,
+    "hf_rank": 43,
     "score": 17,
     "paper_id": "arxiv:2608.14022",
     "source": "arxiv",
@@ -59016,7 +58954,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 39,
+    "hf_rank": 44,
     "score": 16,
     "paper_id": "arxiv:2608.20336",
     "source": "arxiv",
@@ -59037,7 +58975,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 41,
+    "hf_rank": 46,
     "score": 14,
     "paper_id": "arxiv:2608.19880",
     "source": "arxiv",
@@ -59058,7 +58996,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 43,
+    "hf_rank": 48,
     "score": 12,
     "paper_id": "arxiv:2608.19861",
     "source": "arxiv",
@@ -59079,7 +59017,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 44,
+    "hf_rank": 49,
     "score": 11,
     "paper_id": "arxiv:2608.18607",
     "source": "arxiv",
@@ -59184,7 +59122,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 19,
+    "hf_rank": 24,
     "score": 28,
     "paper_id": "arxiv:2608.15767",
     "source": "arxiv",
@@ -59205,7 +59143,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 20,
+    "hf_rank": 25,
     "score": 27,
     "paper_id": "arxiv:2608.12875",
     "source": "arxiv",
@@ -59226,7 +59164,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 22,
+    "hf_rank": 27,
     "score": 25,
     "paper_id": "arxiv:2608.13547",
     "source": "arxiv",
@@ -59247,7 +59185,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 23,
+    "hf_rank": 28,
     "score": 24,
     "paper_id": "arxiv:2608.08466",
     "source": "arxiv",
@@ -59268,7 +59206,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 25,
+    "hf_rank": 30,
     "score": 22,
     "paper_id": "arxiv:2608.19776",
     "source": "arxiv",
@@ -59457,9 +59395,10 @@
     "matched_categories": [
       "Manipulation",
       "VLA",
-      "Dexterous"
+      "Dexterous",
+      "HF-Hot"
     ],
-    "hf_rank": null,
+    "hf_rank": 2,
     "score": 10,
     "paper_id": "arxiv:2608.21031",
     "source": "arxiv",
@@ -60362,7 +60301,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 1,
+    "hf_rank": 6,
     "score": 29,
     "paper_id": "arxiv:2608.16425",
     "source": "arxiv",
@@ -60383,7 +60322,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 2,
+    "hf_rank": 7,
     "score": 28,
     "paper_id": "arxiv:2608.20574",
     "source": "arxiv",
@@ -60404,7 +60343,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 3,
+    "hf_rank": 8,
     "score": 27,
     "paper_id": "arxiv:2608.18184",
     "source": "arxiv",
@@ -60425,7 +60364,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 4,
+    "hf_rank": 9,
     "score": 26,
     "paper_id": "arxiv:2608.08676",
     "source": "arxiv",
@@ -60446,7 +60385,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 5,
+    "hf_rank": 10,
     "score": 25,
     "paper_id": "arxiv:2608.20210",
     "source": "arxiv",
@@ -60467,7 +60406,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 6,
+    "hf_rank": 11,
     "score": 24,
     "paper_id": "arxiv:2608.20886",
     "source": "arxiv",
@@ -60488,7 +60427,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 7,
+    "hf_rank": 12,
     "score": 23,
     "paper_id": "arxiv:2608.16647",
     "source": "arxiv",
@@ -60509,7 +60448,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 8,
+    "hf_rank": 13,
     "score": 22,
     "paper_id": "arxiv:2608.20061",
     "source": "arxiv",
@@ -60530,7 +60469,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 9,
+    "hf_rank": 14,
     "score": 21,
     "paper_id": "arxiv:2608.21360",
     "source": "arxiv",
@@ -60551,7 +60490,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 10,
+    "hf_rank": 15,
     "score": 20,
     "paper_id": "arxiv:2608.20634",
     "source": "arxiv",
@@ -60572,7 +60511,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 12,
+    "hf_rank": 17,
     "score": 18,
     "paper_id": "arxiv:2608.20707",
     "source": "arxiv",
@@ -60593,7 +60532,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 13,
+    "hf_rank": 18,
     "score": 17,
     "paper_id": "arxiv:2608.21156",
     "source": "arxiv",
@@ -60614,7 +60553,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 14,
+    "hf_rank": 19,
     "score": 16,
     "paper_id": "arxiv:2608.21278",
     "source": "arxiv",
@@ -60635,7 +60574,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 15,
+    "hf_rank": 20,
     "score": 15,
     "paper_id": "arxiv:2608.20910",
     "source": "arxiv",
@@ -60656,7 +60595,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 16,
+    "hf_rank": 21,
     "score": 14,
     "paper_id": "arxiv:2608.12781",
     "source": "arxiv",
@@ -60677,9 +60616,72 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 17,
+    "hf_rank": 22,
     "score": 13,
     "paper_id": "arxiv:2608.21134",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2608.21439": {
+    "arxiv_id": "2608.21439",
+    "title": "WorldMind: Decoupled Game World Model for State-Aware NPC Behavior",
+    "abstract": "Game world models have recently demonstrated promising capabilities in generating visually coherent and action-controllable gameplay videos. However, non-player character (NPC) behavior in existing models is either implicitly entangled with video generation or explicitly prescribed through external control signals. Consequently, a game world model has to jointly understand the state, plan the NPC's response and render its visual outcome, limiting its ability to produce responsive and state-aware NPC behavior. The challenge lies in the lack of an explicit interface for state-grounded decision-making. To this end, we introduce WorldMind, to our knowledge the first decoupled framework for state-aware NPC behavior in game world models. WorldMind separates interactive world modeling into four layers: an Understanding Layer that constructs a compact state from generated frames; a Decision Layer that reasons over the compact state to plan the NPC's next action; a Control Layer that translates the actions into temporally aligned conditions; and a Generation Layer that synthesizes their visual outcomes. By reconnecting layers in a closed interaction loop, WorldMind grounds NPC behavior in the evolving game state. We further introduce BOSS-140K, a dataset of gameplay videos paired with rich internal game states, together with an agent that automates the collection at scale. Experiments on BOSS-140K demonstrate reliable compact state reconstruction and mechanics-grounded planning, with WorldMind preferred over the baselines in approximately 70% of pairwise comparisons for its more tactically appropriate and coherent NPC behavior. Project page: https://teawhite.cn/worldmind_projectpage/",
+    "authors": "Zhiyang Deng, Boran Zhang, Danze Chen, Yeying Jin",
+    "publish_date": "2026-08-18",
+    "arxiv_url": "http://arxiv.org/abs/2608.21439",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "HF-Hot"
+    ],
+    "hf_rank": 1,
+    "score": 29,
+    "paper_id": "arxiv:2608.21439",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2608.20438": {
+    "arxiv_id": "2608.20438",
+    "title": "Peer-Voted LLM-Agent Stress Tests Find Feed-Induced Lexical Convergence but No Reliable Matched-Exposure Advantage for Distributed Sources",
+    "abstract": "Population-level behavior in large-language-model (LLM) agents cannot be characterized by single-agent benchmarks. We introduce PV-SST, a peer-voted social-platform testbed, and report a separately frozen, preregistered matched-exposure experiment spanning four topics, four unused seeds, four open-weight model families, and three prespecified larger variants. The experiment comprises 448 trials and 112 complete model-by-topic-by-seed blocks. Relative to a topic-only control, a feed of previous-round peer posts ranked by peer-generated likes increases final-round lexical similarity in both the four-family core panel (paired mean difference +0.0082 TF-IDF cosine units, 95% block-bootstrap CI [0.0043, 0.0121], randomization p=0.000105, n=64 blocks) and the three-variant size extension (+0.0109 [0.0069, 0.0151], p=0.000001, n=48). This contrast bundles peer-post exposure with ranking and therefore does not identify a ranking-only effect. Opposite-side survival falls in the core panel (-3.9 percentage points [-6.8, -1.6], p=0.0068) but not conclusively in the larger variants (-1.0 pp [-3.1, 0.4], p=0.50). Holding adversarial impressions fixed, four distributed sources do not reliably move honest-agent stance more than one source. The preregistered distributed-minus-single contrast is positive but inconclusive in the core panel (+0.057 [-0.009, 0.125], p=0.112) and negative in the larger variants (-0.040 [-0.113, 0.035], p=0.332), failing the prespecified cross-model and cross-topic consistency criterion. Thus the robust result is lexical convergence under the tested peer-ranked feed, not general opinion capture or a general coordination advantage. The study evaluates synthetic LLM-agent populations; it does not estimate effects on people or production platforms.",
+    "authors": "Rana Muhammad Usman, Dominic Williamson",
+    "publish_date": "2026-08-20",
+    "arxiv_url": "http://arxiv.org/abs/2608.20438",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "HF-Hot"
+    ],
+    "hf_rank": 3,
+    "score": 27,
+    "paper_id": "arxiv:2608.20438",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2608.18484": {
+    "arxiv_id": "2608.18484",
+    "title": "Partition the Support, Reconstruct the Residual: Training-Free Sparse Attention for Video Generation and World Models",
+    "abstract": "Training-free block-sparse attention can accelerate video transformers, but row-wise attention concentration does not by itself specify an executable sparse operator. Queries sharing a block route may have poorly overlapping supports, while retained attention mass alone does not determine the post-softmax error from skipped interactions. We show that partition geometry affects both pooled support and the predictability of the remaining residual from the sparse output. We introduce SparsePR, which combines Response-Coupled Partitioning with Probe-Fitted Residual Reconstruction. Sampled-query key responses form paired K/V groups, whose centroids induce query-response coordinates for shared routing. A small set of exact query rows then calibrates a call-specific affine correction from the sparse output within the output subspace observed in the probe residuals. Across four heterogeneous video generation and world models, SparsePR consistently reduces attention-reconstruction error. Ablations show that probe fitting accounts for most of this reduction, while response-coupled partitioning lowers hard-drop error and improves reconstruction under a finite probe budget. SparsePR preserves generation quality at 22.0-26.0% realized executed-pair density while achieving 1.48x-2.61x end-to-end speedups. Project page: https://pardistaghavi.github.io/SparsePR-website/",
+    "authors": "Pardis Taghavi, Reza Langari, Gaurav Pandey",
+    "publish_date": "2026-08-19",
+    "arxiv_url": "http://arxiv.org/abs/2608.18484",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "HF-Hot"
+    ],
+    "hf_rank": 5,
+    "score": 25,
+    "paper_id": "arxiv:2608.18484",
     "source": "arxiv",
     "venue": ""
   }
