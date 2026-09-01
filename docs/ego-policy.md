@@ -3,7 +3,7 @@ layout: default
 title: "EGO Policy"
 ---
 
-## Updated on 2026.08.31
+## Updated on 2026.09.01
 > Usage instructions: [here]({{ site.baseurl }}/README.html#usage)
 
 <style>.paper-nav{display:flex;flex-wrap:wrap;gap:.45rem;margin:1rem 0 1.25rem 0}.paper-nav a{border:1px solid #d0d7de;border-radius:999px;padding:.32rem .7rem;text-decoration:none;color:#24292f;background:#fff;font-size:.92rem}.paper-nav a.active{background:#0969da;color:#fff;border-color:#0969da}</style>
@@ -20,6 +20,7 @@ title: "EGO Policy"
 
 | Publish Date | Title & Abstract | Authors | Links |
 |:---------|:-----------------------|:---------|:------|
+| **2026-08-29** | **AnyWorld: Factorized Egocentric World Models for Cross-Embodiment Generalization** `EGO Policy`<br>Collecting contact-rich robot experiences at scale remains a major bottleneck for generalizable manipulation. Beyond data quantity, robot learning also requires diverse experiences across embodiments, viewpoints, and scenes. Human egocentric videos provide abundant physical interactions, but each video captures only a narrow slice of experience under a single body, camera trajectory, and... | Fayao Liu Team | [ArXiv](http://arxiv.org/abs/2608.29242) / [Web](https://xpeng-robotics.github.io/anyworld/) |
 | **2026-08-27** | **CLAP: Cross-Embodiment Video World Models are Zero-Shot Physical Simulators** `World Model` `EGO Policy` `Dexterous`<br>State-of-the-art action-conditioned video models are typically restricted to a single robot embodiment, preventing them from leveraging the vast corpus of heterogeneous video data that contains rich signals for learning generalizable physics. To bridge this gap, we introduce CLAP, a framework for cross-embodiment action-conditioned video generation capable of being trained on diverse,... | Ola Shorinwa Team | [ArXiv](http://arxiv.org/abs/2608.27406) |
 | **2026-08-20** | **DECOWAM: Decoupled Whole-Body World-Action Model for Legged Mobile Manipulation** `World Model` `EGO Policy` `Dexterous`<br>Mobile manipulation requires a robot to predict how locomotion and arm motion jointly alter future observations and control. Existing world-action models, developed largely for fixed-base platforms, do not explicitly distinguish camera ego-motion from base and arm actions. Here we introduce DECOWAM, a whole-body world-action model that separates these factors through dedicated conditional... | Qiaojun Yu Team | [ArXiv](http://arxiv.org/abs/2608.20114) |
 | **2026-08-19** | **Vision-Language Models for Egocentric Video: From Hand-Object Interaction to Embodied AI** `VLA` `EGO Policy`<br>Egocentric video captures activities from the wearer's perspective, providing a direct view of human attention, hand--object interaction, and goal-directed behavior. This perspective is increasingly important for wearable intelligence, assistive systems, human--robot interaction, and embodied AI, yet it introduces challenges including ego-motion, occlusion, small active objects,... | Fatemeh Ziaeetabar Team | [ArXiv](http://arxiv.org/abs/2608.18671) |
