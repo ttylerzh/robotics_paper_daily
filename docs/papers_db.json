@@ -36829,69 +36829,6 @@
     "source": "arxiv",
     "venue": ""
   },
-  "arxiv:2608.03994": {
-    "arxiv_id": "2608.03994",
-    "title": "When Attention Goes Blind: Numerical Failure in ALiBi Positional Encodings",
-    "abstract": "We identify a previously overlooked failure mode of ALiBi positional encoding: its linear bias scaling underflows floating-point precision, which zeroes out a large fraction of attention weights and renders the affected attention heads partially blind. We analyze this failure mode, characterize its impact, and examine four mitigation strategies. We further demonstrate its occurrence in state-of-the-art pretrained models based on ALiBi. Comprehensive pretraining experiments with 148M-parameter decoder models help us to disentangle its effects from out-of-context degradation. We find that ALiBi's failure mode can substantially impair token retrieval while having only a minor effect on standard decoder benchmarks. We propose four training-time mitigation strategies and evaluate them individually and in combinations, finding that log-scaled distances yield the most consistent improvements in passkey retrieval. Despite this problem, default ALiBi slopes remain a surprisingly strong baseline, particularly for needle-in-a-haystack retrieval. Based on these findings we provide concrete recommendations on how to train models with ALiBi.",
-    "authors": "Christopher Schröder, Lukas Gienapp, Ferdinand Schlatt, Martin Potthast, Gerhard Heyer",
-    "publish_date": "2026-08-04",
-    "arxiv_url": "http://arxiv.org/abs/2608.03994",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [],
-    "matched_categories": [
-      "HF-Hot"
-    ],
-    "hf_rank": 39,
-    "score": 26,
-    "paper_id": "arxiv:2608.03994",
-    "source": "arxiv",
-    "venue": ""
-  },
-  "arxiv:2608.03874": {
-    "arxiv_id": "2608.03874",
-    "title": "ContinualSkillBench: Can LLM Agents Truly Evolve Their Capabilities?",
-    "abstract": "Modern agent frameworks equip large language models with external skill libraries to solve complex tasks. However, it remains unclear whether these systems can effectively evolve their skills and whether the resulting skills improve task-solving capabilities. To bridge this gap, we introduce ContinualSkillBench, a dynamic evaluation framework for in-context continual skill learning. It covers five representative domains, each containing 100 interconnected subtasks ordered by increasing difficulty and opportunities for cross-task skill reuse. Our experiments show that sequential execution generally improves performance, but the gains vary substantially across models and domains. Moreover, in-context learning performs comparably to explicit skill maintenance on average, suggesting that much of the improvement arises from adaptation to prior context and feedback rather than reusable skill abstraction alone. Explicit skills nevertheless provide selective benefits for tasks requiring reusable procedures or precise outputs. We further find that less capable models tend to accumulate larger, more fragmented collections of task-specific skills. These findings show that current in-context skill evolution mechanisms can support continual adaptation, but still struggle to consistently consolidate experience into robust and transferable skills.",
-    "authors": "Tianyi Guan, Yiding Wang, Haotong Yang, Siyuan Cao, Shirui Liu, Yi Hu, Jiaqi Li, Muhan Zhang",
-    "publish_date": "2026-08-04",
-    "arxiv_url": "http://arxiv.org/abs/2608.03874",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [],
-    "matched_categories": [
-      "HF-Hot"
-    ],
-    "hf_rank": 44,
-    "score": 21,
-    "paper_id": "arxiv:2608.03874",
-    "source": "arxiv",
-    "venue": ""
-  },
-  "arxiv:2608.04003": {
-    "arxiv_id": "2608.04003",
-    "title": "PAST-Bench: Benchmarking the Foundations of Recursive Self-Improvement in Personal Agents",
-    "abstract": "Recursive self-improvement requires agents to turn accumulated experience into better future behavior. Personal AI agents offer a concrete setting for studying this capability because they retain preferences, task histories, tool routines, and learned skills across sessions. Yet whether retained experience actually improves them over time has not been systematically tested. We introduce PAST-Bench, a benchmark designed to isolate this question. Each agent runs through ordered sequences of fresh-session tasks under matched conditions that turn retained experience on and off. It spans 26 scenarios and 204 episodes across memory, procedural reuse, information gathering, and update. We report both later-task gains and whether those gains follow the intended save, retrieve, and update pathway. Across seven base models and four agent frameworks, improvement is real but uneven across capabilities. Agents with the same headline gain can differ markedly in whether that gain is supported by evidence of the intended pathway. Guided by these findings, we develop Hermes+, which extends Hermes with five targeted interventions across stages of the agent loop. Hermes+ raises the average gain from retained experience and provides clearer pathway evidence, with its strongest improvement on tasks requiring outdated state to be replaced, although the effect remains capability- and model-dependent. Together, PAST-Bench and Hermes+ provide an evaluation and diagnostic foundation for studying how persistent agents can progress from retaining experience to systematically improving through it. Code: https://github.com/Gen-Verse/PAST-Bench",
-    "authors": "Shuhan Xue, Zixin Ding, Yichen Shen, Yinjie Wang, Zhenfei Yin, Yingcheng Wu, Yuxin Chen, Mengdi Wang, Ling Yang",
-    "publish_date": "2026-08-04",
-    "arxiv_url": "http://arxiv.org/abs/2608.04003",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [],
-    "matched_categories": [
-      "HF-Hot"
-    ],
-    "hf_rank": 19,
-    "score": 11,
-    "paper_id": "arxiv:2608.04003",
-    "source": "arxiv",
-    "venue": ""
-  },
   "arxiv:2608.04007": {
     "arxiv_id": "2608.04007",
     "title": "TurnSight: Turn-Level Hindsight Self-Distillation for Tool-Integrated Reasoning",
@@ -36910,27 +36847,6 @@
     "hf_rank": 24,
     "score": 6,
     "paper_id": "arxiv:2608.04007",
-    "source": "arxiv",
-    "venue": ""
-  },
-  "arxiv:2608.03974": {
-    "arxiv_id": "2608.03974",
-    "title": "JoyAI-Video-Edit: Real-Time Open-Ended Video Editing with Autoregressive Diffusion",
-    "abstract": "Real-time video editing requires low-latency causal generation with bounded computational resources while preserving source fidelity and long-term temporal consistency. We present JoyAI-Video-Edit, a 16B-parameter autoregressive diffusion framework for real-time, open-ended video editing without access to future frames or a predefined video duration. Our method combines chunk-wise autoregressive adaptation, Source-Anchored Distribution Matching Distillation (SA-DMD), and Long-Horizon Autoregressive Distillation to reduce train--inference mismatch, preserve source fidelity during two-step generation, and mitigate accumulated temporal drift. Extensive automatic and human evaluations show that JoyAI-Video-Edit substantially outperforms existing streaming editors and remains competitive with strong offline systems on both short and long videos. The complete system achieves end-to-end 720p video editing at approximately 30 FPS on a single Nvidia B200 GPU. Code is available at https://github.com/jd-opensource/JoyAI-Video-Edit.",
-    "authors": "Yicheng Xiao, Wenxun Dai, Xinran Qin, Lin Song, Maoquan Zhang, Hang Xu, Yukang Chen, Yitong Li, Guohui Zhang, Yuan Zhang, Xuying Zhang, Tommy Zhang, Jianlong Yuan, Peihao Li, Shuai Lu, Siming Fu, Chuyang Zhao, Xin Han, Jie Huang, Wenbo Li, Guoqing Ma, Wei Huang, Xiaojuan Qi, Haoyang Huang, Nan Duan",
-    "publish_date": "2026-08-04",
-    "arxiv_url": "http://arxiv.org/abs/2608.03974",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [],
-    "matched_categories": [
-      "HF-Hot"
-    ],
-    "hf_rank": 25,
-    "score": 5,
-    "paper_id": "arxiv:2608.03974",
     "source": "arxiv",
     "venue": ""
   },
@@ -37961,27 +37877,6 @@
     "source": "arxiv",
     "venue": ""
   },
-  "arxiv:2608.03836": {
-    "arxiv_id": "2608.03836",
-    "title": "Resume Means Resume: A Machine-Checked Conformance Contract for Checkpoint, Interrupt, and Resume Semantics in Workflow Persistence Layers",
-    "abstract": "A framework that persists execution state so a run can be interrupted, survive a crash, and continue must decide what a resume means for effects that already fired. Five widely deployed agent workflow frameworks answer differently, none exposes a machine-checkable contract, and behavior violates even the fragments they state. The RESUME CONTRACT states six properties over the persistence API (prefix continuation, effect exactly-once, fork determinism, checkpoint validity, consume-once, recovery determinism), plus fork-intent and liveness obligations. A TLA+ model checks a reference semantics exhaustively, unchanged at scaled bounds (7.4 million states); a 39-cell fault matrix yields the separating models independence requires, and consume-once splits, its consumption clause independent of all six others. A deterministic, LLM-free harness measures them at pinned releases. LangGraph 1.2.9 durably records a second resume value and never consults it, persists schema-invalid state silently, and re-executes durably recorded work after a real SIGKILL: exactly-once across interrupts, at-least-once across crashes, on one API. CrewAI 1.15.2 re-executes completed effect-bearing methods against its written claim; pydantic-graph 1.x cannot resume after a mid-node crash; no two probed frameworks share a conformance profile. Consume-once holds sequentially and fails under concurrent delivery: k processes resuming one parked interrupt fire the gated effect k times, saturation 1.0 in 36 of 40 cells, and the failure crosses hosts. REMIT, a reference sequencer whose Verus-verified recovery core is line-identical to the shipped executable, repairs the fork and validity cells. The cross-process cell is repaired at the read path, and that repair ships: an opt-in gate claims consumption in the shared store, serving one racer and refusing the rest before any node executes.",
-    "authors": "Sajjad Khan",
-    "publish_date": "2026-08-04",
-    "arxiv_url": "http://arxiv.org/abs/2608.03836",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [],
-    "matched_categories": [
-      "HF-Hot"
-    ],
-    "hf_rank": 37,
-    "score": 29,
-    "paper_id": "arxiv:2608.03836",
-    "source": "arxiv",
-    "venue": ""
-  },
   "arxiv:2608.05102": {
     "arxiv_id": "2608.05102",
     "title": "ABSeeker: Training Long-Horizon Search Agents via Answer-Backtracked Credit Assignment",
@@ -38336,27 +38231,6 @@
     "hf_rank": 27,
     "score": 3,
     "paper_id": "arxiv:2608.05131",
-    "source": "arxiv",
-    "venue": ""
-  },
-  "arxiv:2608.03972": {
-    "arxiv_id": "2608.03972",
-    "title": "ReflectRL: Learning from Golden Negative Trajectories via Reflective-to-Direct Reasoning",
-    "abstract": "On-policy training has emerged as a powerful post-training paradigm for improving the reasoning capabilities of large language models, and is often enhanced by golden trajectories from stronger expert models. However, when the expert fails on harder problems, existing trajectory-guided methods lose their main source of supervision, and these failed trajectories are typically discarded as negative samples. We argue that such failures, which we call Golden Negative Trajectories, can still provide valuable reasoning signals when treated not as demonstrations to imitate, but as flawed trajectories to reflect upon. We identify a Reflection Advantage: for hard problems, reflecting on a flawed trajectory can be easier and more effective than solving the problem directly from scratch. Motivated by this, we propose ReflectRL, a lightweight plug-and-play framework that learns from Golden Negative Trajectories during on-policy training. ReflectRL first uses these trajectories to elicit Reflective Reasoning, then applies Reflective-to-Direct Policy Transition to transfer the acquired reasoning behavior back to Direct Reasoning. Experiments across 9 benchmarks, 4 LLM backbones, and 4 on-policy training methods show that ReflectRL consistently improves reasoning performance with minimal overhead.",
-    "authors": "Jinhe Bi, Chennan Zhou, Zengjie Jin,  Aniri, Shuo Lu, Wenke Huang, Hu Cao, Xun Xiao, Zhihong Zhu, Volker Tresp, Fei Shen, Yunpu Ma, Tat-Seng Chua",
-    "publish_date": "2026-08-04",
-    "arxiv_url": "http://arxiv.org/abs/2608.03972",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [],
-    "matched_categories": [
-      "HF-Hot"
-    ],
-    "hf_rank": 34,
-    "score": 0,
-    "paper_id": "arxiv:2608.03972",
     "source": "arxiv",
     "venue": ""
   },
@@ -44305,27 +44179,6 @@
     "hf_rank": 30,
     "score": 0,
     "paper_id": "arxiv:2608.07463",
-    "source": "arxiv",
-    "venue": ""
-  },
-  "arxiv:2608.03887": {
-    "arxiv_id": "2608.03887",
-    "title": "Omega-S: A Functional Resilience Index for LLM Fine-Tuning",
-    "abstract": "Fine-tuning a large language model on new data degrades what it previously learned. We present Omega-S, a drop-in penalty computed from the weight matrix alone: it needs no previous-task data, no Fisher matrix and no stored copy of the old weights. It is three lines in an existing training loop and adds under 4% to the cost of a step.   Retention. On Llama-3-8B with LoRA, fine-tuned from code to prose and measured by HumanEval over ten seeds, Omega-S retains more of the original capability than no regularisation on 9 of 10 seeds (0.173 -> 0.238 absolute pass@1; sign test one-sided p=0.011, Wilcoxon p=0.006), as a retention ratio, 62.9% -> 84.1%. It also beats tuned weight decay on 10 of 10 seeds (p=0.002) and tuned EWC on 8 of 10 (p=0.014), every arm re-measured in the same session.   Mechanism, measured rather than asserted. Omega-S is topological by construction, its objective built from Tr(A^3), but we measured which of its four factors actually moves and three do not: their elasticity with respect to the weights is at or below 1e-4, against 9e-3 for the degree-variance term. As implemented, the composite reduces to a penalty on the variance of node degrees, which means row magnitude in square modules and directional alignment in non-square ones. We report this because a method whose name promises one thing and whose gradient does another should say so. We also enumerate the open design choices, including a contrast-preserving construction that does what it was designed to do and makes retention worse on all ten seeds.   Repeating an identical configuration, same seed and same hardware, gives a standard deviation of 0.104 in retention ratio. We have not found this quantified for low-rank fine-tuning of language models, and it bounds every seed-paired comparison in this literature, ours included.   Code, per-seed results and the full record of negative results are available.",
-    "authors": "Alberto Acedo",
-    "publish_date": "2026-08-04",
-    "arxiv_url": "http://arxiv.org/abs/2608.03887",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [],
-    "matched_categories": [
-      "HF-Hot"
-    ],
-    "hf_rank": 31,
-    "score": 0,
-    "paper_id": "arxiv:2608.03887",
     "source": "arxiv",
     "venue": ""
   },
@@ -64762,7 +64615,7 @@
       "Dexterous",
       "HF-Hot"
     ],
-    "hf_rank": 44,
+    "hf_rank": 50,
     "score": 0,
     "paper_id": "arxiv:2608.30821",
     "source": "arxiv",
@@ -65618,7 +65471,7 @@
     "matched_categories": [
       "VLA"
     ],
-    "hf_rank": 31,
+    "hf_rank": 37,
     "score": 18,
     "paper_id": "arxiv:2608.30935",
     "source": "arxiv",
@@ -66091,7 +65944,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 20,
+    "hf_rank": 26,
     "score": 29,
     "paper_id": "arxiv:2608.29681",
     "source": "arxiv",
@@ -66112,7 +65965,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 21,
+    "hf_rank": 27,
     "score": 28,
     "paper_id": "arxiv:2608.29974",
     "source": "arxiv",
@@ -66133,7 +65986,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 22,
+    "hf_rank": 28,
     "score": 27,
     "paper_id": "arxiv:2608.29847",
     "source": "arxiv",
@@ -66154,7 +66007,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 23,
+    "hf_rank": 29,
     "score": 26,
     "paper_id": "arxiv:2608.29464",
     "source": "arxiv",
@@ -66175,7 +66028,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 24,
+    "hf_rank": 30,
     "score": 25,
     "paper_id": "arxiv:2608.29387",
     "source": "arxiv",
@@ -66196,7 +66049,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 25,
+    "hf_rank": 31,
     "score": 24,
     "paper_id": "arxiv:2608.30795",
     "source": "arxiv",
@@ -66217,7 +66070,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 26,
+    "hf_rank": 32,
     "score": 23,
     "paper_id": "arxiv:2608.31106",
     "source": "arxiv",
@@ -66238,7 +66091,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 27,
+    "hf_rank": 33,
     "score": 22,
     "paper_id": "arxiv:2608.29137",
     "source": "arxiv",
@@ -66259,7 +66112,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 28,
+    "hf_rank": 34,
     "score": 21,
     "paper_id": "arxiv:2608.29310",
     "source": "arxiv",
@@ -66280,7 +66133,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 29,
+    "hf_rank": 35,
     "score": 20,
     "paper_id": "arxiv:2608.29098",
     "source": "arxiv",
@@ -66301,7 +66154,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 30,
+    "hf_rank": 36,
     "score": 19,
     "paper_id": "arxiv:2608.28833",
     "source": "arxiv",
@@ -66322,7 +66175,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 32,
+    "hf_rank": 38,
     "score": 17,
     "paper_id": "arxiv:2608.30530",
     "source": "arxiv",
@@ -66343,7 +66196,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 33,
+    "hf_rank": 39,
     "score": 16,
     "paper_id": "arxiv:2608.24293",
     "source": "arxiv",
@@ -66364,7 +66217,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 34,
+    "hf_rank": 40,
     "score": 15,
     "paper_id": "arxiv:2608.30209",
     "source": "arxiv",
@@ -66385,7 +66238,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 35,
+    "hf_rank": 41,
     "score": 14,
     "paper_id": "arxiv:2608.30428",
     "source": "arxiv",
@@ -66406,7 +66259,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 36,
+    "hf_rank": 42,
     "score": 13,
     "paper_id": "arxiv:2608.30135",
     "source": "arxiv",
@@ -66427,7 +66280,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 37,
+    "hf_rank": 43,
     "score": 12,
     "paper_id": "arxiv:2608.28695",
     "source": "arxiv",
@@ -66448,7 +66301,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 39,
+    "hf_rank": 45,
     "score": 10,
     "paper_id": "arxiv:2608.29252",
     "source": "arxiv",
@@ -66469,7 +66322,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 40,
+    "hf_rank": 46,
     "score": 9,
     "paper_id": "arxiv:2608.31036",
     "source": "arxiv",
@@ -66490,7 +66343,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 41,
+    "hf_rank": 47,
     "score": 8,
     "paper_id": "arxiv:2608.29910",
     "source": "arxiv",
@@ -66511,7 +66364,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 42,
+    "hf_rank": 48,
     "score": 7,
     "paper_id": "arxiv:2608.30241",
     "source": "arxiv",
@@ -66532,7 +66385,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 43,
+    "hf_rank": 49,
     "score": 6,
     "paper_id": "arxiv:2608.30320",
     "source": "arxiv",
@@ -66726,7 +66579,7 @@
     "matched_categories": [
       "VLA"
     ],
-    "hf_rank": 8,
+    "hf_rank": 15,
     "score": 32,
     "paper_id": "arxiv:2609.01404",
     "source": "arxiv",
@@ -66867,7 +66720,7 @@
     "matched_categories": [
       "World Model"
     ],
-    "hf_rank": 4,
+    "hf_rank": 11,
     "score": 36,
     "paper_id": "arxiv:2609.00188",
     "source": "arxiv",
@@ -67674,7 +67527,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 1,
+    "hf_rank": 8,
     "score": 29,
     "paper_id": "arxiv:2609.01481",
     "source": "arxiv",
@@ -67695,7 +67548,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 2,
+    "hf_rank": 9,
     "score": 28,
     "paper_id": "arxiv:2609.00028",
     "source": "arxiv",
@@ -67716,7 +67569,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 3,
+    "hf_rank": 10,
     "score": 27,
     "paper_id": "arxiv:2609.00111",
     "source": "arxiv",
@@ -67737,7 +67590,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 5,
+    "hf_rank": 12,
     "score": 25,
     "paper_id": "arxiv:2608.30730",
     "source": "arxiv",
@@ -67758,7 +67611,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 6,
+    "hf_rank": 13,
     "score": 24,
     "paper_id": "arxiv:2609.01560",
     "source": "arxiv",
@@ -67779,7 +67632,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 7,
+    "hf_rank": 14,
     "score": 23,
     "paper_id": "arxiv:2609.01591",
     "source": "arxiv",
@@ -67800,7 +67653,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 9,
+    "hf_rank": 16,
     "score": 21,
     "paper_id": "arxiv:2609.00621",
     "source": "arxiv",
@@ -67821,7 +67674,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 10,
+    "hf_rank": 17,
     "score": 20,
     "paper_id": "arxiv:2609.01607",
     "source": "arxiv",
@@ -67842,7 +67695,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 11,
+    "hf_rank": 18,
     "score": 19,
     "paper_id": "arxiv:2608.30468",
     "source": "arxiv",
@@ -67863,7 +67716,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 12,
+    "hf_rank": 19,
     "score": 18,
     "paper_id": "arxiv:2609.00551",
     "source": "arxiv",
@@ -67884,7 +67737,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 13,
+    "hf_rank": 20,
     "score": 17,
     "paper_id": "arxiv:2609.00968",
     "source": "arxiv",
@@ -67905,7 +67758,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 15,
+    "hf_rank": 22,
     "score": 15,
     "paper_id": "arxiv:2608.27509",
     "source": "arxiv",
@@ -67926,7 +67779,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 16,
+    "hf_rank": 23,
     "score": 14,
     "paper_id": "arxiv:2609.00519",
     "source": "arxiv",
@@ -67968,7 +67821,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 18,
+    "hf_rank": 24,
     "score": 12,
     "paper_id": "arxiv:2608.26671",
     "source": "arxiv",
@@ -67989,9 +67842,156 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 19,
+    "hf_rank": 25,
     "score": 11,
     "paper_id": "arxiv:2608.28958",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2608.30457": {
+    "arxiv_id": "2608.30457",
+    "title": "Learning Where Outcomes Change:Credit-Addressable Reasoning for Multimodal Geometry",
+    "abstract": "Multimodal geometry reasoning requires VLMs to extract precise visual relations and preserve them through multi-step deduction. Existing free-form traces obscure the decisions that determine the answer, and trajectory-level reinforcement learning distributes a single terminal signal across the entire response. We introduce credit-addressable reasoning, in which the semantic units exposed during inference also define where learning compares alternatives and assigns credit. We instantiate this principle with Code-CoT, which retains the diagram, represents visual relations as line-addressable executable code, and organizes reasoning into typed events, and CE-GRPO, which selects event boundaries using structural priors and type-normalized entropy, samples complete continuations from shared prefixes, and converts outcome differences into localized advantages. Across nine geometry benchmarks, CE-GRPO achieves an average accuracy of 76.04, outperforming Qwen3-VL-8B and trajectory-level GRPO by $8.09$ and 3.43 points, respectively. Its relative advantage increases with the number of intermediate events, demonstrating the value of representation--optimization co-design for long, dependency-heavy multimodal reasoning.",
+    "authors": "Jiani Guo, Junjie Wang, Jie Wu, Pengxiang Zhao, Dongdong Zhang, Shaohan Huang, Yujiu Yang, Furu Wei",
+    "publish_date": "2026-08-31",
+    "arxiv_url": "http://arxiv.org/abs/2608.30457",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "HF-Hot"
+    ],
+    "hf_rank": 1,
+    "score": 29,
+    "paper_id": "arxiv:2608.30457",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2609.01572": {
+    "arxiv_id": "2609.01572",
+    "title": "From Production Traffic to Post-Training: Building a Self-Hosted LLM That Covers the Corporate Request Mix",
+    "abstract": "Data-residency constraints force enterprises to self-host LLMs, but continuous adoption of newer models without decommissioning their predecessors expands the serving fleet, fragmenting a finite GPU pool. We consolidate traffic from over 200 internal applications onto a single model by closing quality gaps identified through production error analysis along three axes: instruction following, function-calling, and internal task distribution. Quality is tracked by offline benchmarks stratified to production traffic and scored by deterministic verifiers or calibrated LLM judges. Rather than optimising all objectives jointly, which introduces cross-domain reward interference, we train a separate GRPO expert per axis and merge them via two-stage SLERP. Each expert's reward exposes a distinct failure mode, namely semantic collapse, over-calling, and verbosity hacking, each requiring a domain-specific fix. In non-reasoning mode the recipe surpasses a ${\\sim}7\\times$ larger by total parameters baseline on the in-house Arena with 69.6 to 65.8, instruction following with 0.85 to 0.83, and function-calling with 0.79 to 0.77, while lifting general dialogue benchmarks. The model absorbs 50% of platform traffic, 116M requests per month, at a fraction of the serving cost.",
+    "authors": "Olga Tsymboi, Dmitrii Stoianov, Ramil Latypov, Danil Taranets, Daniil Dryabin, Mikhail Gashkov, Viktor Zelenkovskiy, Aleksandr Fida, Gleb Alektorov, Nikita Gulyakov, Arthur Babkin, Aleksandr Medvedev, Pavel Gein, Anatolii Potapov",
+    "publish_date": "2026-09-01",
+    "arxiv_url": "http://arxiv.org/abs/2609.01572",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "HF-Hot"
+    ],
+    "hf_rank": 2,
+    "score": 28,
+    "paper_id": "arxiv:2609.01572",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2609.00137": {
+    "arxiv_id": "2609.00137",
+    "title": "Recursive Criticality of AI Self-Improvement",
+    "abstract": "AI is increasingly used in the R\\&D process that produces future AI systems. We study the conditions under which this feedback becomes self-amplifying. Our model describes how the rate of AI capability growth depends on baseline research productivity, recursive feedback, and the increasing difficulty of research progress. We derive a recursive reproduction number, $\\mathcal{R}_{\\mathrm{AI}}$, that determines whether improvements are amplified or damped across development cycles. This quantity compares the strength of feedback with the rate at which further progress becomes more difficult. When $\\mathcal{R}_{\\mathrm{AI}}>1$, the effects of improvements compound across development cycles, placing the system in a self-amplifying regime. When $\\mathcal{R}_{\\mathrm{AI}}<1$, their effects weaken across cycles. The transition depends on the structure of the AI R\\&D feedback loop and need not occur at any particular level of model capability. A system can therefore enter a self-amplifying regime before acceleration becomes visible, while rapid progress can also occur without self-amplification. Higher baseline research productivity can accelerate progress without changing whether the system is self-amplifying, but the duration of the development cycle becomes a limiting timescale for amplification. Increasing research difficulty can end a period of self-amplification. Extending the model to multiple research actors shows that improvements shared across organizations can make the overall research ecosystem self-amplifying even when no individual actor is. The framework identifies measurable properties of AI R\\&D systems that can help distinguish recursive amplification from rapid progress driven by other sources, including the strength of recursive feedback, how effectively improvements propagate into successor systems, cycle duration, and the increasing difficulty of further progress.",
+    "authors": "Mikhail Burtsev",
+    "publish_date": "2026-08-31",
+    "arxiv_url": "http://arxiv.org/abs/2609.00137",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "HF-Hot"
+    ],
+    "hf_rank": 3,
+    "score": 27,
+    "paper_id": "arxiv:2609.00137",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2608.30478": {
+    "arxiv_id": "2608.30478",
+    "title": "Agents in the Large: Perception-Centered Architecture for Persistent Agents",
+    "abstract": "Cognitive language agents have achieved substantial progress by equipping language models with memory, tools, and decision-making procedures, enabling agents to reason and act in interactive environments. Existing frameworks largely cast these agents as systems for solving user-specified, bounded tasks. An increasingly important goal is for language agents to provide persistent assistance in long-lived settings where user needs, context, and service procedures persist and change, and to remain useful across the broad range of tasks that arise over time. Yet we still lack a framework to characterize persistent AI agents, organize existing work, and guide future development. To this end, we propose a Perception-Centered Architecture for Persistent Agents (Pera). Pera describes a persistent agent organized around perception and control components that continually perceive service-relevant signals from episodic task executions, internal context, and changes in the surrounding environment, and use these signals to construct lifecycle tasks. These tasks drive the ongoing operation and adaptation of the agent's service procedures. We use Pera to retrospectively organize recent work, examine a detailed case study, and offer forward-looking insights for building more capable persistent agents. Just as software engineering moved from programming in the small to programming in the large, Pera frames the evolution of language agents as an analogous architectural transition toward long-lived, adaptive intelligence systems.",
+    "authors": "Shihan Dou, Haoxiang Jia, Shichun Liu, Feng Chen, Chenhao Huang, Yujiong Shen, Shaofan Liu, Jiayi Chen, Jiahang Lin, Honglin Guo, Qianyu He, Minghao Guo, Ziyi Ye, Pluto Zhou, Tao Gui, Qi Zhang, Xuanjing Huang",
+    "publish_date": "2026-08-31",
+    "arxiv_url": "http://arxiv.org/abs/2608.30478",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "HF-Hot"
+    ],
+    "hf_rank": 4,
+    "score": 26,
+    "paper_id": "arxiv:2608.30478",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2609.00768": {
+    "arxiv_id": "2609.00768",
+    "title": "DiagEvo: Diagnosis-Guided Self-Evolution via Hierarchical Error Memory",
+    "abstract": "Self-play is an effective paradigm for language-model self-evolution, but without guidance, solver performance can plateau or decline across rounds. Unguided methods steer question generation with signals such as difficulty, learnability, or diversity. These signals keep questions challenging and varied but do not specify which unresolved reasoning weaknesses later rounds should target. Guided methods obtain direction from external task resources, including human examples, document corpora, or specified difficulty targets, and therefore rely on task information supplied outside the self-play loop. We show that the needed direction can instead be derived from the solver's own failure history. We introduce DiagEvo, whose diagnostician extracts recurring error causes from this history and stores them in a hierarchical error-cause memory. The memory groups related causes under skill nodes and tracks each as Active or Mastered according to self-consistency on targeted questions. The challenger uses these states and recurrence counts to balance cause-targeted generation with free exploration. Double-confidence filtering retains intermediate-difficulty questions only when the most common solver answer has a clear vote lead. DiagEvo derives its curriculum from information produced during self-play, without external task resources. With the default 4B diagnostician, DiagEvo outperforms every baseline in mean accuracy across all nine benchmarks for each of the three solvers: Qwen3-4B, Qwen3-8B, and OctoThinker-8B. On Qwen3-8B, it reaches 72.3% mean accuracy across five mathematical reasoning benchmarks, 4.5 percentage points above R-Zero. Its mean accuracy across all nine benchmarks is 57.4%, 1.1 percentage points above DARC. Ablations show that the hierarchical error-cause memory and double-confidence filtering both contribute to these gains.",
+    "authors": "Xincheng Wei, Yifan Ding, Yoshua Li, Dongsheng Ma, Rongxiang Weng, Xunliang Cai, Wenjian Ding, Yao Zhang",
+    "publish_date": "2026-09-01",
+    "arxiv_url": "http://arxiv.org/abs/2609.00768",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "HF-Hot"
+    ],
+    "hf_rank": 5,
+    "score": 25,
+    "paper_id": "arxiv:2609.00768",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2609.00092": {
+    "arxiv_id": "2609.00092",
+    "title": "Safin-1: Safety from Within through Memory-Native State Evolution",
+    "abstract": "Long-horizon complex tasks require foundation models to accumulate information, maintain internal states, and adapt over extended interactions. Safety should be an intrinsic property of the model itself, rather than a behavioral constraint relying solely on external safeguards or post-hoc alignment such as supervised fine-tuning. This motivates Safety from Within, where safety-relevant capabilities are represented and invoked through the model's native computation. We present Safin-1, a family of foundation models realizing this principle through memory routing and state evolution. Safin-1 is built on Memory-Anchor Routing across Context History (MARCH), a network architecture that maintains structured memory states and selectively retrieves relevant historical information through content-conditioned routing. It supports test-time adaptation of persistent capability states without repeatedly modifying the backbone, enabling controlled specialization over a shared foundation. We investigate this interface on downstream safety tasks through a Safety State, demonstrating effective state-based adaptation with substantial safety improvements. More broadly, the routed-state interface unifies contextual memory and persistent capability adaptation within the model's native computation, reframing memory from a passive record of prior context into an active substrate for maintaining and evolving model behavior. Evaluations across general capabilities, long-context understanding, retrieval, and efficiency further validate Safin-1. These findings provide a path toward safety as a state-native and adaptively maintainable capability. This work is only an initial architectural exploration of Safety from Within, and substantial further work is needed to realize this broader vision.",
+    "authors": "Ming Zhang, Kaisen Yang, Shu Yu, Ermo Hua, Zhekai Chen, Cheng Jin, Jingnan Zheng, Yi Zhang, Zhongtian Ma, Jiawei Zhou, Sirui Chen, Qiaosheng Zhang, Xiang Wang, Ning Ding, Xia Hu, Bowen Zhou, Youbang Sun, Chaochao Lu",
+    "publish_date": "2026-08-31",
+    "arxiv_url": "http://arxiv.org/abs/2609.00092",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "HF-Hot"
+    ],
+    "hf_rank": 6,
+    "score": 24,
+    "paper_id": "arxiv:2609.00092",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2609.01343": {
+    "arxiv_id": "2609.01343",
+    "title": "SMELT: Scaling Laws for Compute-Matched MoE Looped Transformers",
+    "abstract": "Looped Transformers increase effective depth by iterating a shared block of layers, but most evaluations compare at fixed model size, conflating architectural advantage with extra FLOPs. We study looping on Mixture-of-Experts Transformers while closely matching per-token FLOPs, total non-embedding parameters, and KV cache. Through a series of ablations, we arrive at a recipe we call SMELT (Sparse MoE Transformer, middle layers Loop Twice), which loops the middle half of layers twice while matching the unlooped Baseline on all three budgets. We scale SMELT across four sizes up to 54B non-embedding parameters and fit a separate Chinchilla-style scaling law for each architecture. SMELT's loss drops faster with compute, saving 6.8--18.0\\% of training FLOPs on the compute-optimal frontier. The advantage transfers to downstream benchmarks beyond what validation loss predicts, is largest on Code, and grows with sample length and the number of in-context examples. Mechanistic analysis shows that the second visit reduces the attention sink and redirects mass toward content-relevant tokens, an inductive bias that may underlie the observed performance gains. These results show that looping can improve Transformers even under budget matching, offering a practical recipe that turns depth reuse into measurable gains.",
+    "authors": "Shaowen Wang, Ge Zhang, Kairong Luo, Yuhao Wu, Shaofan Liu, Jiaheng Liu, Wenhao Huang, Shen Yan, Jian Li",
+    "publish_date": "2026-09-01",
+    "arxiv_url": "http://arxiv.org/abs/2609.01343",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "HF-Hot"
+    ],
+    "hf_rank": 7,
+    "score": 23,
+    "paper_id": "arxiv:2609.01343",
     "source": "arxiv",
     "venue": ""
   }
