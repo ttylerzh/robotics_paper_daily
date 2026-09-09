@@ -3,7 +3,7 @@ layout: default
 title: "RL"
 ---
 
-## Updated on 2026.09.08
+## Updated on 2026.09.09
 > Usage instructions: [here]({{ site.baseurl }}/README.html#usage)
 
 <style>.paper-nav{display:flex;flex-wrap:wrap;gap:.45rem;margin:1rem 0 1.25rem 0}.paper-nav a{border:1px solid #d0d7de;border-radius:999px;padding:.32rem .7rem;text-decoration:none;color:#24292f;background:#fff;font-size:.92rem}.paper-nav a.active{background:#0969da;color:#fff;border-color:#0969da}</style>
@@ -20,6 +20,7 @@ title: "RL"
 
 | Publish Date | Title & Abstract | Authors | Links |
 |:---------|:-----------------------|:---------|:------|
+| **2026-09-05** | **FALCON-S: Fixed-wing ground-effect Aerodynamics Simulator and Flight Control Learning Suite** `RL`<br>We present a modular, high-fidelity simulation framework for the development and benchmarking of flight control strategies in fixed-wing aerial robots operating near the ground. Unlike existing simulators that rely on simplified or hover-oriented dynamics, our framework models full 6DoF rigid-body physics, semi-empirical ground-effect aerodynamics, actuator dynamics, sensor noise, and... | Miguel Olivares-Mendez Team | [ArXiv](http://arxiv.org/abs/2609.06046) |
 | **2026-09-02** | **Spatially Aware World Action Model via Geometric Latent Diffusion** `World Model` `RL`<br>World Action Models (WAMs) leverage the capabilities of large-scale pretrained video diffusion models to jointly predict future observations and actions, inheriting rich visual and physical priors from internet-scale video. This has made them a promising paradigm for robot policy learning, yet the prevailing models operate exclusively on RGB observations and do not leverage 3D information. To... | Cordelia Schmid Team | [ArXiv](http://arxiv.org/abs/2609.02531) |
 | **2026-09-01** | **ADAPT: Agile Diffusion Action Priors for Robust and Steerable Online Text-Driven Humanoid Control** `RL`<br>We present ADAPT, an end-to-end framework for interactive, text-conditioned humanoid whole-body control. Unlike dominant text-to-motion pipelines that generate kinematic motions for a separate tracker, ADAPT solves language control with an end-to-end closed-loop control framework, where the robot must continuously respond to changing commands while maintaining balance, natural motion, and smooth... | Siyu Tang Team | [ArXiv](http://arxiv.org/abs/2609.00677) / [Web](https://wuyan01.github.io/ADAPT-project/) |
 | **2026-08-26** | **Surgical Video Generation From Diffusion to World Models: A Survey** `RL`<br>Surgical video data provides the primary training resource for models of intraoperative perception, surgical workflow understanding, and robotic decision-making. However, clinical data acquisition remains constrained by privacy, cost, and class imbalance. Surgical video generation has emerged as a transformative approach to addressing data scarcity and as a foundation for surgical simulation,... | Lei Zhang Team | [ArXiv](http://arxiv.org/abs/2608.26214) |
