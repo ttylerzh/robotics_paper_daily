@@ -3,7 +3,7 @@ layout: default
 title: "RL"
 ---
 
-## Updated on 2026.09.16
+## Updated on 2026.09.17
 > Usage instructions: [here]({{ site.baseurl }}/README.html#usage)
 
 <style>.paper-nav{display:flex;flex-wrap:wrap;gap:.45rem;margin:1rem 0 1.25rem 0}.paper-nav a{border:1px solid #d0d7de;border-radius:999px;padding:.32rem .7rem;text-decoration:none;color:#24292f;background:#fff;font-size:.92rem}.paper-nav a.active{background:#0969da;color:#fff;border-color:#0969da}</style>
@@ -20,6 +20,7 @@ title: "RL"
 
 | Publish Date | Title & Abstract | Authors | Links |
 |:---------|:-----------------------|:---------|:------|
+| **2026-09-16** | **WeaveRL: Weaving Reconstruction into Scene-Aware Fabrics for Perceptive Reinforcement Learning** `RL`<br>Reinforcement learning allows robots to acquire complex skills, but producing policies for geometrically complex manipulation remains difficult. A promising approach is to learn on top of collision-avoidant controllers, such as geometric fabrics. However, these approaches have relied on static, hand-specified representations of the scene. Integrating active, online 3D perception into massively... | Alex Millane Team | [ArXiv](http://arxiv.org/abs/2609.18685) |
 | **2026-09-15** | **UniDex-ViTac: Learning Unified Visuo-Tactile Dexterous Manipulation Policy from Human Video Data** `RL`<br>Human videos provide demonstrations of dexterous manipulation but lack robot-executable actions and tactile measurements. We present UniDex-ViTac, a framework that uses human-video-guided simulation to generate robot demonstrations paired with fingertip contact observations for training a deployable visuo-tactile policy. Object-specific residual reinforcement learning specialists adapt annotated... | Sungwook Yang Team | [ArXiv](http://arxiv.org/abs/2609.16504) / [Web](https://unidex-vitac.github.io/) |
 | **2026-09-14** | **ResSafe: Learning Safety Filtering with Residual Reinforcement Learning for Humanoids** `RL`<br>Safe control of humanoid robots remains challenging due to their high-dimensional dynamics, contact-rich interactions, and sensitivity to disturbances. Although reinforcement learning has enabled effective locomotion and motion tracking, learned policies can still generate unsafe actions that lead to instability or falls. In this work, we propose residual reinforcement learning as an implicit... | Jason Jangho Choi Team | [ArXiv](http://arxiv.org/abs/2609.15988) |
 | **2026-09-13** | **Skill Composition for Legged Robot Reinforcement Learning** `RL`<br>Robots, and humanoid robots in particular, are increasingly competent at individual behaviors, each obtained by training a specialized controller. A specialized skill is quick to train, converges reliably because the problem it faces is narrow, and can be validated on its own, none of which is true of a single end-to-end policy asked to cover everything. What remains fragile is the transition... | Luca Iocchi Team | [ArXiv](http://arxiv.org/abs/2609.14647) |
