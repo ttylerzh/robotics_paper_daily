@@ -3,7 +3,7 @@ layout: default
 title: "RL"
 ---
 
-## Updated on 2026.09.30
+## Updated on 2026.10.01
 > Usage instructions: [here]({{ site.baseurl }}/README.html#usage)
 
 <style>.paper-nav{display:flex;flex-wrap:wrap;gap:.45rem;margin:1rem 0 1.25rem 0}.paper-nav a{border:1px solid #d0d7de;border-radius:999px;padding:.32rem .7rem;text-decoration:none;color:#24292f;background:#fff;font-size:.92rem}.paper-nav a.active{background:#0969da;color:#fff;border-color:#0969da}</style>
@@ -20,6 +20,7 @@ title: "RL"
 
 | Publish Date | Title & Abstract | Authors | Links |
 |:---------|:-----------------------|:---------|:------|
+| **2026-09-30** | **DODGER: Safety-Guided Reinforcement Learning for Robot Navigation Among Dynamic Obstacles** `RL`<br>Robots operating in human-centered environments must safely navigate among multiple dynamic obstacles to avoid collisions with people and surrounding infrastructure. Control barrier functions (CBFs) provide an effective mechanism for safety filtering, and recent CBF-based reinforcement learning (RL) methods embed such safety information into learned policies. However, executing only... | Yisoo Lee Team | [ArXiv](http://arxiv.org/abs/2609.38873) / [Web](https://psh0823.github.io/dodger-homepage) |
 | **2026-09-29** | **Multi-Granularity Language-Guided Imitation Learning via Instruction Decomposition** `RL`<br>Using language instructions as conditions to guide robot policy learning has recently become an important research domain. However, existing language-guided policy learning methods typically use an overall task description to guide the entire demonstration trajectory. For manipulation tasks involving multiple execution stages, these methods assign the same language description to different... | Wei-Ta Chu Team | [ArXiv](http://arxiv.org/abs/2609.37135) |
 | **2026-09-27** | **SwingRL: Adaptive Observation Reinforcement Learning with World-Model Prediction for Cable-Suspended Hoisting Control** `RL`<br>Cable-suspended hoisting is widely used to move heavy or bulky payloads that cannot be handled conveniently by rigid pick-and-place systems, for example in crane-assisted construction. Robotic hoisting using flexible cables is challenging because payload motion is underactuated, external disturbances vary, and delayed or lost visual observations can make the perceived payload state stale at... | Brian Sheil Team | [ArXiv](http://arxiv.org/abs/2609.33053) |
 | **2026-09-26** | **RoboFFT: Finetuning generative robot policy via online reinforcement learning with forward process** `RL`<br>Generative models, such as diffusion and flow-based models, have shown strong promise for robot policy learning by capturing complex and multimodal action distributions from demonstrations. However, policies trained solely with imitation learning often suffer from imperfect demonstrations and distributional shifts, while further improvement typically requires additional expert data. Reinforcement... | Yaodong Yang Team | [ArXiv](http://arxiv.org/abs/2609.32236) / [Web](https://student-of-holmes.github.io/RoboFFT/) |

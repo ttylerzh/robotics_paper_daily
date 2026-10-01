@@ -3,7 +3,7 @@ layout: default
 title: "EGO Policy"
 ---
 
-## Updated on 2026.09.30
+## Updated on 2026.10.01
 > Usage instructions: [here]({{ site.baseurl }}/README.html#usage)
 
 <style>.paper-nav{display:flex;flex-wrap:wrap;gap:.45rem;margin:1rem 0 1.25rem 0}.paper-nav a{border:1px solid #d0d7de;border-radius:999px;padding:.32rem .7rem;text-decoration:none;color:#24292f;background:#fff;font-size:.92rem}.paper-nav a.active{background:#0969da;color:#fff;border-color:#0969da}</style>
@@ -20,6 +20,7 @@ title: "EGO Policy"
 
 | Publish Date | Title & Abstract | Authors | Links |
 |:---------|:-----------------------|:---------|:------|
+| **2026-09-30** | **EWAM: Emergent Depth-Wise Specialization in a Unified Embodied Model -- From Semantic Understanding through Visual Foresight to Action** `VLA` `World Model` `EGO Policy`<br>Vision-language-action (VLA) policies emphasize semantic understanding, whereas world-action models (WAMs) learn predictive representations of environment dynamics. Systems that expose a policy to both sources often still concentrate action computation on a single expert. We present EWAM, an action-centric unified embodied model whose asymmetric joint attention lets action tokens read semantic,... | Xiaodan Liang Team | [ArXiv](http://arxiv.org/abs/2609.39973) |
 | **2026-09-29** | **Video2STL: Grounding VLM-Generated Temporal Specifications for Robot Learning** `VLA` `EGO Policy`<br>Video-based policy learning is particularly promising, as it illustrates target behaviors without requiring action annotations or embodiment-matched demonstrations. A central challenge is deciding what information should be transferred from the video to the robot. Existing approaches commonly convert visual observations into scalar similarity or value signals, or ask foundation models to directly... | Jyotirmoy V. Deshmukh Team | [ArXiv](http://arxiv.org/abs/2609.37519) |
 | **2026-09-29** | **Geometry-Preserving Human-to-Robot Upper-Body Motion Retargeting from Monocular Video** `EGO Policy`<br>Monocular RGB video provides an accessible source of human demonstrations for upper-body robot motion, yet video-driven human-to-robot transfer remains challenging because body and hand motion are recovered at different spatial scales, human and robot kinematics differ substantially, and fine distal motion is difficult to preserve across embodiments. We present a geometry-preserving... | Nan Wu Team | [ArXiv](http://arxiv.org/abs/2609.37776) |
 | **2026-09-29** | **Scale-Invariant Manipulability Shape Tracking Across Heterogeneous Manipulators** `EGO Policy`<br>When transferring manipulability across systems with different sizes and kinematic structures, matching absolute ellipsoid scale may be unnecessary when the goal is to reproduce orientation and semi-axis length ratios. Full-matrix tracking, however, penalizes both shape and absolute-scale differences, even when only shape matching is required. We therefore propose a scale-invariant manipulability... | Wansoo Kim Team | [ArXiv](http://arxiv.org/abs/2609.36784) |
