@@ -3,7 +3,7 @@ layout: default
 title: "RL"
 ---
 
-## Updated on 2026.10.05
+## Updated on 2026.10.06
 > Usage instructions: [here]({{ site.baseurl }}/README.html#usage)
 
 <style>.paper-nav{display:flex;flex-wrap:wrap;gap:.45rem;margin:1rem 0 1.25rem 0}.paper-nav a{border:1px solid #d0d7de;border-radius:999px;padding:.32rem .7rem;text-decoration:none;color:#24292f;background:#fff;font-size:.92rem}.paper-nav a.active{background:#0969da;color:#fff;border-color:#0969da}</style>
@@ -20,6 +20,7 @@ title: "RL"
 
 | Publish Date | Title & Abstract | Authors | Links |
 |:---------|:-----------------------|:---------|:------|
+| **2026-10-03** | **TacOT: Learning Contact-Rich Dexterous Manipulation from Human Demonstrations via Tactile-Guided Optimal Transport** `RL` `EGO Policy`<br>Learning contact-rich dexterous manipulation from human demonstrations provides a scalable source of interaction data, yet transferring such skills to robots remains challenging due to unreliable human--robot correspondence. Existing human-to-robot transfer methods typically rely on visual appearance or motion similarity, which may associate similar motions with different contact states and force... | Wenbo Ding Team | [ArXiv](http://arxiv.org/abs/2610.04363) |
 | **2026-10-02** | **UniIntervene++: An Adaptive Intervention Agent for Efficient Real-World Reinforcement Learning** `RL` `Dexterous`<br>Online reinforcement learning (RL) enables robot policies to improve through physical interaction, but the assistance they require changes as their competence evolves. Existing intervention strategies based on offline estimates or fixed decision rules can therefore become mismatched to the current policy. To address this, we propose UniIntervene++, an adaptive intervention agent that learns to... | Ziwei Wang Team | [ArXiv](http://arxiv.org/abs/2610.03620) / [Web](https://github.com/dannyyudong/An-Adaptive-Intervention-Agent-for-Efficient-Real-World-Reinforcement-Learning}{GitHub) |
 | **2026-10-01** | **TOAST: Stochastic Robot Action Tokenization for Autoregressive Vision-Language-Action Models** `VLA` `RL`<br>Autoregressive Vision-Language-Action models often represent continuous robot actions as discrete token sequences, enabling action prediction with standard next-token objectives. FAST has substantially improved this representation by compactly encoding action containing diverse temporal frequencies into relatively few tokens. However, while such compression reduces the number of action tokens... | Yukiyasu Domae Team | [ArXiv](http://arxiv.org/abs/2610.00899) / [Web](https://kskshr.github.io/toast/) |
 | **2026-10-01** | **CriticHack: Evaluating Visual Rewards Under Robot Policy Optimization** `RL`<br>Learned visual reward models are increasingly used to optimize robot policies, yet a reward model can score an execution that acts on the wrong object as highly as one that completes the task. We show that optimizing such a reward can amplify these wrong-object failures while reward and task success both rise, so the signals a practitioner would normally monitor look healthy. We fine-tune every... | Zhen Zhang Team | [ArXiv](http://arxiv.org/abs/2610.02527) |
