@@ -3,7 +3,7 @@ layout: default
 title: "EGO Policy"
 ---
 
-## Updated on 2026.10.08
+## Updated on 2026.10.09
 > Usage instructions: [here]({{ site.baseurl }}/README.html#usage)
 
 <style>.paper-nav{display:flex;flex-wrap:wrap;gap:.45rem;margin:1rem 0 1.25rem 0}.paper-nav a{border:1px solid #d0d7de;border-radius:999px;padding:.32rem .7rem;text-decoration:none;color:#24292f;background:#fff;font-size:.92rem}.paper-nav a.active{background:#0969da;color:#fff;border-color:#0969da}</style>
@@ -20,6 +20,8 @@ title: "EGO Policy"
 
 | Publish Date | Title & Abstract | Authors | Links |
 |:---------|:-----------------------|:---------|:------|
+| **2026-10-08** | **EgoPhys: Estimating Peak Contact Force and Mechanical Work from Egocentric Manipulation Video** `EGO Policy`<br>Physically grounded manipulation of articulated objects requires understanding both the maximum forces encountered during contact and the work performed as their parts move. Peak contact force and mechanical work quantify these complementary aspects, but estimating them from egocentric video is challenging because physical interaction cues are local and indirect. Moreover, peak force is... | Liang Wang Team | [ArXiv](http://arxiv.org/abs/2610.11347) |
+| **2026-10-07** | **Cross-Embodiment Robot Foundation World Models with Latent Actions** `EGO Policy`<br>The diversity of robot embodiments and action spaces makes it challenging to build robot world models that generalize across different embodiments. We introduce the Latent Action-Conditioned Robot World Model (LAC-WM), which operates within a learned unified latent action space shared across diverse embodiments. This unified action space improves the world model's performance when adapted to... | Franziska Meier Team | [ArXiv](http://arxiv.org/abs/2610.10846) |
 | **2026-10-05** | **MobileVISTA: Generative Data Augmentation for Pose Generalization in Mobile Manipulation** `EGO Policy`<br>Mobile manipulators such as humanoid robots are increasingly deployed in dynamic, unstructured environments to perform dexterous manipulation tasks. However, end-to-end manipulation policies trained to imitate demonstration data collected from a single robot pose are brittle: even centimeter-scale deviations in robot pose at deployment can drive ego-centric observations and end-effector... | Jiajun Wu Team | [ArXiv](http://arxiv.org/abs/2610.07511) |
 | **2026-10-05** | **RoboCap: A New Platform for Egocentric Robot Learning** `EGO Policy`<br>Despite its promise for scaling robot learning, egocentric manipulation data is still scarce today. Collection at scale requires vertically integrating ergonomic hardware with centimeter-precise 3D algorithms, at a precision that has not been publicly demonstrated. To address this gap, we introduce RoboCap, a 250\,g six-camera dual-IMU hat designed for in-the-wild egocentric data capture, and the... | BitRobot Team | [ArXiv](http://arxiv.org/abs/2610.07217) |
 | **2026-10-03** | **TacOT: Learning Contact-Rich Dexterous Manipulation from Human Demonstrations via Tactile-Guided Optimal Transport** `RL` `EGO Policy`<br>Learning contact-rich dexterous manipulation from human demonstrations provides a scalable source of interaction data, yet transferring such skills to robots remains challenging due to unreliable human--robot correspondence. Existing human-to-robot transfer methods typically rely on visual appearance or motion similarity, which may associate similar motions with different contact states and force... | Wenbo Ding Team | [ArXiv](http://arxiv.org/abs/2610.04363) |
