@@ -3,7 +3,7 @@ layout: default
 title: "EGO Policy"
 ---
 
-## Updated on 2026.10.18
+## Updated on 2026.10.19
 > Usage instructions: [here]({{ site.baseurl }}/README.html#usage)
 
 <style>.paper-nav{display:flex;flex-wrap:wrap;gap:.45rem;margin:1rem 0 1.25rem 0}.paper-nav a{border:1px solid #d0d7de;border-radius:999px;padding:.32rem .7rem;text-decoration:none;color:#24292f;background:#fff;font-size:.92rem}.paper-nav a.active{background:#0969da;color:#fff;border-color:#0969da}</style>
@@ -20,6 +20,7 @@ title: "EGO Policy"
 
 | Publish Date | Title & Abstract | Authors | Links |
 |:---------|:-----------------------|:---------|:------|
+| **2026-10-16** | **Ego2Contact: Predicting Touch from Egocentric Human Video for Contact-Rich Robot Manipulation** `EGO Policy`<br>Contact locations and interaction forces are critical for contact-rich robot manipulation but are often ambiguous from vision alone. Measuring them on robots requires specialized tactile hardware and platform-specific data collection, which keeps robot tactile data scarce. Human egocentric video is far easier to scale but lacks touch. Recent predictors trained on egocentric recordings paired with... | Zhiwen Fan Team | [ArXiv](http://arxiv.org/abs/2610.22932) |
 | **2026-10-15** | **Spark-0: Scaling Spatially Aligned Tactile Pretraining for Robot Dexterous Manipulation** `VLA` `EGO Policy` `Dexterous`<br>Generalist robot policies benefit from large-scale visual pretraining but often struggle with contact-rich dexterous manipulation, where force, compliance, and incipient slip are hard to observe from images. We present Spark-0, a spatially aligned vision-tactile-language-action (VTLA) model that uses touch in two complementary ways. During pretraining, image-space contact maps derived from... | Wenbo Ding Team | [ArXiv](http://arxiv.org/abs/2610.22342) / [Web](https://xsparkai.com/Spark-0) |
 | **2026-10-15** | **Cross-Embodiment Causal Transfer from Human Videos to Robot Manipulation** `World Model` `EGO Policy`<br>Scaling robot manipulation models requires large amounts of interaction data, yet collecting diverse real-robot experience remains costly. Human manipulation videos, in contrast, provide abundant and diverse task experience that could potentially benefit robot learning. However, differences in morphology, action spaces, and control mechanisms make human motions unsuitable as direct supervision... | Wenwen Qiang Team | [ArXiv](http://arxiv.org/abs/2610.21798) |
 | **2026-10-15** | **VP-EVT: Active Visibility Preservation for Embodied Visual Tracking** `EGO Policy`<br>Embodied Visual Tracking (EVT) is an essential capability for intelligent robots in human-robot collaboration, requiring an agent to follow a designated target person in dynamic environments relying solely on egocentric visual perception. However, persistent pedestrian occlusions in dynamic scenes pose critical challenges to existing EVT methods. Lacking proactive visibility preservation,... | Hong Zhang Team | [ArXiv](http://arxiv.org/abs/2610.21999) |
