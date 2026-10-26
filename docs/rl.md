@@ -3,7 +3,7 @@ layout: default
 title: "RL"
 ---
 
-## Updated on 2026.10.25
+## Updated on 2026.10.26
 > Usage instructions: [here]({{ site.baseurl }}/README.html#usage)
 
 <style>.paper-nav{display:flex;flex-wrap:wrap;gap:.45rem;margin:1rem 0 1.25rem 0}.paper-nav a{border:1px solid #d0d7de;border-radius:999px;padding:.32rem .7rem;text-decoration:none;color:#24292f;background:#fff;font-size:.92rem}.paper-nav a.active{background:#0969da;color:#fff;border-color:#0969da}</style>
@@ -20,6 +20,7 @@ title: "RL"
 
 | Publish Date | Title & Abstract | Authors | Links |
 |:---------|:-----------------------|:---------|:------|
+| **2026-10-23** | **Optimization, Optimal Control, and Reinforcement Learning for Robotics** `RL`<br>These lecture notes provide an introduction to optimization, optimal control, and reinforcement learning for robotics, emphasizing their mathematical connections and practical relevance. They present established material compiled and edited by Yonghyeon Lee, rather than new research results. The notes were developed through a human and AI collaborative writing process, with AI assistance in... | Yonghyeon Lee | [ArXiv](http://arxiv.org/abs/2610.32538) |
 | **2026-10-17** | **Gen2Dex: Learning Dexterous Manipulation from Simulation-Initialized Generated Video Demonstrations** `RL`<br>Human video demonstrations provide rich manipulation strategies for dexterous manipulation learning. We study a setting in which a fully specified simulated scene is used to generate videos that specify the demonstrated manipulation behavior. This setup provides access to scene information such as object geometry, articulation, and camera parameters, while allowing direct control over task and... | Chuang Gan Team | [ArXiv](http://arxiv.org/abs/2610.24392) |
 | **2026-10-16** | **Not All Actions Contribute Equally: Learning Precise Progress Estimation from Imprecise Demonstrations** `Dexterous` `Manipulation` `RL`<br>Progress estimators play an essential role in providing dense reward signals for reinforcement learning in robotic manipulation, but accurately assessing task progress can be much challenging. Existing methods heavily rely on expert data and naively assume that all actions within a demonstration contribute to task success. This assumption often breaks down in real-world scenarios, especially in... | Gao Huang Team | [ArXiv](http://arxiv.org/abs/2610.23769) |
 | **2026-10-15** | **What Should Robot Policies Learn to Predict? Rethinking Supervision Targets in Vision-Language-Action Learning** `VLA` `RL`<br>Vision-language-action (VLA) policies are typically trained with action prediction as the primary supervision signal, since robots ultimately execute actions. Auxiliary objectives such as latent-action (LA) and future-vision (FV) prediction are often added to improve policy learning, yet they compete with action prediction for the same training budget. We ask whether, under a fixed budget,... | Yuan Yao Team | [ArXiv](http://arxiv.org/abs/2610.21915) |
