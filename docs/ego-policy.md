@@ -3,7 +3,7 @@ layout: default
 title: "EGO Policy"
 ---
 
-## Updated on 2026.11.10
+## Updated on 2026.11.11
 > Usage instructions: [here]({{ site.baseurl }}/README.html#usage)
 
 <style>.paper-nav{display:flex;flex-wrap:wrap;gap:.45rem;margin:1rem 0 1.25rem 0}.paper-nav a{border:1px solid #d0d7de;border-radius:999px;padding:.32rem .7rem;text-decoration:none;color:#24292f;background:#fff;font-size:.92rem}.paper-nav a.active{background:#0969da;color:#fff;border-color:#0969da}</style>
@@ -20,6 +20,7 @@ title: "EGO Policy"
 
 | Publish Date | Title & Abstract | Authors | Links |
 |:---------|:-----------------------|:---------|:------|
+| **2026-11-10** | **Ego Guidance: Enhancing Robot Policy Learning with Action-Free Human Egocentric Videos** `RL` `EGO Policy`<br>In this paper, we investigate how human egocentric videos can benefit robot policy learning without action supervision. Building on a pretrained VLM, we propose Shared Prediction on Action and Representation (SPAR), an MoT architecture in which future visual state prediction can provide independent and complementary learning signals alongside action prediction. We find that representations... | Shanghang Zhang Team | [ArXiv](http://arxiv.org/abs/2611.13685) / [Web](https://llong-cs.github.io/EgoGuidance) |
 | **2026-11-08** | **ColNav: Uncertainty-Aware Spacetime Collision Checking with Bounding Volume Hierarchies** `EGO Policy`<br>Safe navigation for mobile robots in dynamic and uncertain environments requires planning paths that avoid collisions with other moving targets. Typically this involves forward propagating the robot motion and checking for collisions at sampled points in space and time. Such methods can miss collisions between sampled points and are not robust to uncertainty in the state estimates. We propose... | Erlend M. Coates Team | [ArXiv](http://arxiv.org/abs/2611.11646) |
 | **2026-11-06** | **ToolDex: An Ego-Exo Human Demonstration Dataset for Creative Physical Tool Use** `RL` `EGO Policy`<br>Creative tool use is a fundamental human capability and an important step toward general-purpose embodied intelligence. It requires agents to reason about object affordances, physical constraints, and manipulation strategies, especially when standard tools are unavailable. However, progress in this area is limited by the lack of real-world datasets that capture human tool-use behavior with... | Jiajun Wu Team | [ArXiv](http://arxiv.org/abs/2611.09036) |
 | **2026-11-06** | **TouchAnnotator: Multi-Source Tactile Supervision with Privileged-View Distillation** `EGO Policy` `Dexterous`<br>Egocentric video captures human-object interaction at scale but rarely includes tactile labels for hidden contact and pressure. We introduce TouchAnnotator, an ego-only bimanual tactile annotator trained with multi-source tactile supervision and privileged-view distillation. A canonical hand field unifies glove pressure, geometry-derived human contact, and robot fingertip deformation from six... | Yansong Tang Team | [ArXiv](http://arxiv.org/abs/2611.09129) |
