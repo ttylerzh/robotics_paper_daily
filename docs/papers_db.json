@@ -93651,27 +93651,6 @@
     "source": "arxiv",
     "venue": ""
   },
-  "arxiv:2610.27628": {
-    "arxiv_id": "2610.27628",
-    "title": "PAR: Progress-Aligned Recurrence for Length Generalization in State Tracking",
-    "abstract": "Looped language models can run more iterations at test time, but additional iterations need not help them solve longer problems. For sequential state tracking, final-answer supervision does not specify how far each iteration should advance, and repeated updates can change the scale of the recurrent state. We introduce \\textbf{Progress-Aligned Recurrence (PAR)}, which trains the prediction at iteration $k$ to match the state after the first $k$ operations and rescales recurrent states to their first-iteration norms. On swap-$S_5$, a Qwen2.5-0.5B model trained on at most 32 moves achieves 95.5\\% mean full-state accuracy at 512 moves, or $16\\times$ the training length, compared with 55.7\\% reported for RLT and 0.8\\% for explicit chain of thought on the same backbone. Controlled $S_5$ ablations show that removing norm anchoring reduces the extrapolation factor from $16\\times$ to below $2.2\\times$, and replacing progress-aligned targets with final-answer supervision reduces it to at most $8\\times$. A learned completion readout selects when to answer without a supplied stopping depth. When intermediate labels are unavailable, prefix self-distillation induces the correspondence from shorter problem prefixes using only final answers. The gains apply across sequential state-tracking tasks, establishing the task structure required for depth extrapolation. These findings support training intermediate predictions and state scale together to make additional recurrent depth useful for longer problems.",
-    "authors": "Pan Wang, Yihao Hu, Guangyuan Dong, Yitong Lin, Hang Wang, Zimi Liu, Zhihao Wen, Jianshe Li, Jiang-Ming Yang, Wei Wu, Yongqi Tong",
-    "publish_date": "2026-10-20",
-    "arxiv_url": "http://arxiv.org/abs/2610.27628",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [],
-    "matched_categories": [
-      "HF-Hot"
-    ],
-    "hf_rank": 37,
-    "score": 0,
-    "paper_id": "arxiv:2610.27628",
-    "source": "arxiv",
-    "venue": ""
-  },
   "arxiv:2610.28402": {
     "arxiv_id": "2610.28402",
     "title": "StreamEval: Evaluating Interactive Streaming Video Generation Models",
@@ -96646,27 +96625,6 @@
     "source": "arxiv",
     "venue": ""
   },
-  "arxiv:2610.27598": {
-    "arxiv_id": "2610.27598",
-    "title": "Meta Expert: Cross-Layer Expert Sharing for Storage- and Retrieval-Efficient MoE",
-    "abstract": "As model parameters scale up, sparsely activated Mixture-of-Experts (MoE) approaches have become essential for model scaling. However, mainstream models currently adopt hierarchical architectures, where experts in different layers, although topologically independent, exhibit substantial similarity and redundancy in their stored content. Compared to the hierarchically arranged \\textbf{Local Expert} in existing mainstream models, we hypothesize that inter-layer shared \\textbf{Meta Expert} hold greater potential. To this end, we conduct a multi-dimensional empirical comparison between Local and Meta Experts, and find that models incorporating Meta Experts exhibit lower parameter redundancy, together with lower cross-entropy loss and higher downstream task accuracy. With the activated quantity and the expert granularity held fixed, \\textbf{our model matches the performance of Vanilla MoE using only 70--80\\% of the experts}, substantially improving the model's scaling potential. Beyond removing inter-layer redundancy among experts and improving information storage efficiency, our theoretical analysis further shows that, compared with Local Experts, Meta Experts provide hidden states with more flexible residual pathways, thereby improving information retrieval efficiency.",
-    "authors": "Ermo Hua, Xiangyu Hong, Baiting Wu, Che Jiang, Haozheng Hou, Yicheng Gu, Hanjing Wang, Qirui Zeng, Ming Zhang, Ning Ding, Qipeng Guo, Youbang Sun, Biqing Qi, Bowen Zhou",
-    "publish_date": "2026-10-20",
-    "arxiv_url": "http://arxiv.org/abs/2610.27598",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [],
-    "matched_categories": [
-      "HF-Hot"
-    ],
-    "hf_rank": 48,
-    "score": 18,
-    "paper_id": "arxiv:2610.27598",
-    "source": "arxiv",
-    "venue": ""
-  },
   "arxiv:2610.28416": {
     "arxiv_id": "2610.28416",
     "title": "Code2Video-Compass: A Comprehensive Benchmark for General-Purpose Code-Based Video Generation across T2V, I2V, and V2V",
@@ -96937,27 +96895,6 @@
     "hf_rank": 30,
     "score": 17,
     "paper_id": "arxiv:2610.31576",
-    "source": "arxiv",
-    "venue": ""
-  },
-  "arxiv:2610.27712": {
-    "arxiv_id": "2610.27712",
-    "title": "RLSplat: Resource-Linear Budget Control for Feed-forward 3D Gaussian Splatting",
-    "abstract": "Feed-forward 3D Gaussian Splatting (FF3DGS) reconstructs 3D scenes from images in a single forward pass, making it well-suited to applications that must operate within limited resource budgets. To further improve its practicality, recent budget-controllable FF3DGS methods allow the number of Gaussians to be adjusted at inference, so that the output meets a given storage limit or rendering-latency constraint. However, these methods overlook the cost of inference itself: to produce a representation with the target number of Gaussians, they first predict a dense set of Gaussians and then prune or select from it, requiring nearly constant latency and peak memory regardless of the budget. We therefore propose RLSplat, a resource-linear budget-controllable FF3DGS framework whose representation size, inference latency, and peak memory all decrease linearly as the Gaussian budget is reduced. Instead of pruning or selection, RLSplat learns a Gaussian allocation policy that distributes the budget across local scene regions, so that exactly the requested number of Gaussians is generated. These Gaussians are then refined through resource-linear Gaussian decoding, in which each Gaussian attends only to nearby Gaussians found via an efficient hierarchical neighbor search, so that the decoding cost decreases linearly with fewer Gaussians. In zero-shot evaluation, RLSplat outperforms prior budget-controllable methods at every budget, surpassing the strongest baseline even with 4$\\times$ fewer Gaussians, while running up to 4.1$\\times$ faster with 9.6$\\times$ less peak memory at low budgets.",
-    "authors": "Injae Kim, Minseok Joo, Jihwan Park, Sehyung Kim, Minseong Bae, Hyunwoo J. Kim",
-    "publish_date": "2026-10-20",
-    "arxiv_url": "http://arxiv.org/abs/2610.27712",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [],
-    "matched_categories": [
-      "HF-Hot"
-    ],
-    "hf_rank": 31,
-    "score": 16,
-    "paper_id": "arxiv:2610.27712",
     "source": "arxiv",
     "venue": ""
   },
@@ -98428,27 +98365,6 @@
     "hf_rank": 10,
     "score": 20,
     "paper_id": "arxiv:2610.31716",
-    "source": "arxiv",
-    "venue": ""
-  },
-  "arxiv:2610.27782": {
-    "arxiv_id": "2610.27782",
-    "title": "RoboJudge: Multimodal Language Models as Judges for Embodied Video Generation",
-    "abstract": "Video generation models are promising foundations for embodied world models, but only if their generated rollouts are physically valid and faithful to task instructions. Multimodal large language models (MLLMs) are increasingly used to judge these properties, yet their agreement with human judgments on embodied videos has not been systematically evaluated. To address this gap, we introduce RoboJudge-Bench, a benchmark for evaluating MLLMs as judges of embodied video generation. The benchmark measures two fundamental dimensions, Physical Adherence and Instruction Alignment, across 800 human-annotated videos from 8 source corpora and 10 video generators, spanning grippers, human hands, and dexterous hands. Experiments reveal uneven alignment between existing judges and human ratings: general-purpose MLLMs show lower agreement on physical adherence, while specialized video judges designed for general-domain physical reasoning do not consistently transfer to embodied scenarios. Motivated by these findings, we construct RoboJudge-Train, comprising 12K videos annotated with 25K human-verified scores and model-assisted rationales for Physical Adherence and Instruction Alignment. We fine-tune a 9B MLLM on this dataset with supervised learning followed by reinforcement learning, yielding RoboJudge-9B. Among the model judges evaluated on RoboJudge-Bench, RoboJudge-9B achieves the highest overall agreement, reaching a Pearson correlation of 0.719 with a statistically significant 0.089 gain over Gemini-3.7-Flash, the best-performing proprietary baseline in our evaluation. Training on RoboJudge-Train also yields gains on external benchmarks, including VideoPhy2 and Physion-Eval. We further use RoboJudge-9B as a downstream evaluator to benchmark video generation models according to Physical Adherence and Instruction Alignment.",
-    "authors": "Siyuan Ma, Yu Qi, Cheng Ye, Ruotian Peng, Xinyi Xu, Zitiantao Lin, Zedong Cai, Yijian Huang, Weiyang Liu, Siyuan Wang, Yandong Wen",
-    "publish_date": "2026-10-20",
-    "arxiv_url": "http://arxiv.org/abs/2610.27782",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [],
-    "matched_categories": [
-      "HF-Hot"
-    ],
-    "hf_rank": 12,
-    "score": 18,
-    "paper_id": "arxiv:2610.27782",
     "source": "arxiv",
     "venue": ""
   },
@@ -109274,27 +109190,6 @@
     "source": "arxiv",
     "venue": ""
   },
-  "arxiv:2610.27815": {
-    "arxiv_id": "2610.27815",
-    "title": "ProVe: Proposer-Verifier Decoding",
-    "abstract": "Speculative decoding accelerates autoregressive (AR) language models by letting a small model draft tokens serially and a large model verify them in parallel. We reverse these roles. Starting from a standard AR checkpoint, we fine-tune the large model into a proposer that predicts a block of future tokens in a single forward pass, then use one additional forward pass to verify the proposed block. This gives ProVe, Proposer-Verifier decoding. The verifier can be a smaller AR model or the proposer itself; the latter gives ProVe-lossless, which reproduces the proposer's greedy AR decoding. Block proposals already provide substantial room for acceleration: with a block size of 16, the proposed block has an average AR-matching prefix of 6.6 tokens on GSM8K. Across six benchmarks with a 32B proposer, ProVe-lossless reaches 2.5x average AR throughput without training a separate draft head. With a small 3B verifier, ProVe reaches 2.7x average throughput at 2.6 accuracy points below AR on the six-task average, providing a controllable tradeoff between speed and accuracy.",
-    "authors": "Ziqi Jin, Weiwen Xu, Jiaxi Li, Yujie Zhong, Qi She, Aixin Sun",
-    "publish_date": "2026-10-20",
-    "arxiv_url": "http://arxiv.org/abs/2610.27815",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [],
-    "matched_categories": [
-      "HF-Hot"
-    ],
-    "hf_rank": 41,
-    "score": 0,
-    "paper_id": "arxiv:2610.27815",
-    "source": "arxiv",
-    "venue": ""
-  },
   "arxiv:2610.42128": {
     "arxiv_id": "2610.42128",
     "title": "DecisionRank: On-Policy Distillation for Decision-Model Rerankers",
@@ -117526,7 +117421,7 @@
     "matched_categories": [
       "World Model"
     ],
-    "hf_rank": 28,
+    "hf_rank": 33,
     "score": 0,
     "paper_id": "arxiv:2611.11166",
     "source": "arxiv",
@@ -117709,7 +117604,7 @@
       "Manipulation",
       "HF-Hot"
     ],
-    "hf_rank": 36,
+    "hf_rank": 41,
     "score": 20,
     "paper_id": "arxiv:2611.12885",
     "source": "arxiv",
@@ -117921,7 +117816,7 @@
       "Dexterous",
       "HF-Hot"
     ],
-    "hf_rank": 4,
+    "hf_rank": 9,
     "score": 20,
     "paper_id": "arxiv:2611.12177",
     "source": "arxiv",
@@ -118395,7 +118290,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 44,
+    "hf_rank": 49,
     "score": 29,
     "paper_id": "arxiv:2611.10556",
     "source": "arxiv",
@@ -118416,7 +118311,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 45,
+    "hf_rank": 50,
     "score": 28,
     "paper_id": "arxiv:2611.09709",
     "source": "arxiv",
@@ -119886,7 +119781,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 27,
+    "hf_rank": 32,
     "score": 29,
     "paper_id": "arxiv:2611.12200",
     "source": "arxiv",
@@ -119907,7 +119802,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 29,
+    "hf_rank": 34,
     "score": 27,
     "paper_id": "arxiv:2611.13348",
     "source": "arxiv",
@@ -119932,7 +119827,7 @@
       "HF-Hot",
       "VLA"
     ],
-    "hf_rank": 30,
+    "hf_rank": 35,
     "score": 26,
     "paper_id": "arxiv:2611.14488",
     "source": "arxiv",
@@ -119953,7 +119848,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 31,
+    "hf_rank": 36,
     "score": 25,
     "paper_id": "arxiv:2611.13482",
     "source": "arxiv",
@@ -119974,7 +119869,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 32,
+    "hf_rank": 37,
     "score": 24,
     "paper_id": "arxiv:2611.03142",
     "source": "arxiv",
@@ -119995,7 +119890,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 33,
+    "hf_rank": 38,
     "score": 23,
     "paper_id": "arxiv:2611.12426",
     "source": "arxiv",
@@ -120016,7 +119911,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 34,
+    "hf_rank": 39,
     "score": 22,
     "paper_id": "arxiv:2611.14033",
     "source": "arxiv",
@@ -120037,7 +119932,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 35,
+    "hf_rank": 40,
     "score": 21,
     "paper_id": "arxiv:2611.12411",
     "source": "arxiv",
@@ -120058,7 +119953,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 37,
+    "hf_rank": 42,
     "score": 19,
     "paper_id": "arxiv:2611.12955",
     "source": "arxiv",
@@ -120079,7 +119974,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 38,
+    "hf_rank": 43,
     "score": 18,
     "paper_id": "arxiv:2611.05927",
     "source": "arxiv",
@@ -120100,7 +119995,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 39,
+    "hf_rank": 44,
     "score": 17,
     "paper_id": "arxiv:2611.11994",
     "source": "arxiv",
@@ -120121,7 +120016,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 40,
+    "hf_rank": 45,
     "score": 16,
     "paper_id": "arxiv:2611.11995",
     "source": "arxiv",
@@ -120142,7 +120037,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 41,
+    "hf_rank": 46,
     "score": 15,
     "paper_id": "arxiv:2611.09501",
     "source": "arxiv",
@@ -120163,7 +120058,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 42,
+    "hf_rank": 47,
     "score": 14,
     "paper_id": "arxiv:2611.10592",
     "source": "arxiv",
@@ -120184,7 +120079,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 43,
+    "hf_rank": 48,
     "score": 13,
     "paper_id": "arxiv:2611.12167",
     "source": "arxiv",
@@ -120340,7 +120235,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 1,
+    "hf_rank": 6,
     "score": 29,
     "paper_id": "arxiv:2611.14116",
     "source": "arxiv",
@@ -120361,7 +120256,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 2,
+    "hf_rank": 7,
     "score": 28,
     "paper_id": "arxiv:2611.13425",
     "source": "arxiv",
@@ -120382,7 +120277,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 3,
+    "hf_rank": 8,
     "score": 27,
     "paper_id": "arxiv:2611.10486",
     "source": "arxiv",
@@ -120403,7 +120298,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 5,
+    "hf_rank": 10,
     "score": 25,
     "paper_id": "arxiv:2611.14115",
     "source": "arxiv",
@@ -120424,7 +120319,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 6,
+    "hf_rank": 11,
     "score": 24,
     "paper_id": "arxiv:2611.13576",
     "source": "arxiv",
@@ -120445,7 +120340,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 7,
+    "hf_rank": 12,
     "score": 23,
     "paper_id": "arxiv:2610.40754",
     "source": "arxiv",
@@ -120466,7 +120361,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 8,
+    "hf_rank": 13,
     "score": 22,
     "paper_id": "arxiv:2611.01527",
     "source": "arxiv",
@@ -120487,7 +120382,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 9,
+    "hf_rank": 14,
     "score": 21,
     "paper_id": "arxiv:2611.14516",
     "source": "arxiv",
@@ -120508,7 +120403,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 10,
+    "hf_rank": 15,
     "score": 20,
     "paper_id": "arxiv:2611.10866",
     "source": "arxiv",
@@ -120529,7 +120424,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 11,
+    "hf_rank": 16,
     "score": 19,
     "paper_id": "arxiv:2611.10015",
     "source": "arxiv",
@@ -120550,7 +120445,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 12,
+    "hf_rank": 17,
     "score": 18,
     "paper_id": "arxiv:2611.10649",
     "source": "arxiv",
@@ -120571,7 +120466,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 13,
+    "hf_rank": 18,
     "score": 17,
     "paper_id": "arxiv:2611.12184",
     "source": "arxiv",
@@ -120592,7 +120487,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 14,
+    "hf_rank": 19,
     "score": 16,
     "paper_id": "arxiv:2611.13885",
     "source": "arxiv",
@@ -120613,7 +120508,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 15,
+    "hf_rank": 20,
     "score": 15,
     "paper_id": "arxiv:2611.14083",
     "source": "arxiv",
@@ -120634,7 +120529,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 16,
+    "hf_rank": 21,
     "score": 14,
     "paper_id": "arxiv:2611.14320",
     "source": "arxiv",
@@ -120655,7 +120550,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 17,
+    "hf_rank": 22,
     "score": 13,
     "paper_id": "arxiv:2611.13995",
     "source": "arxiv",
@@ -120676,7 +120571,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 18,
+    "hf_rank": 23,
     "score": 12,
     "paper_id": "arxiv:2611.07464",
     "source": "arxiv",
@@ -120697,7 +120592,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 19,
+    "hf_rank": 24,
     "score": 11,
     "paper_id": "arxiv:2611.12527",
     "source": "arxiv",
@@ -120718,7 +120613,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 20,
+    "hf_rank": 25,
     "score": 10,
     "paper_id": "arxiv:2611.12934",
     "source": "arxiv",
@@ -120739,7 +120634,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 21,
+    "hf_rank": 26,
     "score": 9,
     "paper_id": "arxiv:2611.12865",
     "source": "arxiv",
@@ -120760,7 +120655,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 22,
+    "hf_rank": 27,
     "score": 8,
     "paper_id": "arxiv:2611.13560",
     "source": "arxiv",
@@ -120781,7 +120676,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 23,
+    "hf_rank": 28,
     "score": 7,
     "paper_id": "arxiv:2611.13572",
     "source": "arxiv",
@@ -120802,7 +120697,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 24,
+    "hf_rank": 29,
     "score": 6,
     "paper_id": "arxiv:2611.14210",
     "source": "arxiv",
@@ -120823,7 +120718,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 25,
+    "hf_rank": 30,
     "score": 5,
     "paper_id": "arxiv:2611.14309",
     "source": "arxiv",
@@ -120844,9 +120739,114 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 26,
+    "hf_rank": 31,
     "score": 4,
     "paper_id": "arxiv:2611.13907",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2611.10193": {
+    "arxiv_id": "2611.10193",
+    "title": "Ensemble Routing for Prompt-Adaptive Cost-Aware LLM Inference",
+    "abstract": "Large language models (LLMs) increasingly support Web-based services that must balance response quality and inference cost across heterogeneous requests. Conventional routing selects one model per prompt, while fixed ensembles cannot adapt their composition and cost to individual requests. We introduce PISA, a prompt-adaptive, cost-aware single-model router, and PISA-E, its extension to ensemble routing. At the core of both methods, PISA combines soft cluster memberships with model-specific predictors to estimate individual model capabilities. Building on these estimates, PISA-E jointly selects ensemble composition and cardinality under an explicit cost--quality preference that can be adjusted at inference time without retraining. A tractable ensemble-success surrogate and efficient candidate selection enable this extension without ensemble-specific training. Across four LLM routing benchmarks under in-distribution (ID) and out-of-distribution (OOD) conditions, PISA achieves the highest macro-average cost--performance hypervolume among the evaluated single-model routers in both settings. Meanwhile, PISA-E achieves the highest macro-average task performance among the evaluated ensemble approaches when prioritizing response quality, surpassing the strongest competitors by 2.09 and 2.87 percentage points under ID and OOD conditions, respectively. At selected lower-cost operating points, it also exceeds the strongest ensemble competitors' macro-average task performance while reducing average inference cost by approximately 36% and 25%, respectively. These results demonstrate the effectiveness of prompt-adaptive capability estimation for both single-model routing and selective ensembling.",
+    "authors": "Saul Urso, Emanuele Carlini, Patrizio Dazzi, Matteo Mordacchini",
+    "publish_date": "2026-11-06",
+    "arxiv_url": "http://arxiv.org/abs/2611.10193",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "HF-Hot"
+    ],
+    "hf_rank": 1,
+    "score": 29,
+    "paper_id": "arxiv:2611.10193",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2610.39671": {
+    "arxiv_id": "2610.39671",
+    "title": "Incentivizing Self-Learning in Large Language Models via Reinforcement Learning",
+    "abstract": "Large language models (LLMs) draw on parametric knowledge and retrieval-augmented generation (RAG) to solve knowledge-intensive tasks. Yet problem solving in unfamiliar domains calls for tightly coupled knowledge acquisition and reasoning, beyond factual retrieval and aggregation or learning solely from a preassembled context. We study self-learning -- autonomously retrieving, studying, and applying knowledge from long-form reference materials on the fly. To investigate this capability, we formulate a textbook-based mathematical problem-solving task. LLMs must navigate textbook exposition, learn and apply relevant principles, and construct proofs for exercises, with reference solutions withheld. We introduce a BookNavigator interface to support this human-inspired study process and incentivize self-learning through reinforcement learning (RL) with fine-grained rewards. Experiments show that our method improves performance across in-domain and out-of-domain textbooks and subjects, raising Intern-S2-Preview-35B's overall proof accuracy from 51.5% to 79.5% and outperforming RL-trained textbook-free and fixed-retrieval baselines. These gains extend to complex long-context benchmarks involving different task types, with improvements over the base model of 1.7 and 2.3 percentage points on BrowseComp-Plus and CL-bench, respectively. Together, these findings suggest that RL can foster a domain-agnostic self-learning strategy, highlighting the potential of self-learning from long-form corpora to strengthen broader problem-solving capabilities on complex, long-context tasks.",
+    "authors": "Lingkai Kong, Yuzhe Gu, Haiteng Zhao, Zijian Wu, Youqing Fang, Zhouqi Hua, Yanan Sun, Kai Chen, Wenwei Zhang",
+    "publish_date": "2026-10-29",
+    "arxiv_url": "http://arxiv.org/abs/2610.39671",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "HF-Hot"
+    ],
+    "hf_rank": 2,
+    "score": 28,
+    "paper_id": "arxiv:2610.39671",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2611.13028": {
+    "arxiv_id": "2611.13028",
+    "title": "GTAGym: Real AAA Game Tasks Environment for Evaluation and Reinforcement Learning",
+    "abstract": "AAA games offer a rich testbed for evaluating agent perception, reasoning, and control. However, evaluating whether agents can complete tasks in AAA games is challenging and often human-annotated because task outcomes are often difficult to verify automatically, let alone applying it for Reinforcement Learning (RL). We introduce GTAGym, an environment and framework for evaluation and RL on GTA V tasks. Its evaluation benchmark, GTAVBench, derived from GTA V main-story missions, contains 103 online tasks reconstructed across nine task families, alongside 47 image-based shooting and sniping tasks using GTA V imagery. A web server provides access to the online environment and evaluation interface, supporting parallel testing through screenshots and keyboard-mouse actions with automatic engine-state outcome checks. We evaluate six frontier LLMs on GTAVBench with textual task instructions and on its GTAVBench-AGI branch, where instructions appear only in the first screenshot and a harness automatically compresses interaction history. The best configuration achieves 70.9% overall accuracy in GTAVBench-AGI, yet aerial navigation, evasion and interception remain difficult. GTAGym also provides a scalable generator that samples task parameters within user-specified ranges and option sets under fixed templates, creating batches of 3D and image-based shooting environments for RL with automatic reward and termination signals. LoRA RL of Qwen3.8-27B on generated on-foot navigation tasks improves the in-domain performance and transfers to out-of-domain task categories, and native GTA V tasks from 15% to 23%.",
+    "authors": "Jiajun Chen, Shicheng Fang, Jiahao Lu, Yuxin Wang, Xipeng Qiu",
+    "publish_date": "2026-11-09",
+    "arxiv_url": "http://arxiv.org/abs/2611.13028",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "HF-Hot"
+    ],
+    "hf_rank": 3,
+    "score": 27,
+    "paper_id": "arxiv:2611.13028",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2611.11912": {
+    "arxiv_id": "2611.11912",
+    "title": "LO-World: Unified BEV Latent Modeling for Joint 4D Occupancy and LiDAR Forecasting",
+    "abstract": "LiDAR point clouds and 3D semantic occupancy represent two distinct modalities capturing fine-grained metric geometry and dense volumetric semantics, respectively, holding natural potential for mutual complementarity. However, existing world models typically forecast these modalities independently or cascade them heuristically, missing the opportunity for reciprocal cross-modal regularization. To address this, we propose \\textbf{LO-World}, a unified 4D world model that forecasts both modalities within a shared BEV latent space. This single-stream formulation enables dense semantics and metric geometry to mutually reinforce each other, while eliminating multi-pipeline redundancy. Specifically, LO-World couples an efficient hybrid range-voxel autoencoder with a flow-matching generator that caches historical context to reduce iterative sampling latency. Extensive experiments demonstrate that LO-World outperforms prior state-of-the-art baselines, improving occupancy forecasting IoU by 10.9% and reducing LiDAR Chamfer Distance by 30.1%. Meanwhile, it sustains a real-time throughput exceeding $25$~FPS on a single RTX 4090. Our code is available at https://github.com/lzzzzzm/LO-World.",
+    "authors": "Zhimin Liao, Ping Wei, Kai Mao, Shuaijia Chen",
+    "publish_date": "2026-11-09",
+    "arxiv_url": "http://arxiv.org/abs/2611.11912",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "HF-Hot"
+    ],
+    "hf_rank": 4,
+    "score": 26,
+    "paper_id": "arxiv:2611.11912",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2611.13001": {
+    "arxiv_id": "2611.13001",
+    "title": "One Table, Many Queries: Benchmarking Generalist Tabular Models Across Generation, Imputation, and Prediction",
+    "abstract": "Generation, imputation, and prediction query different aspects of the same tabular distribution, but are usually evaluated separately. This leaves unclear which capabilities they share, how their training objectives interact, and whether one model can perform all three well. We introduce the One Table Benchmark (\\ours{}), spanning 56 datasets, 46 registered methods, and 20 capability axes under aligned data splits and explicit task contracts. We compare task ranks on aligned support, train five backbones under all seven non-empty objective combinations on five datasets with three seeds, and contrast fixed-model profiles with specialist portfolios. Rank comparisons connect imputation and prediction through numerical recovery and dependence preservation, and link generation to both through predictive utility; distributional fidelity follows different, sometimes opposing, rankings. Objective interventions show the largest pooled gains from including the recipient's own objective. Generation has the broadest coverage of positive pooled auxiliary effects, while prediction shows potential to improve imputation and synthetic-data utility, with responses that vary across backbones. Cross-addition effects reveal that objective benefits need not add and depend on the objectives already present. Fixed-model comparisons expose corresponding utility--fidelity trade-offs: some generalists surpass specialist portfolios on utility, while fidelity continues to favor specialization. Frozen foundation models show strong prediction and numerical point imputation, together with promising synthetic-data utility, highlighting their potential across all three tasks. These findings motivate unified tabular models that share useful conditional information while improving categorical reconstruction and faithful joint sampling.",
+    "authors": "Yuanrui Wang, Kaifang Li, Xuanyue Li, Ziyun Li, Yan Lu, Xingxuan Zhang, Peng Cui",
+    "publish_date": "2026-11-08",
+    "arxiv_url": "http://arxiv.org/abs/2611.13001",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "HF-Hot"
+    ],
+    "hf_rank": 5,
+    "score": 25,
+    "paper_id": "arxiv:2611.13001",
     "source": "arxiv",
     "venue": ""
   }
