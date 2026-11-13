@@ -1111,8 +1111,7 @@
       "Manipulation"
     ],
     "matched_categories": [
-      "RL",
-      "Dexterous"
+      "RL"
     ],
     "hf_rank": null,
     "score": 40,
@@ -1141,279 +1140,6 @@
     "hf_rank": null,
     "score": 10,
     "paper_id": "arxiv:2606.13169",
-    "source": "arxiv",
-    "venue": ""
-  },
-  "arxiv:2606.13679": {
-    "arxiv_id": "2606.13679",
-    "title": "InterleaveThinker: Reinforcing Agentic Interleaved Generation",
-    "abstract": "Recent image generators have demonstrated impressive photorealism and instruction-following capabilities in single-image generation and editing. However, constrained by their architectures, they cannot achieve interleaved generation (text-image sequence), which has crucial applications in visual narratives, guidance, and embodied manipulation. Even the latest open-source Unified Multimodal Models (UMMs) exhibit limited performance in this regard. In this paper, we introduce InterleaveThinker, the first multi-agent pipeline designed to endow any existing image generator with interleaved generation capabilities. Specifically, we employ a planner agent to organize the image-text input sequence, instructing the image generator on the required execution at each step. Subsequently, we introduce a critic agent to evaluate the generator's outputs, identify samples that deviate from the planned instructions, and refine the instructions for regeneration. To implement this pipeline, we construct the Interleave-Planner-SFT-80k and Interleave-Critic-SFT-112k to perform a format cold-start. Then we develop Interleave-Critic-RL-13k to reinforce the step-wise instruction correction capability within a generation trajectory using GRPO. Since a single interleaved generation trajectory may involve over 25 generator calls, optimizing the entire trajectory is computationally impractical. Therefore, we propose accuracy reward and step-wise reward, allowing single-step RL to effectively guide the entire generation trajectory. The results show that InterleaveThinker improves performance across various image generators. On interleaved generation benchmarks, it achieves performance comparable to Nano Banana and GPT-5. Surprisingly, it also significantly enhances the base model on reasoning-based benchmarks; for example, on 4-step FLUX.2-klein, we observe substantial gains on WISE and RISE.",
-    "authors": "Dian Zheng, Harry Lee, Manyuan Zhang, Kaituo Feng, Zoey Guo, Ray Zhang, Hongsheng Li",
-    "publish_date": "2026-06-11",
-    "arxiv_url": "http://arxiv.org/abs/2606.13679",
-    "project_url": "https://github.com/zhengdian1/InterleaveThinker",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [
-      "Manipulation"
-    ],
-    "matched_categories": [
-      "Dexterous"
-    ],
-    "hf_rank": 35,
-    "score": 27,
-    "paper_id": "arxiv:2606.13679",
-    "source": "arxiv",
-    "venue": ""
-  },
-  "arxiv:2606.13663": {
-    "arxiv_id": "2606.13663",
-    "title": "HyperTool: Beyond Step-Wise Tool Calls for Tool-Augmented Agents",
-    "abstract": "Tool-augmented LLM agents commonly rely on step-wise atomic tool calls, where each invocation, observation, and value transfer is exposed in the main reasoning trace. This creates an \\emph{execution-granularity mismatch}: locally deterministic tool workflows are unfolded into repeated model-visible decisions, consuming context and forcing the model to manage low-level dataflow in the trace. We introduce \\textbf{HyperTool}, a unified executable MCP-style tool interface that changes the model-visible unit of tool execution. A model invokes HyperTool with a code block that can call existing tools through their original schemas, manipulate returned values, and pass intermediate results locally, folding deterministic tool subroutines into a single outer call. To train models to use this interface, we synthesize HyperTool-format trajectories from cross-tool compositional tasks and verify them in real MCP environments. On MCP-Universe, HyperTool improves average accuracy from 15.69\\% to 35.29\\% on Qwen3-32B and from 9.93\\% to 33.33\\% on Qwen3-8B, and surpass GPT-OSS and Kimi-k2.5 on average accuracy, showing that our HyperTool can substantially improve multi-step tool use.",
-    "authors": "Yaxin Du, Yifan Zhou, Yujie Ge, Jiajun Wang, Xianghe Pang, Shuo Tang, Tuney Zheng, Bryan Dai, Jian Yang, Siheng Chen",
-    "publish_date": "2026-06-11",
-    "arxiv_url": "http://arxiv.org/abs/2606.13663",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [],
-    "matched_categories": [
-      "Dexterous"
-    ],
-    "hf_rank": null,
-    "score": 0,
-    "paper_id": "arxiv:2606.13663",
-    "source": "arxiv",
-    "venue": ""
-  },
-  "arxiv:2606.13601": {
-    "arxiv_id": "2606.13601",
-    "title": "MCR-Bionic Hand: Anatomical Structural Priors for Dexterous Manipulation",
-    "abstract": "Dexterous robotic hands are usually formulated as high dimensional active control systems governed by degrees of freedom, actuation, and algorithms. Human hand dexterity, however, is partly encoded in the physical architecture of bones, ligaments, tendons, aponeuroses, and intrinsic muscles. This work describes that contribution as two linked forms of structural intelligence: structural prior generation, in which wrist to finger tenodesis, FDS/FDP routing, and the dorsal extensor hood transform low dimensional posture inputs into default grasp configurations and PIP to DIP coordination; and muscle mediated modulation, in which extrinsic muscles, lumbricals, and interossei regulate MCP posture, distal stability, fingertip force paths, and contact states around that default state.   Based on this framework, MCR-Bionic Hand is developed as a 1:1 musculoskeletal biomimetic hand integrating a two row eight bone wrist, cross wrist tendons, anatomical flexor routing, volar plate and collateral ligament constraints, the dorsal extensor hood, and intrinsic muscle pathways within one body. Functional demonstrations and geometric mechanical models show that wrist posture induces multi joint pre shaping, the extensor hood maps PIP posture to a coupled DIP response, and intrinsic plus pathways modulate distal stability and fingertip action direction after grasp formation. Contact rich tasks, including coin rotation, pen transfer, dorsal coin flipping, and cube manipulation, show that MCR-Bionic links low dimensional state generation with fine post contact modulation. These results suggest that anatomical biomimetics is valuable not for visual similarity, but for identifying human hand structures that perform part of control.",
-    "authors": "Haosen Yang, Guowu Wei",
-    "publish_date": "2026-06-11",
-    "arxiv_url": "http://arxiv.org/abs/2606.13601",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [
-      "Dexterous Manipulation",
-      "Manipulation"
-    ],
-    "matched_categories": [
-      "Dexterous"
-    ],
-    "hf_rank": null,
-    "score": 20,
-    "paper_id": "arxiv:2606.13601",
-    "source": "arxiv",
-    "venue": ""
-  },
-  "arxiv:2606.13497": {
-    "arxiv_id": "2606.13497",
-    "title": "SPARC: Reliable Spatial Annotations from Robot Demonstrations at Scale",
-    "abstract": "This work introduces Spatial Annotations from Robot Demonstrations with Reliability Calibration (SPARC), a risk-aware framework that automatically labels robot demonstrations with structured spatial annotations and assigns each annotation a reliability score. Structured spatial annotations, such as bounding boxes, object trajectories, and manipulation phase labels, benefit a broad range of robotics applications from training grounded robot policies and embodied foundation models to motion planning and hierarchical task composition. Existing automated pipelines generate such annotations at scale but provide no reliable quality signal: detector confidence is poorly calibrated for annotation correctness, forcing a choice between accepting noisy labels or discarding useful samples. In contrast to existing automated pipelines, SPARC leverages the spatio-temporal structure inherent to robot tasks to generate a reliability signal, reducing noisy labels and retaining more useful samples. We further introduce Interaction-Aware Bench (IA-Bench), a benchmark that measures model accuracy in grounding the locations of interacted objects in robot demonstrations. On 1.7k human-annotated demonstrations spanning diverse embodiments and scenarios, SPARC significantly outperforms detection-only baselines in localization accuracy while retaining three times more samples at high-precision operating points. Our experiments demonstrate that models finetuned on our annotations achieve state-of-the-art results on object-grounding and pointing benchmarks among similarly sized models, while remaining competitive on broader spatial-reasoning suites without manually verified or annotated training data. Furthermore, policies trained on SPARC-generated annotations outperform baselines in cluttered, visually ambiguous real-world scenes. Code, data, and models are available at intuitive-robots.github.io/sparc-labeling.",
-    "authors": "Nils Blank, Paul Mattes, Maximilian Xiling Li, Jakub Suliga, Thomas Roth, Moritz Reuss, Pankhuri Vanjani, Rudolf Lioutikov",
-    "publish_date": "2026-06-11",
-    "arxiv_url": "http://arxiv.org/abs/2606.13497",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [
-      "Manipulation"
-    ],
-    "matched_categories": [
-      "Dexterous"
-    ],
-    "hf_rank": null,
-    "score": 10,
-    "paper_id": "arxiv:2606.13497",
-    "source": "arxiv",
-    "venue": ""
-  },
-  "arxiv:2606.13394": {
-    "arxiv_id": "2606.13394",
-    "title": "GeoHAT: Geometry-Adaptive Hybrid Action Transformer for Mobile Manipulation",
-    "abstract": "Whole-body mobile manipulation requires coordinating mobile base and manipulator under shifting viewpoints, posing challenges in geometric perception and action generation. Current policies either rely on 2D features or sparse 3D representations that lack dense spatial structure, and typically encode arm and base within one action vector that ignores their distinct control demands. Moreover, existing dense fusion strategies risk corrupting pretrained representations under noisy depth while incurring heavy computational overhead. We present GeoHAT, an end-to-end diffusion-based framework built on a simple principle: geometry should be injected only where reliable and attended to only where needed. GeoHAT employs a lightweight Fourier spatial encoder that maps dense per-pixel 3D coordinates into geometric tokens without an additional 3D vision backbone. These tokens are then selectively injected into vision foundation model features through per-token gated fusion modulated by depth validity, preserving the semantic prior while enriching spatial understanding. For action generation, a Hybrid Whole-Body Action Decoder decomposes arm and base into distinct subspaces and lets each action modality attend to its task-relevant visual context through sparse cross-attention, while causal temporal modeling captures intra-timestep coordination and inter-timestep dependencies. Experiments on the ManiSkill-HAB simulation benchmark demonstrate that GeoHAT achieves a 79.3% mean success rate, surpassing the strongest baseline by 23.7%. Furthermore, real-world experiments on diverse tasks also confirm consistent improvements over all baselines.",
-    "authors": "Xiangyu Zhu, Renjun Wu, Luzhou Ge, Jinyan Liu, Xuesong Li",
-    "publish_date": "2026-06-11",
-    "arxiv_url": "http://arxiv.org/abs/2606.13394",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [
-      "Manipulation"
-    ],
-    "matched_categories": [
-      "Dexterous"
-    ],
-    "hf_rank": null,
-    "score": 10,
-    "paper_id": "arxiv:2606.13394",
-    "source": "arxiv",
-    "venue": ""
-  },
-  "arxiv:2606.13385": {
-    "arxiv_id": "2606.13385",
-    "title": "Who Pays the Price? Stakeholder-Centric Prompt Injection Benchmarking for Real-world Web Agents",
-    "abstract": "Web agents driven by large language models (LLMs) are increasingly deployed in real-world environments, where they operate over untrusted web content and execute actions with direct consequences. This makes them vulnerable to prompt-injection attacks, in which seemingly benign content embeds adversarial instructions that manipulate agent behaviour. Existing security benchmarks adopt an \\textit{attack-centric} perspective, focusing on the technical feasibility of injections while overlooking the nuanced distribution of resulting harms. In practice, however, prompt-injection risk is victim-dependent: a single exploit can produce asymmetric consequences for different stakeholders, and the same attack pattern may exhibit substantially different effectiveness depending on whom it targets. To capture these properties, we introduce \\textbf{\\sysname}, a \\textit{stakeholder-centric} benchmark to systematically categorize and attribute harm in real-world web agent systems. It distinguishes between affected entities (e.g., user, seller, platform), decomposes the attacks into concrete objectives, and evaluates each case with complementary outcome- and process-level metrics. Our results reveal substantial and heterogeneous vulnerabilities: not a single attack objective is reliably resisted by current agents, and failures distribute across qualitatively distinct modes ranging from \\emph{stealthy parasitism} (attack succeeds without disrupting the user's delegated task) to \\emph{misaligned disruption} (task disrupted without attack success) and \\emph{compounded failure} (both adversarial objective and task integrity simultaneously violated). These patterns are missed by conventional evaluation, highlighting the need for stakeholder-aware assessment of LLM-based agents in real-world deployments. Benchmark is available at https://github.com/StakeBench/SBC.",
-    "authors": "Zihao Wang, Yiming Li, Yutong Wu, Zheyu Liu, Kangjie Chen, Fok Kar Wai, Pin-Yu Chen, Vrizlynn L. L. Thing, Bo Li, Dacheng Tao, Tianwei Zhang",
-    "publish_date": "2026-06-11",
-    "arxiv_url": "http://arxiv.org/abs/2606.13385",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [],
-    "matched_categories": [
-      "Dexterous"
-    ],
-    "hf_rank": null,
-    "score": 0,
-    "paper_id": "arxiv:2606.13385",
-    "source": "arxiv",
-    "venue": ""
-  },
-  "arxiv:2606.13282": {
-    "arxiv_id": "2606.13282",
-    "title": "ERTS: Adversarial Robustness Testing of Ethical AI via Semantic Perturbation in a Bounded Consequence Space",
-    "abstract": "As AI systems are deployed in high-stakes ethical contexts such as healthcare triage, autonomous vehicle control, and employment screening, formal methods for evaluating their robustness against adversarial manipulation of ethical reasoning remain underdeveloped. This paper introduces the Ethical Robustness Testing System (ERTS), a closed-pipeline framework that: (1) encodes ethical dilemmas into a 22-dimensional Ethical Consequence Space (ECS) grounded in established ethical theory; (2) applies 17 semantic perturbation functions subject to 6 validity constraint classes including a novel semantic coherence constraint; (3) measures decision deviation via a 4-component Ethical Instability Index (EII); and (4) produces domain-adaptive pre-deployment robustness assessment verdicts. We evaluate 4 structured baseline models and 2 production LLMs (Gemini 2.0 Flash and Llama 3.2) across 50 ethical scenarios spanning 8 deployment domains, generating 1,500 adversarial test cases. Results demonstrate that only 33% of models achieve assessment clearance, with the local Llama-3.2 model proving particularly vulnerable to fairness corruption and information degradation attacks (ERS = 0.737). To the best of our knowledge, no existing framework combines a bounded ethical consequence space, semantic coherence constraints, and domain-adaptive assessment in a single adversarial testing pipeline.",
-    "authors": "Pratyush Chaudhari",
-    "publish_date": "2026-06-11",
-    "arxiv_url": "http://arxiv.org/abs/2606.13282",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [
-      "Manipulation"
-    ],
-    "matched_categories": [
-      "Dexterous"
-    ],
-    "hf_rank": null,
-    "score": 10,
-    "paper_id": "arxiv:2606.13282",
-    "source": "arxiv",
-    "venue": ""
-  },
-  "arxiv:2606.13257": {
-    "arxiv_id": "2606.13257",
-    "title": "Selective stabilization of antiferromagnetic orders in FeTe films via local strain engineering",
-    "abstract": "The parent compound FeTe hosts a complex magnetic landscape that is highly susceptible to lattice distortions. Although theoretical models have predicted a bicollinear to dimer antiferromagnetic (AFM) phase transition under tensile strain, its experimental realization and deterministic control has remained elusive owing to severe magnetic frustration. Here, combining high-resolution scanning tunneling microscopy (STM) and density functional theory (DFT) calculations, we demonstrate the selective stabilization of bicollinear and dimer AFM orders in few-layer FeTe films via local uniaxial strain engineering. By mapping the strain fields near dislocation areas in FeTe films and FeTe/FeSe heterostructures, we establish a direct correspondence between specific strain components and the resulting magnetic ground states. We find that uniaxial compression along the Fe-Fe next-nearest-neighbor direction stabilizes the bicollinear AFM order, with the stripe orientation aligning parallel to the compression axis. Crucially, we report the experimental realization of the long-range dimer AFM order, which emerges under anisotropic strain along the Fe-Fe nearest-neighbor direction. This phase manifests as a distinct $\\sqrt{2} \\times \\sqrt{2}$ electronic reconstruction and shares a common Neel temperature with the bicollinear phase. Our findings reveal that anisotropic strain effectively lifts the magnetic degeneracy among competing states. This work provides a robust strategy for the manipulation of elusive magnetic orders and offers insights into the interplay between lattice, spin, and electronic degrees of freedom in iron-based superconductors.",
-    "authors": "Hao Xu, Jing Jiang, Xuesong Gai, Haicheng Lin, Kai Liu, Zhong-Yi Lu, Kai Chang, Chong Liu",
-    "publish_date": "2026-06-11",
-    "arxiv_url": "http://arxiv.org/abs/2606.13257",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [
-      "Manipulation"
-    ],
-    "matched_categories": [
-      "Dexterous"
-    ],
-    "hf_rank": null,
-    "score": 10,
-    "paper_id": "arxiv:2606.13257",
-    "source": "arxiv",
-    "venue": ""
-  },
-  "arxiv:2606.13239": {
-    "arxiv_id": "2606.13239",
-    "title": "ComAct: Reframing Professional Software Manipulation via COM-as-Action Paradigm",
-    "abstract": "Existing computer-use agents remain fundamentally limited in professional software manipulation: GUI-based agents suffer from fragile visual grounding and long-horizon error accumulation, while API-basedapproaches struggle with heterogeneous protocols and inaccessible commercial interfaces. In this work,we identify the Component Object Model (COM) as a unified executable abstraction, proposing COM-as-Action: a new paradigm that reframes professional software interaction as deterministic program synthesisrather than sequential visual control. To validate this paradigm in the most demanding environments, weintroduce ComCADBench, the first benchmark for agents operating real industrial CAD software. Ourexperiments reveal a substantial paradigm gap: frontier proprietary models achieve near-zero successunder GUI-based interaction, whereas COM-based execution yields substantial immediate gains. Tobridge the remaining gap between syntactic correctness and geometric accuracy, we develop ComActor, aself-correcting agent trained through a progressive three-stage framework, alongside ComForge, a scalableplatform for large-scale training in Windows containers. Extensive experiments show that ComActorachieves state-of-the-art performance on ComCADBench, with strong resilience in long-horizon taskswhere baselines collapse, and generalizes to external CAD benchmark.",
-    "authors": "Jiaxin Ai, Tao Hu, Xuemeng Yang, Shu Zou, Hairong Zhang, Daocheng Fu, Yu Yang, Hongbin Zhou, Nianchen Deng, Pinlong Cai, Zhongyuan Wang, Botian Shi, Kaipeng Zhang, Licheng Wen",
-    "publish_date": "2026-06-11",
-    "arxiv_url": "http://arxiv.org/abs/2606.13239",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [
-      "Manipulation"
-    ],
-    "matched_categories": [
-      "Dexterous"
-    ],
-    "hf_rank": null,
-    "score": 10,
-    "paper_id": "arxiv:2606.13239",
-    "source": "arxiv",
-    "venue": ""
-  },
-  "arxiv:2606.13232": {
-    "arxiv_id": "2606.13232",
-    "title": "WT-UMI: Tactile-based Whole-Body Manipulation via Force-Supervised Contact-Aware Planning",
-    "abstract": "Whole-body humanoid manipulation of bulky, deformable, and shared-load objects requires distributed contact sensing and explicit force regulation, yet most imitation policies treat contact force only implicitly. On the other hand, different demonstration sources provide complementary modalities with inherent trade-offs: human demonstrations capture natural contact forces but not robot-executable actions, while teleoperation directly records robot actions but with less natural force regulation. This paper presents \\textbf{WT-UMI}, a wearable whole-body tactile interface worn by human operators or mounted on humanoids, providing accurate observations of tactile images, contact forces, and end-effector poses across both human demonstration and humanoid teleoperation modes. We introduce a force-conditioned target-pose correction module that converts measured human poses into contact-aware robot targets by learning corrections from teleoperation data. To leverage the natural force interaction in human data, we propose a force-supervised planner that predicts end-effector pose chunks and contact-force trajectories. The predicted contact force serves as the reference for a tactile-based admittance controller. Across five contact-rich tasks spanning deformable objects, bulky rigid objects, and human--humanoid collaboration, WT-UMI improves success rate and reduces contact-position tracking error over four policy baselines. Our project page is available at https://wt-umi.github.io/WTUMI/.",
-    "authors": "Jaehwi Jang, Zhaoyuan Gu, Alfred Cueva, Zimeng Chai, Junjie Sheng, Thong Nguyen, Himank Galundia, Yifan Wu, Huishu Xue, Isaac Legene, Ojas Mediratta, Davin Doan, Andrew Collins, Sarah Sadegh, KyoungMok Kim, Rishita Dhalbisoi, Zun Chen, Ye Zhao",
-    "publish_date": "2026-06-11",
-    "arxiv_url": "http://arxiv.org/abs/2606.13232",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [
-      "Manipulation",
-      "Deformable",
-      "Teleoperation"
-    ],
-    "matched_categories": [
-      "Dexterous"
-    ],
-    "hf_rank": null,
-    "score": 30,
-    "paper_id": "arxiv:2606.13232",
-    "source": "arxiv",
-    "venue": ""
-  },
-  "arxiv:2606.13181": {
-    "arxiv_id": "2606.13181",
-    "title": "Manipulation of the gyrotropic mode frequency and band structure in an FM / AFM disk via vortex imprinting",
-    "abstract": "We experimentally investigate the magnetic gyrotropic mode in a system of vortex ferromagnetic (FM) nanooscillator exchange coupled to an antiferromagnetic (AFM) layer. The micron-sized disks formed from the Ni80Fe20(12 nm) / Ir80Mn20 (5 nm) FM/AFM heterostructure are prepared so that the vortex magnetic state is imprinted into the AFM layer. We apply a magnetic resonance force microscopy (MRFM) method to locally study magnetic oscillations in single FM/AFM disks. We show that the gyrotropic mode frequency is significantly (approximately 4 times) shifted to the high frequency compared to similar structure consisting of a single ferromagnetic disk. Upon applying an in-plane magnetic field, we observe a strong peak at a double frequency which was previously predicted in theory. This is governed by the fact that vortex dynamics is strongly nonlinear in a noncentrosymmetric system under investigation.",
-    "authors": "E. V. Skorokhodov, E. A. Karashtin, I. A. Fedotov, I. Yu. Pashen'kin, M. V. Sapozhnikov",
-    "publish_date": "2026-06-11",
-    "arxiv_url": "http://arxiv.org/abs/2606.13181",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [
-      "Manipulation"
-    ],
-    "matched_categories": [
-      "Dexterous"
-    ],
-    "hf_rank": null,
-    "score": 10,
-    "paper_id": "arxiv:2606.13181",
-    "source": "arxiv",
-    "venue": ""
-  },
-  "arxiv:2606.13153": {
-    "arxiv_id": "2606.13153",
-    "title": "Can non-orthogonal bases form stable skyrmionic beams?",
-    "abstract": "Skyrmions, topologically stable spin textures, have recently garnered significant attention in optics promising robust high-density information transition and nontrivial light-matter interaction. It was believed that the optical skyrmionic beams should be constructed by superposition of two orthogonal spatial modes with orthogonal polarizations to obtain topologically stable propagation. Here, we surprisingly find that propagation-stable skyrmionic beams can still be formed by superpositions of neither orthogonal spatial modes nor orthogonal polarizations. We theoretically present the mechanism to control the stable skyrmionics beams through the hybrid superposition of modes from the Hermite-Gaussian and Laguerre-Gaussian families and experimentally control the longitudinal on-demand dynamics of the skyrmions. This work redefines the topological stability of optical skyrmions, breaks limits and reduces the requirement for manipulating topologically structured light for practical multidimensional implementation of topologically robust information technologies.",
-    "authors": "Zan Zhang, Zhujun Ye, Zhenyu Guo, Zihan Liu, Zhuoyue Sun, Zijing Zhang, Jiantao Ma, Katsuya Inoue, Yijie Shen, Dongmei Deng",
-    "publish_date": "2026-06-11",
-    "arxiv_url": "http://arxiv.org/abs/2606.13153",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [],
-    "matched_categories": [
-      "Dexterous"
-    ],
-    "hf_rank": null,
-    "score": 0,
-    "paper_id": "arxiv:2606.13153",
     "source": "arxiv",
     "venue": ""
   },
@@ -1462,8 +1188,7 @@
     ],
     "matched_categories": [
       "VLA",
-      "RL",
-      "Dexterous"
+      "RL"
     ],
     "hf_rank": null,
     "score": 50,
@@ -1800,145 +1525,6 @@
     "hf_rank": null,
     "score": 10,
     "paper_id": "arxiv:2606.14270",
-    "source": "arxiv",
-    "venue": ""
-  },
-  "arxiv:2606.14683": {
-    "arxiv_id": "2606.14683",
-    "title": "Quantum geometrical description of hole spin qubits far away from the $Γ$-point",
-    "abstract": "Hole spin qubits provide one of the leading platforms for spin-based quantum computing due to their large intrinsic spin-orbit interaction (SOI), which enables fast electrical manipulation. The SOI of planar quantum dots has mostly been investigated in theoretical studies by examining the SOI already present in the two-dimensional hole gas (2DHG). Here, we study the SOI created by the in-plane confinement by deriving non-perturbative effective Hamiltonians numerically for hole spin qubits. We find that the quantum geometry of the 2DHG naturally emerges, leading to a meaningful non-perturbative definition of pseudospin valid far away from the $Γ$-point. The SOI of the 2DHG and of the in-plane confinement have different forms; therefore, they cannot be turned off simultaneously, ruining the perfect spin-orbit switch functionality of spin qubits. We construct effective Hamiltonians using the symmetry approach for various low-dimensional hole systems: (i) a heavy-hole confined in a SiGe/Ge/SiGe heterostructure, (ii) a light-hole confined in SnGe/Ge, (iii) a gate-defined nanowire in SiGe/Ge/SiGe, and (iv) a hole confined in a Ge/Si core/shell nanowire. The non-perturbative effective Hamiltonians provide results with excellent agreement with the full Hamiltonians.",
-    "authors": "Zoltán György, Dmitry Miserev, Jelena Klinovaja, Daniel Loss",
-    "publish_date": "2026-06-12",
-    "arxiv_url": "http://arxiv.org/abs/2606.14683",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [
-      "Manipulation"
-    ],
-    "matched_categories": [
-      "Dexterous"
-    ],
-    "hf_rank": null,
-    "score": 10,
-    "paper_id": "arxiv:2606.14683",
-    "source": "arxiv",
-    "venue": ""
-  },
-  "arxiv:2606.14665": {
-    "arxiv_id": "2606.14665",
-    "title": "EgoGuide: Egocentric Guidance for Efficient Robot-Free Demonstration Collection and Learning",
-    "abstract": "Robot learning from real-world demonstrations is currently constrained by data scaling. Universal Manipulation Interface (UMI) provides an efficient robot-free data collection interface, yet current UMI-style pipelines often collect redundant demonstrations and lack global scene context. To improve data efficiency, we present EgoGuide, a collection interface that records synchronized wrist and head/egocentric observations and couples them with online visual-geometric data quality guidance. We also introduce a Gated Egocentric Residual Policy for robust learning from a viewpoint-varying egocentric camera, allowing head/egocentric context to correct ambiguous local observations while preserving stable wrist-view control. Real-world experiments show that EgoGuide reduces the required number of data episodes and improves data efficiency. The residual policy further improves robustness under visual occlusion. Project Page: https://silicx.github.io/EgoGuide",
-    "authors": "Yue Xu, Mingtao Nie, Tianle Li, Hong Li, Yibo Luo, Siyuan Huang, Yong-Lu Li",
-    "publish_date": "2026-06-12",
-    "arxiv_url": "http://arxiv.org/abs/2606.14665",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [
-      "Manipulation",
-      "Robot Learning"
-    ],
-    "matched_categories": [
-      "Dexterous"
-    ],
-    "hf_rank": null,
-    "score": 20,
-    "paper_id": "arxiv:2606.14665",
-    "source": "arxiv",
-    "venue": ""
-  },
-  "arxiv:2606.14606": {
-    "arxiv_id": "2606.14606",
-    "title": "Impedance MPC with Disturbance Estimation for Dexterous Hand Control",
-    "abstract": "Dexterous hands must simultaneously track precise finger trajectories and maintain safe, compliant contact -- objectives in tension for any fixed-gain controller. We present an actuator-agnostic Impedance Model Predictive Control (Impedance MPC) framework for dexterous fingers, instantiating the constant-$A_d$ offset-free architecture established for physical human-robot interaction (pHRI); its stability, recursive-feasibility, and input-to-state-stability guarantees are inherited by preserving the architectural assumptions. An algebraic feedforward reduces the tendon transmission -- hydraulic, cable, pneumatic, twisted-string, or series-elastic -- to a constant-coefficient double integrator, so the QP cost inverse is precomputed offline and a 10-step receding-horizon quadratic program runs at 500\\,Hz while enforcing hard constraints on contact force (ISO/TS 15066), actuation limits, and jerk. An encoder-only augmented-Kalman disturbance state drives steady-state error to zero under any constant contact load. On a hydraulically actuated finger -- the worked example platform, adding pressure and cavitation constraints -- the 500\\,Hz Kalman MPC attains 0.5\\,mrad RMS, 0.1\\,mrad steady-state, and 6.6\\,mrad peak deflection under 1.5\\,Nm contact: 183$\\times$, 1500$\\times$, and 23$\\times$ better than classical impedance. The realized first-move stiffness (18$\\to$323\\,Nm/rad with update rate) is independently verified. The architecture scales to a 16-DOF LEAP Hand MuJoCo simulation, recovering from 2.5\\,N grasp-load disturbances within 0.7\\,s.",
-    "authors": "Yongyan Cao",
-    "publish_date": "2026-06-12",
-    "arxiv_url": "http://arxiv.org/abs/2606.14606",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [
-      "Dexterous hand"
-    ],
-    "matched_categories": [
-      "Dexterous"
-    ],
-    "hf_rank": null,
-    "score": 10,
-    "paper_id": "arxiv:2606.14606",
-    "source": "arxiv",
-    "venue": ""
-  },
-  "arxiv:2606.14602": {
-    "arxiv_id": "2606.14602",
-    "title": "What Robots Do Matters More Than What They Look Like: Task Context Shapes Trust in Educational HRI",
-    "abstract": "Socially assistive robots (SARs) are increasingly deployed in educational and information-sharing contexts, supported by advances in large language models that enable fluent real-time interaction. Despite the growing diversity of robot embodiments, it remains unclear whether a single robot appearance is appropriate across different interaction tasks or whether trust depends primarily on contextual factors. In this study, we examine how robot appearance and task type jointly influence trust in robots. Using a within-subjects video-based experiment (N = 81), participants evaluated three robots with distinct appearances while performing three educationally relevant tasks: teaching, procedural instruction, and personal-information discussion. Results from repeated-measures analyses show a strong main effect of task on trust, with participants reporting the highest trust during instructional guidance, moderate trust during teaching activities, and significantly lower trust when robots requested personal information. In contrast, robot appearance showed no significant main effect, and the interaction between appearance and task was marginal. These findings suggest that trust in human-robot interaction is shaped more strongly by task context than by physical embodiment alone. By focusing on future educators as end users, this work contributes empirical evidence toward task-aware robot deployment in educational environments and highlights the importance of aligning robot roles and behaviors with interaction goals rather than relying solely on anthropomorphic design.",
-    "authors": "Anna-Maria Velentza, Konstantina Nikou, Anne-Gwenn Bosser, Nikolaos Fachantidis",
-    "publish_date": "2026-06-12",
-    "arxiv_url": "http://arxiv.org/abs/2606.14602",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [
-      "Anthropomorphic"
-    ],
-    "matched_categories": [
-      "Dexterous"
-    ],
-    "hf_rank": null,
-    "score": 10,
-    "paper_id": "arxiv:2606.14602",
-    "source": "arxiv",
-    "venue": ""
-  },
-  "arxiv:2606.14585": {
-    "arxiv_id": "2606.14585",
-    "title": "Sensitivity Shaping for Latent Modeling",
-    "abstract": "Generative dynamics models enable planning in challenging robotic systems, but safe deployment requires reliably detecting policy-induced out-of-distribution (OOD) transitions. Existing methods typically treat the learned dynamics as fixed and attach post hoc support surrogates. We show that these surrogates can fail when the dynamics are locally insensitive to critical action choices: unsupported control actions may produce latent predictions that resemble demonstrated transitions, suppressing OOD signals despite large true predictive errors. To address this, we introduce support-conditioned control-sensitivity regularization, which promotes sensitive local response to control input changes in learned dynamics in high-support training regions. This preserves control-induced variation while limiting unstable extrapolation due to weak empirical support. Experiments in vision-based obstacle avoidance, manipulation, and real-robot navigation show improved OOD detection and safer closed-loop planning.",
-    "authors": "Hongzhan Yu, Chenghao Li, Ruipeng Zhang, Henrik Christensen, Sicun Gao",
-    "publish_date": "2026-06-12",
-    "arxiv_url": "http://arxiv.org/abs/2606.14585",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [
-      "Manipulation"
-    ],
-    "matched_categories": [
-      "Dexterous"
-    ],
-    "hf_rank": null,
-    "score": 10,
-    "paper_id": "arxiv:2606.14585",
-    "source": "arxiv",
-    "venue": ""
-  },
-  "arxiv:2606.14580": {
-    "arxiv_id": "2606.14580",
-    "title": "Persuasion Index: A Theory-Guided Framework for Persuasion Analysis",
-    "abstract": "Identifying persuasive rhetorical cues is critical across domains, from detecting information manipulation and improving AI safety to advancing public health communication. We propose Persuasion Index (PI), a taxonomy of 15 dimensions grounded in persuasion theories from psychology and communication, and one transparent implementation using 55 sub-features built from lexicons and rule-based detectors. The taxonomy is modular: individual detectors can be replaced while preserving the theoretical structure. By evaluating PI on four public datasets varying in domain, style, and outcome measures, we show that PI provides a shared feature space for interpreting rhetorical patterns associated with persuasion-related outcomes. Linear models show that PI features carry meaningful predictive signal while remaining computationally lightweight. Dimension-level analyses reveal recurring associations between PI dimensions and persuasion outcomes across datasets, while also highlighting topic- and stance-specific variation. We release PI as an open-source package and web interface for principled and auditable analysis of human and AI-mediated communication.",
-    "authors": "Liancheng Gong, Zhiyang Wang, Yiwei Xu, Julia Mendelsohn",
-    "publish_date": "2026-06-12",
-    "arxiv_url": "http://arxiv.org/abs/2606.14580",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [
-      "Manipulation"
-    ],
-    "matched_categories": [
-      "Dexterous"
-    ],
-    "hf_rank": null,
-    "score": 10,
-    "paper_id": "arxiv:2606.14580",
     "source": "arxiv",
     "venue": ""
   },
@@ -3119,54 +2705,6 @@
     "source": "arxiv",
     "venue": ""
   },
-  "arxiv:2606.18231": {
-    "arxiv_id": "2606.18231",
-    "title": "Adaptive Volumetric Mechanical Property Fields Invariant to Resolution",
-    "abstract": "Accurate mechanical properties (or materials) Young's modulus ($E$), Poisson's ratio ($ν$) and density ($ρ$) are essential for reliable physics simulation of digital worlds, but most 3D assets lack this information. We propose AdaVoMP, a method for predicting accurate dense spatially-varying ($E$, $ν$, $ρ$) for input 3D objects across representations, improving the resolution, accuracy, and memory efficiency over the state-of-the-art. The foundation of our technique is a sparse and adaptive voxel structure SAV that efficiently represents both the input 3D shape and the material field output. We replace the fixed-voxel model of the most accurate prior method, VoMP, with a novel sparse transformer encoder-decoder model that learns to generate a unique SAV autoregressively for every input shape to represent its materials, achieving a resolution $16^3\\times$ higher than prior art. Experiments show that AdaVoMP estimates more accurate volumetric properties, even with lesser test-time compute than all prior art. This allows us to convert high-resolution complex 3D objects into simulation-ready assets, resulting in realistic deformable simulations.",
-    "authors": "Rishit Dagli, Donglai Xiang, Vismay Modi, Xuning Yang, Gavriel State, David I. W. Levin, Maria Shugrina",
-    "publish_date": "2026-06-16",
-    "arxiv_url": "http://arxiv.org/abs/2606.18231",
-    "project_url": "https://research.nvidia.com/labs/sil/projects/adavomp/.",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [
-      "Deformable"
-    ],
-    "matched_categories": [
-      "Manipulation",
-      "HF-Hot"
-    ],
-    "hf_rank": 34,
-    "score": 10,
-    "paper_id": "arxiv:2606.18231",
-    "source": "arxiv",
-    "venue": ""
-  },
-  "arxiv:2606.18223": {
-    "arxiv_id": "2606.18223",
-    "title": "Learning Red Agent Policy from Observations for Neurosymbolic Autonomous Cyber Agents",
-    "abstract": "With sophisticated cyber-attacks becoming increasingly prevalent, modern networks require intelligent autonomous cyber-defense agents trained via Reinforcement Learning (RL). These agents employ neurosymbolic approaches such as behavior trees with learning-enabled components (LECs) to learn, reason, adapt, and implement security rules while maintaining critical operations. However, these autonomous networks are partially observable systems, i.e., the cyber-attacker's (red agent's) actions are not observable, making it difficult for the defender to predict red actions, learn red policies, or assess the attacker's intrusion levels. To address this, we propose a Policy Learning Technique using imitation learning to learn policies for partially observable RL agents with discrete states and discrete actions. We apply this technique in an autonomous cyber environment to predict red agent's actions from network observations and defender actions. Integrated with a neurosymbolic cyber-defense agent, our method effectively handles different red policies and achieves high prediction accuracy across diverse simulated scenarios.",
-    "authors": "Ankita Samaddar, Sandeep Neema, Daniel Balasubramanian, Xenofon Koutsoukos",
-    "publish_date": "2026-06-16",
-    "arxiv_url": "http://arxiv.org/abs/2606.18223",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [
-      "Imitation Learning",
-      "reinforcement learning"
-    ],
-    "matched_categories": [
-      "Manipulation"
-    ],
-    "hf_rank": null,
-    "score": 10,
-    "paper_id": "arxiv:2606.18223",
-    "source": "arxiv",
-    "venue": ""
-  },
   "arxiv:2606.18186": {
     "arxiv_id": "2606.18186",
     "title": "Kolmogorov Regression for Robust Diffusion Policies",
@@ -3182,33 +2720,11 @@
       "Manipulation"
     ],
     "matched_categories": [
-      "Manipulation",
       "Dexterous"
     ],
     "hf_rank": null,
     "score": 0,
     "paper_id": "arxiv:2606.18186",
-    "source": "arxiv",
-    "venue": ""
-  },
-  "arxiv:2606.18177": {
-    "arxiv_id": "2606.18177",
-    "title": "A minimizing-movement framework for geometric gradient flows with admissible tangential motion",
-    "abstract": "We develop a minimizing-movement framework for parametric finite element approximations of geometric gradient flows with admissible tangential motion. At each time step, the discrete variational problem combines a metric dissipation term for the normal displacement with a surface Dirichlet energy. The metric determines the normal geometric evolution: the $L^2(Γ)$ metric gives mean curvature flow, while the $H^{-1}(Γ)$ metric gives surface diffusion flow. Tangential velocity is selected independently through weak constraints on the deformation map. The central structural condition is admissibility, namely, that the identity map satisfies the constraint. This condition keeps the identity map available as a comparison function and yields the natural stability estimate. The framework recovers the classical Barrett--Garcke--Nürnberg (BGN) scheme from the unconstrained formulation and the dual minimal-deformation-rate (MDR) scheme from the MDR constraint. We further introduce two new admissible variants: an admissible BGN scheme and a relaxed MDR scheme. For the resulting fully discrete schemes, we prove existence and uniqueness under natural nondegeneracy assumptions and establish unconditional energy stability. Numerical experiments compare the admissible and classical schemes and illustrate their stability properties and mesh-quality behavior.",
-    "authors": "Xiaoxiao Liu, Quan Zhao",
-    "publish_date": "2026-06-16",
-    "arxiv_url": "http://arxiv.org/abs/2606.18177",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [],
-    "matched_categories": [
-      "Manipulation"
-    ],
-    "hf_rank": null,
-    "score": 0,
-    "paper_id": "arxiv:2606.18177",
     "source": "arxiv",
     "venue": ""
   },
@@ -3228,7 +2744,6 @@
       "Manipulation"
     ],
     "matched_categories": [
-      "Manipulation",
       "Dexterous"
     ],
     "hf_rank": null,
@@ -3258,7 +2773,6 @@
       "Manipulation"
     ],
     "matched_categories": [
-      "Manipulation",
       "VLA",
       "RL",
       "Dexterous"
@@ -3287,7 +2801,6 @@
       "Manipulation"
     ],
     "matched_categories": [
-      "Manipulation",
       "VLA",
       "Dexterous"
     ],
@@ -3313,75 +2826,11 @@
       "Manipulation"
     ],
     "matched_categories": [
-      "Manipulation",
       "Dexterous"
     ],
     "hf_rank": null,
     "score": 10,
     "paper_id": "arxiv:2606.17982",
-    "source": "arxiv",
-    "venue": ""
-  },
-  "arxiv:2606.17969": {
-    "arxiv_id": "2606.17969",
-    "title": "High-Order Simulation of Particle-Laden Flows in Moving Domains Using Coupled ALE and Sliding Mesh Approaches",
-    "abstract": "In practical applications, compressible particle-laden flows in moving geometries involve complex, non-linear, and multi-scale inter-actions with turbulent structures. Resolving these dynamics numerically requires careful algorithmic treatment to accurately predict particle trajectories. This work presents a high-fidelity Euler-Lagrange framework that couples a high-order discontinuous Galerkin spectral element method for the continuous phase with a Lagrangian point-particle tracking scheme. To manage moving and deforming domains, the framework integrates two distinct mesh movement strategies: the arbitrary Lagrangian-Eulerian method for general mesh deformations such as time-resolved particle-induced surface deformations and its special interface case, the sliding mesh approach, uniquely suited for rigid rotational or translational movements. A primary focus is placed on tightly coupling the arbitrary Lagrangian-Eulerian formulation into the temporal evolution step by utilizing radial basis function morphing to capture the non-linear feedback loop between evolving surface topologies and the continuous phase. Concurrently, the framework ensures time- and high-order accurate coupling of the mesh movement algorithms with the dispersed phase. In particular, the proposed algorithm resolves the sliding mesh tracking problem by enforcing strict spatial and temporal accuracy as Lagrangian particles cross non-conforming grid interfaces between adjacent moving zones. The algorithms are rigorously validated against multiple benchmarks and subsequently applied to two challenging compressor rotor applications: the first focusing on solid-particle erosion, and the second featuring an upstream cylindrical wake generator.",
-    "authors": "Anna Schwarz, Patrick Kopper",
-    "publish_date": "2026-06-16",
-    "arxiv_url": "http://arxiv.org/abs/2606.17969",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [],
-    "matched_categories": [
-      "Manipulation"
-    ],
-    "hf_rank": null,
-    "score": 0,
-    "paper_id": "arxiv:2606.17969",
-    "source": "arxiv",
-    "venue": ""
-  },
-  "arxiv:2606.17964": {
-    "arxiv_id": "2606.17964",
-    "title": "UV/IR mixing as an artifact of non-covariant quantisation",
-    "abstract": "We study the path integral quantisation of a scalar field on a generic noncommutative deformation of Minkowski space, built as a quantum homogeneous space of a deformed Poincaré group. We show that the procedure depends on the choice of noncommutative functional derivative, and we isolate two natural choices, distinguished by the space in which the Leibniz rule remains undeformed. The first, which carries the undeformed statistics, reproduces the standard scheme and yields n-point functions that break the deformed Poincaré covariance and exhibit the UV/IR mixing of [8]. The second, which adapts the functional calculus to the braided statistics of the fields in the spirit of [20], yields covariant n-point functions free of this mixing. We trace both the covariance breaking and the mixing to a single source, the intertwining of external and loop momenta in the non-planar contributions, and conclude that, in the models considered, the UV/IR mixing of [8] is an artifact of a quantisation that breaks the deformed symmetry rather than a feature of noncommutativity itself. We further disentangle covariance, fixed by the quantisation scheme, from finiteness, fixed independently by the propagator, and illustrate the formalism on the T-Minkowski models, the Euclidean three-dimensional quantum gravity model, and the quantum two-sphere.",
-    "authors": "Kilian Hersent, Flavio Mercati",
-    "publish_date": "2026-06-16",
-    "arxiv_url": "http://arxiv.org/abs/2606.17964",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [],
-    "matched_categories": [
-      "Manipulation"
-    ],
-    "hf_rank": null,
-    "score": 0,
-    "paper_id": "arxiv:2606.17964",
-    "source": "arxiv",
-    "venue": ""
-  },
-  "arxiv:2606.17951": {
-    "arxiv_id": "2606.17951",
-    "title": "Data-Driven Discovery of a Simple Phantom-Crossing Dark Energy Parametrization",
-    "abstract": "We develop a data-driven reconstruction programme for the dark-energy equation of state within VCDM, a minimally modified gravity framework in which both background and linear perturbations can be consistently evolved across the phantom divide. Using CMB, BAO, and type-Ia supernova data, we first perform a Bayesian spline reconstruction of $w(a)$, finding a preference for smooth, monotonic phantom-crossing trajectories. Bayesian evidence disfavors increasingly complex spline models, indicating that current observations exhibit a statistical preference for low-complexity dark-energy dynamics. Motivated by this result, we apply Exhaustive Symbolic Regression, an interpretable machine-learning technique that systematically searches over analytic expressions of fixed complexity, identifying the remarkably simple one-parameter form $w(a)={w_0}/{\\sqrt a}$, which reproduces the reconstructed behaviour and fits the data at a level comparable to standard two-parameter parametrizations such as CPL. The model naturally crosses the phantom divide for $w_0<0$, suppresses early dark energy, and predicts a transient accelerating and phantom phase without a future big-rip singularity. As a one-parameter model, it is highly predictive, being a genuinely dynamical deformation of the cosmological constant rather than containing it as a limit. Bayesian model comparison yields mild-to-moderate support for this parametrization relative to standard two-parameter alternatives, and stronger evidence relative to $Λ$CDM. Our results suggest that current observations favour surprisingly simple dark-energy dynamics and illustrate how Bayesian reconstruction and symbolic regression can be combined into a principled model-discovery framework for cosmology.",
-    "authors": "Giulia Borghetto, Ameek Malhotra, Simran Arora, Antonio De Felice, Shinji Mukohyama, Gianmassimo Tasinato, Ivonne Zavala",
-    "publish_date": "2026-06-16",
-    "arxiv_url": "http://arxiv.org/abs/2606.17951",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [],
-    "matched_categories": [
-      "Manipulation"
-    ],
-    "hf_rank": null,
-    "score": 0,
-    "paper_id": "arxiv:2606.17951",
     "source": "arxiv",
     "venue": ""
   },
@@ -3403,7 +2852,6 @@
       "Manipulation"
     ],
     "matched_categories": [
-      "Manipulation",
       "VLA",
       "Dexterous"
     ],
@@ -3430,7 +2878,6 @@
       "Manipulation"
     ],
     "matched_categories": [
-      "Manipulation",
       "VLA",
       "Dexterous",
       "HF-Hot"
@@ -3438,157 +2885,6 @@
     "hf_rank": 42,
     "score": 10,
     "paper_id": "arxiv:2606.17846",
-    "source": "arxiv",
-    "venue": ""
-  },
-  "arxiv:2606.17836": {
-    "arxiv_id": "2606.17836",
-    "title": "High-Fidelity 3D Geometric Reconstruction of Pelvic Organs from MRI: A Hybrid Deep Learning and Iterative Optimization Approach",
-    "abstract": "Patient-specific 3D reconstruction of pelvic organ geometry from MRI is important for pelvic floor modeling and downstream patient-specific analysis. However, while previous studies have focused primarily on either image segmentation or downstream use of 3D models, the reconstruction of high-fidelity, high-quality geometries remains labor-intensive and poorly standardized. The study introduced a hybrid deformable shape modeling framework that integrates deep learning prediction with iterative optimization for the reconstruction of the bladder, uterus, and rectum. The framework consists of three core components: a geometry-aware multi-level deep learning architecture that preserves topological consistency of pelvic organs; a two-stage amortized optimization training strategy that balances global shape capture and local surface refinement; and a holistic synergy mechanism--where iterative optimization provides supervision for deep learning during the training phase, and during inference, deep learning rapidly predicts the global organ morphology, followed by iterative optimization to refine local surfaces and mesh quality. This framework demonstrated marked superiority in geometric fidelity than current mainstream deep learning-based organ reconstruction models. For individual anatomical structures, the reconstructed 3D geometries for the bladder, rectum, and uterus achieved significantly lower Chamfer Distance values and higher Dice Similarity Coefficient scores. In addition, while maintaining high computational efficiency, the proposed architecture yielded superior overall volumetric mesh quality. At the patient level, the framework achieved higher mean values for the 10 worst elements for both minSICN and minSIGE compared to traditional geometric post-processing algorithms.",
-    "authors": "Hui Wang, Xiaowei Li, Chenxin Zhang, Yifan Feng, Jianwei Zuo, Yumeng Tang, Xiuli Sun, Jianliu Wang, Bing Xie, Jiajia Luo",
-    "publish_date": "2026-06-16",
-    "arxiv_url": "http://arxiv.org/abs/2606.17836",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [
-      "Deformable"
-    ],
-    "matched_categories": [
-      "Manipulation"
-    ],
-    "hf_rank": null,
-    "score": 10,
-    "paper_id": "arxiv:2606.17836",
-    "source": "arxiv",
-    "venue": ""
-  },
-  "arxiv:2606.17785": {
-    "arxiv_id": "2606.17785",
-    "title": "Theoretical calculations on half-lives of spontaneous one-proton radioactivity",
-    "abstract": "Research on the unstable nuclei beyond the nucleon drip line is an important method to study the nuclear interaction and structure in the extremely neutron-deficient or rich systems. Various nuclides beyond the proton drip line mainly decay through spontaneous one-proton emission. Using deformed Woods-Saxon potential, spin-orbit potential, and expanded Coulomb potential to construct the daughter-proton potential, the half-life data of various proton emitters are systematically calculated based on the quantum tunneling model and the microscopic Gamow state theory. By using nuclear data from different sources and comparing them with the measurements, the dependence of proton emission on decay energy and spectroscopic factors is evaluated. Additionally, based on previous observations, the half-life of the possibly lighter proton emitter in the fpg-shell below has been theoretically predicted. Our results are compiled into a comprehensive dataset of half-lives for both experimentally confirmed emitters (50 < Z < 84) and theoretically predicted emitters (30 < Z < 50), providing a useful reference for future experimental investigations related to the proton drip line. The datasets presented in this paper, including our results of calculation, are openly available at https://www.doi.org/10.57760/sciencedb.27551.",
-    "authors": "Hanlin Wang, Zhen Wang, Zhongzhou Ren",
-    "publish_date": "2026-06-16",
-    "arxiv_url": "http://arxiv.org/abs/2606.17785",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [],
-    "matched_categories": [
-      "Manipulation"
-    ],
-    "hf_rank": null,
-    "score": 0,
-    "paper_id": "arxiv:2606.17785",
-    "source": "arxiv",
-    "venue": ""
-  },
-  "arxiv:2606.17758": {
-    "arxiv_id": "2606.17758",
-    "title": "A Double--Scaling Large--\\(d\\) Saddle of BFSS/BMN Matrix Quantum Mechanics",
-    "abstract": "We study the large--\\(d\\) dynamics of the mass--deformed bosonic \\(\\mathrm{BFSS}_{d+1}\\) matrix quantum mechanics using a Hubbard--Stratonovich localization of the Yang--Mills interaction. After integrating out the matrix coordinates, the theory reduces to a holonomy--dependent effective action for an auxiliary adjoint kernel. We introduce a commuting--symmetric saddle and its maximally symmetric specialization, in which the interaction is encoded in a single dynamically generated mass shift \\(k_0\\). The resulting large--\\(d\\) description is a gauged matrix harmonic oscillator with self--consistent frequency \\(s^2=m+k_0\\), fixed by a gap equation.   We analyze the low--temperature \\(X\\)-space physics, the holonomy effective action, the Yang--Mills observable, and the associated phase structure. We then identify a correlated double--scaling limit in which \\(d\\to\\infty\\), \\(m\\to\\infty\\), and \\(κ=m^{3/2}/d\\) is held fixed. In this limit the Yang--Mills interaction and the explicit mass deformation remain parametrically balanced: the theory interpolates between the commutator--dominated BFSS regime and the mass--dominated Gaussian regime.   The double--scaled theory exhibits two complementary large--\\(d\\) regimes. At low temperature, the enhanced gap pushes the deconfinement scale upward and opens a parametrically large uniform--holonomy region, where the bulk dynamics behaves as weakly coupled \\(\\mathrm{BFSS}_2\\)--type gauged harmonic--oscillator sectors. At the same time, the high--temperature branch reveals an overlap window in which the Gaussian description remains self--consistent while the commutator contribution per matrix pair is parametrically suppressed. The resulting dynamics is therefore \\(\\mathrm{BFSS}_2\\)--like in its enlarged uniform--holonomy sector and IKKT--like in its almost--commuting matrix behavior.",
-    "authors": "Badis Ydri",
-    "publish_date": "2026-06-16",
-    "arxiv_url": "http://arxiv.org/abs/2606.17758",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [],
-    "matched_categories": [
-      "Manipulation"
-    ],
-    "hf_rank": null,
-    "score": 0,
-    "paper_id": "arxiv:2606.17758",
-    "source": "arxiv",
-    "venue": ""
-  },
-  "arxiv:2606.17728": {
-    "arxiv_id": "2606.17728",
-    "title": "Mass Probe of Tetrahedral Symmetry in Atomic Nuclei",
-    "abstract": "Tetrahedral symmetry has long been predicted as an exotic shape degree of freedom in atomic nuclei, yet clear experimental manifestations remain elusive. We show that the triple binding energy difference $δV_{pn}^{(3)}$ can isolate a structural effect of tetrahedral symmetry in $^{80}$Zr. Using relativistic density functional theory solved on a three-dimensional lattice without symmetry restrictions, the experimental $δV_{pn}^{(3)}$ values for even-even $^{80\\text{-}90}$Zr isotopes are well reproduced without adjustable parameters. While an enhancement of $δV_{pn}^{(3)}$ near $N\\simeq Z$ is commonly attributed to proton-neutron correlations beyond the mean field, the pronounced nonmonotonic peak at $N=40$ emerges at the mean-field level only when the tetrahedral degree of freedom is included. Constraining the tetrahedral deformation to zero removes the peak and leads to clear deviations from experiment. The anomaly is traced to a well-localized tetrahedral minimum in $^{80}$Zr, supported by potential energy surfaces and characteristic single-particle level splittings. Calculations restricted to quadrupole and triaxial shapes fail to reproduce the localized enhancement, indicating that the effect is not a generic proton-neutron correlation but a symmetry-selective increase of proton-neutron binding associated with tetrahedral geometry. We therefore identify the $δV_{pn}^{(3)}$ anomaly in $^{80}$Zr as a structural mechanism distinct from the conventional Wigner-type enhancement and show that nuclear masses constitute a sensitive probe of tetrahedral symmetry.",
-    "authors": "F. F. Xu, P. W. Zhao",
-    "publish_date": "2026-06-16",
-    "arxiv_url": "http://arxiv.org/abs/2606.17728",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [],
-    "matched_categories": [
-      "Manipulation"
-    ],
-    "hf_rank": null,
-    "score": 0,
-    "paper_id": "arxiv:2606.17728",
-    "source": "arxiv",
-    "venue": ""
-  },
-  "arxiv:2606.17685": {
-    "arxiv_id": "2606.17685",
-    "title": "Coherent Control of an Embedded Bound State Without a Spectral Gap",
-    "abstract": "Bound states in the continuum (BICs) can confine photonic excitations in open systems without conventional cavities or band gaps, making them natural candidates for long-lived quantum storage and single-photon control. Their use is limited, however, by two obstacles: they are dark to incident photons, and they lack spectral-gap protection from the surrounding continuum. We overcome both limitations in a giant atom coupled to a one-dimensional waveguide using two temporal control knobs. Atomic-frequency modulation breaks and restores the destructive-interference condition, enabling deterministic capture and release of mode-matched single photons. Coupling modulation instead preserves the BIC condition while tuning the atomic and photonic weights of the stored state. A key result is that this embedded state can nevertheless be controlled adiabatically despite the absence of a spectral gap, with an intrinsic leakage probability linear in the ramp rate. By separating radiative access from BIC-preserving deformation, the protocol turns a dark BIC into a single-photon memory whose fidelity is set by the intrinsic continuum-induced leakage law, providing a route to embedded-state control in open photonic platforms.",
-    "authors": "Yue Chang",
-    "publish_date": "2026-06-16",
-    "arxiv_url": "http://arxiv.org/abs/2606.17685",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [],
-    "matched_categories": [
-      "Manipulation"
-    ],
-    "hf_rank": null,
-    "score": 0,
-    "paper_id": "arxiv:2606.17685",
-    "source": "arxiv",
-    "venue": ""
-  },
-  "arxiv:2606.17658": {
-    "arxiv_id": "2606.17658",
-    "title": "Ground-state properties of the $S=3/2$ anisotropic triangular lattice antiferromagnet Na$_3$Cr(PO$_4$)$_2$",
-    "abstract": "We report the crystal structure and magnetic properties of a $S=3/2$ anisotropic triangular lattice compound Na$_3$Cr(PO$_4$)$_2$ employing single-crystal and powder x-ray diffraction, magnetization, heat capacity, and $^{31}$P nuclear magnetic resonance (NMR) experiments, supported by the band structure calculations. Magnetic susceptibility exhibits a broad maximum around 3.5 K, indicating the presence of a short-range antiferromagnetic order, typical of a low-dimensional spin system. Magnetization and heat capacity manifest an antiferromagnetic long-range ordering at around $T_{\\rm N} \\simeq 2.6$ K. This was further confirmed by the drastic NMR line broadening and a peak in the nuclear spin-lattice and spin-spin relaxation rates. The isothermal magnetization data exhibit a field-induced spin-flop transition at around $μ_0H_{\\rm SF} \\simeq 1.7$ T reminiscent of an anisotropic two-dimensional magnet, before saturating above $μ_0H_{\\rm sat} \\simeq 4.5$ T. The saturation field was further upheld by the field-dependent NMR relaxation measurements at low temperatures. The $^{31}$P NMR spectral shape confirms the commensurate antiferromagnetic nature of the ordering below $T_{\\rm N}$. \\textit{Ab initio} calculations reveal a significant deformation of the triangular spin lattice, resulting in triangles with two antiferromagnetic couplings of similar strength and a much weaker coupling along the third side of the triangle.",
-    "authors": "A. Magar, Sebin J. Sebastian, Q. -P. Ding, Y. Skourski, A. A. Tsirlin, Y. Furukawa, R. Nath",
-    "publish_date": "2026-06-16",
-    "arxiv_url": "http://arxiv.org/abs/2606.17658",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [],
-    "matched_categories": [
-      "Manipulation"
-    ],
-    "hf_rank": null,
-    "score": 0,
-    "paper_id": "arxiv:2606.17658",
-    "source": "arxiv",
-    "venue": ""
-  },
-  "arxiv:2606.17654": {
-    "arxiv_id": "2606.17654",
-    "title": "5G Network Architecture and Configuration Choices to Support Teleoperated Driving at Scale",
-    "abstract": "Teleoperated driving (ToD) enables the remote driving or control of vehicles. For this purpose, vehicles must transmit video feeds to the ToD control center so that the remote operator is fully aware of the driving conditions and can safely control the vehicle. 5G (and beyond) networks are fundamental for the deployment of ToD as they can provide the low latency, reliable and broadband connection necessary to connect the vehicle and ToD control center. However, it is unclear whether common 5G network architectures and configurations are well-suited to support the simultaneous teleoperation of multiple vehicles with demanding uplink bandwidth, as current networks are mainly configured to support mobile broadband services. This paper demonstrates that MEC or edge-based 5G networks are better suited to support and scale the ToD service than centralized networks, and quantifies the bandwidth required to simultaneously teleoperate multiple vehicles under various 5G network architectures and configurations, including different duplexing modes and TDD frame structures. Finally, the study shows that the configuration of the control channels can help mitigate the impact that the processing time of the video feeds has on the capacity to support and scale the ToD service.",
-    "authors": "M. C. Lucas-Estañ, B. Coll-Perales, M. I. Khan, J. Gozálvez, S. S. Avedisov, O. Altintas, M. Sepulcre",
-    "publish_date": "2026-06-16",
-    "arxiv_url": "http://arxiv.org/abs/2606.17654",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [
-      "Teleoperation"
-    ],
-    "matched_categories": [
-      "Manipulation"
-    ],
-    "hf_rank": null,
-    "score": 10,
-    "paper_id": "arxiv:2606.17654",
     "source": "arxiv",
     "venue": ""
   },
@@ -93059,27 +92355,6 @@
     "source": "arxiv",
     "venue": ""
   },
-  "arxiv:2610.28444": {
-    "arxiv_id": "2610.28444",
-    "title": "EvaOmni: An Evidence-Grounded Benchmark for Audio-Visual Reasoning",
-    "abstract": "Omni LLMs can naturally locate key audio and visual evidence and integrate information across modalities for audiovisual reasoning. Existing audio-visual reasoning benchmarks that mainly rely on multiple-choice questions usually score models solely based on answer correctness, making it difficult to assess whether a model truly forms a reasoning chain from evidence to the correct answer. In addition, textual or unimodal shortcuts may allow models to answer correctly without analyzing the necessary audio-visual evidence, further weakening the reliability of evaluation benchmarks. To address these issues, we introduce EvaOmni, an evidence-grounded benchmark containing 392 videos and 1,027 purely human-annotated question-answer pairs, covering 15 capabilities and three levels: retrieval and localization, basic understanding, and complex reasoning. We design a series of rigorous annotation procedures in which experts annotate audio and visual evidence and construct video-based distractors; humans review whether questions meet strict inspection criteria, and finally models filter textual and unimodal shortcuts. Beyond high-quality question-answer pairs, we require models to simultaneously return the answer and supporting evidence intervals in order to evaluate the complete reasoning chain. We propose the Coverage Grounded Score (C.G.) to measure how much annotated evidence a model identifies, and the Bottleneck Grounded Score (B.G.) to penalize poor temporal localization in either modality; both are incorporated into answer correctness. Across 7 open-weight and 17 proprietary Omni LLMs, Gemini3.7-Flash achieved the highest overall accuracy (79.4%), C.G. (70.8%), and B.G. (35.1%). At Level 3, it reached 79.1% accuracy, but its B.G. was only 12.3%. These results show that even the most advanced models still have room for development in grounded audio-visual reasoning.",
-    "authors": "Xiaoxing Hu, Wenxi Yao, Chaoyuan Shi, Ziqi Ye, Xiaorong Guo, Peixuan Li, Zhuoran Sun, Ziyang Gong, Peiyuan Zhang, Mingxin Liu, Shuran Ma, Hongbo Liu, Xiaomin Yu, Yu Tian, Wentao Wang, Zhenjie Yang, Jian Hu, Yunhang Shen, Haoyu Cao, Xue Yang",
-    "publish_date": "2026-10-20",
-    "arxiv_url": "http://arxiv.org/abs/2610.28444",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [],
-    "matched_categories": [
-      "HF-Hot"
-    ],
-    "hf_rank": 39,
-    "score": 29,
-    "paper_id": "arxiv:2610.28444",
-    "source": "arxiv",
-    "venue": ""
-  },
   "arxiv:2610.28559": {
     "arxiv_id": "2610.28559",
     "title": "Large Flow Language Models",
@@ -93420,27 +92695,6 @@
     "source": "arxiv",
     "venue": ""
   },
-  "arxiv:2610.28554": {
-    "arxiv_id": "2610.28554",
-    "title": "OverSeer: Multi-Agent World Models Beyond What Agents See",
-    "abstract": "Despite the success of video world models, extending them to multiple agents is difficult because it requires generating several agent-specific video streams that are consistent in time and between agents. To address this gap, we introduce OverSeer, a multi-agent world model that augments egocentric agent views with auxiliary camera views. We suggest that, by fixing the auxiliary views in space, they act as a proxy for a world-centric representation: Unlike the agents' views, which can change entirely due to a simple change in agent position, changes in the auxiliary views directly map to localized changes in the world state. We show that these fixed views substantially help the model to maintain consistency. We also show that, due to their redundant and semi-static nature, the auxiliary views can be efficiently compressed with a delta-VAE that encodes only the changes relative to a static reference image, reducing the number of tokens required to process them. Experiments in Minecraft and Doom demonstrate improved world and agent consistency, with qualitative results on real-world multi-camera captures indicating that the approach is not tied to game engines. Our compression analysis further shows that delta-VAE substantially reduces the computational overhead of auxiliary-view generation. We conclude that these fixed views provide a simple and efficient way to improve multi-agent world models.",
-    "authors": "Runjia Li, Kam Woh Ng, Minghao Chen, Junlin Han, Jianyuan Wang, Zhaochong An, Juan-Manuel Perez-Rua, Andrea Vedaldi, Shikun Liu",
-    "publish_date": "2026-10-20",
-    "arxiv_url": "http://arxiv.org/abs/2610.28554",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [],
-    "matched_categories": [
-      "HF-Hot"
-    ],
-    "hf_rank": 40,
-    "score": 23,
-    "paper_id": "arxiv:2610.28554",
-    "source": "arxiv",
-    "venue": ""
-  },
   "arxiv:2610.28632": {
     "arxiv_id": "2610.28632",
     "title": "Joints, Camera, Action! Co-Generating 3D Motion and Video for Arbitrary Rigs",
@@ -93480,48 +92734,6 @@
     "hf_rank": 23,
     "score": 7,
     "paper_id": "arxiv:2610.28601",
-    "source": "arxiv",
-    "venue": ""
-  },
-  "arxiv:2610.28435": {
-    "arxiv_id": "2610.28435",
-    "title": "Multimodal Reranking Is a System One Decision",
-    "abstract": "Multimodal rerankers are usually dedicated models: a vision-language model (VLM) is trained on retrieval data to score the candidates of a query. Scoring options is not specific to reranking. System One decision models such as Jev map a state and a typed question to one probability per option without generating text, and general models can make such decisions with little or no training. Reranking is one such decision, with the query and its candidates as the state and the candidates as the options. We therefore argue that a general VLM can serve as a multimodal reranker through System One decisions, and that decision tuning can improve its reranking. We ask a VLM one choice question over the top 16 candidates of a first-stage retriever and rank the candidates by the probabilities of their labels, read from one forward pass. On MMEB-V2 image retrieval, this choice scores 5.4 to 7.3 hit@1 above a yes/no question per candidate, and the yes/no question falls below the first stage. With the choice, zero-shot Qwen3.8-27B beats the supervised Qwen3-VL-Reranker-2B on all three benchmarks and comes within 1.6 points of Reranker-8B on each. It matches Reranker-8B on MMEB-V2 visual documents (84.79 vs. 84.78 nDCG@5), at 1.1 to 1.5 times its latency. JEV-27B-VL, the same backbone tuned on text decisions only, improves page reranking by 0.6 to 1.1 points, with gains on most tasks (sign test, p <= 0.017), and leaves natural images unchanged. The zero-shot model is larger than the supervised rerankers and of a newer generation, so these comparisons are confounded; we discuss this and other alternative views, and the experiments that would test the position.",
-    "authors": "Zhuchenyang Liu, Yao Zhang, Yu Xiao",
-    "publish_date": "2026-10-20",
-    "arxiv_url": "http://arxiv.org/abs/2610.28435",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [],
-    "matched_categories": [
-      "HF-Hot"
-    ],
-    "hf_rank": 25,
-    "score": 5,
-    "paper_id": "arxiv:2610.28435",
-    "source": "arxiv",
-    "venue": ""
-  },
-  "arxiv:2610.28522": {
-    "arxiv_id": "2610.28522",
-    "title": "DecisionPivot: A Diagnostic Benchmark for Decision Models in LLM Systems",
-    "abstract": "Decision models support routing, guardrails, and output verification in LLM systems. However, item accuracy alone cannot establish whether models make correct decisions across controlled variations or assign reliable confidence to their predictions. We introduce DecisionPivot, a diagnostic benchmark comprising 48 tasks and 40,033 items across seven decision roles. Its core track contains 7,800 items from 13 generated task families, organized into contrast groups with computed answers verified by independently implemented solvers. The complementary reference track contains 32,233 items from 35 public test sets, preserving their original evaluation metrics. We evaluate 40 decision models and 14 general models using documented, model-specific protocols, assessing item and contrast-group accuracy, probability ordering, calibration, and empirical selective coverage. Our results reveal substantial differences obscured by aggregate scores: two 27B models separated by only 2.6 points on the reference track achieve contrast-group accuracies of 70.1% and 44.2%. Across 2,400 binary contrast pairs, Perplexity Decider correctly ranks the positive member above the negative member in 92.3% of pairs but answers both members correctly in only 74.1%, exposing a gap between probability ordering and decision correctness. Models with similar item accuracy also differ in the reliability of their high-confidence predictions. On a separate 1,296-item subset, GLM-5.3 achieves 93.5\\% contrast-group accuracy at a higher reasoning setting, compared with 81.5% at its lowest effort. By linking errors to pivotal details and difficulty levels, DecisionPivot provides fine-grained diagnostics of decision failures that aggregate evaluation alone cannot reveal.",
-    "authors": "Xialie Zhuang, Mingcong Lei, Zunhai Su, Ri Liu, Jianjin Li, Peixian Ma, Jia Pan, Ngai Wong, Guanhua Chen, Chuan-Wei Kuo",
-    "publish_date": "2026-10-20",
-    "arxiv_url": "http://arxiv.org/abs/2610.28522",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [],
-    "matched_categories": [
-      "HF-Hot"
-    ],
-    "hf_rank": 32,
-    "score": 0,
-    "paper_id": "arxiv:2610.28522",
     "source": "arxiv",
     "venue": ""
   },
@@ -94921,27 +94133,6 @@
     "hf_rank": 42,
     "score": 10,
     "paper_id": "arxiv:2610.30108",
-    "source": "arxiv",
-    "venue": ""
-  },
-  "arxiv:2610.28474": {
-    "arxiv_id": "2610.28474",
-    "title": "Answering in the User's Variety: Calibrated Accommodation Pairs for Post-Training",
-    "abstract": "People adapt how they talk to the person in front of them. However, chat models tend to respond in Standard English regardless of the dialect used by the user. A uniform answer can hide whether training treats these users alike, and output audits cannot tell as well. We trace how each post-training stage, from supervised fine-tuning (SFT) to preference optimization (DPO) and reinforcement learning, changes a model's tendency to match the user, and read what each update prefers from two content-matched replies, one matching the user and one not. Across 10 open model lineages, post-training standardizes replies to every informal cue, yet after adjusting for how likely each reply already was, the DPO update still favours matching British and Australian spelling over AAE and Singlish on 10 lineages, and models still produce AAE features when asked. We then introduce calibrated accommodation pairs (CAP), preference data that reward matching users' dialect density while preserving Standard English for Standard-English users. On a fully open model, CAP raises convergence on features it was not trained on without a detectable increase in dialect for Standard-English users or a cost in instruction following. In contrast, one-sided pairs reach a similar gain only by overshooting the user and imposing dialect. Our findings show that uniform replies can hide selective updates and audits should read the update as well as the output. Code: https://github.com/kouzhizhuo/cap-accommodation.",
-    "authors": "Zhizhuo Kou, Heming Li, Jian Yang, Junyu Luo, Jingshu Peng, Sirui Han, Yike Guo",
-    "publish_date": "2026-10-20",
-    "arxiv_url": "http://arxiv.org/abs/2610.28474",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [],
-    "matched_categories": [
-      "HF-Hot"
-    ],
-    "hf_rank": 44,
-    "score": 8,
-    "paper_id": "arxiv:2610.28474",
     "source": "arxiv",
     "venue": ""
   },
@@ -96391,27 +95582,6 @@
     "hf_rank": 11,
     "score": 19,
     "paper_id": "arxiv:2610.31668",
-    "source": "arxiv",
-    "venue": ""
-  },
-  "arxiv:2610.28441": {
-    "arxiv_id": "2610.28441",
-    "title": "Stratified Sparse Attention: Reducing the Sparse-to-Dense Gap at Extreme Sparsity",
-    "abstract": "Large Language Model inference over long contexts is increasingly bottlenecked by the cost of attending to a growing Key-Value (KV) cache. Sparse attention reduces this cost by accessing only a fraction of the cache, but existing methods face a trade-off between deterministic retrieval, which captures high-scoring tokens but discards residual attention mass, and sampling, which improves coverage at the cost of higher variance. Hybrid methods combine top-$k$ retrieval with uniform sampling, yet still exhibit a substantial gap from dense attention at aggressive sparsity. We introduce \\emph{Stratified Sparse Attention (SSA)}, a unified framework combining deterministic retrieval with score-guided sampling. SSA deterministically attends to high-scoring tokens while sampling the residual using proxy attention scores and correcting for their inclusion probabilities, thereby recovering attention mass beyond the retrieval set. SSA encompasses top-$k$, top-$p$, and hybrid top-$k$+sampling as special cases. Across RULER, LongBench, LOFT, and AIME, and five models ranging from 3B to 27B parameters, SSA consistently improves over the baselines at matched sparsity. On RULER-HARD with Ministral-3-8B, SSA improves accuracy over the strongest practical baseline from 81.8\\% to 84.2\\% at 32K and from 63.8\\% to 69.3\\% at 128K under $50\\times$ attention sparsity, recovering 94\\% and 85\\% of dense-attention performance, respectively. With optimized CUDA kernels, SSA achieves up to $2.96\\times$ decode speedup over FlashInfer at 1M context, demonstrating that its accuracy gains translate into practical long-context inference acceleration. We open-source our code at https://github.com/skylight-org/SSA-Paper-Code.",
-    "authors": "Sahil Joshi, Prithvi Dixit, Aryan Katiyar, Agniva Chowdhury, Joseph E. Gonzalez, Anshumali Shrivastava, Aditya Desai, Kumar Krishna Agrawal",
-    "publish_date": "2026-10-20",
-    "arxiv_url": "http://arxiv.org/abs/2610.28441",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [],
-    "matched_categories": [
-      "HF-Hot"
-    ],
-    "hf_rank": 46,
-    "score": 13,
-    "paper_id": "arxiv:2610.28441",
     "source": "arxiv",
     "venue": ""
   },
@@ -99829,27 +98999,6 @@
     "hf_rank": 42,
     "score": 26,
     "paper_id": "arxiv:2610.33877",
-    "source": "arxiv",
-    "venue": ""
-  },
-  "arxiv:2610.28490": {
-    "arxiv_id": "2610.28490",
-    "title": "Learning from Automatic 3D Gaussian Splatting Edits for Online Bayesian Scene Change Detection",
-    "abstract": "Online scene change detection requires integrating incoming observations to determine which regions have changed relative to a reference scene. We update change beliefs as new images arrive using generalised Bayesian evidence fusion. However, the prior probability of change and evidence models are unknown beforehand, and numerical Bayesian inference can be costly. We address these challenges by learning offline from automatic edits to a reference 3D Gaussian Splatting (3DGS) model. These edits generate labelled training views without manual annotations. Together with unchanged reference observations, they provide supervision for learning scene-specific evidence models and estimating the effective pixel prior and response statistics. Online prediction combines current evidence with historical support, while closed-form local Bayes factors, parameterized by the learned response statistics, update an accumulated 3D Gaussian field. Object-guided refinement produces the final change masks. Our method achieves state-of-the-art accuracy on PASLCD and CCS3D, with $67.64\\%$ and $75.82\\%$ mIoU, respectively. On PASLCD, the complete pipeline runs at $17.2$\\,FPS over complete query sequences, the fastest among the evaluated online methods. Project page: https://changruizhu96.github.io/work/lego-scd/",
-    "authors": "Changrui Zhu, Simon Julier",
-    "publish_date": "2026-10-20",
-    "arxiv_url": "http://arxiv.org/abs/2610.28490",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [],
-    "matched_categories": [
-      "HF-Hot"
-    ],
-    "hf_rank": 43,
-    "score": 25,
-    "paper_id": "arxiv:2610.28490",
     "source": "arxiv",
     "venue": ""
   },
@@ -113713,7 +112862,7 @@
       "Dexterous",
       "HF-Hot"
     ],
-    "hf_rank": 13,
+    "hf_rank": 20,
     "score": 10,
     "paper_id": "arxiv:2611.08286",
     "source": "arxiv",
@@ -117565,7 +116714,7 @@
       "Dexterous",
       "HF-Hot"
     ],
-    "hf_rank": 25,
+    "hf_rank": 32,
     "score": 20,
     "paper_id": "arxiv:2611.12177",
     "source": "arxiv",
@@ -119984,7 +119133,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 22,
+    "hf_rank": 29,
     "score": 29,
     "paper_id": "arxiv:2611.14116",
     "source": "arxiv",
@@ -120005,7 +119154,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 23,
+    "hf_rank": 30,
     "score": 28,
     "paper_id": "arxiv:2611.13425",
     "source": "arxiv",
@@ -120026,7 +119175,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 24,
+    "hf_rank": 31,
     "score": 27,
     "paper_id": "arxiv:2611.10486",
     "source": "arxiv",
@@ -120047,7 +119196,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 26,
+    "hf_rank": 33,
     "score": 25,
     "paper_id": "arxiv:2611.14115",
     "source": "arxiv",
@@ -120068,7 +119217,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 27,
+    "hf_rank": 34,
     "score": 24,
     "paper_id": "arxiv:2611.13576",
     "source": "arxiv",
@@ -120089,7 +119238,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 28,
+    "hf_rank": 35,
     "score": 23,
     "paper_id": "arxiv:2610.40754",
     "source": "arxiv",
@@ -120110,7 +119259,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 29,
+    "hf_rank": 36,
     "score": 22,
     "paper_id": "arxiv:2611.01527",
     "source": "arxiv",
@@ -120131,7 +119280,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 30,
+    "hf_rank": 37,
     "score": 21,
     "paper_id": "arxiv:2611.14516",
     "source": "arxiv",
@@ -120152,7 +119301,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 31,
+    "hf_rank": 38,
     "score": 20,
     "paper_id": "arxiv:2611.10866",
     "source": "arxiv",
@@ -120173,7 +119322,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 32,
+    "hf_rank": 39,
     "score": 19,
     "paper_id": "arxiv:2611.10015",
     "source": "arxiv",
@@ -120194,7 +119343,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 33,
+    "hf_rank": 40,
     "score": 18,
     "paper_id": "arxiv:2611.10649",
     "source": "arxiv",
@@ -120215,7 +119364,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 34,
+    "hf_rank": 41,
     "score": 17,
     "paper_id": "arxiv:2611.12184",
     "source": "arxiv",
@@ -120236,7 +119385,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 35,
+    "hf_rank": 42,
     "score": 16,
     "paper_id": "arxiv:2611.13885",
     "source": "arxiv",
@@ -120257,7 +119406,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 36,
+    "hf_rank": 43,
     "score": 15,
     "paper_id": "arxiv:2611.14083",
     "source": "arxiv",
@@ -120278,7 +119427,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 37,
+    "hf_rank": 44,
     "score": 14,
     "paper_id": "arxiv:2611.14320",
     "source": "arxiv",
@@ -120299,7 +119448,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 38,
+    "hf_rank": 45,
     "score": 13,
     "paper_id": "arxiv:2611.13995",
     "source": "arxiv",
@@ -120320,7 +119469,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 39,
+    "hf_rank": 46,
     "score": 12,
     "paper_id": "arxiv:2611.07464",
     "source": "arxiv",
@@ -120341,7 +119490,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 40,
+    "hf_rank": 47,
     "score": 11,
     "paper_id": "arxiv:2611.12527",
     "source": "arxiv",
@@ -120362,7 +119511,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 41,
+    "hf_rank": 48,
     "score": 10,
     "paper_id": "arxiv:2611.12934",
     "source": "arxiv",
@@ -120383,7 +119532,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 42,
+    "hf_rank": 49,
     "score": 9,
     "paper_id": "arxiv:2611.12865",
     "source": "arxiv",
@@ -120404,7 +119553,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 43,
+    "hf_rank": 50,
     "score": 8,
     "paper_id": "arxiv:2611.13560",
     "source": "arxiv",
@@ -120509,7 +119658,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 17,
+    "hf_rank": 24,
     "score": 29,
     "paper_id": "arxiv:2611.10193",
     "source": "arxiv",
@@ -120530,7 +119679,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 18,
+    "hf_rank": 25,
     "score": 28,
     "paper_id": "arxiv:2610.39671",
     "source": "arxiv",
@@ -120551,7 +119700,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 19,
+    "hf_rank": 26,
     "score": 27,
     "paper_id": "arxiv:2611.13028",
     "source": "arxiv",
@@ -120572,7 +119721,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 20,
+    "hf_rank": 27,
     "score": 26,
     "paper_id": "arxiv:2611.11912",
     "source": "arxiv",
@@ -120593,7 +119742,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 21,
+    "hf_rank": 28,
     "score": 25,
     "paper_id": "arxiv:2611.13001",
     "source": "arxiv",
@@ -120614,7 +119763,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 1,
+    "hf_rank": 8,
     "score": 29,
     "paper_id": "arxiv:2611.11306",
     "source": "arxiv",
@@ -120635,7 +119784,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 2,
+    "hf_rank": 9,
     "score": 28,
     "paper_id": "arxiv:2611.13766",
     "source": "arxiv",
@@ -120656,7 +119805,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 3,
+    "hf_rank": 10,
     "score": 27,
     "paper_id": "arxiv:2611.12304",
     "source": "arxiv",
@@ -120677,7 +119826,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 4,
+    "hf_rank": 11,
     "score": 26,
     "paper_id": "arxiv:2611.05862",
     "source": "arxiv",
@@ -120698,7 +119847,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 5,
+    "hf_rank": 12,
     "score": 25,
     "paper_id": "arxiv:2611.12869",
     "source": "arxiv",
@@ -120719,7 +119868,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 6,
+    "hf_rank": 13,
     "score": 24,
     "paper_id": "arxiv:2611.14418",
     "source": "arxiv",
@@ -120740,7 +119889,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 7,
+    "hf_rank": 14,
     "score": 23,
     "paper_id": "arxiv:2611.14413",
     "source": "arxiv",
@@ -120761,7 +119910,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 8,
+    "hf_rank": 15,
     "score": 22,
     "paper_id": "arxiv:2611.13843",
     "source": "arxiv",
@@ -120782,7 +119931,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 9,
+    "hf_rank": 16,
     "score": 21,
     "paper_id": "arxiv:2611.13410",
     "source": "arxiv",
@@ -120803,7 +119952,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 10,
+    "hf_rank": 17,
     "score": 20,
     "paper_id": "arxiv:2611.13758",
     "source": "arxiv",
@@ -120824,7 +119973,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 11,
+    "hf_rank": 18,
     "score": 19,
     "paper_id": "arxiv:2611.08379",
     "source": "arxiv",
@@ -120845,9 +119994,998 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 14,
+    "hf_rank": 21,
     "score": 16,
     "paper_id": "arxiv:2610.40394",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2611.15368": {
+    "arxiv_id": "2611.15368",
+    "title": "Bind-WAM: Binding-Uncertainty-Guided Selective Future Imagination in World Action Models",
+    "abstract": "World Action Models (WAMs) can improve robot learning by jointly predicting future visual states and actions, but generating a visual future at every replanning step is expensive and sometimes unnecessary. This raises a critical question: when should a robot policy imagine the future? In this paper, we propose Bind-WAM, a binding-uncertainty-guided WAM for selective future imagination. Bind-WAM introduces language-object binding uncertainty, selectively invoking joint future-action generation when the current observation does not support stable task-relevant action generation. An offline labeling pipeline uses complete demonstrations and action context to identify task-relevant objects and detect reference mismatch, invisibility, and identity drift. The resulting pseudo-labels supervise a lightweight router that predicts binding uncertainty from the current observation and language instruction. At inference, a shared WAM policy invokes selective future imagination according to the predicted uncertainty and its change between consecutive replanning steps. Simulation and real-world experiments demonstrate that Bind-WAM can establish binding uncertainty as a strong, interpretable signal for selective future imagination.",
+    "authors": "Chenhao Qiu, Shuyi Chen, Songen Gu, Shufeng Nan, Tianyu Wang, Siyu Lin, Yifan Li, Bingwen Zhu, Yanwei Fu",
+    "publish_date": "2026-11-11",
+    "arxiv_url": "http://arxiv.org/abs/2611.15368",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [
+      "world action model"
+    ],
+    "matched_categories": [
+      "World Model"
+    ],
+    "hf_rank": null,
+    "score": 10,
+    "paper_id": "arxiv:2611.15368",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2611.16424": {
+    "arxiv_id": "2611.16424",
+    "title": "PhysCapBench: A Cross-Domain Benchmark for Physically Grounded Video Captioning",
+    "abstract": "Physical AI aims to learn transferable physical knowledge from real-world experience to understand, predict, and act in the physical world. Internet videos and embodied demonstrations provide complementary observations of motion, interaction, and state evolution. A foundational data challenge is to measure and preserve this physical information as training supervision. In video-language pretraining, captions express observed processes in language, yet a semantically correct description can omit the interactions and transitions that define those processes. Rich physical experience in video does not automatically translate into sufficient language supervision. This gap calls for a yardstick to assess annotation quality, compare captioning strategies, and guide training-data refinement. Motivated by our data construction for world-model pretraining, we introduce PhysCapBench, to our knowledge the first unified physical-caption benchmark spanning all three domains: third-person scenes, egocentric manipulation, and handheld-gripper demonstrations. It provides human-verified annotations for 1,500 video sequences and evaluates accuracy and coverage through seven physical dimensions. We examine downstream utility through video reconstruction and manipulation-policy fine-tuning. Physical captions reduce reconstruction LPIPS by 8.6-9.5% on third-person videos and 26.9-30.9% on egocentric videos relative to metadata captions. Training-instruction enrichment improves both PhysCapBench scores and policy success, including a 7.5-percentage-point gain for pi0.5 on a RoboTwin 2.0 subtask. PhysCapBench makes the physical content of language supervision inspectable and comparable, providing a cross-domain basis for its evaluation and improvement.",
+    "authors": "Haofeng Wang, Pengcheng Wen, Ruiqi Li, Yuhao Zhang, Tiange Zhang, Boren Zheng, Xuanyi Liu, Siyu Tao, Danni Yu, Gan Lin, Haocheng Tang, Tianzizhe Guo, Mingyuan Su, Boyuan Chen, Zhongyuan Wang",
+    "publish_date": "2026-11-12",
+    "arxiv_url": "http://arxiv.org/abs/2611.16424",
+    "project_url": "https://hfwang2001.github.io/physcapbench-site/",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [
+      "egocentric manipulation",
+      "Manipulation"
+    ],
+    "matched_categories": [
+      "EGO Policy",
+      "Dexterous"
+    ],
+    "hf_rank": null,
+    "score": 20,
+    "paper_id": "arxiv:2611.16424",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2611.14958": {
+    "arxiv_id": "2611.14958",
+    "title": "Adapting Monocular Depth Estimation in Novel Scenes through Disparity Refinement and Robot Ego-Motion",
+    "abstract": "The geometric understanding of a scene is a crucial component for safe and efficient robotic operations in novel and unstructured environments. The recent emergence of foundation models for Monocular Depth Estimation (MDE) has provided an opportunity to enrich robotic perception capabilities with dense long-range depth predictions, replacing expensive onboard hardware (e.g., LiDARs and stereo cameras). However, these offline models are primarily trained on affine-invariant depth representations, and their generalization to novel scenes remains unclear. In this work we present EM-ViT, a monocular depth estimation model that learns to adapt online relative depth inputs from a foundation model prior to the metric scale with observations collected during robotic operations. Motivated by the stereo camera parameterization, our method decomposes depth prediction via dense disparity refinement to recover the scene's relative structure and an effective baseline scalar prediction to determine the missing metric scale. The learning process leverages sparse LiDAR points and, optionally, the robot's Ego-Motion (EM) to rapidly train a lightweight Vision Transformer (ViT), while an internal gradient matching loss preserves the fine-grained semantic structure of the input disparity in real-time. We demonstrate the efficacy of our method on publicly available sequences, such as KITTI, and show that our online learning pipeline can adapt to novel scenes faster and with higher accuracy than existing MDE foundation models. The code and supplementary materials will be publicly available at https://emvit-mde.github.io.",
+    "authors": "Dimitrios Chatziparaschis, Georgios Georgakis, Adnan I. Ansar, Shehryar Khattak, Konstantinos Karydis",
+    "publish_date": "2026-11-11",
+    "arxiv_url": "http://arxiv.org/abs/2611.14958",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "EGO Policy"
+    ],
+    "hf_rank": null,
+    "score": 0,
+    "paper_id": "arxiv:2611.14958",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2611.16632": {
+    "arxiv_id": "2611.16632",
+    "title": "Reins: Frontier Multimodal Models Driving Real Robot Arms on Long-Horizon Tasks, Zero-Shot",
+    "abstract": "Frontier models such as GPT-6.1 Sol, GPT-6 Astra and Claude Opus 5.5 can now plan and call tools, yet they still struggle to drive real robots through long-horizon, contact-rich manipulation, blind while the arm moves and while they think. We present Reins, a harness in which an off-the-shelf model operates a dual-arm robot with 3D perception tools and atomic actions that report contact and grip. The model chains actions in one call, each with a condition that must hold, stopping at the first that fails; a second instance, the narrator, watches the cameras continuously and reports what changed with every result. From images, Reins also builds a simulation-ready twin of the scene for continual policy learning. With natural-language prompts and no task-specific code, GPT-6.1 Sol succeeds in 88% of real episodes on five tasks; without the harness, it fails every shell game, taking 8 times as long. Three frontier models perform alike but differ in tracking a scene that changes while the actor thinks. Code will be released upon publication.",
+    "authors": "Pengfei Ye, Zhiyang Dou, Yuxiang Ma, Haonan Chen, Heng Yang, Edward H. Adelson",
+    "publish_date": "2026-11-12",
+    "arxiv_url": "http://arxiv.org/abs/2611.16632",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [
+      "Manipulation",
+      "contact-rich manipulation"
+    ],
+    "matched_categories": [
+      "Dexterous",
+      "Manipulation"
+    ],
+    "hf_rank": null,
+    "score": 20,
+    "paper_id": "arxiv:2611.16632",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2611.16589": {
+    "arxiv_id": "2611.16589",
+    "title": "STVLA: Spatial-aware and Temporal-memory forVision-Language-Action Models",
+    "abstract": "Robotic manipulation often requires both spatial scene understanding and task history. However, many vision-language-action (VLA) policies rely primarily on current observations, without explicitly integrating spatial structure and task history. Appearance-based memories can be sensitive to occlusion and viewpoint changes, while spatial representations of the current scene alone do not preserve how the scene has changed during task execution. We introduce STVLA, a framework that incorporates features from a pretrained visual geometry foundation model into temporal memory alongside visual representations. This allows the policy to recall past scene structure as context for current action decisions. To select informative history, STVLA uses a mathematically grounded scoring rule that balances relevance to the current observation with complementary evidence from memory. Across evaluations on LIBERO, LIBERO-Mem, MIKASA-Robo, and SimplerEnv Bridge, STVLA achieves the highest average success rate among the compared methods on each benchmark. On real-world block stacking, object organization, and phone packaging, it improves success over $π_{0.5}$ by $58.33$, $30.00$, and $35.00$ percentage points, respectively. These results support integrating scene geometry into temporal memory to improve manipulation requiring both spatial precision and task history. Project website: \\href{https://stvla.github.io/}{https://stvla.github.io/}",
+    "authors": "Zhuo Han, Yeqiang Wang, Xinran Wang, Hongwei Han, Yi Xiong, Zunian Wan, Jianbo Mao, Huan Peng, Yongcheng Liu, Wei Shan, Maoqing Yao",
+    "publish_date": "2026-11-12",
+    "arxiv_url": "http://arxiv.org/abs/2611.16589",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [
+      "Manipulation",
+      "Robotic Manipulation"
+    ],
+    "matched_categories": [
+      "Dexterous",
+      "Manipulation"
+    ],
+    "hf_rank": null,
+    "score": 20,
+    "paper_id": "arxiv:2611.16589",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2611.16542": {
+    "arxiv_id": "2611.16542",
+    "title": "Single-spike superradiant free-electron lasers",
+    "abstract": "Free-electron lasers (FELs) deliver high-brilliance radiation from the infrared to X-rays, enabling atomic-scale studies on femtosecond-to-attosecond timescales. Yet conventional facilities rely on large, costly radio-frequency accelerators. Laser wakefield accelerators (LWFAs), combining high accelerating gradients with ultra-high peak currents, offer a compact alternative and open up new prospects for advanced FEL operation. Here, we demonstrate a tabletop superradiant FEL driven by single-spike, pre-bunched electron beams from a LWFA. By manipulating the energy chirp during acceleration and compressing the bunch to sub-wavelength duration, we obtain coherent radiation extending into the vacuum-ultraviolet (VUV) regime within a remarkably compact 3-metre beamline--from gas target to radiator. Under optimized conditions, the measured photon yield reaches 2.8x10^10 per pulse after transmission through a 500-um slit, with a reproducibility of approximately 70%. This approach uniquely exploits the energy chirp and high-current characteristics inherent to LWFA beams without recourse to exponential gain, substantially minimizing device length while obviating the need for external synchronization and offering enhanced tolerance to jitter--thereby establishing a practical route toward efficient, compact FELs suitable for applications in academic, industrial, and clinical settings.",
+    "authors": "Ke Feng, Runshu Hu, Yanjie Ge, Hai Jiang, Kangnan Jiang, Xizhuan Chen, Hao Wang, Gaojie Zeng, Zixiao Guo, Guiyao Wang, Jia Wang, Song Li, Jiayan Gui, Kegui Xia, Zongxin Zhang, Xiaojun Yang, Yi Xu, Yuxin Leng, Luyang Yu, Wei Zhang, Zhiqiang Jiang, Bo Liu, Chao Feng, Wentao Wang, Zhentang Zhao, Ruxin Li",
+    "publish_date": "2026-11-12",
+    "arxiv_url": "http://arxiv.org/abs/2611.16542",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "Dexterous"
+    ],
+    "hf_rank": null,
+    "score": 0,
+    "paper_id": "arxiv:2611.16542",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2611.16509": {
+    "arxiv_id": "2611.16509",
+    "title": "Sound Automatic Lock Placement for Concurrent Programs with Pointers",
+    "abstract": "We propose a lightweight method for automatic lock placement in concurrent POSIX programs with explicit pointer manipulation, such as C programs. Given a program that lacks sufficient user-placed mutexes, or contains none at all, our method introduces new mutexes to prevent data races. The method is formally proven to guarantee the absence of data races and mainly consists of three steps. The first step performs lockset analysis and may-happen-in-parallel analysis. The second step conducts a concurrent points-to analysis derived from a Steensgaard-like procedural analysis, where per-thread points-to graphs are unified using a special completion rule. The final step places locks to prevent data races while respecting a lock ordering to avoid deadlocks. In addition, user-annotated critical sections are protected through insertion of dedicated locks. Since lock placement is a complex and error-prone task, our method aims at helping developers write correct concurrent programs.",
+    "authors": "Nicolas Waldburger, Florian Faissole, Ryo Okabe, Denis Cousineau",
+    "publish_date": "2026-11-12",
+    "arxiv_url": "http://arxiv.org/abs/2611.16509",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [
+      "Manipulation"
+    ],
+    "matched_categories": [
+      "Dexterous"
+    ],
+    "hf_rank": null,
+    "score": 10,
+    "paper_id": "arxiv:2611.16509",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2611.16459": {
+    "arxiv_id": "2611.16459",
+    "title": "The Tiglath Pileser principle and models of persuasion",
+    "abstract": "This paper develops a formal framework for analysing how agents extract reliable information from narratives and communicative interactions involving strategic deception. Building on Rubinstein and Glazer's models of persuasion, we introduce Tiglath-Pileser relations, a generalization of codex-based guidance relations, to formalize Baruch Halpern's Tiglath-Pileser principle: despite systematic bias, reported claims must retain a connection to the truth. We analyse these relations set-theoretically and axiomatically, identifying conditions for their successful application in persuasion. Our dynamic approach examines how such relations are formed, revised, and strategically manipulated, extending existing models beyond one-shot interactions. Two case studies, including a formal reconstruction of Halpern's interpretation of the biblical account of King David, illustrate the framework's application to historiographical reasoning. Combining logic, epistemic reasoning, and game theory, the paper provides an account of belief formation and truth approximation under partial information and strategic manipulation.",
+    "authors": "Willem Conradie, Krishna Manoorkar, Alessandra Palmigiano, Apostolos Tzimoulis, Nachoem Wijnberg",
+    "publish_date": "2026-11-12",
+    "arxiv_url": "http://arxiv.org/abs/2611.16459",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [
+      "Manipulation"
+    ],
+    "matched_categories": [
+      "Dexterous"
+    ],
+    "hf_rank": null,
+    "score": 10,
+    "paper_id": "arxiv:2611.16459",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2611.16439": {
+    "arxiv_id": "2611.16439",
+    "title": "HALO: Human-Aligned Data Collection for WhoLe-body MObile Manipulation",
+    "abstract": "Learning whole-body mobile manipulation requires demonstrations that coordinate bimanual actions with locomotion across extended workspaces. However, existing interfaces trade off direct robot control, perception and action alignment, and natural operator mobility, making such demonstrations difficult to collect. We introduce HALO, a human-aligned data collection system for whole-body mobile manipulation. The system aligns the operator's perception and action space with the robot while preserving direct physical feedback and natural locomotion. Operators guide the robot end-effectors through kinesthetic teaching and move a low-resistance platform without the deployed mobile base while performing bimanual manipulation. This interface enables more natural whole-body demonstrations, but the close human-robot coupling introduces discrepancies between the demonstration and deployment settings. We address these discrepancies with deployment-aligned demonstration processing, which calibrates and temporally aligns platform motion with the deployed base response and masks and inpaints demonstrator hands in recorded observations. Compared with Mobile ALOHA and VR teleoperation, HALO enables up to 2.9x faster demonstration collection while maintaining comparable or higher success rates. Policies trained with HALO perform precise manipulation tasks, including zip-tie fastening, and achieve a 73.3% success rate on a six-stage long-horizon mobile manipulation task involving repeated coordinated base and arm motion. Project page: https://robbyant-research.github.io/Lingbot-ALOHA/",
+    "authors": "Shuai Yang, Fangyi Xu, Yishu Shen, Kecheng Zheng, Yinghao Xu",
+    "publish_date": "2026-11-12",
+    "arxiv_url": "http://arxiv.org/abs/2611.16439",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [
+      "Bimanual",
+      "Manipulation",
+      "Teleoperation"
+    ],
+    "matched_categories": [
+      "Dexterous",
+      "Manipulation"
+    ],
+    "hf_rank": null,
+    "score": 30,
+    "paper_id": "arxiv:2611.16439",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2611.16423": {
+    "arxiv_id": "2611.16423",
+    "title": "VOKE: Visual Object Kinematics Estimator for Dexterous In-Hand Manipulation",
+    "abstract": "Vision-based dexterous in-hand manipulation requires knowing not only where an object is, but also how it moves. However, most robotic manipulation systems rely on off-the-shelf visual perception models whose outputs are limited to static object masks, geometry, or 6D poses, leaving downstream controllers to infer object dynamics implicitly from noisy visual observations. We present VOKE, a kinematics-aware perception framework that augments existing object and hand-object pose estimators to recover a complete object kinematic state comprising pose, linear and angular velocity, and linear and angular acceleration. VOKE contains two core perception modules and a downstream application study. First, a Pluggable Kinematics Module (PKM) attaches to the output of a standard pose estimator and predicts the object's linear and angular velocity and acceleration from temporal visual features. Second, a Kinematics-guided Pose Refinement Module (KPRM) converts this motion vector into a second-order, motion-prior reference pose and refines the per-frame pose estimates. We evaluate VOKE on DexYCB and OakInk, where it consistently improves object pose estimation across three different backbones and substantially reduces velocity and acceleration estimation error compared with pose differencing. As a downstream application, we use Kinematics-Augmented Reinforcement Learning (KARL) to compare a kinematics-augmented policy with a pose-history baseline. After training the policies in simulation, we transfer the kinematics-augmented policy to the physical robot without policy fine-tuning, demonstrating the complete perception-to-control pathway in the target domain.",
+    "authors": "Shengjia Zhu, Wenqiang Xu, Lin Shao",
+    "publish_date": "2026-11-12",
+    "arxiv_url": "http://arxiv.org/abs/2611.16423",
+    "project_url": "https://voke-project.pages.dev/",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [
+      "In-hand Manipulation",
+      "Manipulation",
+      "Robotic Manipulation"
+    ],
+    "matched_categories": [
+      "Dexterous",
+      "Manipulation"
+    ],
+    "hf_rank": null,
+    "score": 30,
+    "paper_id": "arxiv:2611.16423",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2611.16386": {
+    "arxiv_id": "2611.16386",
+    "title": "Remember What Changes the Odds: Critic-Gated Event Memory for Long-Horizon Manipulation",
+    "abstract": "In long-horizon manipulation, a robot may need to take different actions under identical observations, depending on task progress and the outcomes of earlier attempts. We refer to this ambiguity as decision aliasing. Resolving it requires the policy to maintain memory of its execution history. To reduce the cost of processing full observation histories, recent methods build compact event memories using perceptual, semantic, or kinematic cues. However, these criteria may miss events that matter for task success. We instead propose an outcome-grounded principle: remember events that substantially change the predicted probability of eventual success. Following this principle, we introduce CGEM, a critic-gated event memory that uses a critic to select events with large estimated changes in success probability. Positive and negative changes are encoded as progress and failure records, respectively. Failure records are discarded once the corresponding subtask is completed. In a ten-subtask diagnostic environment with exactly computed success probabilities, CGEM achieves 88.0% success, compared with 0.0% for both a 36-step observation window and a kinematic event memory. Removing failure records reduces success to 1.7%.",
+    "authors": "Xuanzhuo Liu, Chuankang Li, Maoqing Yao, Guanghui Ren",
+    "publish_date": "2026-11-12",
+    "arxiv_url": "http://arxiv.org/abs/2611.16386",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [
+      "Manipulation"
+    ],
+    "matched_categories": [
+      "Dexterous"
+    ],
+    "hf_rank": null,
+    "score": 10,
+    "paper_id": "arxiv:2611.16386",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2611.16374": {
+    "arxiv_id": "2611.16374",
+    "title": "ManiLadder: Benchmarking Robot Manipulation Through a Categorized and Multi-Difficulty Level Task Ladder",
+    "abstract": "Recent advances in robotic manipulation have enabled increasingly complex and dexterous behaviors, yet existing benchmarks still focus on simple pick-and-place tasks and lack a systematic framework for measuring progress in robot learning along the axis of task difficulty. We present ManiLadder, a large-scale and organized simulation benchmark for robotic manipulation. ManiLadder contains 112 carefully designed tasks stratified into 4 difficulty levels, with 8 categories in each level, spanning rigid-body and deformable-object manipulation, single-arm and dual-arm settings, and gripper and dexterous-hand end-effectors. To calibrate difficulty, we fix the data amount the same for every task and use a unified flow- matching imitation learning policy under the same training and evaluation protocols, then use its evaluation success rate as an operational empirical difficulty signal. All tasks are iteratively refined until they fall into target difficulty ranges, which are then verified across different random seeds, policies, and agentic learning systems. We further analyze the task properties, compare different policy performances and training settings, analyze task transfer and data scaling behaviors, and conduct real-world experiments showing that the designed tasks preserve their difficulty ordering beyond simulation. ManiLad- der provides a calibrated ladder for measuring, comparing, and advancing robotic manipulation capabilities. More results are available at https://maniladder-benchmark.github.io/.",
+    "authors": "Chongkai Gao, Jieao Shi, Zhaoyu Mu, Yudi Lin, Xuanwei Liu, Wei Ken Ng, Baiye Cheng, Anqi Chen, Kerun Liu, Zhuoran Li, Xuchuan Huang, Haoyang Li, Shengjia Zhu, Nga Teng Chan, Yuxuan Zhang, Xingyu Chen, Lin Shao",
+    "publish_date": "2026-11-12",
+    "arxiv_url": "http://arxiv.org/abs/2611.16374",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [
+      "Manipulation",
+      "Robot Manipulation",
+      "Robotic Manipulation",
+      "Robot Learning",
+      "Imitation Learning",
+      "Deformable"
+    ],
+    "matched_categories": [
+      "Dexterous",
+      "Manipulation"
+    ],
+    "hf_rank": null,
+    "score": 60,
+    "paper_id": "arxiv:2611.16374",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2611.16213": {
+    "arxiv_id": "2611.16213",
+    "title": "Visibility-Aware Task and Motion Planning with Task-Centric Perception",
+    "abstract": "Long-horizon manipulation under uncertainty remains a challenging problem in robotics. We present \\ourmethod{}, an algorithm for Visibility-Aware Task and Motion Planning. \\ourmethod{} extends existing deterministic task and motion planning solvers to partially observable object rearrangement tasks, while still being able to take advantage of the efficiency and compositional generalization over long horizons of the base solver. This extension interleaves sensing actions into a plan skeleton that assumed full observability, and uses a novel persistent object-based memory to fuse observations into object mesh hypotheses and an observed occupancy map. We evaluate \\ourmethod{} on real-world tabletop rearrangement tasks which feature heavy occlusion and partial visibility and demonstrate that it outperforms baselines that do not perform active perception or have persistent memory.",
+    "authors": "Sahit Chintalapudi, Xiaoyan Wang, Aryan Zoroufi, Aditya Agarwal, Nancy Kanwisher, Tomás Lozano-Pérez, Leslie Pack Kaelbling",
+    "publish_date": "2026-11-12",
+    "arxiv_url": "http://arxiv.org/abs/2611.16213",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [
+      "Manipulation"
+    ],
+    "matched_categories": [
+      "Dexterous"
+    ],
+    "hf_rank": null,
+    "score": 10,
+    "paper_id": "arxiv:2611.16213",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2611.16056": {
+    "arxiv_id": "2611.16056",
+    "title": "Sub-actions in Action: Text-Guided Hand-Role Alignment for Sub-Action Recognition",
+    "abstract": "Our objective is to enhance VLMs ability to distinguish the roles of the left and right hands in egocentric actions. We introduce sub-action detection, a task that requires models to explicitly recognise the left- and right-hand roles and their manipulated objects within an ongoing high-level action. To address this challenge, we propose BiScopeNet, a framework that augments existing video-LLMs without modifying their vision encoders or language models. BiScopeNet incorporates two components: FocusAlign, a gated text-guided attention-based module that selectively aligns video features with textual context to emphasise action-relevant cues, and MetaLoss, a masked, object-weighted loss that prioritises visually grounded terms. To supervise sub-action detection, we introduce BiScopeCap-100K, a large-scale video-level dataset curated from existing egocentric datasets, providing dense captions that jointly describe high-level actions, left/right-hand roles, and manipulated objects, enriched with spatial metadata for grounding. Across the evaluated Video-LLM backbones, BiScopeNet improves action, hand-role, and object recognition over the corresponding supervised baselines, achieving the strongest aggregate performance among the evaluated configurations on BiScopeCap.",
+    "authors": "Sadegh Rahmaniboldaji, Filip Rybansky, Quoc Vuong, Frank Guerin, Andrew Gilbert",
+    "publish_date": "2026-11-11",
+    "arxiv_url": "http://arxiv.org/abs/2611.16056",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "Dexterous"
+    ],
+    "hf_rank": null,
+    "score": 0,
+    "paper_id": "arxiv:2611.16056",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2611.15981": {
+    "arxiv_id": "2611.15981",
+    "title": "DexRemo: A Force-Sensing Hand Platform and Task Suite for Contact-Rich Removal Manipulation",
+    "abstract": "Many manipulation tasks require separating adhered, embedded, contaminated, or mechanically constrained targets. We study this setting as removal manipulation, where progress depends on evolving contact states that are only partially observable from vision and kinematics. We introduce DexRemo, a three-finger robotic hand with high-force actuation, modular fingertips, and three-axis fingertip force sensing, together with a nine-scenario real-robot task suite spanning adhesive detachment, surface cleaning and self-cleaning, and occluded retrieval. To make multi-finger force observations easier to fuse, we express fingertip forces in a shared wrist-centered frame, giving force components consistent geometric meaning across fingers and time. Using an Action Chunking Transformer backbone, policies fuse multi-view vision, proprioception, fingertip pose, and force observations to predict closed-loop action chunks from demonstrations. Evaluation uses six core benchmark tasks for controlled fingertip-input and force-frame ablations, plus three extension scenarios for additional held-out coverage. Across these evaluations, the learned policies achieve consistent removal performance, and ablations show that wrist-frame forces, especially with fingertip pose, improve stability and generalization over local-frame force inputs and no-force baselines. Project website: https://dexremo.github.io",
+    "authors": "Liman Wang, Hanyang Zhong, Sun Zhaole, Wenting Cao, Babar Jamil, Andy Tyrrell, Shan Luo, Jihong Zhu",
+    "publish_date": "2026-11-11",
+    "arxiv_url": "http://arxiv.org/abs/2611.15981",
+    "project_url": "https://dexremo.github.io",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [
+      "Manipulation"
+    ],
+    "matched_categories": [
+      "Dexterous"
+    ],
+    "hf_rank": null,
+    "score": 10,
+    "paper_id": "arxiv:2611.15981",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2611.15974": {
+    "arxiv_id": "2611.15974",
+    "title": "Video-Action Models for Data-Efficient Industrial Manipulation",
+    "abstract": "Industrial manipulation requires precise alignment and controlled handling of rigid, deformable, and flexible components. Yet, the benefits of pretrained visuomotor policies remain underexplored in settings where limited access to specialized hardware, components, and fixtures constrains demonstration collection and evaluation. Understanding task-specific data requirements is important for assessing their scalability across diverse processes on the factory floor. We investigate whether video pretraining can support reliable industrial manipulation with limited action data. We propose FLUX-mimic, a video-action model, motivated by the potential of video pretraining to capture motion and interaction patterns that enable sample-efficient training. FLUX-mimic is built on a backbone pretrained on large-scale web and industrial task data, and an action expert to generate robot trajectories. We train our policy by joint video-action training. Across four automotive manufacturing benchmark tasks and two bimanual robot platforms, FLUX-mimic outperforms all considered baselines on the dexterous robot platform and matches pi_{0.5}'s average success rate on the gripper-based robot platform. On a deformable part kitting task, FLUX-mimic reaches 77.5% success with as little as two hours of task-specific action-labeled demonstrations.",
+    "authors": "Eugenio Chisari, Stefanos Charalambous, Oliver Sanchez, Thomas Umbach, Michael Gentner, Fabio Quattrini, Norica Bacuieti, Sabin Grube Doiz, Valentin Bertle, Sigmund Hennum Hoeg, Alain Ryser, German Rodriguez, Mario Arduini, Dang Nguyen, Florian Aumann, Felix Hegg, Manuel Meier, Philipp Wand, Julian Lotzer, Alessio Desogus, Benedek Forrai, Michael Bloesch, Stephan-Daniel Gravert, Stefan Weirich, Patrick Lanners, Elvis Nava",
+    "publish_date": "2026-11-11",
+    "arxiv_url": "http://arxiv.org/abs/2611.15974",
+    "project_url": "https://www.mimicrobotics.com/blog/video-action-models-for-data-efficient-industrial-manipulation",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [
+      "Bimanual",
+      "Manipulation"
+    ],
+    "matched_categories": [
+      "Dexterous"
+    ],
+    "hf_rank": null,
+    "score": 20,
+    "paper_id": "arxiv:2611.15974",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2611.15941": {
+    "arxiv_id": "2611.15941",
+    "title": "Lang-SVG: Hierarchical Image Vectorization with Language Priors",
+    "abstract": "Image vectorization reconstructs raster images as compact scalable vector graph- ics (SVG), providing a structured and editable code representation of images. However, most existing vectorization methods optimize for pixel-level render- ing fidelity, often producing SVGs that lack alignment with human-perceived object-part hierarchies, making them difficult to manipulate. To address this, we propose Lang-SVG, which introduces an explicit tree structure to organize SVG primitives with semantic labels and parent-child relationships. Lang-SVG incorporates granularity-controllable and open-vocabulary segmentation priors to initialize object-part hierarchies and leverages multimodal large language models (MLLMs) with SVG tree context to assign semantic labels to unlabeled nodes. To reduce redundancy, we introduce depth-adaptive simplification to reduce shape complexity and Tree-Guided Pruning and Merging to eliminate redundant SVG nodes. L1-SAM-Prompting further recovers missing regions to improve recon- struction fidelity and structural completeness. Beyond reconstruction fidelity, we introduce a new evaluation protocol that measures structural quality and semantic part alignment. Experiments demonstrate that Lang-SVG achieves state-of-the-art performance in both rendering fidelity and structural quality. Project website: https://xiliu8006.github.io/Lang-SVG/.",
+    "authors": "Xi Liu, Chaoyi Zhou, Run Wang, Jiaang Li, Feng Luo, Junxiang Huang, Siyu Huang",
+    "publish_date": "2026-11-11",
+    "arxiv_url": "http://arxiv.org/abs/2611.15941",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "Dexterous"
+    ],
+    "hf_rank": null,
+    "score": 0,
+    "paper_id": "arxiv:2611.15941",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2611.15937": {
+    "arxiv_id": "2611.15937",
+    "title": "MOSAIC: Modular Obstacle and Spatial-Aware Framework for Manipulation In Cluttered Scenes",
+    "abstract": "Vision-Language-Action (VLA) models have demonstrated strong performance in robotic manipulation, yet most rely primarily on 2D visual observations and language instructions, leaving scene geometry and obstacle relationships to be inferred implicitly. This limitation is particularly problematic in cluttered environments, where small spatial errors can lead to unintended contacts or collisions. We propose MOSAIC, a modular spatial- and obstacle-aware framework that can be integrated with pretrained VLA policies to improve object-level scene understanding and action generation. Our method augments the VLA backbone with an auxiliary semantic grounding task that predicts role-specific masks for the target object, destination region, and surrounding obstacles. We further combine the target and destination masks with depth estimated from 3D scene reconstruction to construct role-specific geometric tokens that are injected directly into the action expert. In addition, we propose obstacle-aware attention supervision that emphasizes obstacles near the robot body during task execution. The resulting attention features are subsequently injected into later action-expert layers to further guide action generation. Together, these components provide explicit semantic, geometric, and obstacle-aware cues while preserving the underlying pretrained VLA architecture. We evaluate our framework on pretrained VLA model using the RoboPRO benchmark, including visual perturbation tests, and further validate it on real-world manipulation tasks. MOSAIC improves the success rate by 5.1% in cluttered scenes, and by 9.7% under visual perturbations, with gains of up to 25.0% in the most challenging environment. We will release our code and dataset upon acceptance at the following Github page: https://mmahdavian.github.io/MOSAIC/",
+    "authors": "Richard Shi, Mohammad Mahdavian, Mehrdad Momeni Zadeh, Mohammed Elmahgiubi, Amir Rasouli",
+    "publish_date": "2026-11-11",
+    "arxiv_url": "http://arxiv.org/abs/2611.15937",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [
+      "Manipulation"
+    ],
+    "matched_categories": [
+      "Dexterous"
+    ],
+    "hf_rank": null,
+    "score": 10,
+    "paper_id": "arxiv:2611.15937",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2611.15928": {
+    "arxiv_id": "2611.15928",
+    "title": "Runtime Safety and Emergency Stops on a Full-Size Humanoid: Deployment Lessons and a Case for Graduated Force Authority",
+    "abstract": "Full-size humanoid robots are being considered for hazardous industrial work such as disassembling electric-vehicle batteries. We describe the safety mechanisms of an open-source autonomy stack for the Unitree H1-2 humanoid and what deploying them taught us. All joint commands pass through a safety layer that runs separately from the control software. It enforces joint position, velocity, and torque limits, and it stops the robot when a state estimate becomes stale or when the hard-wired emergency stop (e-stop) is pressed or disconnected. We pushed the standing robot until it lost balance. With a model-predictive lower-body controller it never recovered, and the operator had to press the e-stop in every trial. Pressing it removes balance control, and the robot falls. The safety layer's own limits trigger the same stop, and limits chosen for manipulation were exceeded during normal walking. Near an operator or a battery pack, the fall can be more dangerous than the cause of the stop. Joint limits bound how much force a robot can apply, but not when applying it is appropriate. Drawing on research on responsibility and on child and adolescent development, we therefore make a case for granting robots force authority in stages, with a person or organization explicitly responsible for its use.",
+    "authors": "Max Conway, Yutong Zhang, Allen Devaraj, William Xie, Alessandro Roncone, Nikolaus Correll",
+    "publish_date": "2026-11-11",
+    "arxiv_url": "http://arxiv.org/abs/2611.15928",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [
+      "Manipulation"
+    ],
+    "matched_categories": [
+      "Dexterous"
+    ],
+    "hf_rank": null,
+    "score": 10,
+    "paper_id": "arxiv:2611.15928",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2611.15802": {
+    "arxiv_id": "2611.15802",
+    "title": "RUMI: A Robotiq-Matched Universal Manipulation Interface for Robot Learning with Augmented Reality and Haptic Feedback",
+    "abstract": "Many manipulation tasks require carefully controlled contact forces for successful execution, yet large-scale, force-aware datasets remain scarce. Handheld interfaces can help by transmitting interaction forces directly through the operator's arm, but most existing designs are tailored to simple linear grippers and do not match the nonlinear mechanics of widely used robotic grippers. We present RUMI, a handheld universal manipulation interface matched to the Robotiq 2F-85 with exchangeable fingertip sensors that preserves the target gripper geometry while enabling natural input before contact and force measurement after contact. By integrating the tracking system into a virtual reality headset, our method provides real-time augmented reality feedback about the kinematic feasibility of motion on the target robot platform. We further introduce a haptic feedback mechanism that supports force-aware teleoperation for simulated and real robots. A user study shows fewer episodes containing joint-limit violations with live robot visualization and pose initialization (3/50) than without augmented reality (16/50). We additionally train imitation policies from demonstrations, collected using two different fingertip modalities enabled by the gripper-matched hardware, and assess the haptic interface's capability for collecting force-aware teleoperation datasets in simulation.",
+    "authors": "Kevin Avdiu, Seongjin Bien, Yannik Blei, Philine Meister, Johannes Hechtl, Philipp Schmitt, Kai Wurm, Georg von Wichert, Wolfram Burgard",
+    "publish_date": "2026-11-11",
+    "arxiv_url": "http://arxiv.org/abs/2611.15802",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [
+      "Manipulation"
+    ],
+    "matched_categories": [
+      "Dexterous"
+    ],
+    "hf_rank": null,
+    "score": 10,
+    "paper_id": "arxiv:2611.15802",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2611.15770": {
+    "arxiv_id": "2611.15770",
+    "title": "Privacy-Preserving Spectrum Data Obfuscation in Next-Generation Spectrum Coexistence Systems",
+    "abstract": "In spectrum coexistence systems, the primary user (PU) activity must be partially disclosed for interference avoidance and coordination, while the exact spectrum occupancy information is often restricted due to security and regulatory constraints. To this end, subset-based disclosures can be employed in which the true frequency is included while ambiguity is introduced. This paper shows that naive randomized subset disclosures remain highly vulnerable to information leakage through inference, as temporal structure can be exploited to recover spectrum usage information. Under Markovian dynamics of the PU's spectrum usage, hidden Markov model (HMM) filtering with online learning is applied, while under periodic dynamics, period and phase estimations with phase-aligned statistics are used for inference. To address this vulnerability, structure-aware obfuscation strategies are introduced. For Markovian dynamics, history-based and belief-based schemes are designed to induce model mismatch and limit posterior concentration, while for periodic dynamics, cycle-dominance and decoy-based schemes are designed to manipulate phase-wise statistics and bias the inference process. These obfuscation schemes significantly hinder inference of spectrum information and offer principled disclosure solutions for spectrum coexistence systems.",
+    "authors": "Yalin E. Sagduyu, Tugba Erpek, Sastry Kompella, Joseph A. Molnar",
+    "publish_date": "2026-11-11",
+    "arxiv_url": "http://arxiv.org/abs/2611.15770",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "Dexterous"
+    ],
+    "hf_rank": null,
+    "score": 0,
+    "paper_id": "arxiv:2611.15770",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2611.15659": {
+    "arxiv_id": "2611.15659",
+    "title": "GraSLA: A Lightweight Spatial-Language-Action Model with Grasp Hypotheses as Geometric Priors",
+    "abstract": "This paper focuses on improving the behavioral diversity and effectiveness of language-conditioned manipulation policies trained through imitation learning. Recently, continuous-action policies have become mainstream in robotic manipulation, but the lack of diverse demonstrations tends to restrict their behavioral diversity. For grasping, a fundamental subtask of manipulation, 6-DoF grasp detection provides diverse grasp hypotheses, but open-loop execution constrains responsiveness in dynamic environments. This motivates us to combine the diversity of grasp hypotheses with the adaptability of continuous-action policies. To this end, we propose GraSLA, a lightweight and effective spatial-language-action model with grasp hypotheses as geometric priors. In particular, we employ spatial and language foundation models to encode scene geometry and task semantics, and integrate them with grasp hypotheses through bidirectional cross-attention for continuous action prediction. On LIBERO, GraSLA achieves an average success rate of 99.30%.",
+    "authors": "Jibao Yuan, Zixiang Zhao, Wensong Xu, Siqi Lu, Shaofei Chen",
+    "publish_date": "2026-11-11",
+    "arxiv_url": "http://arxiv.org/abs/2611.15659",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [
+      "Manipulation"
+    ],
+    "matched_categories": [
+      "Dexterous"
+    ],
+    "hf_rank": null,
+    "score": 10,
+    "paper_id": "arxiv:2611.15659",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2611.16673": {
+    "arxiv_id": "2611.16673",
+    "title": "PIM: A Physical Intuition Model for Low-Latency Prediction of Object Interaction Outcomes",
+    "abstract": "Predicting object interaction outcomes from initial conditions is a central problem in data-driven physical reasoning. Existing methods often use rigid-body-level states or predict the evolution through autoregressive rollouts. Coarse representations cannot represent local deformation, while rollout errors may compound over long prediction horizons. Instead, we introduce PIM, a Physical Intuition Model that directly predicts a physical system's equilibrium state from its initial mesh geometry, kinematics, and physical attributes. PIM combines local k-nearest-neighbor (KNN) attention to encode intra-object geometry, anchor-based cross-object attention to model interactions, and a dual-branch decoder that predicts object-level translations and per-vertex residual displacements. Across MuJoCo scenarios involving both rigid and deformable interactions, PIM achieves lower vertex and centroid errors than the evaluated baselines. By predicting complete equilibrium states in a single forward pass, PIM substantially reduces latency relative to autoregressive learned models and MuJoCo rollouts under the evaluated protocols, enabling low-latency inference when only the final outcome is required.",
+    "authors": "Tangwen Luo, Chuankun Zheng, Yuchi Huo",
+    "publish_date": "2026-11-12",
+    "arxiv_url": "http://arxiv.org/abs/2611.16673",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [
+      "Deformable"
+    ],
+    "matched_categories": [
+      "Manipulation"
+    ],
+    "hf_rank": null,
+    "score": 10,
+    "paper_id": "arxiv:2611.16673",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2611.16636": {
+    "arxiv_id": "2611.16636",
+    "title": "Residual ellipticity driven by intense magnetic stress in the hot neutron star era",
+    "abstract": "A neutron star with a nonaxisymmetric mass distribution continuously radiates gravitational waves. The amplitude depends on the magnitude of the deformation, and is crucial for gravitational-wave astronomy. We studied an evolutionary effect on the magnetically induced ellipticity in the neutron star crust. A large deformation at the hot era before solidification is assumed to be produced magneto-hydrodynamically, and the fate at later time follows owing to the decrease in the force associated with the decay and redistribution of the current. Instead of simulating the evolution of deformation with the magnetic field over a long timescale, we estimate the ellipticity that remains after the formation of the solid crust by comparing two equilibrium models before and after solidification. The relic ellipticity is $\\sim 10^{-8} (B_0/10^{13}{\\rm{G}})^2$ in the magnitude for dipole field strength $B_{0}$ at the surface. This value was primarily determined by the magnetic field at the later time, with a weak dependence on the initial large deformation. The memory of the presolidification state was retained, but was small because the elastic force contributes little to the equilibrium.",
+    "authors": "Yasufumi Kojima, Akira Dohi, Kotaro Fujisawa, Shota Kisaka",
+    "publish_date": "2026-11-12",
+    "arxiv_url": "http://arxiv.org/abs/2611.16636",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "Manipulation"
+    ],
+    "hf_rank": null,
+    "score": 0,
+    "paper_id": "arxiv:2611.16636",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2611.16622": {
+    "arxiv_id": "2611.16622",
+    "title": "Revisiting the Isospin Quartic Term of the Nucleonic Matter Equation of State in the Walecka Model",
+    "abstract": "The fourth-order nuclear symmetry energy $E_{\\rm{sym,4}}(ρ)$ is generally regarded as a small correction to the quadratic symmetry energy, but its magnitude, density dependence, and implications for neutron stars (NSs) remain unconstrained. Within the nonlinear Walecka model, we derive an analytical expression for $E_{\\rm{sym,4}}(ρ)$ and construct 3000 equations of state (EOSs) constrained by nuclear data and astrophysical observations. We find that: (1) At saturation density, $E_{\\rm{sym,4}}(ρ_0)$ can reach $6$\\,MeV or higher, well above the commonly expected $2$\\,MeV, while relatively large values can remain compatible with microscopic calculations. (2) Over NS densities, $|E_{\\rm{sym,4}}(ρ)|$ generally stays below $20$\\,MeV but can reach about $25\\%$ of the symmetry energy. (3) EOSs with $E_{\\rm{sym,4}}(ρ_0)\\gtrsim2\\,\\rm{MeV}$ can exhibit positive symmetry energy curvature $K_{\\rm{sym}}$ while satisfying the GW170817 tidal deformability constraint, potentially relaxing the previously inferred preference for negative $K_{\\rm{sym}}$. (4) The density derivatives of $E_{\\rm{sym,4}}(ρ)$, particularly its curvature $K_{\\rm{sym,4}}$, can contribute substantially to the fourth-order isospin incompressibility. (5) Variations in $E_{\\rm{sym,4}}(ρ_0)$ across selected EOSs can change the low-density squared speed of sound by $40\\%$ or more. Higher-order symmetry energies also affect the proton fraction and NS core-crust transition. Thus, even a modest fourth-order contribution to the EOS can significantly influence the response and composition of asymmetric nucleonic matter, highlighting the importance of going beyond the quadratic approximation.",
+    "authors": "Jian-Hao Shi, Bao-Jun Cai, Yu-Gang Ma",
+    "publish_date": "2026-11-12",
+    "arxiv_url": "http://arxiv.org/abs/2611.16622",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "Manipulation"
+    ],
+    "hf_rank": null,
+    "score": 0,
+    "paper_id": "arxiv:2611.16622",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2611.16575": {
+    "arxiv_id": "2611.16575",
+    "title": "Elasto-inertial force exerted on a sphere oscillating in a fluid near a soft interface",
+    "abstract": "Fluid inertia can remain important in confined flows, even at low Reynolds number when convective inertia is negligible; yet its coupling with interface deformability is an open problem. Here, we theoretically investigate the high-frequency oscillations of an immersed sphere near an elastic wall in the lubrication regime. We first reconcile previous predictions for the added mass near a rigid wall by consistently matching the inner lubrication flow with the outer flow. Using this rigid-wall problem as a reference, we then develop a perturbative analysis of wall deformation and derive the leading elasto-inertial correction to the hydrodynamic force. Our results reveal that the coupling between interface softness and fluid inertia produces a dominant non-dissipative force contribution scaling as the power four of the frequency in the high-frequency limit, thus corresponding to the fourth time derivative of the sphere's position. This finding may have implications regarding the short-time dynamics of colloidal particles near deformable interfaces in biological and soft-matter settings.",
+    "authors": "Axel Batalha, Harshit Joshi, Yacine Amarouchene, Thomas Salez",
+    "publish_date": "2026-11-12",
+    "arxiv_url": "http://arxiv.org/abs/2611.16575",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [
+      "Deformable"
+    ],
+    "matched_categories": [
+      "Manipulation"
+    ],
+    "hf_rank": null,
+    "score": 10,
+    "paper_id": "arxiv:2611.16575",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2611.16419": {
+    "arxiv_id": "2611.16419",
+    "title": "I See What You Want: Decoding Hierarchical Operator Intent from Visual Teleoperation History",
+    "abstract": "Vision-language models (VLMs) have become a powerful foundation for robotic scene understanding, task planning, and language-conditioned control. A natural question follows: can these models also decode what a human operator intends while teleoperating a robot, without any explicit instruction? We formulate this as hierarchical intent prediction, jointly inferring the ongoing atomic action and the broader mission it serves from a short visual teleoperation history. To study this, we introduce VI AMO (Vision Intention Action and Mission Ongoing), a dataset of 6,600 episodes from eleven robot sources with 13,653 temporally aligned action annotations and 9,702 mission annotations. Large proprietary models struggle with this problem: on held-out episodes, GPT-4o reaches Sentence-BERT similarities of only 0.563 and 0.470 for action and mission, and GPT-5.6 Luna achieves only 0.581 and 0.554. Fine-tuning a VLM on VI AMO yields our Vision-Intention Model (VIM), which raises these scores to 0.825 and 0.821 and still reaches 0.726 and 0.717 on the 35.4% of test actions with both labels absent from training. Finally, as a downstream application, VIM's predicted mission enables a vision-language-action (VLA) policy to take over from the operator mid-task in a real-world environment unseen during VIM fine-tuning, reducing human teleoperation time by 34.6% relative to GPT-4o and 39.8% relative to GPT-5.6 Luna, while cutting intent-prediction latency by roughly 70% on average.",
+    "authors": "Xiangyi Jia, Kaixian Qu, Shengzhi Wang, Chenyu Yang, Robert Katzschmann, Marco Hutter",
+    "publish_date": "2026-11-12",
+    "arxiv_url": "http://arxiv.org/abs/2611.16419",
+    "project_url": "https://see-want.github.io/",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [
+      "Teleoperation"
+    ],
+    "matched_categories": [
+      "Manipulation"
+    ],
+    "hf_rank": null,
+    "score": 10,
+    "paper_id": "arxiv:2611.16419",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2611.16340": {
+    "arxiv_id": "2611.16340",
+    "title": "The Bolza Surface Does Not Locally Minimize the Diameter Function",
+    "abstract": "We study the diameter function on the Teichmüller space of closed hyperbolic Riemann surfaces. Although the Bolza surface maximizes the systole among hyperbolic surfaces of genus 2, its extremal behavior with respect to the diameter function is less clear. Using first variations of distances at diameter pairs and linear programming duality, we establish a sufficient criterion for a surface not to be a local minimizer of the diameter function. More precisely, we show that if each diameter pair can be assigned a simple closed geodesic formed by two minimizing geodesic segments joining its endpoints, with distinct assigned geodesics pairwise disjoint, then a deformation varying only the length parameters in Fenchel-Nielsen coordinates strictly decreases the diameter. The assigned geodesics extend to a pants decomposition, and the decrease is detected by a strictly negative upper bound for the first-order variation of the diameter. We then apply this criterion to the Bolza surface and prove that it is not a local minimizer of the diameter function on the Teichmüller space of genus 2.",
+    "authors": "Ryo Matsuda, Keita Yamazaki",
+    "publish_date": "2026-11-12",
+    "arxiv_url": "http://arxiv.org/abs/2611.16340",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "Manipulation"
+    ],
+    "hf_rank": null,
+    "score": 0,
+    "paper_id": "arxiv:2611.16340",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2611.16312": {
+    "arxiv_id": "2611.16312",
+    "title": "Alloy: A Multi-Material Physics Engine for Robot Learning",
+    "abstract": "Robots handle much more than rigid objects: towels, cables, water, sand. The simulators used to train robots at scale are strongest on rigid bodies, and adding another material usually means a second engine and hand-written glue between the two. We present Alloy, an open-source physics engine for robot learning in which rigid robots, cloth, cables, liquids, granular material and soft bodies share one scene. Each object is described once; Alloy assigns it to a solver suited to its material, couples the solvers inside every control step, and runs the scene in many parallel worlds on one GPU, or on a CPU. Every world carries a health grade, to help tell a failure of the physics from a failure of the policy. Alloy is built on Newton, MuJoCo Warp and Warp, and it is written to be driven by coding agents: its documentation ships inside the package, every error names its fix, and the engine is exposed as tools over the Model Context Protocol. In a cold test, agents that had never seen Alloy installed a pre-release from the package index and trained policies for walking, cable handling and pouring on a single GPU. We also report how throughput grows with the number of worlds, depth-camera throughput, agreement with closed-form references, and a reliability test over a thousand worlds.",
+    "authors": "Pranay Gupta, Deepanshu Rohilla",
+    "publish_date": "2026-11-12",
+    "arxiv_url": "http://arxiv.org/abs/2611.16312",
+    "project_url": "https://github.com/argonrobotics-ai/alloy",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [
+      "Robot Learning"
+    ],
+    "matched_categories": [
+      "Manipulation"
+    ],
+    "hf_rank": null,
+    "score": 10,
+    "paper_id": "arxiv:2611.16312",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2611.16259": {
+    "arxiv_id": "2611.16259",
+    "title": "Reconstruct What You Can: Distractor-free 4D Gaussian Splatting",
+    "abstract": "Dynamic reconstruction from casual video must preserve valid subject motion while suppressing transient occluders, shadows, and volumetric effects. Existing methods either suppress valid motion through static-scene assumptions or model all observations jointly, producing ghosting and unstable geometry. We introduce ReCan-GS, a 4D Gaussian Splatting framework that separates coherent scene content from inconsistent observations. It derives a Jacobian-based deformation-sensitivity score from the learned deformation field, using it as an empirical proxy for reconstruction ambiguity. The score guides separation into dynamic Core Gaussians and per-view Distractor Gaussians, or post-hoc pruning of sensitive Core Gaussians. The same criterion supports removal of spatial occluders, photometric artifacts, and evolving smoke or fog without masks, pretrained segmenters, or medium-specific supervision. Experiments on synthetic and real dynamic scenes and synthetic smoke/fog scenes demonstrate its usefulness across the evaluated distractor regimes.",
+    "authors": "Joel Julin, Liuyue Xie, Ananya Bal, Mose Sakashita, Koichiro Niinuma, Laszlo A. Jeni",
+    "publish_date": "2026-11-12",
+    "arxiv_url": "http://arxiv.org/abs/2611.16259",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "Manipulation"
+    ],
+    "hf_rank": null,
+    "score": 0,
+    "paper_id": "arxiv:2611.16259",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2611.16175": {
+    "arxiv_id": "2611.16175",
+    "title": "Stack more levels: how to get general and human-like Mario playing",
+    "abstract": "Super Mario Bros. is widely used in game AI and procedural content generation (PCG), yet it remains unclear whether a model-free agent can reliably win unseen levels. To address this question, we train Proximal Policy Optimization (PPO) agents on increasingly large sets of PCG-generated Mario levels and evaluate their generalization on 1000 held-out test levels. We then shape competent PPO policies into three gameplay archetypes---runner, killer, and collector. Finally, we fine-tune these PPO policies using Diffusion-Reward Adversarial Imitation Learning (DRAIL) with human gameplay demonstrations. We find that increasing the number of distinct PCG-generated training levels generally improves unseen-level performance, and that fine-tuning PPO policies with DRAIL increases action-level human-likeness while preserving much of the persona induced by PPO pretraining.",
+    "authors": "Shinichi Arimura, Yuchen Li, Julian Togelius",
+    "publish_date": "2026-11-12",
+    "arxiv_url": "http://arxiv.org/abs/2611.16175",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [
+      "Imitation Learning"
+    ],
+    "matched_categories": [
+      "Manipulation"
+    ],
+    "hf_rank": null,
+    "score": 10,
+    "paper_id": "arxiv:2611.16175",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2611.16116": {
+    "arxiv_id": "2611.16116",
+    "title": "Robo-SWE: An Executable Issue-Resolution Dataset Mined from Robot Software Repositories",
+    "abstract": "Coding agents are evaluated mostly on general-purpose software, but domain-specific systems require domain-aware evaluation. Robot software is a particularly challenging case: Robot Operating System 2 (ROS 2) packages have their own build tools, simulators and learning frameworks are built on physics engines, and behavior that depends on timing and hardware is hard to test. We present Robo-SWE, a dataset of 236 executable issue-resolution tasks mined from merged pull requests in 28 public robotics repositories in four domains: ROS 2 systems, simulation and physics engines, robotics algorithm libraries, and robot-learning frameworks. Each task contains the original issue text, a container recipe for the repository at the commit before the fix, the developers' fix, and the developers' tests, which fail before the fix and pass after it in repeated offline runs. The dataset also keeps a provenance ledger of all 1,567 candidate pull requests, with the stage each reached and the reason for every rejection, and, as a first use, 3,540 graded attempts by five coding-agent setups with recorded patches and 3,529 available trajectories. Across three runs per primary setup, resolve rates range from 45.8% for Claude Sonnet 5.5 to 56.5% for Claude Opus 5.5; GPT-6.1 Sol reaches 54.1% at maximum effort and 52.5% at medium effort, and GPT-6 Astra 51.4%. GLM-5.3 resolves 46.2%, and Kimi K3.1 Pro 43.9%. The tasks are validated by execution; verification of their fairness by human reviewers is future work. The dataset and public leaderboard are available online.",
+    "authors": "Vahid Haratian, Vahid Ansari, Mohammadhossein Malmir, Alois Knoll",
+    "publish_date": "2026-11-11",
+    "arxiv_url": "http://arxiv.org/abs/2611.16116",
+    "project_url": "https://huggingface.co/datasets/vharatian/Robo-SWE",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "Manipulation"
+    ],
+    "hf_rank": null,
+    "score": 0,
+    "paper_id": "arxiv:2611.16116",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2611.16083": {
+    "arxiv_id": "2611.16083",
+    "title": "Tendex Lines and Short-Time Deformation: The Geometry of Lunar Tides",
+    "abstract": "Tendex lines and the stretchlines and squeezelines of Lagrangian coherent structure theory share a geometric construction: they integrate eigenvector fields of symmetric tensors. We connect their dynamical interpretations through the short-time deformation of particles released with zero initial velocity relative to a freely falling reference in an autonomous gravitational field. The leading departure of the Cauchy--Green tensor from the identity is quadratic in time and equals the tidal tensor multiplied by the squared observation time. The tidal tensorlines therefore give the limiting principal stretching and squeezing directions. For the planar lunar field, these tensorlines are radial lines and concentric circles centered on the Moon. The same tidal tensor defines a Lorentzian metric whose null directions have no quadratic change in line-element length. Its null geodesics are logarithmic spirals, describing the short-time limit of finite-time unit-stretch geometry. Near Earth, the principal tensorlines clarify the two outward tidal tendencies, while the null directions distinguish vanishing leading extension from vanishing relative acceleration.",
+    "authors": "F. J. Beron-Vera",
+    "publish_date": "2026-11-11",
+    "arxiv_url": "http://arxiv.org/abs/2611.16083",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "Manipulation"
+    ],
+    "hf_rank": null,
+    "score": 0,
+    "paper_id": "arxiv:2611.16083",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2611.16036": {
+    "arxiv_id": "2611.16036",
+    "title": "Tautological generation of preprojective BPS cohomology",
+    "abstract": "Let $Q$ be a quiver and let $\\mathbf{d}$ be a dimension vector. We prove that the affinized BPS cohomology of the stack of $\\mathbf{d}$-dimensional representations of the preprojective algebra $Π_Q$ is generated by its reduced virtual fundamental class under the action of tautological classes. This is a generalisation to singular quiver varieties of the Kirwan surjectivity statement of McGerty-Nevins for smooth framed quiver varieties. We prove that the statement holds for every King stability condition. To prove this, we attach legs to vertices of $Q$ and construct a correspondence with a smooth quiver variety for the extended quiver. This correspondence sends the reduced virtual fundamental class of the singular preprojective quiver stack to the Vandermonde determinant capped with the fundamental class of the smooth preprojective quiver stack for the leg-extended quiver. We construct the Weyl group action by the simultaneous Springer resolution of Dobrovolska-Ginzburg-Travkin, providing a comparison of the cohomology of fibres. This comparison preserves the tautological Chern classes. The sign-isotypic formula involving Kac polynomials of Hausel-Letellier-Rodriguez-Villegas, combined with Kirwan surjectivity for smooth framed quiver varieties of McGerty-Nevins, then implies the tautological generation theorem. We also describe the sign isotypic component of the cohomology of quiver varieties using the real-root subalgebras of the BPS Lie algebra. The tautological generation result can be extended via similar methods to deformed preprojective algebras of Crawley-Boevey-Holland at central parameters.",
+    "authors": "Ben Davison, Lucien Hennecart",
+    "publish_date": "2026-11-11",
+    "arxiv_url": "http://arxiv.org/abs/2611.16036",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "Manipulation"
+    ],
+    "hf_rank": null,
+    "score": 0,
+    "paper_id": "arxiv:2611.16036",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2611.16020": {
+    "arxiv_id": "2611.16020",
+    "title": "Imitating the Imperfect: Offline-to-Online Robust Imitation Learning from Heterogeneous Demonstrators",
+    "abstract": "Imitation learning (IL) typically relies on large-scale offline demonstrations collected from multiple human or algorithmic demonstrators. However, most existing approaches assume these demonstrators are homogeneous or near-optimal experts, a convenient but unrealistic assumption in real-world applications. In practice, demonstrations are often collected from heterogeneous demonstrators with unknown and varying levels of expertise, resulting in highly mixed-quality data. In this work, we study a challenging yet practical setting of imitation learning from such heterogeneous imperfect demonstrators. We propose Latent Expertise and Optimality Scoring based Imitation Learning (LEOS-IL), a principled framework that jointly learns (i) a state-action optimality scoring model and (ii) latent expertise levels for each demonstrator from unlabeled suboptimal offline demonstrations. The learned scoring model is then integrated into an online policy optimization procedure, where the agent is trained to maximize estimated optimality scores while its online rollouts are iteratively leveraged to refine the scoring model, thereby mitigating distributional shift during online adaptation. We further provide theoretical guarantees for optimality score identification and conditional optimal occupancy and policy recovery under explicit sufficient conditions. Experiments on continuous control benchmarks demonstrate that our approach consistently outperforms existing baselines across highly heterogeneous and low-quality demonstration regimes.",
+    "authors": "Cheng Pan, Nan Lu, Kai Arulkumaran, Josie Hughes",
+    "publish_date": "2026-11-11",
+    "arxiv_url": "http://arxiv.org/abs/2611.16020",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [
+      "Imitation Learning"
+    ],
+    "matched_categories": [
+      "Manipulation"
+    ],
+    "hf_rank": null,
+    "score": 10,
+    "paper_id": "arxiv:2611.16020",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2611.16012": {
+    "arxiv_id": "2611.16012",
+    "title": "Topology-Aware 4D Gaussian Splatting for Egocentric Videos",
+    "abstract": "Reconstructing dynamic scenes and objects from monocular egocentric video is crucial for embodied AI, yet existing 4D Gaussian Splatting (4DGS) approaches struggle with everyday interactions involving topological changes, such as cutting, assembly, opening, or closing. Since 4DGS methods rely on deforming a fixed representation, events that split, merge, or reveal surfaces cause severe visual artifacts. To address this challenge, we introduce TopoEgo, the first benchmark dedicated to topological changes in egocentric video (covering fission, fusion, open, and close), alongside Topo-4DGS, a topology-aware reconstruction method. Topo4DGS jointly models part-level motion and time-varying surface support by assigning independent rigid transformations to interacting parts and dynamically activating or deactivating Gaussians as surfaces appear, disappear, or separate. Extensive experiments demonstrate that Topo-4DGS significantly outperforms state-of-the-art 4DGS approaches across topological changes, especially on post-event frames. Code and data will be made publicly available.",
+    "authors": "Leonardo Vanni, Stefano Gasperini, Federico Tombari, Chiara Plizzari",
+    "publish_date": "2026-11-11",
+    "arxiv_url": "http://arxiv.org/abs/2611.16012",
+    "project_url": "https://topoego.github.io",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "Manipulation"
+    ],
+    "hf_rank": null,
+    "score": 0,
+    "paper_id": "arxiv:2611.16012",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2611.16002": {
+    "arxiv_id": "2611.16002",
+    "title": "On the algebraic Mackey deformation",
+    "abstract": "This paper provides a conceptual understanding of the Mackey bijection from the admissible dual of a real reductive group $G$ into the admissible dual of its Cartan motion group $G_0$, by studying the primitive spectrum of a Hecke algebra over $\\mathbb{C}[t]$ arising from the contraction of $G$ to $G_0$. If $K$ denotes a maximal compact subgroup of $G$, our approach leads to the following two results: the admissible Mackey bijection is a piecewise homeomorphism, each piece being defined by the length of the lowest $K$-types; the Hecke algebras of $G$ and $G_0$ have, up to $K$-types not exceeding a certain length, the same periodic cyclic homology.",
+    "authors": "Yvann Gaudillot-Estrada",
+    "publish_date": "2026-11-11",
+    "arxiv_url": "http://arxiv.org/abs/2611.16002",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "Manipulation"
+    ],
+    "hf_rank": null,
+    "score": 0,
+    "paper_id": "arxiv:2611.16002",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2611.16321": {
+    "arxiv_id": "2611.16321",
+    "title": "From Large Language Models to Efficient System One Models via Adaptive Computation",
+    "abstract": "Transferring LLMs into System One decision models typically replaces the language modeling head with a decision head while retaining the full backbone, making every decision pay for all layers. Yet it remains unclear how much depth such decisions require. We find that decision information is concentrated in intermediate layers, with early layers building essential features and the final six layers removable without loss, while independently trained smaller models largely mimic the full model rather than developing specialized decision capabilities. These findings suggest that efficiency requires not simply smaller backbones, but shared computation across different depths. Building on this, we propose \\method{}, which jointly trains a full model with prefix sub-models that share its final layers and decision head through self-distillation. A lightweight gate reads the hidden state at each exit to determine whether additional computation is needed, allowing one model to operate at multiple layers. Across seven decision benchmarks, our approach matches or outperforms independently trained models at every depth, while achieving better accuracy-efficiency trade-offs through adaptive computation.",
+    "authors": "Minh-Anh Nguyen",
+    "publish_date": "2026-11-12",
+    "arxiv_url": "http://arxiv.org/abs/2611.16321",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "HF-Hot"
+    ],
+    "hf_rank": 1,
+    "score": 29,
+    "paper_id": "arxiv:2611.16321",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2611.15131": {
+    "arxiv_id": "2611.15131",
+    "title": "Duo: A Reciprocal World Model for Full-Duplex Interaction",
+    "abstract": "In this report, we introduce the Reciprocal World Model (RWM) and present Duo v1, a full-duplex world model that continuously perceives audiovisual inputs while responding to users in real time. The RWM treats intelligence and physical reality as equally fundamental to what constitutes a world. Existing world models largely focus on simulating the latter, leaving reasoning and decision-making as external controls rather than intrinsic parts of the world itself. In RWM, we identify two equally fundamental capabilities: Intent, which provides the cognition underlying world interactions, and Realization, which generates coherent audio-visual behavior. To realize this formulation, Duo v1 introduces three key technical designs: (1) Leveraging autoregressive modeling for continuous interaction reasoning and participation decisions, rather than restricting it to instruction understanding for diffusion models. (2) Constructing chunk-specific conditions and synchronize tokens across Intent and Realization on a unified timeline. Module-specific attention masks enforce causal dependencies both within and across chunks, preventing access to future inputs. (3) Mitigating distribution shift in both modules through dual rollout distillation, training on autoregressively generated Intent tokens and synthesized audiovisual histories from Realization. Both modules continuously perceive real-time audio, video, and text, enabling full-duplex interaction with spontaneous conversations and interruptions. Beyond conversation, users can share real objects, reshape virtual scenes, guide assistants, or play audiovisual games without mouse or keyboard controls. The release of Duo v1 makes our first step, with the next version coming soon. We look forward to broader exploration of this emerging field.",
+    "authors": "Hengyuan Cao, Biao Gong, Guoshan Lu, Qiyuan Zhang, Lin Liu, Yiding Tian, Yilei Jiang, Yuxin Ma, Chengzhang Wu, Kun Chen, Yiqian Xie, Ting Liu, Xin Zheng, Xijun Gu, Tianren Ma, Jiancheng Pan, Chi Zhang, Xuzhe Zheng, Siyi Li, Zhenzhong Lan",
+    "publish_date": "2026-11-11",
+    "arxiv_url": "http://arxiv.org/abs/2611.15131",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "HF-Hot"
+    ],
+    "hf_rank": 2,
+    "score": 28,
+    "paper_id": "arxiv:2611.15131",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2611.13004": {
+    "arxiv_id": "2611.13004",
+    "title": "G-STAR: Group-Scaled Token Capacity for Deeply Compressed Autoregressive Generation",
+    "abstract": "Discrete autoregressive models offer a scalable framework for image generation. However, they face a fundamental trade-off: long token sequences preserve representation quality but slow generation, while aggressive spatial compression reduces representation capacity. Based on product quantization, we show that, under a fixed nominal information budget, group size should scale quadratically with the per-axis spatial compression factor. Building on this principle, we propose GSTAR, a spatial--group co-scaling framework that enables \\(32\\times\\) and even effective \\(64\\times\\) compression while preserving strong reconstruction, understanding, and generation performance. Since larger groups introduce intra-group dependencies that must be modeled efficiently, we analyze their impact on inference latency and generation quality and introduce a semi-autoregressive decoder that combines parallel feature computation with lightweight causal modeling. With these designs, our highly compressed models perform competitively with leading models across five representative text-to-image benchmarks (GenEval, DPG-Bench, PRISM, LongText-Bench, and Qwen-Image-Bench). At \\(1024\\times1024\\) resolution, our model delivers a \\(20\\times\\) speedup over prior discrete autoregressive models, generating each image in 2.5 seconds on a single NVIDIA H200. Together, these results show that highly compressed discrete representations can enable high-quality autoregressive generation at low latency.",
+    "authors": "Xu Huang, Ye Huang, Xiaotong Li, Zhengrong Yue, Jialv Zou, Minhao Jing, Haodong Li, Wenhao Yan, Yaxin Luo, Duomin Wang, Daquan Zhou",
+    "publish_date": "2026-11-08",
+    "arxiv_url": "http://arxiv.org/abs/2611.13004",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "HF-Hot"
+    ],
+    "hf_rank": 3,
+    "score": 27,
+    "paper_id": "arxiv:2611.13004",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2611.14815": {
+    "arxiv_id": "2611.14815",
+    "title": "BirdDreams: Joint Perspective and BEV Video Generation for a Plausible, Reactive Driving World Model",
+    "abstract": "Driving world models aim to simulate how a scene unfolds under different ego actions. This requires plausible motion of surrounding vehicles as well as precise ego-trajectory control. Learning vehicle motion from perspective video alone is challenging because motion is entangled with appearance and vehicles can be occluded. Prior work therefore conditions video generation on layouts that specify vehicle motion, providing control over surrounding vehicles but requiring their future trajectories as inputs. We introduce BirdDreams, an autoregressive driving world model that jointly generates perspective video and a schematic bird's-eye-view (BEV) video, making scene layout part of the predicted future. The BEV, rendered from scene annotations for training, depicts roads and vehicles as simple shapes at a fixed metric scale, providing a top-down view of their positions and motion with reduced occlusion between vehicles. Perspective video, by contrast, retains scene details that the BEV omits, such as traffic signals and object appearance. Joint attention between two video diffusion transformers, one per stream, lets each stream inform the other during generation. The predicted BEV also provides a geometric interface for ego control: we translate and rotate its latest frame along an input ego trajectory and use the resulting frames as a soft condition that shows how the scene would appear to move if only the ego vehicle moved. At inference, BirdDreams generates both videos from a single camera image without requiring an HD map or vehicle-state inputs. On PhysicalAI-AV and nuScenes, BirdDreams follows input ego trajectories more faithfully than prior driving world models and generates more plausible ego motion without ego-action conditioning. Human evaluation shows that BirdDreams outperforms a perspective-only baseline in generating realistic surrounding-vehicle behavior.",
+    "authors": "Junyoung Seo, Jaewoo Seo, Seungryong Kim, Laura Leal-Taixé, Xiuming Zhang, Seung Wook Kim",
+    "publish_date": "2026-11-10",
+    "arxiv_url": "http://arxiv.org/abs/2611.14815",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "HF-Hot"
+    ],
+    "hf_rank": 4,
+    "score": 26,
+    "paper_id": "arxiv:2611.14815",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2611.05984": {
+    "arxiv_id": "2611.05984",
+    "title": "On the Design of Hyper-Connections: Simplification, Stability, and Scalability",
+    "abstract": "Hyper-Connections (HC) architectures are increasingly adopted in frontier language models, yet their components remain insufficiently understood and introduce non-negligible training overhead. In this work, we systematically study the HC architecture to understand its components and identify simpler, more efficient designs. We find that learned read/write gating without mixing and unconstrained mixing with fixed gates form two effective interaction groups: either alone achieves performance comparable to mHC. We also identify repeated access to the expanded residual state as a major source of training overhead, even without mixing. These findings lead to SimpleHC, which simplifies the architecture by removing residual mixing and simplifies execution through shared memory access, using the resulting additive structure and shared gate inputs. Layer-specific gates share a group-entry state, enabling batched reads and deferred writes; scalar corrections exactly preserve preceding sublayer output contributions. Our analyses support both the retained residual structure and the design of shared memory access. SimpleHC incurs only 2.4% extra end-to-end training time over a vanilla residual baseline at the largest tested scale. It maintains performance comparable to mHC when scaling from 15B to 30B MoE models, exhibits smoother gradient dynamics during standard training, and remains stable under stress. We hope SimpleHC will encourage a broader pursuit of simplicity in foundation model design, making performance gains more accessible and practical at scale.",
+    "authors": "Xiangdong Zhang, Xiaohan Qin, Sunan Zou, Tuo Dai, Bizhao Shi, Zhuo Xia, Yebin Yang, Yizhou Chen, Yuliang Liu, Yu Cheng, Junchi Yan",
+    "publish_date": "2026-11-04",
+    "arxiv_url": "http://arxiv.org/abs/2611.05984",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "HF-Hot"
+    ],
+    "hf_rank": 5,
+    "score": 25,
+    "paper_id": "arxiv:2611.05984",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2611.08538": {
+    "arxiv_id": "2611.08538",
+    "title": "Subliminal Learning in Vision-Language Models",
+    "abstract": "Subliminal learning is a phenomenon in large language models (LLMs) where a teacher passes a hidden preference to a student through training data unrelated to that preference. We study whether subliminal learning also occurs in vision-language models (VLMs). We finetune a teacher VLM to prefer a specific animal or facial attribute and use a control teacher from the same base model. Both teachers generate numbers for an unrelated visual task involving geometric shapes. Two students initialized from the same base VLM are finetuned on the same images, using numbers generated by either the biased or control teacher. Across VLMs ranging from 2B to 7B parameters, we find that both animal and facial preferences can transfer through this unrelated task. Students trained on biased-teacher outputs select the target more often than control students, with a difference of up to $\\sim$10 percentage points in the animal preference task. Transfer can become stronger with more training data and varies with the target preference, model, and how the numbers are generated. Beyond preferences, we show that the biased student's explanations use more of the same words and phrases as the biased teacher's explanations than those of the control student, even when all three models select the same image. These results matter for training VLMs and show that training on unrelated data may change both a VLM's image preferences and how it explains its choices, and that transfer can become stronger with more training samples.",
+    "authors": "Arman Hatami, Romina Aalishah, Ilya E. Monosov",
+    "publish_date": "2026-11-04",
+    "arxiv_url": "http://arxiv.org/abs/2611.08538",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "HF-Hot"
+    ],
+    "hf_rank": 6,
+    "score": 24,
+    "paper_id": "arxiv:2611.08538",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2611.11531": {
+    "arxiv_id": "2611.11531",
+    "title": "Probing Transformer Representations Layer by Layer, Module by Module",
+    "abstract": "Which representation should be probed in a transformer-based foundation model? Recent work shows that the standard practice of probing the final layer is often suboptimal, as intermediate layers can provide better features. Yet, representations are still largely studied along depth alone, treating each transformer block as an atomic unit. In this work, we analyze transformer representations layer by layer, module by module. Through more than 144,000 linear probing evaluations of vision foundation models (VFMs) and large language models (LLMs), we show that layer and module choices should be considered jointly: the best layer-module pair yields substantially larger gains over the final-layer residual stream than the best layer with the residual stream fixed. Moreover, module performance can vary substantially across layers, showing that useful representations cannot be characterized by depth alone. Building on these findings, we evaluate simple fixed probing strategies: the final-layer feedforward activation (Act@100) for vision and the second normalization layer at 60% depth (LN2@60) for language. These strategies improve over the probing baseline in a majority of evaluations and recover, on average, 42% and 86% of the gains from probing the best layer-module pair for vision and language, respectively. For VFMs, these gains increase with the transfer difficulty between pretraining and downstream data.",
+    "authors": "Ambroise Odonnat, Theo Gnassounou, Laetitia Chapel, Romain Tavenard, Ievgen Redko",
+    "publish_date": "2026-11-08",
+    "arxiv_url": "http://arxiv.org/abs/2611.11531",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "HF-Hot"
+    ],
+    "hf_rank": 7,
+    "score": 23,
+    "paper_id": "arxiv:2611.11531",
     "source": "arxiv",
     "venue": ""
   }
