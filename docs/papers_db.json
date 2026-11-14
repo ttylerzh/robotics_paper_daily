@@ -92036,48 +92036,6 @@
     "source": "arxiv",
     "venue": ""
   },
-  "arxiv:2610.29357": {
-    "arxiv_id": "2610.29357",
-    "title": "Memory-Centric Continual Learning for AI Agents",
-    "abstract": "Autonomous agents powered by foundation models can reason, plan, and use tools, but their fixed weights and context limits hinder sustained learning from experience over long-term deployment. While external memory systems attempt to bridge this gap, they mostly act as passive retrieval caches, evaluated primarily by whether they can recall stored facts or past interactions. Whether memory can drive genuine continual learning remains an open question. In this paper, we introduce Memory-Centric Continual Learning (MCCL), arguing that memory should be judged by whether it improves future actions, not merely what it retrieves. MCCL has three main parts. First, a three-axis taxonomy organizes memory by where state is stored (substrates), what form it takes (assets), and how it is managed (policies). This defines a two-loop lifecycle that updates memory state in an inner loop while refining management policies in an outer loop based on task feedback. Second, an evaluation protocol measures retention under interference, adaptation to change, and task transfer to isolate genuine behavioral gains from simple context expansion. Third, a memory scaling framework models how agent performance scales with experience, storage capacity, and compute budgets across non-parametric and parametric memory. Together, these components reframe agent memory from passive lookup to continuous learning, offering a principled route toward self-improving autonomous agents.",
-    "authors": "Dongfang Li, Zhuoen Chen, Bonian Jia, Zixuan Liu, Zhengxuan Lu, Can Deng, Yukun Shi, Yuhang Meng, Xin Zhang, Jiahe Huang, Fuhao Li, Junmai Wang, Shunyao Wen, Jingjun Sun, Jiaxu Tian, Jiangling Zhang, Zihan Wang, Liangyou Li, Yitong Yao, Shuangyong Song, Beilun Wang, Pengxu Wei, Hanlin Xu, Chang Liu, Yongxiang Li, Baotian Hu, Xiangyang Ji, Min Zhang",
-    "publish_date": "2026-10-21",
-    "arxiv_url": "http://arxiv.org/abs/2610.29357",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [],
-    "matched_categories": [
-      "HF-Hot"
-    ],
-    "hf_rank": 39,
-    "score": 15,
-    "paper_id": "arxiv:2610.29357",
-    "source": "arxiv",
-    "venue": ""
-  },
-  "arxiv:2610.29441": {
-    "arxiv_id": "2610.29441",
-    "title": "Sparsity Should Be ALLOTted by Output: Training-Free Allocation of Block-Sparse Attention for Video Diffusion Transformers",
-    "abstract": "Full 3D attention is costly in video Diffusion Transformers. Block-sparse attention reduces this cost by computing only selected attention blocks. However, existing methods either overlook the potential to optimize sparsity allocation or rely on heuristic rules or local metrics to guide it. In this work, we observe that sparsifying attention in different layers and at different denoising steps affects final-video fidelity to substantially different degrees. Yet the identities of the most sensitive layer-step pairs remain nearly unchanged across inputs. Building on these findings, we propose Allocating Layer-step Latency by Output Tests (ALLOT), a training-free sparsity allocation method. Treating each layer-step pair as a cell, ALLOT estimates each cell's contribution to final-video error through (i) cell probing and (ii) trajectory calibration, then jointly optimizes cell densities under a measured-latency budget. It preserves existing selection strategies and kernels, replacing only the allocation component. At equal or shorter wall-clock time, ALLOT outperforms every compared allocation strategy with XAttention, with an 11.8 dB PSNR gain on HunyuanVideo. Extensive experiments across four additional published pipelines on Wan2.1, Wan2.2, and HunyuanVideo show that ALLOT outperforms or ties the default in all nine settings.",
-    "authors": "Tianze Xia, Xiaoling Zhou, Ruya Lan, Yiqiao Liao, Chengru Song, Shiming Xiang",
-    "publish_date": "2026-10-21",
-    "arxiv_url": "http://arxiv.org/abs/2610.29441",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [],
-    "matched_categories": [
-      "HF-Hot"
-    ],
-    "hf_rank": 41,
-    "score": 13,
-    "paper_id": "arxiv:2610.29441",
-    "source": "arxiv",
-    "venue": ""
-  },
   "arxiv:2610.29989": {
     "arxiv_id": "2610.29989",
     "title": "Looking Ahead: Modeling Future Evolution in Autoregressive Video Generation",
@@ -92096,27 +92054,6 @@
     "hf_rank": 42,
     "score": 12,
     "paper_id": "arxiv:2610.29989",
-    "source": "arxiv",
-    "venue": ""
-  },
-  "arxiv:2610.29434": {
-    "arxiv_id": "2610.29434",
-    "title": "RubatoCodec: Budgeted Adaptive Speech Tokenization with Streaming Decoding",
-    "abstract": "Neural speech codecs provide discrete tokens for speech generation. Lower frame rates shorten token sequences, but each token must then carry more linguistic and acoustic information. Variable-frame-rate codecs address this trade-off by adapting token allocation to speech content, but threshold-based allocation lets content determine the token count, so the sequence length a speech generator must produce varies across utterances and datasets at a fixed setting. We present RubatoCodec, a variable-frame-rate speech codec built on X-Codec-2 with an exact utterance-level event budget and streaming decoding. Its Adaptive Firing mechanism uses changes in codec features and waveform spectra to divide speech into variable-duration events without a learned boundary predictor. Discrete codes and an explicit duration represent each event, allowing a speech generator to predict and decode one event at a time. Controlled experiments show that adaptive allocation outperforms fixed-rate coding in reconstruction fidelity and intelligibility at low event rates. A model trained on large-scale multilingual speech achieves competitive reconstruction quality across English, Japanese, and Mandarin, with the best intelligibility preservation among the compared codecs on the evaluated English and Japanese benchmarks at comparable bitrates. In a matched text-to-speech comparison, the adaptive representation yields lower WER and higher UTMOS and UTMOSv2 with comparable speaker similarity. The speech generator also learns the codec's utterance-level event budget without an explicit generation-time rate constraint. These results demonstrate that budgeted adaptive speech representations support both high-quality reconstruction and streaming text-to-speech generation. Code and weights are available at https://github.com/third-intelligence/RubatoCodec and https://huggingface.co/third-intelligence/RubatoCodec.",
-    "authors": "Chihiro Arata, Shohei Taniguchi, Gouki Minegishi, Kan Hatakeyama-Sato",
-    "publish_date": "2026-10-21",
-    "arxiv_url": "http://arxiv.org/abs/2610.29434",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [],
-    "matched_categories": [
-      "HF-Hot"
-    ],
-    "hf_rank": 43,
-    "score": 11,
-    "paper_id": "arxiv:2610.29434",
     "source": "arxiv",
     "venue": ""
   },
@@ -93327,27 +93264,6 @@
     "hf_rank": 42,
     "score": 10,
     "paper_id": "arxiv:2610.30108",
-    "source": "arxiv",
-    "venue": ""
-  },
-  "arxiv:2610.29317": {
-    "arxiv_id": "2610.29317",
-    "title": "SpatialBrain: Spatial Intelligence Growing from Experience",
-    "abstract": "Spatial reasoning requires more than access to geometric tools: a reasoner must decide when direct observation is sufficient and when to reconstruct, measure, or change reference frames. We present SpatialBrain, a framework that retains experience about these decisions while keeping its vision-language backbone fixed. The key distinction is between evidence about a scene and experience about how to reason with that evidence. 3DFusionMemory fuses current-scene observations into queryable spatial relations. A Spatial Skill Library provides reusable tool procedures, and Spatial Cognition associates task conditions with experience about when and how to use memory and skills. Completed trajectories are abstracted into process records and consolidated between task blocks, allowing later decisions to draw on earlier execution without transferring scene coordinates or reference answers. Across five spatial-reasoning benchmarks, SpatialBrain improves on direct answers from the same backbone on four and ties on the fifth. Component comparisons, experience-coverage curves, and traced resource decisions characterize how the framework accumulates and uses these resources.",
-    "authors": "Yifan Zhou, Ziyang Gong, Xiaojun Ye, Yifei Liu, Donggang Li, Xiaolong Zhou, Zhihang Zhong, Xue Yang",
-    "publish_date": "2026-10-21",
-    "arxiv_url": "http://arxiv.org/abs/2610.29317",
-    "project_url": "",
-    "code_url": "",
-    "pwc_url": "",
-    "framework": "",
-    "matched_keywords": [],
-    "matched_categories": [
-      "HF-Hot"
-    ],
-    "hf_rank": 47,
-    "score": 5,
-    "paper_id": "arxiv:2610.29317",
     "source": "arxiv",
     "venue": ""
   },
@@ -111867,7 +111783,7 @@
       "Dexterous",
       "HF-Hot"
     ],
-    "hf_rank": 44,
+    "hf_rank": 49,
     "score": 10,
     "paper_id": "arxiv:2611.08286",
     "source": "arxiv",
@@ -112139,7 +112055,7 @@
       "Manipulation",
       "HF-Hot"
     ],
-    "hf_rank": 9,
+    "hf_rank": 14,
     "score": 10,
     "paper_id": "arxiv:2611.08318",
     "source": "arxiv",
@@ -117090,7 +117006,7 @@
       "Dexterous",
       "HF-Hot"
     ],
-    "hf_rank": 8,
+    "hf_rank": 13,
     "score": 10,
     "paper_id": "arxiv:2611.14256",
     "source": "arxiv",
@@ -117624,7 +117540,7 @@
       "Manipulation",
       "HF-Hot"
     ],
-    "hf_rank": 11,
+    "hf_rank": 16,
     "score": 0,
     "paper_id": "arxiv:2611.14046",
     "source": "arxiv",
@@ -118771,7 +118687,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 32,
+    "hf_rank": 37,
     "score": 29,
     "paper_id": "arxiv:2611.11306",
     "source": "arxiv",
@@ -118792,7 +118708,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 33,
+    "hf_rank": 38,
     "score": 28,
     "paper_id": "arxiv:2611.13766",
     "source": "arxiv",
@@ -118813,7 +118729,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 34,
+    "hf_rank": 39,
     "score": 27,
     "paper_id": "arxiv:2611.12304",
     "source": "arxiv",
@@ -118834,7 +118750,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 35,
+    "hf_rank": 40,
     "score": 26,
     "paper_id": "arxiv:2611.05862",
     "source": "arxiv",
@@ -118855,7 +118771,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 36,
+    "hf_rank": 41,
     "score": 25,
     "paper_id": "arxiv:2611.12869",
     "source": "arxiv",
@@ -118876,7 +118792,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 37,
+    "hf_rank": 42,
     "score": 24,
     "paper_id": "arxiv:2611.14418",
     "source": "arxiv",
@@ -118897,7 +118813,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 38,
+    "hf_rank": 43,
     "score": 23,
     "paper_id": "arxiv:2611.14413",
     "source": "arxiv",
@@ -118918,7 +118834,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 39,
+    "hf_rank": 44,
     "score": 22,
     "paper_id": "arxiv:2611.13843",
     "source": "arxiv",
@@ -118939,7 +118855,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 40,
+    "hf_rank": 45,
     "score": 21,
     "paper_id": "arxiv:2611.13410",
     "source": "arxiv",
@@ -118960,7 +118876,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 41,
+    "hf_rank": 46,
     "score": 20,
     "paper_id": "arxiv:2611.13758",
     "source": "arxiv",
@@ -118981,7 +118897,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 42,
+    "hf_rank": 47,
     "score": 19,
     "paper_id": "arxiv:2611.08379",
     "source": "arxiv",
@@ -119002,7 +118918,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 45,
+    "hf_rank": 50,
     "score": 16,
     "paper_id": "arxiv:2610.40394",
     "source": "arxiv",
@@ -119865,7 +119781,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 25,
+    "hf_rank": 30,
     "score": 29,
     "paper_id": "arxiv:2611.16321",
     "source": "arxiv",
@@ -119886,7 +119802,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 26,
+    "hf_rank": 31,
     "score": 28,
     "paper_id": "arxiv:2611.15131",
     "source": "arxiv",
@@ -119907,7 +119823,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 27,
+    "hf_rank": 32,
     "score": 27,
     "paper_id": "arxiv:2611.13004",
     "source": "arxiv",
@@ -119928,7 +119844,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 28,
+    "hf_rank": 33,
     "score": 26,
     "paper_id": "arxiv:2611.14815",
     "source": "arxiv",
@@ -119949,7 +119865,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 29,
+    "hf_rank": 34,
     "score": 25,
     "paper_id": "arxiv:2611.05984",
     "source": "arxiv",
@@ -119970,7 +119886,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 30,
+    "hf_rank": 35,
     "score": 24,
     "paper_id": "arxiv:2611.08538",
     "source": "arxiv",
@@ -119991,7 +119907,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 31,
+    "hf_rank": 36,
     "score": 23,
     "paper_id": "arxiv:2611.11531",
     "source": "arxiv",
@@ -120037,7 +119953,7 @@
       "EGO Policy",
       "Dexterous"
     ],
-    "hf_rank": null,
+    "hf_rank": 2,
     "score": 20,
     "paper_id": "arxiv:2611.16728",
     "source": "arxiv",
@@ -120663,7 +120579,7 @@
     "matched_categories": [
       "Manipulation"
     ],
-    "hf_rank": 15,
+    "hf_rank": 20,
     "score": 35,
     "paper_id": "arxiv:2611.17060",
     "source": "arxiv",
@@ -120814,7 +120730,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 1,
+    "hf_rank": 6,
     "score": 29,
     "paper_id": "arxiv:2611.16961",
     "source": "arxiv",
@@ -120835,7 +120751,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 2,
+    "hf_rank": 7,
     "score": 28,
     "paper_id": "arxiv:2611.12750",
     "source": "arxiv",
@@ -120856,7 +120772,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 3,
+    "hf_rank": 8,
     "score": 27,
     "paper_id": "arxiv:2611.15094",
     "source": "arxiv",
@@ -120877,7 +120793,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 4,
+    "hf_rank": 9,
     "score": 26,
     "paper_id": "arxiv:2611.17334",
     "source": "arxiv",
@@ -120898,7 +120814,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 5,
+    "hf_rank": 10,
     "score": 25,
     "paper_id": "arxiv:2611.16409",
     "source": "arxiv",
@@ -120919,7 +120835,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 6,
+    "hf_rank": 11,
     "score": 24,
     "paper_id": "arxiv:2611.16009",
     "source": "arxiv",
@@ -120940,7 +120856,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 7,
+    "hf_rank": 12,
     "score": 23,
     "paper_id": "arxiv:2611.15844",
     "source": "arxiv",
@@ -120961,7 +120877,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 12,
+    "hf_rank": 17,
     "score": 18,
     "paper_id": "arxiv:2611.12872",
     "source": "arxiv",
@@ -120982,7 +120898,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 13,
+    "hf_rank": 18,
     "score": 17,
     "paper_id": "arxiv:2611.17331",
     "source": "arxiv",
@@ -121003,7 +120919,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 14,
+    "hf_rank": 19,
     "score": 16,
     "paper_id": "arxiv:2611.08219",
     "source": "arxiv",
@@ -121024,7 +120940,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 16,
+    "hf_rank": 21,
     "score": 14,
     "paper_id": "arxiv:2610.41453",
     "source": "arxiv",
@@ -121045,7 +120961,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 17,
+    "hf_rank": 22,
     "score": 13,
     "paper_id": "arxiv:2611.00428",
     "source": "arxiv",
@@ -121066,7 +120982,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 18,
+    "hf_rank": 23,
     "score": 12,
     "paper_id": "arxiv:2611.17167",
     "source": "arxiv",
@@ -121087,7 +121003,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 19,
+    "hf_rank": 24,
     "score": 11,
     "paper_id": "arxiv:2611.00359",
     "source": "arxiv",
@@ -121108,7 +121024,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 20,
+    "hf_rank": 25,
     "score": 10,
     "paper_id": "arxiv:2611.16905",
     "source": "arxiv",
@@ -121129,7 +121045,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 21,
+    "hf_rank": 26,
     "score": 9,
     "paper_id": "arxiv:2611.15777",
     "source": "arxiv",
@@ -121150,7 +121066,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 22,
+    "hf_rank": 27,
     "score": 8,
     "paper_id": "arxiv:2611.16217",
     "source": "arxiv",
@@ -121171,7 +121087,7 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 23,
+    "hf_rank": 28,
     "score": 7,
     "paper_id": "arxiv:2611.16517",
     "source": "arxiv",
@@ -121192,9 +121108,93 @@
     "matched_categories": [
       "HF-Hot"
     ],
-    "hf_rank": 24,
+    "hf_rank": 29,
     "score": 6,
     "paper_id": "arxiv:2611.16748",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2611.10439": {
+    "arxiv_id": "2611.10439",
+    "title": "Who Remembers What? Multi-Granularity Memory Extraction for Multi-User, Multi-Agent Interaction",
+    "abstract": "Self-evolving agents improve their own skills, memory, and harness code from experience without retraining the base LLM, and group-evolving agents go further by sharing these lessons across agents. Yet most such systems overlook that sharing across users and heterogeneous agents requires deciding who can benefit from each lesson and what information must remain private. We present MixUA, a memory system that distills independent user-agent trajectories into lessons and assigns each lesson to a user-agent pair, user, agent, or global scope according to whom it benefits and what it may disclose. For evaluation, we introduce CrossLearnBench, a mixed-user-agent benchmark that pairs established agent tasks with user preferences and privacy probes that test whether private facts leak into memory other users can read. With five users and seven agents, MixUA raises pass rates by up to 16 points over no memory and 5 over a single global memory, even on tasks previously tried only by other users on other agents. It retains up to 90% of previously stated preferences, and at most 0.02% of privacy probes find a planted private fact in a forbidden scope. We hope MixUA offers a scalable path toward a global system where users and agents co-evolve.",
+    "authors": "Yunzhe Wang, Mesut Erhan Unal, Sheng Zhang, Shabnam Ghadar, Peng Tang",
+    "publish_date": "2026-11-07",
+    "arxiv_url": "http://arxiv.org/abs/2611.10439",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "HF-Hot"
+    ],
+    "hf_rank": 1,
+    "score": 29,
+    "paper_id": "arxiv:2611.10439",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2611.17336": {
+    "arxiv_id": "2611.17336",
+    "title": "Back to Pixels: Lifting Latent Video Diffusion into Pixel Space",
+    "abstract": "Frontier video generation models work in a VAE latent space that compresses video in both space and time. This compression made training tractable, but now limits high-resolution, controllable, and interactive generation -- doubling resolution quadruples token count, conditions apply to groups of frames rather than individual ones, and each response must wait for the rest of its multi-frame block. We present PixVid, a simple yet effective method that lifts a pretrained latent video model to directly generate every frame in pixel space. PixVid keeps the diffusion transformer and replaces the VAE decoder with a convolutional head that renders its outputs into pixels. We find that predicting clean video rather than velocity, together with a larger noise shift, is key to quality. Finetuned from Wan2.1-14B, PixVid is competitive with the latent baseline within $\\sim 1.3$M training clips. Working framewise in pixels, it generates at $2\\times$ higher resolution with the same per-frame token count, keeps depth-conditioned video editing aligned under fast motion, and responds to each action at the next frame. Project page: https://chenshuo20.github.io/PixVid/",
+    "authors": "Yanke Song, Shuo Chen, Chris Rockwell, Guande He, Nan Liu, Desai Xie, Tianpei Gu, Yong-Hyun Park, Aryan V S, Dennis Yuren Menn, Ming-Hsuan Yang, Xun Huang",
+    "publish_date": "2026-11-12",
+    "arxiv_url": "http://arxiv.org/abs/2611.17336",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "HF-Hot"
+    ],
+    "hf_rank": 3,
+    "score": 27,
+    "paper_id": "arxiv:2611.17336",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2611.17190": {
+    "arxiv_id": "2611.17190",
+    "title": "Consensus Capture in Reference-Based UAV Video Stabilization: A Benchmark on Dynamic Urban Scenes",
+    "abstract": "Reference-frame stabilization registers every frame of a hovering-drone video onto one reference frame, keeping object positions comparable. The registration pipelines it relies on are selected on feature-matching benchmarks in which only the camera moves. Over a busy intersection, vehicles moving together supply mutually consistent correspondences that can draw the robust homography estimate toward their motion: consensus capture, which inlier statistics cannot flag. A two-part benchmark measures it and the object masking meant to prevent it. A static protocol scores ten pipelines under exactly known homographies on 4K aerial frames, tuned on a site-disjoint split at a matched resolution and feature budget. A dynamic protocol scores them at an offline and a real-time budget on hovers selected from the video alone to span the amount and coherence of moving foreground, plus a stationary control. It measures background alignment, object position error and the share of a moving group's displacement an estimate follows, against a pseudo-ground-truth reference audited with manually annotated ground control points, which also score every candidate. On static scenes, tuned AKAZE, RootSIFT, SIFT and BRISK lead, retuning the matcher thresholds raises the mean average accuracy (mAA) by at most 0.0062, and masking costs less than 0.005. Unmasked ORB is captured on 28 of 304 real-time dynamic pairs and on 6 offline; its real-time captured estimates have a median corner error of 18.8 px yet typical inlier counts and ratios. Masking removes capture for every pipeline and leaves the leading pipelines unchanged. Code, data and results are released.",
+    "authors": "Robert Fonod, Nikolas Geroliminis",
+    "publish_date": "2026-11-12",
+    "arxiv_url": "http://arxiv.org/abs/2611.17190",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "HF-Hot"
+    ],
+    "hf_rank": 4,
+    "score": 26,
+    "paper_id": "arxiv:2611.17190",
+    "source": "arxiv",
+    "venue": ""
+  },
+  "arxiv:2611.09567": {
+    "arxiv_id": "2611.09567",
+    "title": "TurtLES: A Large-Scale Benchmark for Turbulent 3D Neural PDE Surrogates",
+    "abstract": "Machine-learning surrogates are increasingly used to accelerate computational fluid dynamics, yet progress is limited by the lack of benchmarks capturing realistic, time-dependent turbulent flows. We introduce TurtLES, a 14 TB dataset of 3D turbulent cylinder wakes in the shear-layer transition regime, computed via high-fidelity implicit large-eddy simulations. The dataset contains 400 trajectories of 400 time steps each, with 3-11 million points per frame, spanning variations in geometry, Reynolds number, and angle of attack. Unlike existing datasets, TurtLES combines (i) physically realistic turbulence with an active energy cascade driven by vortex stretching, (ii) dense irregular meshes, and (iii) long-horizon temporal dynamics. We benchmark state-of-the-art neural operators on autoregressive rollouts and identify key failure modes, including temporal instability, loss of small-scale energy, and challenges in learning on large irregular domains. TurtLES provides a new benchmark for evaluating surrogate models on 3D turbulent wakes at industrially relevant mesh resolution.",
+    "authors": "Jarno Platenburg, Armand Kassaï Koupaï, Paola Cinnella, Patrick Gallinari",
+    "publish_date": "2026-11-06",
+    "arxiv_url": "http://arxiv.org/abs/2611.09567",
+    "project_url": "",
+    "code_url": "",
+    "pwc_url": "",
+    "framework": "",
+    "matched_keywords": [],
+    "matched_categories": [
+      "HF-Hot"
+    ],
+    "hf_rank": 5,
+    "score": 25,
+    "paper_id": "arxiv:2611.09567",
     "source": "arxiv",
     "venue": ""
   }
