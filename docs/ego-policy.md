@@ -3,7 +3,7 @@ layout: default
 title: "EGO Policy"
 ---
 
-## Updated on 2026.11.25
+## Updated on 2026.11.26
 > Usage instructions: [here]({{ site.baseurl }}/README.html#usage)
 
 <style>.paper-nav{display:flex;flex-wrap:wrap;gap:.45rem;margin:1rem 0 1.25rem 0}.paper-nav a{border:1px solid #d0d7de;border-radius:999px;padding:.32rem .7rem;text-decoration:none;color:#24292f;background:#fff;font-size:.92rem}.paper-nav a.active{background:#0969da;color:#fff;border-color:#0969da}</style>
@@ -20,6 +20,7 @@ title: "EGO Policy"
 
 | Publish Date | Title & Abstract | Authors | Links |
 |:---------|:-----------------------|:---------|:------|
+| **2026-11-25** | **Who Is Ego? Scaling Cross-View Camera Wearer Identification and Segmentation beyond Humans** `EGO Policy`<br>A first-person (ego) image reveals what a camera sees, but not who or what carries it. Given a synchronized third-person (exo) image, camera wearer identification asks who is ego: which candidate carries the ego camera? We extend this task beyond humans to robots, vehicles, animals, and drones, and broaden its spatial scope (where is ego) from selecting a provided candidate mask to wearer... | Yuqian Fu Team | [ArXiv](http://arxiv.org/abs/2611.34489) |
 | **2026-11-24** | **G0.7: Scaling Up a Fast World Action Model with Long Context** `World Model` `EGO Policy`<br>World action models (WAMs) adapt pretrained video generators for robot control by jointly predicting future camera frames and actions, transferring physical priors learned from video into manipulation policies. However, generating future frames before every action makes test-time inference too slow for closed-loop control, while most existing policies remain restricted to short observation... | Hang Zhao Team | [ArXiv](http://arxiv.org/abs/2611.31822) |
 | **2026-11-24** | **Motion Conditioned World Modeling for Embodied Visual Tracking** `EGO Policy`<br>World models support embodied decision-making by predicting future environment states. In embodied visual tracking, uncertain target motion and robot-induced viewpoint changes jointly affect visual observations, making future-state prediction challenging. We propose Motion-Conditioned World Modeling, which incorporates predicted target-motion distributions and robot ego-motion into latent state... | Changsheng Xu Team | [ArXiv](http://arxiv.org/abs/2611.32900) |
 | **2026-11-24** | **ObsBridge: Observation-Grounded Conditioning for Ego Trajectory Prediction** `EGO Policy`<br>Pedestrian forecasting from ego-view observations is challenging because occlusion, limited visibility, and tracking errors corrupt observed motion histories. Such errors are particularly consequential for autonomous robot navigation. Existing paradigms typically either impute noisy history positions before forecasting or jointly train an auxiliary history reconstruction branch. However,... | Yutao Yue Team | [ArXiv](http://arxiv.org/abs/2611.32447) |
